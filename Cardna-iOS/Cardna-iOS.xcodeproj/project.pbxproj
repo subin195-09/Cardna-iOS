@@ -13,6 +13,8 @@
 		15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51AF3278AB2F0001E1F6F /* Main.storyboard */; };
 		15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C51AF6278AB2F1001E1F6F /* Assets.xcassets */; };
 		15C51AFA278AB2F1001E1F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51AF8278AB2F1001E1F6F /* LaunchScreen.storyboard */; };
+		15C51B04278AB591001E1F6F /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B03278AB591001E1F6F /* Const.swift */; };
+		15C51B06278AB7DB001E1F6F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B05278AB7DB001E1F6F /* Image.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		15C51AF6278AB2F1001E1F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15C51AF9278AB2F1001E1F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15C51AFB278AB2F1001E1F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C51B03278AB591001E1F6F /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		15C51B05278AB7DB001E1F6F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		15C51AEC278AB2F0001E1F6F /* Cardna-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				15C51B01278AB576001E1F6F /* Configuration */,
 				15C51AED278AB2F0001E1F6F /* AppDelegate.swift */,
 				15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */,
 				15C51AF1278AB2F0001E1F6F /* ViewController.swift */,
@@ -74,13 +79,29 @@
 			path = "Cardna-iOS";
 			sourceTree = "<group>";
 		};
+		15C51B01278AB576001E1F6F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				15C51B02278AB584001E1F6F /* Constants */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		15C51B02278AB584001E1F6F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				15C51B03278AB591001E1F6F /* Const.swift */,
+				15C51B05278AB7DB001E1F6F /* Image.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4B4CC109876C5FE080B66C2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */,
 				BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,8 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C51AF2278AB2F0001E1F6F /* ViewController.swift in Sources */,
+				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
+				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
