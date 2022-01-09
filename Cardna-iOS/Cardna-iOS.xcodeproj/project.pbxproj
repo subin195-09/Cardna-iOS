@@ -23,6 +23,7 @@
 		15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B19278AC445001E1F6F /* InsightViewController.swift */; };
 		15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B1B278AC44B001E1F6F /* MyPage.storyboard */; };
 		15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B1D278AC456001E1F6F /* MyPageViewController.swift */; };
+		15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B20278ACA52001E1F6F /* UIColor+.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		15C51B19278AC445001E1F6F /* InsightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightViewController.swift; sourceTree = "<group>"; };
 		15C51B1B278AC44B001E1F6F /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		15C51B1D278AC456001E1F6F /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		15C51B20278ACA52001E1F6F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		15C51B01278AB576001E1F6F /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				15C51B1F278ACA39001E1F6F /* AppExtensions */,
 				15C51B02278AB584001E1F6F /* Constants */,
 			);
 			path = Configuration;
@@ -166,6 +169,14 @@
 				15C51B1D278AC456001E1F6F /* MyPageViewController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		15C51B1F278ACA39001E1F6F /* AppExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				15C51B20278ACA52001E1F6F /* UIColor+.swift */,
+			);
+			path = AppExtensions;
 			sourceTree = "<group>";
 		};
 		4B4CC109876C5FE080B66C2D /* Pods */ = {
@@ -313,6 +324,7 @@
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
+				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
