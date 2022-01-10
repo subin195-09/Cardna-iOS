@@ -24,6 +24,10 @@
 		15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B1B278AC44B001E1F6F /* MyPage.storyboard */; };
 		15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B1D278AC456001E1F6F /* MyPageViewController.swift */; };
 		15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B20278ACA52001E1F6F /* UIColor+.swift */; };
+		15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B28278C98B1001E1F6F /* Pretendard-Light.otf */; };
+		15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B29278C98B1001E1F6F /* Pretendard-Regular.otf */; };
+		15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */; };
+		15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B2E278C997F001E1F6F /* UIFont+.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		15C51B1B278AC44B001E1F6F /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		15C51B1D278AC456001E1F6F /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		15C51B20278ACA52001E1F6F /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		15C51B28278C98B1001E1F6F /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		15C51B29278C98B1001E1F6F /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		15C51B2E278C997F001E1F6F /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,10 +95,6 @@
 			children = (
 				15C51B01278AB576001E1F6F /* Configuration */,
 				15C51B07278AC1F2001E1F6F /* Source */,
-				15C51AED278AB2F0001E1F6F /* AppDelegate.swift */,
-				15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */,
-				15C51AF6278AB2F1001E1F6F /* Assets.xcassets */,
-				15C51AF8278AB2F1001E1F6F /* LaunchScreen.storyboard */,
 				15C51AFB278AB2F1001E1F6F /* Info.plist */,
 			);
 			path = "Cardna-iOS";
@@ -99,6 +103,8 @@
 		15C51B01278AB576001E1F6F /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				15C51B23278ACB79001E1F6F /* Resources */,
+				15C51B22278ACB6F001E1F6F /* Supports */,
 				15C51B1F278ACA39001E1F6F /* AppExtensions */,
 				15C51B02278AB584001E1F6F /* Constants */,
 			);
@@ -175,8 +181,38 @@
 			isa = PBXGroup;
 			children = (
 				15C51B20278ACA52001E1F6F /* UIColor+.swift */,
+				15C51B2E278C997F001E1F6F /* UIFont+.swift */,
 			);
 			path = AppExtensions;
+			sourceTree = "<group>";
+		};
+		15C51B22278ACB6F001E1F6F /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */,
+				15C51AED278AB2F0001E1F6F /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		15C51B23278ACB79001E1F6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15C51B25278C9879001E1F6F /* Font */,
+				15C51AF8278AB2F1001E1F6F /* LaunchScreen.storyboard */,
+				15C51AF6278AB2F1001E1F6F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15C51B25278C9879001E1F6F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				15C51B28278C98B1001E1F6F /* Pretendard-Light.otf */,
+				15C51B29278C98B1001E1F6F /* Pretendard-Regular.otf */,
+				15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		4B4CC109876C5FE080B66C2D /* Pods */ = {
@@ -257,10 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C51AFA278AB2F1001E1F6F /* LaunchScreen.storyboard in Resources */,
+				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
+				15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
+				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
 				15C51B18278AC43E001E1F6F /* Insight.storyboard in Resources */,
 			);
@@ -315,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */,
 				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
