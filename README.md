@@ -1,23 +1,21 @@
 # 카드나 : 다양한 나를 펼치다
-### 거기 아요 최고라카드나? 🎴🎴
-<br/>
+### "거기 아요 최고라카드나? 🎴🎴"
 
 ## 🃏 프로젝트 소개
 > *내가 아는 나와 다른 사람이 아는 나를 카드로 만들어 `조하리의 창(Johari's Windows)`의 `열린 창(Open area)`를 넓히자.*<br/>
 > 이를 통해 다양한 나를 소개하고 서로를 더욱 깊게 알아갈 수 있는 서비스
 <div align="center">
-<img src="">
 
+![Cardna_Concept_Github](https://user-images.githubusercontent.com/48648026/148782516-b327f8b9-06aa-48d8-8121-5f63b83cdb08.jpeg)
 ![Swift](https://img.shields.io/badge/swift-v5.5.2-orange?logo=swift) ![Xcode](https://img.shields.io/badge/xcode-v13.2.1-blue?logo=xcode)
 </div>
 <br/>
 
 ## 👨‍👩‍👧‍👦 카족들 소개
-<img src="">
-
+![Cardna_iOS_Github](https://user-images.githubusercontent.com/48648026/148782952-5e7262af-6244-4fcf-8f89-361709e8e3ee.jpg)
 | ```Lead``` ```씨워터``` 김혜수 | ```무명이``` 이경민 | ```닝팝``` 이남준 |
 | :-: | :-: | :-: |
-| <img src="" width="150"> | <img src="" width="150"> | <img src="" width="150"> |
+| <img src="https://user-images.githubusercontent.com/48648026/148783045-b676033a-a6b9-4afb-8abf-a66d9e537dd5.png" width="250"> | <img src="https://user-images.githubusercontent.com/48648026/148783025-0cff0c36-0b3e-47de-b1a0-3ac6e0e7b180.png" width="250"> | <img src="https://user-images.githubusercontent.com/48648026/148783060-952f18de-ed60-40e3-a872-6411fd8192b6.png" width="250"> |
 | [@hyesuuou](https://github.com/hyesuuou) | [@meenyweeny](https://github.com/meenyweeny) | [@ningpop](https://github.com/ningpop) |
 | 리드 경험과 사람을 얻고 싶고, <div></div>안해본 기능을 구현하고 싶습니다. | YB에게 알려줄 수 있는 <div></div>실력을 갖고 싶습니다. | iOS를 제대로 도전해보는<div></div>경험을 얻어가고 싶습니다. |
 <br/>
@@ -478,8 +476,9 @@ Commit 메시지에 작업 분류를 작성하지 않고, Issue 번호로만 관
 ex.) 작업하기 위해 생성한 Issue의 번호가 3번일 때, commit message는 `[#3] (작업한 내용)` 으로 남긴다.
 <br/>
 
-### Git Branch 전략
-<img src="">
+### Git Branch 전략 - Git-flow
+<img src="https://user-images.githubusercontent.com/48648026/148783471-e57e4436-b143-428d-a95c-ec118fb54694.png" width="600">
+
 develop → default 브랜치
 
 - feature/#이슈번호-hs(이름)
@@ -487,18 +486,19 @@ develop → default 브랜치
 
 main → 릴리즈 버전
 <br/>
+<br/>
 
 ## 📂 Project Foldering Convention
 ```
 🗂 Network
     🗂 Mock
-			- json 예시파일.json
+        - json 예시파일.json
     🗂 Base
-			- NetworkResult.swift
+        - NetworkResult.swift
     🗂 APIModels
-			- 서버모델.swift
+        - 서버모델.swift
     🗂 APIConstants
-			- APIConstant.swift
+        - APIConstant.swift
     🗂 APIService
         🗂 (ex. AuthAPI)
             - AuthRouter.swift (Router파일)
@@ -507,37 +507,37 @@ main → 릴리즈 버전
             - CardRouter.swift
             - CardService.swift
 🗂 Configuration
-	🗂 Resources
-    	- LaunchScreen.storyboard
-		🗂 Font
-			- 폰트파일
-		🗂 Asset
-	🗂 Supports
-		- AppDelegate.swift
-		- SceneDelegate.swift
-	🗂 AppExtensions
-		- UIView+.swift
-		- UITextField+.swift
-		- UIColor+.swift
-		- UIFont+.swift
+    🗂 Resources
+        - LaunchScreen.storyboard
+        🗂 Font
+            - 폰트파일
+        🗂 Asset
+    🗂 Supports
+        - AppDelegate.swift
+        - SceneDelegate.swift
+    🗂 AppExtensions
+        - UIView+.swift
+        - UITextField+.swift
+        - UIColor+.swift
+        - UIFont+.swift
     🗂 Constants
-		- Const.swift
-		- Image.swift
-		- Xib.siwft
-		- Storyboard.swift
-		- ...
+        - Const.swift
+        - Image.swift
+        - Xib.siwft
+        - Storyboard.swift
+        - ...
 🗂 Source
-	🗂 AppSources
-		🗂 AppComponents (공통 컴포넌트들)
-			- OKButton.swift
-			- ... 
-	    🗂 AppModels
-			- API랑은 관련없지만 따로 필요할 것 같은 모델
-	    🗂 AppProtocols
-			- 앱 전체에서 공통으로 쓸만한 프로토콜
-		🗂 AppXibs
-			- 공통 xib파일 (ex. 카드셀)
-	🗂 Scene (뷰별로 분리)
+    🗂 AppSources
+        🗂 AppComponents (공통 컴포넌트들)
+            - OKButton.swift
+            - ... 
+        🗂 AppModels
+            - API랑은 관련없지만 따로 필요할 것 같은 모델
+        🗂 AppProtocols
+            - 앱 전체에서 공통으로 쓸만한 프로토콜
+        🗂 AppXibs
+            - 공통 xib파일 (ex. 카드셀)
+    🗂 Scene (뷰별로 분리)
         🗂 Scene1
             - Scene1.Storyboard
             - Scene1ViewController.swift (ViewController)
@@ -549,8 +549,8 @@ Info.plist
 <br/>
 
 ## 🛠 Technical Stack
-- Swift 5.3
-- Xcode 13.0
+- Swift 5.5.2
+- Xcode 13.2.1
 - Another Library
   - Moya
   - Snapkit + Then
