@@ -67,8 +67,8 @@
     
     ```swift
     func collectionView(_ collectionView: UICollectionView,
-    									  cellForItemAt indexPath: IndexPath
-    										) -> UICollectionViewCell {
+    			  cellForItemAt indexPath: IndexPath
+    				) -> UICollectionViewCell {
       // doSomething()
     }
     ```
