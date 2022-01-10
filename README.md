@@ -7,7 +7,8 @@
 <div align="center">
 
 ![Cardna_Concept_Github](https://user-images.githubusercontent.com/48648026/148782516-b327f8b9-06aa-48d8-8121-5f63b83cdb08.jpeg)
-![Swift](https://img.shields.io/badge/swift-v5.5.2-orange?logo=swift) ![Xcode](https://img.shields.io/badge/xcode-v13.2.1-blue?logo=xcode)
+![Swift](https://img.shields.io/badge/swift-v5.5.2-orange?logo=swift) ![Xcode](https://img.shields.io/badge/xcode-v13.2.1-blue?logo=xcode)<br/>
+![Moya](https://img.shields.io/badge/Moya-v15.0.0-brightgreen) ![SnapKit](https://img.shields.io/badge/SnapKit-v5.0.1-skyblue) ![Then](https://img.shields.io/badge/Then-v2.7.0-lightgrey)
 </div>
 <br/>
 
@@ -552,8 +553,8 @@ Info.plist
 - Swift 5.5.2
 - Xcode 13.2.1
 - Another Library
-  - Moya
-  - Snapkit + Then
+  - Moya 15.0.0
+  - Snapkit 5.0.1 + Then 2.7.0
 <br/>
 
 ## 📱 Test Device
