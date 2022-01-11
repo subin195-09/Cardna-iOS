@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */; };
+		15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
 		15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51AF3278AB2F0001E1F6F /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15582F3C278D7AAA00C38614 /* AppSources */ = {
+			isa = PBXGroup;
+			children = (
+				15582F3D278D7AB600C38614 /* AppXibs */,
+			);
+			path = AppSources;
+			sourceTree = "<group>";
+		};
+		15582F3D278D7AB600C38614 /* AppXibs */ = {
+			isa = PBXGroup;
+			children = (
+				15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */,
+				15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */,
+			);
+			path = AppXibs;
+			sourceTree = "<group>";
+		};
 		15C51AE1278AB2F0001E1F6F = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +144,7 @@
 		15C51B07278AC1F2001E1F6F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				15582F3C278D7AAA00C38614 /* AppSources */,
 				15C51B08278AC200001E1F6F /* Scene */,
 			);
 			path = Source;
@@ -297,6 +319,7 @@
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
 				15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */,
+				15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
@@ -358,6 +381,7 @@
 				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
+				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
