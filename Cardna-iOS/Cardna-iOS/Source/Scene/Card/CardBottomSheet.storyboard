@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CardBottomSheetViewController-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CardBottomSheetViewController" title="CardBottomSheetViewController" id="Y6W-OH-hqX" customClass="CardBottomSheetViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0C-sh-YCp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSn-bx-nal">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="Xqu-kD-sSC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="addCardMeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4kR-Lt-AUW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkC-2y-U22">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="sXD-NK-l4o"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="addCardYouButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1b-dH-erl"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtCardme" translatesAutoresizingMaskIntoConstraints="NO" id="n7C-g5-rO0">
+                                        <rect key="frame" x="32" y="32" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="8qk-zC-nOm"/>
+                                            <constraint firstAttribute="width" secondItem="n7C-g5-rO0" secondAttribute="height" multiplier="1:1" id="y4y-9H-hvf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드나 작성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v8-Zj-ZlH">
+                                        <rect key="frame" x="90" y="32" width="78" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="n6J-pN-G9q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나에 대한 카드를 새로 작성해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvz-Kd-Gf5">
+                                        <rect key="frame" x="90" y="60" width="238" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Qaa-nZ-FQz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtCardyou" translatesAutoresizingMaskIntoConstraints="NO" id="isb-vP-27L">
+                                        <rect key="frame" x="32" y="124" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Bmy-OS-LzE"/>
+                                            <constraint firstAttribute="width" secondItem="isb-vP-27L" secondAttribute="height" multiplier="1:1" id="UAV-GM-WCq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드너 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-jN-1eT">
+                                        <rect key="frame" x="90" y="124" width="78" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="4XY-Zv-RC9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타인이 말하는 나를 카드로 만들어보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Job-dN-RAQ">
+                                        <rect key="frame" x="90" y="152" width="268" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="jns-hx-hvS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Job-dN-RAQ" firstAttribute="leading" secondItem="isb-vP-27L" secondAttribute="trailing" constant="13" id="0FZ-1l-mbO"/>
+                                    <constraint firstAttribute="height" constant="260" id="2xw-MW-rwO"/>
+                                    <constraint firstItem="Job-dN-RAQ" firstAttribute="top" secondItem="b0k-jN-1eT" secondAttribute="bottom" constant="1" id="56z-Hv-hEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="hSn-bx-nal" secondAttribute="trailing" id="6iU-gn-LH0"/>
+                                    <constraint firstItem="MkC-2y-U22" firstAttribute="leading" secondItem="M0C-sh-YCp" secondAttribute="leading" id="HAL-W3-b7o"/>
+                                    <constraint firstItem="MkC-2y-U22" firstAttribute="top" secondItem="hSn-bx-nal" secondAttribute="bottom" id="Lvw-ZO-RkK"/>
+                                    <constraint firstItem="b0k-jN-1eT" firstAttribute="leading" secondItem="isb-vP-27L" secondAttribute="trailing" constant="13" id="RnT-TW-UjD"/>
+                                    <constraint firstItem="n7C-g5-rO0" firstAttribute="leading" secondItem="M0C-sh-YCp" secondAttribute="leading" constant="32" id="TE6-ZV-6Ln"/>
+                                    <constraint firstItem="isb-vP-27L" firstAttribute="leading" secondItem="M0C-sh-YCp" secondAttribute="leading" constant="32" id="Xaz-wY-eLn"/>
+                                    <constraint firstItem="3v8-Zj-ZlH" firstAttribute="top" secondItem="M0C-sh-YCp" secondAttribute="top" constant="32" id="bFF-sc-9jN"/>
+                                    <constraint firstItem="b0k-jN-1eT" firstAttribute="top" secondItem="Qvz-Kd-Gf5" secondAttribute="bottom" constant="43" id="jUd-mq-XBg"/>
+                                    <constraint firstItem="Qvz-Kd-Gf5" firstAttribute="leading" secondItem="n7C-g5-rO0" secondAttribute="trailing" constant="13" id="kTD-a4-Al1"/>
+                                    <constraint firstItem="isb-vP-27L" firstAttribute="top" secondItem="n7C-g5-rO0" secondAttribute="bottom" constant="47" id="m8r-Uq-oC7"/>
+                                    <constraint firstItem="Qvz-Kd-Gf5" firstAttribute="top" secondItem="3v8-Zj-ZlH" secondAttribute="bottom" constant="1" id="oT0-Pm-3PM"/>
+                                    <constraint firstItem="3v8-Zj-ZlH" firstAttribute="leading" secondItem="n7C-g5-rO0" secondAttribute="trailing" constant="13" id="oXW-i9-Y3j"/>
+                                    <constraint firstItem="hSn-bx-nal" firstAttribute="leading" secondItem="M0C-sh-YCp" secondAttribute="leading" id="piF-Gh-Voh"/>
+                                    <constraint firstItem="n7C-g5-rO0" firstAttribute="top" secondItem="M0C-sh-YCp" secondAttribute="top" constant="32" id="pyb-Jo-e3h"/>
+                                    <constraint firstItem="hSn-bx-nal" firstAttribute="top" secondItem="M0C-sh-YCp" secondAttribute="top" id="rHr-Tp-bKu"/>
+                                    <constraint firstAttribute="trailing" secondItem="MkC-2y-U22" secondAttribute="trailing" id="z4V-hJ-cWS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="M0C-sh-YCp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LS7-wd-3lc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M0C-sh-YCp" secondAttribute="trailing" id="Vpl-4M-fnt"/>
+                            <constraint firstItem="M0C-sh-YCp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wkw-q3-X9Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addCardMeButton" destination="hSn-bx-nal" id="z3C-D2-Vru"/>
+                        <outlet property="addCardMeExplainLabel" destination="Qvz-Kd-Gf5" id="4Wp-DI-blc"/>
+                        <outlet property="addCardMeIconImageView" destination="n7C-g5-rO0" id="L7Q-k2-ICc"/>
+                        <outlet property="addCardMeTitleLabel" destination="3v8-Zj-ZlH" id="evi-ls-yUi"/>
+                        <outlet property="addCardYouButton" destination="MkC-2y-U22" id="sgV-7O-3Nw"/>
+                        <outlet property="addCardYouExplainLabel" destination="Job-dN-RAQ" id="V96-l6-0vd"/>
+                        <outlet property="addCardYouIconImageView" destination="isb-vP-27L" id="Ga6-7B-VIc"/>
+                        <outlet property="addCardYouTitleLabel" destination="b0k-jN-1eT" id="CdN-ZC-AQf"/>
+                        <outlet property="cardAddBottomSheetView" destination="M0C-sh-YCp" id="3Ba-HK-Zbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="65.763546798029566"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icbtCardme" width="45" height="45"/>
+        <image name="icbtCardyou" width="45" height="45"/>
+    </resources>
+</document>
