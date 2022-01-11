@@ -26,13 +26,12 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-Wz-4Op">
                                         <rect key="frame" x="368" y="1" width="42" height="42"/>
-                                        <color key="backgroundColor" red="0.33963474040000002" green="0.55110767360000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="gLd-f5-d9Q"/>
                                             <constraint firstAttribute="width" secondItem="jLL-Wz-4Op" secondAttribute="height" multiplier="1:1" id="oaU-OT-hxh"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icbtCardplus"/>
                                         <connections>
                                             <action selector="addCardButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0pb-cO-iYm"/>
                                         </connections>
@@ -48,6 +47,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Af-YP-MaY" secondAttribute="trailing" id="4Ld-uv-KaQ"/>
                             <constraint firstItem="4Af-YP-MaY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BgX-Gf-zW1"/>
@@ -72,5 +72,6 @@
     <resources>
         <image name="btmnavi2Active" width="85" height="84"/>
         <image name="btmnavi2Inactive" width="85" height="84"/>
+        <image name="icbtCardplus" width="32" height="32"/>
     </resources>
 </document>

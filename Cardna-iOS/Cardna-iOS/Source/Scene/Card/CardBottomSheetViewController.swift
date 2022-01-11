@@ -35,34 +35,32 @@ class CardBottomSheetViewController: UIViewController {
     // MARK: - Function
     
     private func setLayout() {
-        setBottomSheetView()
-        setLabel()
+        setBottomSheetViewUI()
+        setLabelUI()
     }
     
-    private func setBottomSheetView() {
+    private func setBottomSheetViewUI() {
         cardAddBottomSheetView.layer.cornerRadius = 24
         cardAddBottomSheetView.backgroundColor = UIColor.darkGray
     }
     
-    private func setLabel() {
-        addCardMeTitleLabel.font = .Pretendard(.semiBold, size: 18)
-        addCardMeTitleLabel.textColor = .w1
-        addCardYouTitleLabel.font = .Pretendard(.semiBold, size: 18)
-        addCardYouTitleLabel.textColor = .w1
+    private func setLabelUI() {
+        [addCardMeTitleLabel, addCardYouTitleLabel].forEach {
+            $0?.font = .Pretendard(.semiBold, size: 18)
+            $0?.textColor = .w1
+        }
         
-        addCardMeExplainLabel.font = .Pretendard(.regular, size: 14)
-        addCardMeExplainLabel.textColor = .w2
-        addCardYouExplainLabel.font = .Pretendard(.regular, size: 14)
-        addCardYouExplainLabel.textColor = .w2
+        [addCardMeExplainLabel, addCardYouExplainLabel].forEach {
+            $0?.font = .Pretendard(.regular, size: 14)
+            $0?.textColor = .w1
+        }
     }
     
     // MARK: - IBAction
+    
     @IBAction func addCardMeButtonDidTap(_ sender: Any) {
-        print("\n\n눌림\n\n")
     }
     
-    
     @IBAction func addCardYouButtonDidTap(_ sender: Any) {
-        print("\n\n눌려씀\n\n")
     }
 }

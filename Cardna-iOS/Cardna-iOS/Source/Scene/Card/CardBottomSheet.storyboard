@@ -40,7 +40,7 @@
                                             <action selector="addCardYouButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a1b-dH-erl"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7C-g5-rO0">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtCardme" translatesAutoresizingMaskIntoConstraints="NO" id="n7C-g5-rO0">
                                         <rect key="frame" x="32" y="32" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="8qk-zC-nOm"/>
@@ -65,7 +65,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isb-vP-27L">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtCardyou" translatesAutoresizingMaskIntoConstraints="NO" id="isb-vP-27L">
                                         <rect key="frame" x="32" y="124" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Bmy-OS-LzE"/>
@@ -139,4 +139,8 @@
             <point key="canvasLocation" x="20" y="65.763546798029566"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icbtCardme" width="45" height="45"/>
+        <image name="icbtCardyou" width="45" height="45"/>
+    </resources>
 </document>
