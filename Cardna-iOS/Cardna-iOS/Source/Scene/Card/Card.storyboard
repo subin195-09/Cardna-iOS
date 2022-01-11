@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,13 +14,55 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-YP-MaY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드팩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-DP-5Oi">
+                                        <rect key="frame" x="16" y="4" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-Wz-4Op">
+                                        <rect key="frame" x="368" y="1" width="42" height="42"/>
+                                        <color key="backgroundColor" red="0.33963474040000002" green="0.55110767360000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="gLd-f5-d9Q"/>
+                                            <constraint firstAttribute="width" secondItem="jLL-Wz-4Op" secondAttribute="height" multiplier="1:1" id="oaU-OT-hxh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="addCardButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0pb-cO-iYm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tds-DP-5Oi" firstAttribute="leading" secondItem="4Af-YP-MaY" secondAttribute="leading" constant="16" id="ADe-dR-tdb"/>
+                                    <constraint firstAttribute="height" constant="44" id="D74-Sp-Jor"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLL-Wz-4Op" secondAttribute="trailing" constant="4" id="Iej-EL-V7L"/>
+                                    <constraint firstItem="Tds-DP-5Oi" firstAttribute="top" secondItem="4Af-YP-MaY" secondAttribute="top" constant="4" id="OUU-R9-2Ug"/>
+                                    <constraint firstItem="jLL-Wz-4Op" firstAttribute="top" secondItem="4Af-YP-MaY" secondAttribute="top" constant="1" id="wqm-KP-eTY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Af-YP-MaY" secondAttribute="trailing" id="4Ld-uv-KaQ"/>
+                            <constraint firstItem="4Af-YP-MaY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BgX-Gf-zW1"/>
+                            <constraint firstItem="4Af-YP-MaY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g02-GE-Daq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="btmnavi2Inactive" selectedImage="btmnavi2Active" id="nan-JL-JP4">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addCardButton" destination="jLL-Wz-4Op" id="ogu-Hs-TSF"/>
+                        <outlet property="navigationBarView" destination="4Af-YP-MaY" id="TXV-lR-UC4"/>
+                        <outlet property="navigationTitleLabel" destination="Tds-DP-5Oi" id="ZVf-wg-jXj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

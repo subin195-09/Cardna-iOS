@@ -4,9 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Pretendard-Light</string>
-		<string>Pretendard-Regular</string>
-		<string>Pretendard-SemiBold</string>
+		<string>Pretendard-Light.otf</string>
+		<string>Pretendard-Regular.otf</string>
+		<string>Pretendard-SemiBold.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
