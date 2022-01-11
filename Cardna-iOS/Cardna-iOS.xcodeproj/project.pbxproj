@@ -31,6 +31,7 @@
 		15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */; };
 		15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B2E278C997F001E1F6F /* UIFont+.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
+		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		15C51B2E278C997F001E1F6F /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			children = (
 				15C51B20278ACA52001E1F6F /* UIColor+.swift */,
 				15C51B2E278C997F001E1F6F /* UIFont+.swift */,
+				98938427278D8F4D00ACDC06 /* UIView+.swift */,
 			);
 			path = AppExtensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
+				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 			);
