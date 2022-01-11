@@ -44,5 +44,4 @@ class CardCollectionViewCell: UICollectionViewCell {
             bgView.backgroundColor = .mainPurple
         }
     }
-
 }
