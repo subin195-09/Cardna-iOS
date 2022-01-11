@@ -34,9 +34,9 @@ extension Const {
         
         // MARK: - 카드팩 icon
         
-        static let cardPackMeIconActive = UIImage(named: "icbtCardmeAcrive")!
-        //static let cardPackYouIconActive = UIImage(named: "")
-        //static let cardPackMeIcon
-        static let cardPackYouIcon = UIImage(named: "icbtCardyouInacrive")!
+        static let cardPackMeIconActive = UIImage(named: "icbtCardmeActive")!
+        static let cardPackYouIconActive = UIImage(named: "icbtCardyouActive")!
+        static let cardPackMeIcon = UIImage(named: "icbtCardmeInactive")!
+        static let cardPackYouIcon = UIImage(named: "icbtCardyouInactive")!
     }
 }
