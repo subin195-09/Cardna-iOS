@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var countLabel: UILabel!
     
     // MARK: - VC LifeCycle
     
@@ -42,6 +44,8 @@ class HomeViewController: UIViewController {
     func setUI() {
         setNavigationBarUI()
         setTitleUI()
+        setEditButtonUI()
+        setCountLabelUI()
     }
     
     func setNavigationBarUI() {
@@ -51,5 +55,13 @@ class HomeViewController: UIViewController {
     func setTitleUI() {
         nameLabel.font = .Pretendard(.light, size: 28)
         commentLabel.font = .cardnaH1Sbd
+    }
+    
+    func setEditButtonUI() {
+        editButton.tintColor = .w3
+    }
+    
+    func setCountLabelUI() {
+        countLabel.font = .cardnaB5Rg
     }
 }
