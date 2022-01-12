@@ -27,11 +27,33 @@ class AddCardViewController: UIViewController {
         $0.textColor = UIColor.w1
         $0.textAlignment = .center
     }
+    
+    var cardImageView = UIImageView().then {
+        $0.layer.cornerRadius = 10
+        $0.layer.borderColor = UIColor.w3.cgColor
+        $0.layer.borderWidth = 1.0
+    }
+    
+    var emptyCardImage = UIImageView().then {
+        $0.image = Const.Image.imgCardimg
+    }
+    
+    var emptyCardLabel = UILabel().then {
+        $0.text = "카드에 들어갈\n이미지를 넣어보세요!"
+        $0.font = .cardnaB1Rg
+        $0.textColor = .w3
+        $0.textAlignment = .center
+        $0.numberOfLines = 2
+    }
+    
+    // MARK: - VC LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
     }
+    
+    // MARK: - Function
     
     private func setLayout() {
         setViewHierarchy()
@@ -39,14 +61,14 @@ class AddCardViewController: UIViewController {
     }
     
     private func setViewHierarchy() {
-        view.addSubviews(titleBarUIView, backButton, addCardViewTitleLabel)
+        view.addSubviews(titleBarUIView, backButton, addCardViewTitleLabel, cardImageView, emptyCardImage, emptyCardLabel)
     }
     
     private func setConstraints() {
         self.view.backgroundColor = .black
         
         titleBarUIView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
             $0.height.equalTo(44)
@@ -62,9 +84,31 @@ class AddCardViewController: UIViewController {
             $0.leading.equalTo(self.backButton.snp.trailing).offset(88)
             $0.height.equalTo(27)
         }
+        
+        cardImageView.snp.makeConstraints {
+            $0.top.equalTo(self.titleBarUIView.snp.bottom).offset(20)
+            $0.width.equalTo(190)
+            $0.height.equalTo(273)
+            $0.centerX.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        emptyCardImage.snp.makeConstraints {
+            $0.top.equalTo(self.cardImageView.snp.top).inset(83)
+            $0.centerX.equalTo(self.cardImageView)
+            $0.height.equalTo(40)
+        }
+        
+        emptyCardLabel.snp.makeConstraints {
+            $0.top.equalTo(self.emptyCardImage.snp.bottom).offset(18)
+            $0.centerX.equalTo(self.cardImageView)
+            $0.height.equalTo(44)
+        }
     }
 
     // MARK: 화면 전환 코드
+    
+    // MARK: - Objc Function
+    
 //    @objc
 //    private func backButtonDidTap(_ sender: UIButton) {
 //        let nowVC = self.presentingViewController
