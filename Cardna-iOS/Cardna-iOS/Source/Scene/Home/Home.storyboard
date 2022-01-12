@@ -14,13 +14,51 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsC-V9-WlX">
+                                <rect key="frame" x="368" y="45" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6wx-1k-hRz"/>
+                                    <constraint firstAttribute="width" constant="42" id="my8-dU-vgy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icbtNotification"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지우님은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqI-RA-2IT">
+                                <rect key="frame" x="16" y="102" width="59" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KxG-ci-5kp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="힘이들땐 하늘을 봐..!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-2V-JgP">
+                                <rect key="frame" x="16" y="138" width="140.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mqI-RA-2IT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="58" id="4vq-R8-CLx"/>
+                            <constraint firstItem="2aD-2V-JgP" firstAttribute="leading" secondItem="mqI-RA-2IT" secondAttribute="leading" id="7AA-E2-2bA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PsC-V9-WlX" secondAttribute="trailing" constant="4" id="OuS-rK-3Oh"/>
+                            <constraint firstItem="PsC-V9-WlX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="Yhr-5j-FCS"/>
+                            <constraint firstItem="2aD-2V-JgP" firstAttribute="top" secondItem="mqI-RA-2IT" secondAttribute="bottom" id="bor-8a-hS1"/>
+                            <constraint firstItem="mqI-RA-2IT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uoK-SI-gb7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="btmnavi1Inactive" selectedImage="btmnavi1Active" id="UqP-V0-GS7">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="commentLabel" destination="2aD-2V-JgP" id="xRn-vD-fWx"/>
+                        <outlet property="nameLabel" destination="mqI-RA-2IT" id="ORH-s9-t0p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,5 +68,6 @@
     <resources>
         <image name="btmnavi1Active" width="85" height="84"/>
         <image name="btmnavi1Inactive" width="85" height="84"/>
+        <image name="icbtNotification" width="42" height="42"/>
     </resources>
 </document>
