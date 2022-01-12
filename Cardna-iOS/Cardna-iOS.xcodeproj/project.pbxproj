@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
+		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
+		14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */; };
 		15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */; };
 		15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */; };
 		15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */; };
@@ -41,6 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
+		14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetail.storyboard; sourceTree = "<group>"; };
@@ -90,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14A17B8A278F524C00167ECE /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				14A17B8B278F526E00167ECE /* Extensions */,
+				14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */,
+			);
+			path = AddCard;
+			sourceTree = "<group>";
+		};
+		14A17B8B278F526E00167ECE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		15582F3C278D7AAA00C38614 /* AppSources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +212,7 @@
 				15C51B0B278AC3E1001E1F6F /* Home */,
 				15A6EEAD278ECB05006EA23C /* CardDetail */,
 				15C51B0C278AC3EA001E1F6F /* Card */,
+				14A17B8A278F524C00167ECE /* AddCard */,
 				15C51B0D278AC3F9001E1F6F /* Insight */,
 				15C51B0E278AC408001E1F6F /* MyPage */,
 			);
@@ -241,6 +265,7 @@
 				15C51B2E278C997F001E1F6F /* UIFont+.swift */,
 				98938427278D8F4D00ACDC06 /* UIView+.swift */,
 				15A6EEB3278F1023006EA23C /* String+.swift */,
+				14A17B88278F36EC00167ECE /* UILabel+.swift */,
 			);
 			path = AppExtensions;
 			sourceTree = "<group>";
@@ -418,6 +443,7 @@
 			files = (
 				15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */,
 				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
+				14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
@@ -425,6 +451,7 @@
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
+				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
@@ -433,6 +460,7 @@
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
+				14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TDPZKXY69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cardna-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -610,6 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8TDPZKXY69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cardna-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
