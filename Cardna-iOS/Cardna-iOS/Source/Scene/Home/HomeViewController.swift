@@ -9,8 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    // MARK: - Property
-    
     // MARK: - IBOutlet
     
     @IBOutlet weak var nameLabel: UILabel!
