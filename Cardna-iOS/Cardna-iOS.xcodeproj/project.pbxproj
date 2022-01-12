@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */; };
 		15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */; };
+		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
 		15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C51AF3278AB2F0001E1F6F /* Main.storyboard */; };
@@ -31,14 +32,15 @@
 		15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */; };
 		15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B2E278C997F001E1F6F /* UIFont+.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
-		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
 		9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */; };
 		98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */; };
+		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +65,9 @@
 		15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		15C51B2E278C997F001E1F6F /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardBottomSheet.storyboard; sourceTree = "<group>"; };
 		9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomSheetViewController.swift; sourceTree = "<group>"; };
+		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,14 @@
 				15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */,
 			);
 			path = AppXibs;
+			sourceTree = "<group>";
+		};
+		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		15C51AE1278AB2F0001E1F6F = {
@@ -172,6 +182,7 @@
 		15C51B0B278AC3E1001E1F6F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				15BCB21C278EA4BC005E6D98 /* Extensions */,
 				15C51B0F278AC41A001E1F6F /* Home.storyboard */,
 				15C51B11278AC426001E1F6F /* HomeViewController.swift */,
 			);
@@ -392,6 +403,7 @@
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
+				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
