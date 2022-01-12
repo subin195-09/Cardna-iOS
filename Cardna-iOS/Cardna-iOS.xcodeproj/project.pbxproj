@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */; };
 		15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */; };
+		15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */; };
+		15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEB1278ECB42006EA23C /* CardDetailViewController.swift */; };
+		15A6EEB4278F1023006EA23C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEB3278F1023006EA23C /* String+.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetail.storyboard; sourceTree = "<group>"; };
+		15A6EEB1278ECB42006EA23C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		15A6EEB3278F1023006EA23C /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,15 @@
 				15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */,
 			);
 			path = AppXibs;
+			sourceTree = "<group>";
+		};
+		15A6EEAD278ECB05006EA23C /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */,
+				15A6EEB1278ECB42006EA23C /* CardDetailViewController.swift */,
+			);
+			path = CardDetail;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -172,6 +187,7 @@
 				15C51AF3278AB2F0001E1F6F /* Main.storyboard */,
 				15C51B09278AC2C5001E1F6F /* MainTabBarController.swift */,
 				15C51B0B278AC3E1001E1F6F /* Home */,
+				15A6EEAD278ECB05006EA23C /* CardDetail */,
 				15C51B0C278AC3EA001E1F6F /* Card */,
 				15C51B0D278AC3F9001E1F6F /* Insight */,
 				15C51B0E278AC408001E1F6F /* MyPage */,
@@ -224,6 +240,7 @@
 				15C51B20278ACA52001E1F6F /* UIColor+.swift */,
 				15C51B2E278C997F001E1F6F /* UIFont+.swift */,
 				98938427278D8F4D00ACDC06 /* UIView+.swift */,
+				15A6EEB3278F1023006EA23C /* String+.swift */,
 			);
 			path = AppExtensions;
 			sourceTree = "<group>";
@@ -339,6 +356,7 @@
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
 				15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */,
+				15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */,
 				15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
@@ -403,6 +421,7 @@
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
+				15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */,
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
@@ -411,6 +430,7 @@
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
+				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 			);
