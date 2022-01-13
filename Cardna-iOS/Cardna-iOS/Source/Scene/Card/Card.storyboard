@@ -130,16 +130,56 @@
                                     <constraint firstItem="1pH-I9-DKH" firstAttribute="leading" secondItem="EcM-Ee-Mv8" secondAttribute="leading" constant="16" id="xuv-dU-twI"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X88-QU-M5N">
+                                <rect key="frame" x="0.0" y="160" width="375" height="569"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lid-bl-36v">
+                                    <size key="itemSize" width="375" height="568"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardContainerCollectionViewCell" id="ToE-dO-4C6" customClass="CardContainerCollectionViewCell" customModule="Cardna_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.66666666666666663" width="375" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1P1-GY-0AB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIE-K0-fz3">
+                                                    <rect key="frame" x="0.0" y="50" width="375" height="468"/>
+                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WIE-K0-fz3" secondAttribute="trailing" id="8fl-xK-u1i"/>
+                                                <constraint firstItem="WIE-K0-fz3" firstAttribute="leading" secondItem="1P1-GY-0AB" secondAttribute="leading" id="AJj-CT-cEN"/>
+                                                <constraint firstItem="WIE-K0-fz3" firstAttribute="top" secondItem="1P1-GY-0AB" secondAttribute="top" constant="50" id="DW1-HZ-ToN"/>
+                                                <constraint firstAttribute="bottom" secondItem="WIE-K0-fz3" secondAttribute="bottom" constant="50" id="GsF-Cx-0Z4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="exampleView" destination="WIE-K0-fz3" id="WZn-nX-lEP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Af-YP-MaY" secondAttribute="trailing" id="4Ld-uv-KaQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X88-QU-M5N" secondAttribute="trailing" id="7V1-LU-E87"/>
                             <constraint firstItem="EcM-Ee-Mv8" firstAttribute="top" secondItem="4Af-YP-MaY" secondAttribute="bottom" id="8lK-q4-MnP"/>
                             <constraint firstItem="4Af-YP-MaY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BgX-Gf-zW1"/>
+                            <constraint firstItem="X88-QU-M5N" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IFb-Or-CJr"/>
                             <constraint firstItem="EcM-Ee-Mv8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ybh-eR-xTf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EcM-Ee-Mv8" secondAttribute="trailing" id="es0-lX-X1c"/>
                             <constraint firstItem="4Af-YP-MaY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g02-GE-Daq"/>
+                            <constraint firstItem="X88-QU-M5N" firstAttribute="top" secondItem="EcM-Ee-Mv8" secondAttribute="bottom" id="oWY-ZN-HLt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="X88-QU-M5N" secondAttribute="bottom" id="p0o-4g-ANg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="btmnavi2Inactive" selectedImage="btmnavi2Active" id="nan-JL-JP4">
@@ -148,6 +188,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addCardButton" destination="jLL-Wz-4Op" id="ogu-Hs-TSF"/>
+                        <outlet property="cardContainerCollectionView" destination="X88-QU-M5N" id="jmd-27-LeH"/>
                         <outlet property="cardCountLabel" destination="hR9-fY-3aQ" id="xbl-qB-bHX"/>
                         <outlet property="cardPackTitleCollectionView" destination="A8G-ni-jrN" id="MKO-y9-Yh2"/>
                         <outlet property="indicatorBarView" destination="1pH-I9-DKH" id="1Fg-ak-CYA"/>
@@ -167,6 +208,9 @@
         <image name="icbtCardplus" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
