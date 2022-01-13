@@ -255,7 +255,7 @@ class AddCardViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    func updateCountLabel(characterCount: Int) {
+    func updateContentsCountLabel(characterCount: Int) {
         cardContentsCountLabel.text = "\(characterCount)/200"
     }
     
@@ -265,16 +265,4 @@ class AddCardViewController: UIViewController {
     private func didTapTextView(_ sender: Any) {
         view.endEditing(true)
     }
-    
-    // MARK: 화면 전환 코드
-    
-//    @objc
-//    private func backButtonDidTap(_ sender: UIButton) {
-//        let nowVC = self.presentingViewController
-//        self.dismiss(animated: true){
-//            guard let mainVC = nowVC as? UINavigationController else { return }
-//            mainVC.popToRootViewController(animated: true)
-//        }
-//    }
-
 }

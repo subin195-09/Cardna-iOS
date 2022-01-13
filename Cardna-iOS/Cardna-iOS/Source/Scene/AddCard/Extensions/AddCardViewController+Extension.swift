@@ -19,7 +19,7 @@ extension AddCardViewController: UITextViewDelegate {
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             textView.text = cardContentsTextViewPlaceHolder
             textView.textColor = .w3
-            updateCountLabel(characterCount: 0)
+            updateContentsCountLabel(characterCount: 0)
         }
     }
 
@@ -30,7 +30,7 @@ extension AddCardViewController: UITextViewDelegate {
 
         let characterCount = newString.count
         guard characterCount <= 200 else { return false }
-        updateCountLabel(characterCount: characterCount)
+        updateContentsCountLabel(characterCount: characterCount)
 
         return true
     }
