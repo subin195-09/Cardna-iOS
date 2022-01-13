@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import MaterialComponents.MaterialBottomSheet
 
 class AddCardViewController: UIViewController {
     
@@ -273,11 +274,22 @@ class AddCardViewController: UIViewController {
         cardContentsCountLabel.text = "\(characterCount)/200"
     }
     
+    private func showBottomSheet() {
+        guard let bottomSheetVC = UIStoryboard(name: "AddCardBottomSheet", bundle: nil).instantiateViewController(withIdentifier: "AddCardBottomSheetViewController") as? AddCardBottomSheetViewController else { return }
+        
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: bottomSheetVC)
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 300
+        bottomSheet.adjustHeightForSafeAreaInsets = false
+        
+        self.present(bottomSheet, animated: true, completion: nil)
+    }
+    
     // MARK: - Objc Function
     
     @objc
     private func didImageViewTap(_ sender: Any) {
         print("tap")
+        showBottomSheet()
     }
     
     @objc

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */; };
+		142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */; };
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
 		14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardBottomSheet.storyboard; sourceTree = "<group>"; };
+		142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				14A17B8B278F526E00167ECE /* Extensions */,
 				14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */,
+				142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */,
+				142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */,
 			);
 			path = AddCard;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C51AFA278AB2F1001E1F6F /* LaunchScreen.storyboard in Resources */,
+				142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */,
 				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
@@ -477,6 +484,7 @@
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
+				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,

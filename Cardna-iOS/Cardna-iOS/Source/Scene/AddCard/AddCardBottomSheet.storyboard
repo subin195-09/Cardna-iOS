@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Card Bottom Sheet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddCardBottomSheetViewController" id="Y6W-OH-hqX" customClass="AddCardBottomSheetViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-rO-SKH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-tX-Oug">
+                                        <rect key="frame" x="341" y="30" width="49" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="심볼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUq-qE-Ou1">
+                                        <rect key="frame" x="24" y="61" width="30" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aUq-qE-Ou1" firstAttribute="top" secondItem="h2G-rO-SKH" secondAttribute="top" constant="61" id="DeU-TC-kus"/>
+                                    <constraint firstAttribute="trailing" secondItem="sg1-tX-Oug" secondAttribute="trailing" constant="24" id="Uyz-JC-ohb"/>
+                                    <constraint firstItem="sg1-tX-Oug" firstAttribute="top" secondItem="h2G-rO-SKH" secondAttribute="top" constant="30" id="i5b-Ma-ZDL"/>
+                                    <constraint firstItem="aUq-qE-Ou1" firstAttribute="leading" secondItem="h2G-rO-SKH" secondAttribute="leading" constant="24" id="qGm-YL-LDO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="h2G-rO-SKH" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="2Qn-uD-Sc5"/>
+                            <constraint firstItem="h2G-rO-SKH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Gik-vP-H47"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h2G-rO-SKH" secondAttribute="trailing" id="IFC-DB-KRs"/>
+                            <constraint firstAttribute="bottom" secondItem="h2G-rO-SKH" secondAttribute="bottom" id="TMF-aX-pL0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addCardBottomSheetView" destination="h2G-rO-SKH" id="fje-aR-eZx"/>
+                        <outlet property="completeButton" destination="sg1-tX-Oug" id="3LA-o3-vrX"/>
+                        <outlet property="symbolTitleLabel" destination="aUq-qE-Ou1" id="K2V-q3-Deh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="46"/>
+        </scene>
+    </scenes>
+</document>
