@@ -54,6 +54,8 @@ class AddCardViewController: UIViewController {
         $0.numberOfLines = 2
     }
     
+    var cardImageViewButton = UIButton()
+    
     var cardContentsUIView = UIView()
     
     var cardKeywordLabel1 = UILabel().then {
@@ -122,6 +124,7 @@ class AddCardViewController: UIViewController {
         super.viewDidLoad()
         setLayout()
         setGesture()
+        setTouchUpCardImageViewButton()
     }
     
     // MARK: - Function
@@ -133,7 +136,7 @@ class AddCardViewController: UIViewController {
     
     private func setViewHierarchy() {
         view.addSubviews(titleBarUIView, backButton, addCardViewTitleLabel, addCardScrollView)
-        self.addCardScrollView.addSubviews(cardImageView, emptyCardImage, emptyCardLabel,
+        self.addCardScrollView.addSubviews(emptyCardImage, emptyCardLabel, cardImageView, cardImageViewButton,
                                            cardContentsUIView, cardKeywordLabel1,
                                            cardKeywordTextField, cardKeywordLabel2,
                                            cardKeywordUnderLine, cardKeywordCountLabel,
@@ -180,6 +183,13 @@ class AddCardViewController: UIViewController {
             $0.top.equalTo(self.cardImageView.snp.top).inset(83)
             $0.centerX.equalTo(self.cardImageView)
             $0.height.equalTo(40)
+        }
+        
+        cardImageViewButton.snp.makeConstraints {
+            $0.top.equalTo(self.cardImageView)
+            $0.width.equalTo(190)
+            $0.height.equalTo(273)
+            $0.centerX.equalTo(self.addCardScrollView)
         }
         
         emptyCardLabel.snp.makeConstraints {
@@ -249,6 +259,10 @@ class AddCardViewController: UIViewController {
         }
     }
     
+    private func setTouchUpCardImageViewButton() {
+        cardImageViewButton.addTarget(self, action: #selector(didImageViewTap), for: .touchUpInside)
+    }
+    
     private func setGesture() {
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(didTapTextView(_:)))
@@ -260,6 +274,11 @@ class AddCardViewController: UIViewController {
     }
     
     // MARK: - Objc Function
+    
+    @objc
+    private func didImageViewTap(_ sender: Any) {
+        print("tap")
+    }
     
     @objc
     private func didTapTextView(_ sender: Any) {
