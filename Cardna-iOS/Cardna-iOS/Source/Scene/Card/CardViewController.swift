@@ -25,17 +25,16 @@ class CardViewController: UIViewController {
     
     @IBOutlet weak var cardPackTitleCollectionView: UICollectionView!
     @IBOutlet weak var indicatorBarView: UIView!
-    
     @IBOutlet weak var indicatorLeadingConstraint: NSLayoutConstraint!
     
-    
+    @IBOutlet weak var cardContainerCollectionView: UICollectionView!
     
     // MARK: - VC LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCollectionView()
         initialize()
+        setCollectionView()
         setLabelUI()
         setViewUI()
     }
@@ -43,7 +42,7 @@ class CardViewController: UIViewController {
     // MARK: - Function
     
     private func setCollectionView() {
-        [cardPackTitleCollectionView].forEach {
+        [cardPackTitleCollectionView, cardContainerCollectionView].forEach {
             $0?.delegate = self
             $0?.dataSource = self
         }
