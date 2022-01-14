@@ -45,5 +45,6 @@ class MyPageSettingViewController: UIViewController {
     
     func setLabelUI() {
         titleLabel.font = .cardnaSh1Sbd
+        titleLabel.textColor = .w1
     }
 }
