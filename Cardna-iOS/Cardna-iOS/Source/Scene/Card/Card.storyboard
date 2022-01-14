@@ -147,21 +147,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIE-K0-fz3">
-                                                    <rect key="frame" x="0.0" y="50" width="375" height="468"/>
-                                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                                </view>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-GI-jEE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                                    <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UWE-4d-Alu">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WIE-K0-fz3" secondAttribute="trailing" id="8fl-xK-u1i"/>
-                                                <constraint firstItem="WIE-K0-fz3" firstAttribute="leading" secondItem="1P1-GY-0AB" secondAttribute="leading" id="AJj-CT-cEN"/>
-                                                <constraint firstItem="WIE-K0-fz3" firstAttribute="top" secondItem="1P1-GY-0AB" secondAttribute="top" constant="50" id="DW1-HZ-ToN"/>
-                                                <constraint firstAttribute="bottom" secondItem="WIE-K0-fz3" secondAttribute="bottom" constant="50" id="GsF-Cx-0Z4"/>
+                                                <constraint firstAttribute="bottom" secondItem="gNG-GI-jEE" secondAttribute="bottom" id="Oqp-Ej-kRB"/>
+                                                <constraint firstAttribute="trailing" secondItem="gNG-GI-jEE" secondAttribute="trailing" id="Xk2-dn-GfP"/>
+                                                <constraint firstItem="gNG-GI-jEE" firstAttribute="leading" secondItem="1P1-GY-0AB" secondAttribute="leading" id="lcJ-la-t0U"/>
+                                                <constraint firstItem="gNG-GI-jEE" firstAttribute="top" secondItem="1P1-GY-0AB" secondAttribute="top" id="tSB-Ok-vIS"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="exampleView" destination="WIE-K0-fz3" id="WZn-nX-lEP"/>
+                                            <outlet property="cardPackCollectionView" destination="gNG-GI-jEE" id="F1P-Ad-NAL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,9 +215,6 @@
         <image name="icbtCardplus" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
