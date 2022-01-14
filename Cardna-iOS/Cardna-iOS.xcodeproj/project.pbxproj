@@ -51,6 +51,10 @@
 		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
 		98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */; };
 		98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */; };
+		98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */; };
+		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
+		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
+		98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,10 @@
 		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+Extension.swift"; sourceTree = "<group>"; };
+		98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
+		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
+		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
+		98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPageSettingViewController+Extension.swift"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,12 +265,8 @@
 		15C51B08278AC200001E1F6F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				15C51AF3278AB2F0001E1F6F /* Main.storyboard */,
-				15C51B09278AC2C5001E1F6F /* MainTabBarController.swift */,
+				98C6893B2791DE42008BB153 /* MyPageSetting */,
 				15A6EEC4279066CE006EA23C /* SelectCard */,
-				15C51B0B278AC3E1001E1F6F /* Home */,
-				15A6EEAD278ECB05006EA23C /* CardDetail */,
-				15C51B0C278AC3EA001E1F6F /* Card */,
 				14A17B8A278F524C00167ECE /* AddCard */,
 				15C51B0C278AC3EA001E1F6F /* Card */,
 				15A6EEAD278ECB05006EA23C /* CardDetail */,
@@ -383,6 +387,33 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		98C6893B2791DE42008BB153 /* MyPageSetting */ = {
+			isa = PBXGroup;
+			children = (
+				98C689432791DEEF008BB153 /* Extensions */,
+				98C689402791DEA7008BB153 /* Cell */,
+				98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */,
+				98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */,
+			);
+			path = MyPageSetting;
+			sourceTree = "<group>";
+		};
+		98C689402791DEA7008BB153 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		98C689432791DEEF008BB153 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ECEBD127D549C3142E0DC5A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */,
 				15C51AFA278AB2F1001E1F6F /* LaunchScreen.storyboard in Resources */,
 				142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */,
 				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
@@ -520,6 +552,7 @@
 			files = (
 				15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */,
 				15A6EECD27907782006EA23C /* SelectCardHeaderCollectionReusableView.swift in Sources */,
+				98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */,
 				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
 				14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */,
 				98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */,
@@ -538,12 +571,14 @@
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */,
+				98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
 				15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
+				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 				14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */,
 			);
