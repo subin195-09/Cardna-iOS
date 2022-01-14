@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListTableViewCell" rowHeight="111" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="Cardna_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYv-Bb-H6Z">
+                        <rect key="frame" x="16" y="6" width="288" height="99"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남준님이 소개를 적어줬어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-rc-V66">
+                                <rect key="frame" x="20" y="18" width="248" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="52v-IF-jRm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드나의 닝팝・남준" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzH-3g-a6G">
+                                <rect key="frame" x="20" y="45" width="127.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/01/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIz-3n-hnY">
+                                <rect key="frame" x="183.5" y="45.5" width="84.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e4Z-w3-Kzu">
+                                <rect key="frame" x="244" y="21" width="24" height="17.5"/>
+                                <color key="tintColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4fq-rc-V66" secondAttribute="trailing" constant="20" id="0In-0F-nV2"/>
+                            <constraint firstItem="e4Z-w3-Kzu" firstAttribute="centerY" secondItem="4fq-rc-V66" secondAttribute="centerY" id="D9z-Wo-e0O"/>
+                            <constraint firstItem="4fq-rc-V66" firstAttribute="leading" secondItem="DYv-Bb-H6Z" secondAttribute="leading" constant="20" id="Hyk-mp-aib"/>
+                            <constraint firstItem="e4Z-w3-Kzu" firstAttribute="trailing" secondItem="AIz-3n-hnY" secondAttribute="trailing" id="cHe-4F-Htw"/>
+                            <constraint firstItem="UzH-3g-a6G" firstAttribute="top" secondItem="4fq-rc-V66" secondAttribute="bottom" constant="3" id="fOK-qf-TG1"/>
+                            <constraint firstItem="UzH-3g-a6G" firstAttribute="leading" secondItem="4fq-rc-V66" secondAttribute="leading" id="iuW-bO-me1"/>
+                            <constraint firstItem="4fq-rc-V66" firstAttribute="top" secondItem="DYv-Bb-H6Z" secondAttribute="top" constant="18" id="qe3-Jn-kRD"/>
+                            <constraint firstItem="AIz-3n-hnY" firstAttribute="centerY" secondItem="UzH-3g-a6G" secondAttribute="centerY" id="rK4-2e-lWT"/>
+                            <constraint firstAttribute="trailing" secondItem="AIz-3n-hnY" secondAttribute="trailing" constant="20" id="uf4-tq-1fS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DYv-Bb-H6Z" secondAttribute="trailing" constant="16" id="AYh-ME-tGG"/>
+                    <constraint firstItem="DYv-Bb-H6Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="gd9-ud-EcU"/>
+                    <constraint firstAttribute="bottom" secondItem="DYv-Bb-H6Z" secondAttribute="bottom" constant="6" id="hrT-hN-7sw"/>
+                    <constraint firstItem="DYv-Bb-H6Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ppo-Zx-k9e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="DYv-Bb-H6Z" id="KFC-GP-FEa"/>
+                <outlet property="dateLabel" destination="AIz-3n-hnY" id="G2K-hQ-LzQ"/>
+                <outlet property="fromLabel" destination="UzH-3g-a6G" id="2Ny-95-gK1"/>
+                <outlet property="imageIcon" destination="e4Z-w3-Kzu" id="A8V-h5-lSi"/>
+                <outlet property="titleLabel" destination="4fq-rc-V66" id="Mmo-SS-Nv5"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="118.19196428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+    </resources>
+</document>

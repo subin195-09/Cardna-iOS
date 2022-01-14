@@ -24,6 +24,11 @@
 		15A6EECD27907782006EA23C /* SelectCardHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EECC27907781006EA23C /* SelectCardHeaderCollectionReusableView.swift */; };
 		15A6EED22791E7C3006EA23C /* SelectCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EED12791E7C3006EA23C /* SelectCardModalViewController.swift */; };
 		15A6EED42791EA8D006EA23C /* SelectCardModalViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */; };
+		15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EED62791F87F006EA23C /* CardNotYetBox.storyboard */; };
+		15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EED82791F8BB006EA23C /* CardNotYetBoxViewController.swift */; };
+		15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */; };
+		15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */; };
+		15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -77,6 +82,11 @@
 		15A6EECC27907781006EA23C /* SelectCardHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		15A6EED12791E7C3006EA23C /* SelectCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardModalViewController.swift; sourceTree = "<group>"; };
 		15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectCardModalViewController+Extension.swift"; sourceTree = "<group>"; };
+		15A6EED62791F87F006EA23C /* CardNotYetBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardNotYetBox.storyboard; sourceTree = "<group>"; };
+		15A6EED82791F8BB006EA23C /* CardNotYetBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNotYetBoxViewController.swift; sourceTree = "<group>"; };
+		15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardNotYetBoxViewController+Extension.swift"; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +179,8 @@
 			children = (
 				15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */,
 				15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */,
+				15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */,
+				15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */,
 			);
 			path = AppXibs;
 			sourceTree = "<group>";
@@ -199,6 +211,24 @@
 			children = (
 				15A6EECA27907201006EA23C /* SelectCardViewController+Extension.swift */,
 				15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15A6EED52791F829006EA23C /* CardNotYetBox */ = {
+			isa = PBXGroup;
+			children = (
+				15A6EEDE27920292006EA23C /* Extensions */,
+				15A6EED62791F87F006EA23C /* CardNotYetBox.storyboard */,
+				15A6EED82791F8BB006EA23C /* CardNotYetBoxViewController.swift */,
+			);
+			path = CardNotYetBox;
+			sourceTree = "<group>";
+		};
+		15A6EEDE27920292006EA23C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +301,7 @@
 		15C51B08278AC200001E1F6F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				15A6EED52791F829006EA23C /* CardNotYetBox */,
 				98C6893B2791DE42008BB153 /* MyPageSetting */,
 				15A6EEC4279066CE006EA23C /* SelectCard */,
 				14A17B8A278F524C00167ECE /* AddCard */,
@@ -501,6 +532,8 @@
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
 				9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */,
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
+				15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */,
+				15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
 				15A6EEC6279066F6006EA23C /* SelectCard.storyboard in Resources */,
 				15C51B18278AC43E001E1F6F /* Insight.storyboard in Resources */,
@@ -570,6 +603,8 @@
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
 				15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */,
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
+				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
+				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
@@ -587,6 +622,7 @@
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
+				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 				14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */,
 			);
