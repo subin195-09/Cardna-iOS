@@ -9,8 +9,12 @@ import UIKit
 
 class CardNotYetBoxViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var navigationTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - VC LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,8 @@ class CardNotYetBoxViewController: UIViewController {
         setTableView()
         registerXib()
     }
+    
+    // MARK: - Function
     
     func setUI() {
         navigationTitleLabel.font = .cardnaSh1Sbd
