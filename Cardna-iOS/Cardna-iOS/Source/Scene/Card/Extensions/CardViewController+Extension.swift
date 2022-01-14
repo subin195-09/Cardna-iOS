@@ -18,7 +18,6 @@ extension CardViewController {
             indicatorBarView.backgroundColor = .mainPurple
             indicatorLeadingConstraint.constant = 92
         }
-        
         UIView.animate(withDuration: 0.15) {
             self.view.layoutIfNeeded()
         }
@@ -30,20 +29,10 @@ extension CardViewController: UICollectionViewDelegate {
 
 extension CardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == cardPackTitleCollectionView {
-//            return 2
-//        }
-//        else if collectionView == cardContainerCollectionView {
-//            return 2
-//        }
-//        else {
-//            return 10
-//        }
         return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if collectionView == cardPackTitleCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardPackTitleCollectionViewCell.identifier, for: indexPath) as? CardPackTitleCollectionViewCell else { return UICollectionViewCell() }
             cell.setUI(index: indexPath.row, title: cardPackTitle[indexPath.row])
@@ -55,7 +44,6 @@ extension CardViewController: UICollectionViewDataSource {
         else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardContainerCollectionViewCell.identifier, for: indexPath) as? CardContainerCollectionViewCell else { return UICollectionViewCell() }
             cell.cellPage = nowPage
-            cell.setUI()
             return cell
         }
     }

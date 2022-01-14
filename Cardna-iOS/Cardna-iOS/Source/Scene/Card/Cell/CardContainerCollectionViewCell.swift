@@ -49,15 +49,10 @@ class CardContainerCollectionViewCell: UICollectionViewCell {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-        
-    }
-    
-    func setUI() {
     }
 }
 
 extension CardContainerCollectionViewCell: UICollectionViewDelegate {
-    
 }
 
 extension CardContainerCollectionViewCell: UICollectionViewDataSource {
