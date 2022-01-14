@@ -8,6 +8,12 @@
 import UIKit
 
 class AddCardBottomSheetViewController: UIViewController {
+    
+    // MARK: - Property
+    
+    var addCardSymbolIconList: [UIImage] = []
+    
+    // MARK: - IBOutlet
 
     @IBOutlet weak var addCardBottomSheetView: UIView!
     @IBOutlet weak var completeButton: UIButton!
@@ -16,13 +22,23 @@ class AddCardBottomSheetViewController: UIViewController {
     @IBOutlet weak var photoTitleLabel: UILabel!
     @IBOutlet weak var photoFromGalleryLabel: UILabel!
     
-    var addCardSymbolIconList: [UIImage] = []
+    // MARK: - VC LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initSymbolIconData()
         setLayout()
         setCollectionView()
+    }
+    
+    // MARK: - Function
+    
+    private func initSymbolIconData() {
+        addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmile,
+                                                  Const.Image.icbtSymbolHeart,
+                                                  Const.Image.icbtSymbolDia,
+                                                  Const.Image.icbtSymbolSpade,
+                                                  Const.Image.icbtSymbolClover])
     }
     
     private func setLayout() {
@@ -33,8 +49,8 @@ class AddCardBottomSheetViewController: UIViewController {
     
     private func setBottomSheetViewUI() {
         addCardBottomSheetView.layer.cornerRadius = 24
-        addCardBottomSheetView.backgroundColor = UIColor.darkGray
-        addCardSymbolCollectionView.backgroundColor = UIColor.darkGray
+        addCardBottomSheetView.backgroundColor = .darkGray
+        addCardSymbolCollectionView.backgroundColor = .darkGray
     }
     
     private func setButtonUI() {
@@ -54,13 +70,5 @@ class AddCardBottomSheetViewController: UIViewController {
     private func setCollectionView() {
         addCardSymbolCollectionView.dataSource = self
         addCardSymbolCollectionView.delegate = self
-    }
-    
-    private func initSymbolIconData() {
-        addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmile,
-                                                  Const.Image.icbtSymbolHeart,
-                                                  Const.Image.icbtSymbolDia,
-                                                  Const.Image.icbtSymbolSpade,
-                                                  Const.Image.icbtSymbolClover])
     }
 }

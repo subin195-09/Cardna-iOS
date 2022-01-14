@@ -14,7 +14,6 @@ class AddCardSymbolCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var symbolIconImageView: UIImageView!
     
     func setData(symbolIconImage: UIImage) {
-        print(symbolIconImage)
         symbolIconImageView.image = symbolIconImage
     }
 }
