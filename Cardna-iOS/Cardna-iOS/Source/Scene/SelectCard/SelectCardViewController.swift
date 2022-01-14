@@ -45,4 +45,11 @@ class SelectCardViewController: UIViewController {
         countLabel.textColor = .w3
         countLabel.font = .Pretendard(.light, size: 12)
     }
+    
+    // MARK: - IBAction
+    
+    @IBAction func allCardButtonDidTap(_ sender: Any) {
+        guard let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCardModalViewController") as? SelectCardModalViewController else { return }
+        self.present(cardVC, animated: true, completion: nil)
+    }
 }
