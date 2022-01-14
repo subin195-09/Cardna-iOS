@@ -22,6 +22,8 @@
 		15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEC7279066FE006EA23C /* SelectCardViewController.swift */; };
 		15A6EECB27907201006EA23C /* SelectCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EECA27907201006EA23C /* SelectCardViewController+Extension.swift */; };
 		15A6EECD27907782006EA23C /* SelectCardHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EECC27907781006EA23C /* SelectCardHeaderCollectionReusableView.swift */; };
+		15A6EED22791E7C3006EA23C /* SelectCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EED12791E7C3006EA23C /* SelectCardModalViewController.swift */; };
+		15A6EED42791EA8D006EA23C /* SelectCardModalViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -73,6 +75,8 @@
 		15A6EEC7279066FE006EA23C /* SelectCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardViewController.swift; sourceTree = "<group>"; };
 		15A6EECA27907201006EA23C /* SelectCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectCardViewController+Extension.swift"; sourceTree = "<group>"; };
 		15A6EECC27907781006EA23C /* SelectCardHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		15A6EED12791E7C3006EA23C /* SelectCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardModalViewController.swift; sourceTree = "<group>"; };
+		15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectCardModalViewController+Extension.swift"; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			children = (
 				15A6EEC9279071EA006EA23C /* Extensions */,
 				15A6EEC5279066F6006EA23C /* SelectCard.storyboard */,
+				15A6EED12791E7C3006EA23C /* SelectCardModalViewController.swift */,
 				15A6EEC7279066FE006EA23C /* SelectCardViewController.swift */,
 				15A6EECC27907781006EA23C /* SelectCardHeaderCollectionReusableView.swift */,
 			);
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				15A6EECA27907201006EA23C /* SelectCardViewController+Extension.swift */,
+				15A6EED32791EA8D006EA23C /* SelectCardModalViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,9 +557,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */,
+				15A6EED42791EA8D006EA23C /* SelectCardModalViewController+Extension.swift in Sources */,
 				15A6EECD27907782006EA23C /* SelectCardHeaderCollectionReusableView.swift in Sources */,
 				98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */,
 				15C51B04278AB591001E1F6F /* Const.swift in Sources */,
+				15A6EED22791E7C3006EA23C /* SelectCardModalViewController.swift in Sources */,
 				14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */,
 				98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */,
 				15A6EECB27907201006EA23C /* SelectCardViewController+Extension.swift in Sources */,

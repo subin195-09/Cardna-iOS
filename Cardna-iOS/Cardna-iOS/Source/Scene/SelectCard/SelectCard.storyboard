@@ -88,6 +88,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="icbtSymbolHeartSelect"/>
+                                        <connections>
+                                            <action selector="allCardButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XfP-QW-AU1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,6 +130,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="626" y="155"/>
+        </scene>
+        <!--Select Card Modal View Controller-->
+        <scene sceneID="uop-yh-NhE">
+            <objects>
+                <viewController storyboardIdentifier="SelectCardModalViewController" id="lL8-AV-fIU" customClass="SelectCardModalViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7pE-cj-2Ij">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SEA-BX-JM7">
+                                <rect key="frame" x="154.5" y="76" width="105" height="32"/>
+                                <segments>
+                                    <segment title="카드나"/>
+                                    <segment title="카드너"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCt-Sa-Psf">
+                                <rect key="frame" x="194.5" y="109" width="25" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="coJ-PZ-99E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-9J-U5T">
+                                <rect key="frame" x="347.5" y="76" width="48.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-dM-9Ne">
+                                <rect key="frame" x="0.0" y="137" width="414" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sik-9P-850">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Q7-WY-wck"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SEA-BX-JM7" firstAttribute="top" secondItem="1Q7-WY-wck" secondAttribute="top" constant="32" id="FiO-6f-Gc8"/>
+                            <constraint firstItem="NCt-Sa-Psf" firstAttribute="top" secondItem="SEA-BX-JM7" secondAttribute="bottom" constant="2" id="IoS-tB-cW2"/>
+                            <constraint firstItem="AYS-dM-9Ne" firstAttribute="leading" secondItem="1Q7-WY-wck" secondAttribute="leading" id="MQo-jN-8fw"/>
+                            <constraint firstItem="wFb-9J-U5T" firstAttribute="centerY" secondItem="SEA-BX-JM7" secondAttribute="centerY" id="Na8-V4-Dj5"/>
+                            <constraint firstItem="NCt-Sa-Psf" firstAttribute="centerX" secondItem="SEA-BX-JM7" secondAttribute="centerX" id="TNz-Dc-B1B"/>
+                            <constraint firstAttribute="bottom" secondItem="AYS-dM-9Ne" secondAttribute="bottom" id="Vmz-UP-S8o"/>
+                            <constraint firstItem="SEA-BX-JM7" firstAttribute="centerX" secondItem="1Q7-WY-wck" secondAttribute="centerX" id="asf-q0-fgf"/>
+                            <constraint firstItem="AYS-dM-9Ne" firstAttribute="trailing" secondItem="1Q7-WY-wck" secondAttribute="trailing" id="fWj-qp-oZn"/>
+                            <constraint firstItem="AYS-dM-9Ne" firstAttribute="top" secondItem="NCt-Sa-Psf" secondAttribute="bottom" constant="10" id="oy3-yb-a5U"/>
+                            <constraint firstItem="1Q7-WY-wck" firstAttribute="trailing" secondItem="wFb-9J-U5T" secondAttribute="trailing" constant="18" id="r2Q-zc-7jq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="AYS-dM-9Ne" id="sv7-NN-RUW"/>
+                        <outlet property="completeButton" destination="wFb-9J-U5T" id="npK-is-SSE"/>
+                        <outlet property="countLabel" destination="NCt-Sa-Psf" id="HSD-t1-GCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8c6-xA-cm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1362" y="164"/>
         </scene>
     </scenes>
     <resources>
