@@ -276,11 +276,9 @@ class AddCardViewController: UIViewController {
     
     private func showBottomSheet() {
         guard let bottomSheetVC = UIStoryboard(name: "AddCardBottomSheet", bundle: nil).instantiateViewController(withIdentifier: "AddCardBottomSheetViewController") as? AddCardBottomSheetViewController else { return }
-        
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: bottomSheetVC)
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 300
         bottomSheet.adjustHeightForSafeAreaInsets = false
-        
         self.present(bottomSheet, animated: true, completion: nil)
     }
     
