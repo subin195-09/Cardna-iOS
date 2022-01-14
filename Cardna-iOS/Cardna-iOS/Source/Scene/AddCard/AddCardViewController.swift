@@ -288,7 +288,6 @@ class AddCardViewController: UIViewController {
     
     @objc
     private func didImageViewTap(_ sender: Any) {
-        print("tap")
         showBottomSheet()
     }
     
