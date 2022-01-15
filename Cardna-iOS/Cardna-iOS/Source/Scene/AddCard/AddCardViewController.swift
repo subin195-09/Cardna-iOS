@@ -118,6 +118,7 @@ class AddCardViewController: UIViewController {
         $0.titleLabel?.font = .cardnaH5Sbd
         $0.backgroundColor = .mainGreen
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(showCompletedCard(_:)), for: .touchUpInside)
     }
     
     // MARK: - VC LifeCycle
@@ -293,5 +294,12 @@ class AddCardViewController: UIViewController {
     @objc
     private func didTapTextView(_ sender: Any) {
         view.endEditing(true)
+    }
+    
+    @objc
+    private func showCompletedCard(_ sender: Any) {
+        guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
+        completedCardVC.receivedText = cardKeywordTextField.text ?? ""
+        self.present(completedCardVC, animated: true, completion: nil)
     }
 }

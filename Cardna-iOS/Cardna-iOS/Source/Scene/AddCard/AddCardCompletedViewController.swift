@@ -1,0 +1,48 @@
+//
+//  AddCardCompletedViewController.swift
+//  Cardna-iOS
+//
+//  Created by 이남준 on 2022/01/15.
+//
+
+import UIKit
+
+class AddCardCompletedViewController: UIViewController {
+    
+    // MARK: - Property
+    
+    var receivedText = ""
+    
+    // MARK: - IBOutlet
+
+    @IBOutlet weak var completedMessage: UILabel!
+    @IBOutlet weak var makedCard: UIView!
+    @IBOutlet weak var makedCardImageView: UIImageView!
+    @IBOutlet weak var makedCardLabel: UILabel!
+    
+    // MARK: - VC LifeCycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        self.makedCardLabel.text = receivedText
+    }
+    
+    // MARK: - Function
+    
+    private func setUI() {
+        setLabel()
+        setCardView()
+    }
+    
+    private func setLabel() {
+        completedMessage.textColor = .w1
+        completedMessage.font = .cardnaH5Sbd
+    }
+    
+    private func setCardView() {
+        makedCard.layer.cornerRadius = 10
+        makedCardLabel.font = .cardnaH5Sbd
+        makedCardLabel.textColor = .black
+    }
+}

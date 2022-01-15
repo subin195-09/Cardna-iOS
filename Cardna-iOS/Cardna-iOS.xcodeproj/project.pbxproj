@@ -10,6 +10,8 @@
 		142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */; };
 		142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */; };
 		142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */; };
+		143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */; };
+		143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E2D662793079100706038 /* AddCardCompletedViewController.swift */; };
 		146DA7B12792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */; };
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
@@ -79,6 +81,8 @@
 		142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardBottomSheet.storyboard; sourceTree = "<group>"; };
 		142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSymbolCollectionViewCell.swift; sourceTree = "<group>"; };
+		143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardCompletedViewController.storyboard; sourceTree = "<group>"; };
+		143E2D662793079100706038 /* AddCardCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardCompletedViewController.swift; sourceTree = "<group>"; };
 		146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardBottomSheetViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */,
 				142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */,
 				142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */,
+				143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */,
+				143E2D662793079100706038 /* AddCardCompletedViewController.swift */,
 			);
 			path = AddCard;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */,
 				15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
+				143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */,
 				15A6EEC6279066F6006EA23C /* SelectCard.storyboard in Resources */,
 				15C51B18278AC43E001E1F6F /* Insight.storyboard in Resources */,
 			);
@@ -696,6 +703,7 @@
 				98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
+				143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */,
 				15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */,
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
 				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
