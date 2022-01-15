@@ -70,9 +70,9 @@
                     </view>
                     <connections>
                         <outlet property="completedMessage" destination="JsA-4q-yVi" id="krC-n8-yHC"/>
-                        <outlet property="makedCard" destination="Tld-f6-PHV" id="LVh-8g-U3F"/>
                         <outlet property="makedCardImageView" destination="0aQ-Uc-Tj7" id="957-a6-NBe"/>
-                        <outlet property="makedCardLabel" destination="Tld-f6-PHV" id="iG3-fp-HkN"/>
+                        <outlet property="makedCardLabel" destination="Tld-f6-PHV" id="bTB-Fm-iXB"/>
+                        <outlet property="makedCardUIView" destination="rJP-Mt-nzZ" id="cOS-tR-1Zf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

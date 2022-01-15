@@ -16,7 +16,7 @@ class AddCardCompletedViewController: UIViewController {
     // MARK: - IBOutlet
 
     @IBOutlet weak var completedMessage: UILabel!
-    @IBOutlet weak var makedCard: UIView!
+    @IBOutlet weak var makedCardUIView: UIView!
     @IBOutlet weak var makedCardImageView: UIImageView!
     @IBOutlet weak var makedCardLabel: UILabel!
     
@@ -41,7 +41,7 @@ class AddCardCompletedViewController: UIViewController {
     }
     
     private func setCardView() {
-        makedCard.layer.cornerRadius = 10
+        makedCardUIView.layer.cornerRadius = 10
         makedCardLabel.font = .cardnaH5Sbd
         makedCardLabel.textColor = .black
     }
