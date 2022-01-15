@@ -18,7 +18,6 @@ class AddCardViewController: UIViewController {
     var cardKeywordCount: Int = 0
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
     
-    
     // MARK: - Component
     
     var titleBarUIView = UIView()
@@ -41,6 +40,8 @@ class AddCardViewController: UIViewController {
         $0.layer.cornerRadius = 10
         $0.layer.borderColor = UIColor.w3.cgColor
         $0.layer.borderWidth = 1.0
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
     }
     
     var emptyCardImage = UIImageView().then {
@@ -117,6 +118,7 @@ class AddCardViewController: UIViewController {
         $0.titleLabel?.font = .cardnaH5Sbd
         $0.backgroundColor = .mainGreen
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(showCompletedCard(_:)), for: .touchUpInside)
     }
     
     // MARK: - VC LifeCycle
@@ -292,5 +294,14 @@ class AddCardViewController: UIViewController {
     @objc
     private func didTapTextView(_ sender: Any) {
         view.endEditing(true)
+    }
+    
+    @objc
+    private func showCompletedCard(_ sender: Any) {
+        guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
+        completedCardVC.receivedText = cardKeywordTextField.text ?? ""
+        completedCardVC.receivedImage = cardImageView.image ?? UIImage()
+        completedCardVC.modalPresentationStyle = .fullScreen
+        self.present(completedCardVC, animated: true, completion: nil)
     }
 }
