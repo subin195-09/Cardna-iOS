@@ -10,6 +10,7 @@
 		142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */; };
 		142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */; };
 		142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */; };
+		146DA7B12792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */; };
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
 		14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */; };
@@ -68,6 +69,7 @@
 		142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardBottomSheet.storyboard; sourceTree = "<group>"; };
 		142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSymbolCollectionViewCell.swift; sourceTree = "<group>"; };
+		146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardBottomSheetViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */,
+				146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */,
 				98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */,
 				15A6EECB27907201006EA23C /* SelectCardViewController+Extension.swift in Sources */,
+				146DA7B12792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
