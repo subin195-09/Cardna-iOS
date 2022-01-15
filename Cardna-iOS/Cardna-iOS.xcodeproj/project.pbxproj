@@ -30,6 +30,11 @@
 		15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */; };
 		15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */; };
 		15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */; };
+		15A6EEE4279298BD006EA23C /* MyPageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEE3279298BD006EA23C /* MyPageViewController+Extension.swift */; };
+		15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEE527929A4E006EA23C /* MyPageProfileTableViewCell.swift */; };
+		15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */; };
+		15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */; };
+		15A6EEEC2792A165006EA23C /* MyPageFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -57,6 +62,8 @@
 		98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98817C6727929AD200819892 /* EmailSearch.storyboard */; };
 		98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98817C6927929B0600819892 /* EmailSearchViewController.swift */; };
 		98817C6C2792A2E700819892 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98817C6B2792A2E700819892 /* UITextField+.swift */; };
+		98817C722792C5D100819892 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98817C712792C5D100819892 /* Initial.storyboard */; };
+		98817C742792C5E100819892 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98817C732792C5E100819892 /* InitialViewController.swift */; };
 		9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */; };
 		98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */; };
 		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
@@ -92,6 +99,11 @@
 		15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardNotYetBoxViewController+Extension.swift"; sourceTree = "<group>"; };
+		15A6EEE3279298BD006EA23C /* MyPageViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPageViewController+Extension.swift"; sourceTree = "<group>"; };
+		15A6EEE527929A4E006EA23C /* MyPageProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProfileTableViewCell.swift; sourceTree = "<group>"; };
+		15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +133,8 @@
 		98817C6727929AD200819892 /* EmailSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailSearch.storyboard; sourceTree = "<group>"; };
 		98817C6927929B0600819892 /* EmailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSearchViewController.swift; sourceTree = "<group>"; };
 		98817C6B2792A2E700819892 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		98817C712792C5D100819892 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
+		98817C732792C5E100819892 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardBottomSheet.storyboard; sourceTree = "<group>"; };
 		9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -190,6 +204,8 @@
 				15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */,
 				15A6EEDA2792001E006EA23C /* ListTableViewCell.swift */,
 				15A6EEDB2792001E006EA23C /* ListTableViewCell.xib */,
+				15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */,
+				15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */,
 			);
 			path = AppXibs;
 			sourceTree = "<group>";
@@ -240,6 +256,23 @@
 				15A6EEDF279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15A6EEE1279297AD006EA23C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15A6EEE3279298BD006EA23C /* MyPageViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15A6EEE2279297B6006EA23C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15A6EEE527929A4E006EA23C /* MyPageProfileTableViewCell.swift */,
+				15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -310,6 +343,7 @@
 		15C51B08278AC200001E1F6F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				98817C702792C58300819892 /* Initial */,
 				98817C6627929A7700819892 /* EmailSearch */,
 				15A6EED52791F829006EA23C /* CardNotYetBox */,
 				98C6893B2791DE42008BB153 /* MyPageSetting */,
@@ -361,6 +395,8 @@
 		15C51B0E278AC408001E1F6F /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				15A6EEE2279297B6006EA23C /* Cell */,
+				15A6EEE1279297AD006EA23C /* Extensions */,
 				15C51B1B278AC44B001E1F6F /* MyPage.storyboard */,
 				15C51B1D278AC456001E1F6F /* MyPageViewController.swift */,
 			);
@@ -425,6 +461,15 @@
 				98817C6927929B0600819892 /* EmailSearchViewController.swift */,
 			);
 			path = EmailSearch;
+			sourceTree = "<group>";
+		};
+		98817C702792C58300819892 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				98817C712792C5D100819892 /* Initial.storyboard */,
+				98817C732792C5E100819892 /* InitialViewController.swift */,
+			);
+			path = Initial;
 			sourceTree = "<group>";
 		};
 		98BDF5A2278F5B6A00B02F33 /* Cell */ = {
@@ -542,6 +587,7 @@
 				98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */,
 				15C51AFA278AB2F1001E1F6F /* LaunchScreen.storyboard in Resources */,
 				142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */,
+				98817C722792C5D100819892 /* Initial.storyboard in Resources */,
 				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
@@ -550,6 +596,7 @@
 				98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */,
 				15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
+				15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
 				9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */,
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
@@ -625,6 +672,7 @@
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
 				15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */,
+				15A6EEE4279298BD006EA23C /* MyPageViewController+Extension.swift in Sources */,
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
@@ -635,16 +683,20 @@
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
+				15A6EEEC2792A165006EA23C /* MyPageFriendsTableViewCell.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */,
 				98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */,
+				98817C742792C5E100819892 /* InitialViewController.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
+				15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */,
 				15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */,
 				98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
+				15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */,
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
 				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
