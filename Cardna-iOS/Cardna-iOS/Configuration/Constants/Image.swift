@@ -36,7 +36,15 @@ extension Const {
         static let icbtBoxbackPurple = UIImage(named: "icbtBoxbackPurple")!
         static let icbtBoxbackGreen = UIImage(named: "icbtBoxbackGreen")!
         static let icbtBoxbackGray = UIImage(named: "icbtBoxbackGray")!
-        
+        static let icbtWrite = UIImage(named: "icbtWrite")!
+        static let icbtFriendsplus = UIImage(named: "icbtFriendsplus")!
+        static let icbtSetting = UIImage(named: "icbtSetting")!
+        static let btFriendsplusEll = UIImage(named: "btFriendsplusEll")!
+        static let btFriendspluscheckEll = UIImage(named: "btFriendspluscheckEll")!
+        static let icbtX = UIImage(named: "icbtX")!
+        static let icbtBox = UIImage(named: "icbtBox")!
+        static let icbtTrash = UIImage(named: "icbtTrash")!
+        static let icbtFriendalready = UIImage(named: "icbtFriendalready")!
         
         // MARK: - 카드추가 모달 icon
         
@@ -80,6 +88,44 @@ extension Const {
         // MARK: - 카드추가뷰 이미지
         
         static let imgCardimg = UIImage(named: "imgCardimg")!
+        
+        // MARK: - 공감
+        static let likeUnselected = UIImage(named: "likeUnselected")!
+        static let likeSelected = UIImage(named: "likeSelected")!
+        
+        // MARK: - 빈 카드이미지 에셋
+        
+        static let imgSymSmilePur = UIImage(named: "imgSymSmilePur")!
+        static let imgSymHeartPur = UIImage(named: "imgSymHeartPur")!
+        static let imgSymSpadePur = UIImage(named: "imgSymSpadePur")!
+        static let imgSymCloverPur = UIImage(named: "imgSymCloverPur")!
+        static let imgSymDiaPur = UIImage(named: "imgSymDiaPur")!
+        static let imgSymSmile = UIImage(named: "imgSymSmile")!
+        static let imgSymHeart = UIImage(named: "imgSymHeart")!
+        static let imgSymSpade = UIImage(named: "imgSymSpade")!
+        static let imgSymClover = UIImage(named: "imgSymClover")!
+        static let imgSymDia = UIImage(named: "imgSymDia")!
+        
+        // MARK: - 카드 수정 전체카드 에셋
+        
+        static let fbtCardpack = UIImage(named: "fbtCardpack")!
+        
+        // MARK: - 메인로고
+        
+        static let cardnalogo = UIImage(named: "cardnalogo")!
+        
+        // MARK: - 인사이트
+        
+        static let openArea = UIImage(named: "openArea")!
+        static let rightshy = UIImage(named: "rightshy")!
+        static let leftshy = UIImage(named: "leftshy")!
+        static let blindArea = UIImage(named: "blindArea")!
+        static let gradientbg = UIImage(named: "gradientbg")!
+        
+        // MARK: - 카드 - 버튼
+        static let btMinus = UIImage(named: "btMinus")!
+        
+        // MARK: - 갤러리 아이콘
+        static let icGallery = UIImage(named: "icGallery")!
     }
-    
 }
