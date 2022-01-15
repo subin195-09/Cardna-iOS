@@ -9,6 +9,8 @@ import UIKit
 
 class MyPageViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var navigationTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var friendTitleLabel: UILabel!
@@ -16,11 +18,15 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var friendCountLabel: UILabel!
     
+    // MARK: - VC LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setTableView()
     }
+    
+    // MARK: - Function
     
     func setUI() {
         setNavigationBarUI()
@@ -71,5 +77,4 @@ class MyPageViewController: UIViewController {
             }
         }
     }
-    
 }
