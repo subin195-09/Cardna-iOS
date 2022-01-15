@@ -12,6 +12,7 @@ class AddCardCompletedViewController: UIViewController {
     // MARK: - Property
     
     var receivedText = ""
+    var receivedImage = UIImage()
     
     // MARK: - IBOutlet
 
@@ -26,6 +27,7 @@ class AddCardCompletedViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         self.makedCardLabel.text = receivedText
+        self.makedCardImageView.image = receivedImage
     }
     
     // MARK: - Function
@@ -44,5 +46,7 @@ class AddCardCompletedViewController: UIViewController {
         makedCardUIView.layer.cornerRadius = 10
         makedCardLabel.font = .cardnaH5Sbd
         makedCardLabel.textColor = .black
+        makedCardImageView.contentMode = .scaleAspectFill
+        makedCardImageView.clipsToBounds = true
     }
 }

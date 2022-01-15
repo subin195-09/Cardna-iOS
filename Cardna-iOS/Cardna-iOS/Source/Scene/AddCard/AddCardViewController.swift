@@ -300,6 +300,8 @@ class AddCardViewController: UIViewController {
     private func showCompletedCard(_ sender: Any) {
         guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
         completedCardVC.receivedText = cardKeywordTextField.text ?? ""
+        completedCardVC.receivedImage = cardImageView.image ?? UIImage()
+        completedCardVC.modalPresentationStyle = .fullScreen
         self.present(completedCardVC, animated: true, completion: nil)
     }
 }
