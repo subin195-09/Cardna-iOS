@@ -12,6 +12,7 @@ class AddCardBottomSheetViewController: UIViewController {
     // MARK: - Property
     
     var addCardSymbolIconList: [UIImage] = []
+    let imagePickerController = UIImagePickerController()
     
     // MARK: - IBOutlet
 
@@ -29,6 +30,7 @@ class AddCardBottomSheetViewController: UIViewController {
         initSymbolIconData()
         setLayout()
         setCollectionView()
+        setImagePickerController()
     }
     
     // MARK: - Function
@@ -70,5 +72,9 @@ class AddCardBottomSheetViewController: UIViewController {
     private func setCollectionView() {
         addCardSymbolCollectionView.dataSource = self
         addCardSymbolCollectionView.delegate = self
+    }
+    
+    private func setImagePickerController() {
+        imagePickerController.delegate = self
     }
 }
