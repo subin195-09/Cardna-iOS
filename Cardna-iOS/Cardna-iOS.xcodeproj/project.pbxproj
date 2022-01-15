@@ -16,6 +16,9 @@
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
 		14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */; };
+		15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF2279356B400F37EB4 /* lottie_cardyou.json */; };
+		15232FF5279356B900F37EB4 /* lottie_cardme.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF4279356B900F37EB4 /* lottie_cardme.json */; };
+		15232FF7279356C000F37EB4 /* gif_confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF6279356C000F37EB4 /* gif_confetti.json */; };
 		15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */; };
 		15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */; };
 		15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */; };
@@ -87,6 +90,9 @@
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		15232FF2279356B400F37EB4 /* lottie_cardyou.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardyou.json; sourceTree = "<group>"; };
+		15232FF4279356B900F37EB4 /* lottie_cardme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardme.json; sourceTree = "<group>"; };
+		15232FF6279356C000F37EB4 /* gif_confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gif_confetti.json; sourceTree = "<group>"; };
 		15582F3E278D7B2400C38614 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		15582F3F278D7B2400C38614 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A6EEAF278ECB2A006EA23C /* CardDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetail.storyboard; sourceTree = "<group>"; };
@@ -193,6 +199,16 @@
 				146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15232FF1279356A900F37EB4 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				15232FF2279356B400F37EB4 /* lottie_cardyou.json */,
+				15232FF4279356B900F37EB4 /* lottie_cardme.json */,
+				15232FF6279356C000F37EB4 /* gif_confetti.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		15582F3C278D7AAA00C38614 /* AppSources */ = {
@@ -434,6 +450,7 @@
 		15C51B23278ACB79001E1F6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15232FF1279356A900F37EB4 /* Lottie */,
 				15C51B25278C9879001E1F6F /* Font */,
 				15C51AF8278AB2F1001E1F6F /* LaunchScreen.storyboard */,
 				15C51AF6278AB2F1001E1F6F /* Assets.xcassets */,
@@ -597,6 +614,7 @@
 				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
+				15232FF7279356C000F37EB4 /* gif_confetti.json in Resources */,
 				15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */,
 				15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */,
 				98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */,
@@ -607,10 +625,12 @@
 				9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */,
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
 				15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */,
+				15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */,
 				15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
 				143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */,
 				15A6EEC6279066F6006EA23C /* SelectCard.storyboard in Resources */,
+				15232FF5279356B900F37EB4 /* lottie_cardme.json in Resources */,
 				15C51B18278AC43E001E1F6F /* Insight.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
