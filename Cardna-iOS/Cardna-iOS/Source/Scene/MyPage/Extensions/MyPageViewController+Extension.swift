@@ -13,14 +13,12 @@ extension MyPageViewController: UITableViewDelegate {
 
 extension MyPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         if section == 1 {
             return 122
         }
         else {
             return 0
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,12 +30,8 @@ extension MyPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 1 {
-            return headerView
-        }
-        
+        if section == 1 { return headerView }
         else { return nil }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +46,6 @@ extension MyPageViewController: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,6 +55,4 @@ extension MyPageViewController: UITableViewDataSource {
         default: return 0
         }
     }
-    
-    
 }

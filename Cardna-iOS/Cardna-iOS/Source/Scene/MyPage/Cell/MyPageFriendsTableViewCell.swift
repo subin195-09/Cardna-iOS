@@ -32,7 +32,6 @@ class MyPageFriendsTableViewCell: UITableViewCell {
         let nib = UINib(nibName: ProfileCollectionViewCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
     }
-
 }
 
 extension MyPageFriendsTableViewCell {
