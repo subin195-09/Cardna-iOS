@@ -29,6 +29,12 @@ class CardCollectionViewCell: UICollectionViewCell {
         setUI()
     }
     
+    override func prepareForReuse() {
+        imageView.image = nil
+        titleLabel.text = nil
+        bgView.backgroundColor = .w2
+    }
+    
     // MARK: - Function
     
     func setUI() {
