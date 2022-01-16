@@ -52,6 +52,7 @@
 		15ABE49F2794CD0600516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE49E2794CD0600516170 /* MainCardService.swift */; };
 		15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A02794CD0E00516170 /* MainCardRouter.swift */; };
 		15ABE4A62794CD6900516170 /* MainCardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A52794CD6900516170 /* MainCardResponse.swift */; };
+		15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A72794D5A400516170 /* UIImageView+.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -140,6 +141,7 @@
 		15ABE49E2794CD0600516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCardService.swift; path = ../../../../../../../SOPT/Keepin/MainCardService.swift; sourceTree = "<group>"; };
 		15ABE4A02794CD0E00516170 /* MainCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardRouter.swift; sourceTree = "<group>"; };
 		15ABE4A52794CD6900516170 /* MainCardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardResponse.swift; sourceTree = "<group>"; };
+		15ABE4A72794D5A400516170 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 				15A6EEB3278F1023006EA23C /* String+.swift */,
 				14A17B88278F36EC00167ECE /* UILabel+.swift */,
 				98817C6B2792A2E700819892 /* UITextField+.swift */,
+				15ABE4A72794D5A400516170 /* UIImageView+.swift */,
 			);
 			path = AppExtensions;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
 				15233001279366A300F37EB4 /* NetworkConstant.swift in Sources */,
+				15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
 				15232FFD2793617F00F37EB4 /* MoyaLoggingPlugin.swift in Sources */,
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,

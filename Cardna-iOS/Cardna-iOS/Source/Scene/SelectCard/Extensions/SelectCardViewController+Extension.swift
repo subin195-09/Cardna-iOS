@@ -41,7 +41,7 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("zzz")
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: UIImage(), title: "ㅋㅋ대표카드", isMe: true, small: true)
+        cell.setData(image: "https://firebasestorage.googleapis.com/v0/b/cardna-29f5b.appspot.com/o/20220115_212100_64397479199.jpeg?alt=media", title: "ㅋㅋ대표카드", isMe: true, small: true)
         return cell
     }
     
