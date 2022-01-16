@@ -29,7 +29,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: UIImage(), title: "우왕", isMe: true)
+        cell.setData(image: Const.Image.imgSymSmile, title: "우왕", isMe: true, small: false)
         return cell
     }
 }

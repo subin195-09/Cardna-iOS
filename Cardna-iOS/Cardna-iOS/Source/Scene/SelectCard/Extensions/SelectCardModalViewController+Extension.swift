@@ -28,7 +28,7 @@ extension SelectCardModalViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: UIImage(), title: "ㅋㅋㅋ ", isMe: true)
+        cell.setData(image: UIImage(), title: "ㅋㅋㅋ ", isMe: true, small: true)
         return cell
     }
 }
