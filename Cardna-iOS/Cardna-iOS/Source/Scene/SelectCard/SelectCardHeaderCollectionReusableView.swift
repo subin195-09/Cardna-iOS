@@ -32,7 +32,7 @@ class SelectCardHeaderCollectionReusableView: UICollectionReusableView {
     
     
     func configure() {
-        self.backgroundColor = .black
+        self.backgroundColor = .clear
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.adjustsFontForContentSizeCategory = true
