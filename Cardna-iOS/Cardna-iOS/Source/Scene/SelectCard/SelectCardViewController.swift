@@ -11,6 +11,9 @@ class SelectCardViewController: UIViewController {
     
     // MARK: - IBOutlet
     
+    @IBOutlet var bgView: UIView!
+    @IBOutlet weak var navigationBgView: UIView!
+    @IBOutlet weak var countBgView: UIView!
     @IBOutlet weak var navigationTitle: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,17 +39,24 @@ class SelectCardViewController: UIViewController {
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .black
     }
     
     func setUI() {
+        bgView.backgroundColor = .black
         navigationTitle.textColor = .w1
         navigationTitle.font = .cardnaSh1Sbd
         countLabel.textColor = .w3
         countLabel.font = .Pretendard(.light, size: 12)
+        countBgView.backgroundColor = .black
+        navigationBgView.backgroundColor = .black
     }
     
     // MARK: - IBAction
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func allCardButtonDidTap(_ sender: Any) {
         guard let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCardModalViewController") as? SelectCardModalViewController else { return }

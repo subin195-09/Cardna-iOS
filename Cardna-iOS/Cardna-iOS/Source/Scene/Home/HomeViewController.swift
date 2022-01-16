@@ -62,4 +62,11 @@ class HomeViewController: UIViewController {
     func setCountLabelUI() {
         countLabel.font = .cardnaB5Rg
     }
+    
+    // MARK: - IBAction
+    
+    @IBAction func editButtonDidTap(_ sender: Any) {
+        let editVC = UIStoryboard(name: "SelectCard", bundle: nil).instantiateViewController(withIdentifier: "SelectCardViewController")
+        self.navigationController?.pushViewController(editVC, animated: true)
+    }
 }
