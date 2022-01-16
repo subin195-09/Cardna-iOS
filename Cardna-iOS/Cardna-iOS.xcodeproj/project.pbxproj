@@ -72,6 +72,8 @@
 		15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */; };
 		15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51B2E278C997F001E1F6F /* UIFont+.swift */; };
 		294375D6BD6AACBECF5E84B0 /* Pods_Cardna_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */; };
+		98116F3D2794678100042215 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98116F3C2794678100042215 /* Login.storyboard */; };
+		98116F3F2794678B00042215 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98116F3E2794678B00042215 /* LoginViewController.swift */; };
 		98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98327CEB279075FA006AE794 /* CardContainerCollectionViewCell.swift */; };
 		98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98817C6727929AD200819892 /* EmailSearch.storyboard */; };
 		98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98817C6927929B0600819892 /* EmailSearchViewController.swift */; };
@@ -157,6 +159,8 @@
 		15C51B2A278C98B1001E1F6F /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		15C51B2E278C997F001E1F6F /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6A0B93B9268C3525FEDB692F /* Pods-Cardna-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		98116F3C2794678100042215 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		98116F3E2794678B00042215 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		98327CEB279075FA006AE794 /* CardContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		98817C6727929AD200819892 /* EmailSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmailSearch.storyboard; sourceTree = "<group>"; };
 		98817C6927929B0600819892 /* EmailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSearchViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 		15C51B08278AC200001E1F6F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				98116F3B2794676A00042215 /* Login */,
 				14FA67C42793761B002FCDE5 /* Join */,
 				98817C702792C58300819892 /* Initial */,
 				98817C6627929A7700819892 /* EmailSearch */,
@@ -526,6 +531,15 @@
 				BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		98116F3B2794676A00042215 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				98116F3C2794678100042215 /* Login.storyboard */,
+				98116F3E2794678B00042215 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		98817C6627929A7700819892 /* EmailSearch */ = {
@@ -675,6 +689,7 @@
 				15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
 				9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */,
+				98116F3D2794678100042215 /* Login.storyboard in Resources */,
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
 				15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */,
 				15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */,
@@ -761,6 +776,7 @@
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
+				98116F3F2794678B00042215 /* LoginViewController.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				152330032793670B00F37EB4 /* BaseTargetType.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
