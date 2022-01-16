@@ -9,6 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Property
+    
+    var cardList: [MainCardResponse] = 
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +25,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getMainCard()
         setCollectionView()
         registerXib()
         setUI()
@@ -61,6 +66,13 @@ class HomeViewController: UIViewController {
     
     func setCountLabelUI() {
         countLabel.font = .cardnaB5Rg
+    }
+    
+    func getMainCard() {
+        MainCardService.shared.postSignIn { response in
+            print("res", response)
+            
+        }
     }
     
     // MARK: - IBAction

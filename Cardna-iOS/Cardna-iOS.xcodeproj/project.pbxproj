@@ -49,6 +49,9 @@
 		15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */; };
 		15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */; };
 		15A6EEEC2792A165006EA23C /* MyPageFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */; };
+		15ABE49F2794CD0600516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE49E2794CD0600516170 /* MainCardService.swift */; };
+		15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A02794CD0E00516170 /* MainCardRouter.swift */; };
+		15ABE4A62794CD6900516170 /* MainCardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A52794CD6900516170 /* MainCardResponse.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -134,6 +137,9 @@
 		15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		15ABE49E2794CD0600516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCardService.swift; path = ../../../../../../../SOPT/Keepin/MainCardService.swift; sourceTree = "<group>"; };
+		15ABE4A02794CD0E00516170 /* MainCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardRouter.swift; sourceTree = "<group>"; };
+		15ABE4A52794CD6900516170 /* MainCardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardResponse.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +252,8 @@
 		15232FF82793612500F37EB4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4A32794CD3B00516170 /* APIModels */,
+				15ABE49B2794CCD300516170 /* APIServices */,
 				15232FF92793612E00F37EB4 /* Base */,
 			);
 			path = Network;
@@ -348,6 +356,39 @@
 				15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		15ABE49B2794CCD300516170 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE49D2794CCF600516170 /* MainCardAPI */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		15ABE49D2794CCF600516170 /* MainCardAPI */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE49E2794CD0600516170 /* MainCardService.swift */,
+				15ABE4A02794CD0E00516170 /* MainCardRouter.swift */,
+			);
+			path = MainCardAPI;
+			sourceTree = "<group>";
+		};
+		15ABE4A32794CD3B00516170 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4A42794CD5B00516170 /* MainCardModel */,
+			);
+			path = APIModels;
+			sourceTree = "<group>";
+		};
+		15ABE4A42794CD5B00516170 /* MainCardModel */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4A52794CD6900516170 /* MainCardResponse.swift */,
+			);
+			path = MainCardModel;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -781,7 +822,9 @@
 				152330032793670B00F37EB4 /* BaseTargetType.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
+				15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
+				15ABE4A62794CD6900516170 /* MainCardResponse.swift in Sources */,
 				15A6EEEC2792A165006EA23C /* MyPageFriendsTableViewCell.swift in Sources */,
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */,
@@ -795,6 +838,7 @@
 				15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */,
 				15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */,
 				98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */,
+				15ABE49F2794CD0600516170 /* MainCardService.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15232FFF2793669A00F37EB4 /* URLConstant.swift in Sources */,
