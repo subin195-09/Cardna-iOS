@@ -16,6 +16,9 @@
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
 		14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */; };
+		14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A9327727945589006B4D86 /* JoinNameViewController.swift */; };
+		14FA67C62793764D002FCDE5 /* JoinViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */; };
+		14FA67C827937660002FCDE5 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA67C727937660002FCDE5 /* JoinViewController.swift */; };
 		15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF2279356B400F37EB4 /* lottie_cardyou.json */; };
 		15232FF5279356B900F37EB4 /* lottie_cardme.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF4279356B900F37EB4 /* lottie_cardme.json */; };
 		15232FF7279356C000F37EB4 /* gif_confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF6279356C000F37EB4 /* gif_confetti.json */; };
@@ -95,6 +98,9 @@
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		14A9327727945589006B4D86 /* JoinNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinNameViewController.swift; sourceTree = "<group>"; };
+		14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinViewController.storyboard; sourceTree = "<group>"; };
+		14FA67C727937660002FCDE5 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		15232FF2279356B400F37EB4 /* lottie_cardyou.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardyou.json; sourceTree = "<group>"; };
 		15232FF4279356B900F37EB4 /* lottie_cardme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardme.json; sourceTree = "<group>"; };
 		15232FF6279356C000F37EB4 /* gif_confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gif_confetti.json; sourceTree = "<group>"; };
@@ -209,6 +215,16 @@
 				146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14FA67C42793761B002FCDE5 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */,
+				14FA67C727937660002FCDE5 /* JoinViewController.swift */,
+				14A9327727945589006B4D86 /* JoinNameViewController.swift */,
+			);
+			path = Join;
 			sourceTree = "<group>";
 		};
 		15232FF1279356A900F37EB4 /* Lottie */ = {
@@ -396,6 +412,7 @@
 		15C51B08278AC200001E1F6F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				14FA67C42793761B002FCDE5 /* Join */,
 				98817C702792C58300819892 /* Initial */,
 				98817C6627929A7700819892 /* EmailSearch */,
 				15A6EED52791F829006EA23C /* CardNotYetBox */,
@@ -651,6 +668,7 @@
 				98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */,
 				15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
+				14FA67C62793764D002FCDE5 /* JoinViewController.storyboard in Resources */,
 				15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */,
 				15C51B1C278AC44B001E1F6F /* MyPage.storyboard in Resources */,
 				9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */,
@@ -716,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C51B2F278C997F001E1F6F /* UIFont+.swift in Sources */,
+				14FA67C827937660002FCDE5 /* JoinViewController.swift in Sources */,
 				15A6EED42791EA8D006EA23C /* SelectCardModalViewController+Extension.swift in Sources */,
 				15A6EECD27907782006EA23C /* SelectCardHeaderCollectionReusableView.swift in Sources */,
 				98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */,
@@ -749,6 +768,7 @@
 				98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */,
 				98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */,
 				98817C742792C5E100819892 /* InitialViewController.swift in Sources */,
+				14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */,
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
