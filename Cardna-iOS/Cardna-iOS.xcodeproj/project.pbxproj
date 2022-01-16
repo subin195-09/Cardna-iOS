@@ -49,10 +49,12 @@
 		15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */; };
 		15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */; };
 		15A6EEEC2792A165006EA23C /* MyPageFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */; };
-		15ABE49F2794CD0600516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE49E2794CD0600516170 /* MainCardService.swift */; };
 		15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A02794CD0E00516170 /* MainCardRouter.swift */; };
 		15ABE4A62794CD6900516170 /* MainCardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A52794CD6900516170 /* MainCardResponse.swift */; };
 		15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4A72794D5A400516170 /* UIImageView+.swift */; };
+		15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AA2794D9A200516170 /* MyPageRouter.swift */; };
+		15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AC2794D9A900516170 /* MyPageService.swift */; };
+		15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AF2794DB7900516170 /* MainCardService.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -138,10 +140,12 @@
 		15A6EEE72792A036006EA23C /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A6EEE82792A036006EA23C /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A6EEEB2792A165006EA23C /* MyPageFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFriendsTableViewCell.swift; sourceTree = "<group>"; };
-		15ABE49E2794CD0600516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCardService.swift; path = ../../../../../../../SOPT/Keepin/MainCardService.swift; sourceTree = "<group>"; };
 		15ABE4A02794CD0E00516170 /* MainCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardRouter.swift; sourceTree = "<group>"; };
 		15ABE4A52794CD6900516170 /* MainCardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardResponse.swift; sourceTree = "<group>"; };
 		15ABE4A72794D5A400516170 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		15ABE4AA2794D9A200516170 /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
+		15ABE4AC2794D9A900516170 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
+		15ABE4AF2794DB7900516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardService.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -363,6 +367,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4A92794D99300516170 /* MyPageAPI */,
 				15ABE49D2794CCF600516170 /* MainCardAPI */,
 			);
 			path = APIServices;
@@ -371,8 +376,8 @@
 		15ABE49D2794CCF600516170 /* MainCardAPI */ = {
 			isa = PBXGroup;
 			children = (
-				15ABE49E2794CD0600516170 /* MainCardService.swift */,
 				15ABE4A02794CD0E00516170 /* MainCardRouter.swift */,
+				15ABE4AF2794DB7900516170 /* MainCardService.swift */,
 			);
 			path = MainCardAPI;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4AE2794DA9600516170 /* MyPageModel */,
 				15ABE4A42794CD5B00516170 /* MainCardModel */,
 			);
 			path = APIModels;
@@ -391,6 +397,22 @@
 				15ABE4A52794CD6900516170 /* MainCardResponse.swift */,
 			);
 			path = MainCardModel;
+			sourceTree = "<group>";
+		};
+		15ABE4A92794D99300516170 /* MyPageAPI */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4AA2794D9A200516170 /* MyPageRouter.swift */,
+				15ABE4AC2794D9A900516170 /* MyPageService.swift */,
+			);
+			path = MyPageAPI;
+			sourceTree = "<group>";
+		};
+		15ABE4AE2794DA9600516170 /* MyPageModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyPageModel;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -815,6 +837,8 @@
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
 				15233001279366A300F37EB4 /* NetworkConstant.swift in Sources */,
+				15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */,
+				15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */,
 				15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
 				15232FFD2793617F00F37EB4 /* MoyaLoggingPlugin.swift in Sources */,
@@ -824,6 +848,7 @@
 				98116F3F2794678B00042215 /* LoginViewController.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				152330032793670B00F37EB4 /* BaseTargetType.swift in Sources */,
+				15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
 				15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */,
@@ -842,7 +867,6 @@
 				15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */,
 				15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */,
 				98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */,
-				15ABE49F2794CD0600516170 /* MainCardService.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15232FFF2793669A00F37EB4 /* URLConstant.swift in Sources */,
