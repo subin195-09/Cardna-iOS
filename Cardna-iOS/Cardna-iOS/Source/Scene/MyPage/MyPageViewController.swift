@@ -9,6 +9,10 @@ import UIKit
 
 class MyPageViewController: UIViewController {
     
+    // MARK: - Property
+    var myInfo: MyPageResponse?
+    var friendList: [FriendList] = []
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var navigationTitleLabel: UILabel!
@@ -22,8 +26,9 @@ class MyPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getMyPageInfo()
         setUI()
-        setTableView()
+        
     }
     
     // MARK: - Function
@@ -74,6 +79,28 @@ class MyPageViewController: UIViewController {
             ///왼쪽 아이콘 이미지넣기
             if let leftView = textfield.leftView as? UIImageView {
                 leftView.image = Const.Image.icbtSearch
+            }
+        }
+    }
+    
+    func getMyPageInfo() {
+        MyPageService.shared.getMyPage { response in
+            switch response {
+            case .success(let data):
+                print(data)
+                guard let data = data as? MyPageResponse else { return }
+                self.friendCountLabel.text = "\(data.friendList.count)"
+                self.myInfo = data
+                self.friendList = data.friendList
+                self.setTableView()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
             }
         }
     }

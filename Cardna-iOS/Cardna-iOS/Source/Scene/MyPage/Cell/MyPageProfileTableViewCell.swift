@@ -34,4 +34,10 @@ class MyPageProfileTableViewCell: UITableViewCell {
         emailLabel.font = .cardnaB5Rg
         emailLabel.textColor = .w3
     }
+    
+    func setData(image: String, name: String, email: String) {
+        profileImageView.setImage(with: image)
+        nameLabel.text = "\(name)님"
+        emailLabel.text = email
+    }
 }
