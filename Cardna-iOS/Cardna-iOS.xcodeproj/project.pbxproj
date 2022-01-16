@@ -55,6 +55,7 @@
 		15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AA2794D9A200516170 /* MyPageRouter.swift */; };
 		15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AC2794D9A900516170 /* MyPageService.swift */; };
 		15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AF2794DB7900516170 /* MainCardService.swift */; };
+		15ABE4B22794DBC100516170 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B12794DBC100516170 /* MyPageResponse.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -146,6 +147,7 @@
 		15ABE4AA2794D9A200516170 /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
 		15ABE4AC2794D9A900516170 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
 		15ABE4AF2794DB7900516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardService.swift; sourceTree = "<group>"; };
+		15ABE4B12794DBC100516170 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 		15ABE4AE2794DA9600516170 /* MyPageModel */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4B12794DBC100516170 /* MyPageResponse.swift */,
 			);
 			path = MyPageModel;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
 				98116F3F2794678B00042215 /* LoginViewController.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
+				15ABE4B22794DBC100516170 /* MyPageResponse.swift in Sources */,
 				152330032793670B00F37EB4 /* BaseTargetType.swift in Sources */,
 				15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
