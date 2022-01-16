@@ -39,9 +39,11 @@ extension MyPageViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageProfileTableViewCell.identifier, for: indexPath) as? MyPageProfileTableViewCell else { return UITableViewCell() }
+            cell.setData(image: myInfo?.userImg ?? "", name: myInfo?.name ?? "", email: myInfo?.email ?? "")
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageFriendsTableViewCell.identifier, for: indexPath) as? MyPageFriendsTableViewCell else { return UITableViewCell() }
+            cell.setData(friendList: friendList)
             return cell
         default:
             return UITableViewCell()

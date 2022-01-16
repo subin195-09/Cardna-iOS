@@ -10,6 +10,7 @@ import UIKit
 class MyPageFriendsTableViewCell: UITableViewCell {
     
     static let identifier = "MyPageFriendsTableViewCell"
+    var friendList: [FriendList] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,6 +33,10 @@ class MyPageFriendsTableViewCell: UITableViewCell {
         let nib = UINib(nibName: ProfileCollectionViewCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
     }
+    
+    func setData(friendList: [FriendList]) {
+        self.friendList = friendList
+    }
 }
 
 extension MyPageFriendsTableViewCell {
@@ -50,11 +55,14 @@ extension MyPageFriendsTableViewCell {
 
 extension MyPageFriendsTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return friendList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as? ProfileCollectionViewCell else { return UICollectionViewCell() }
+        cell.setData(image: friendList[indexPath.item].userImg,
+                     name: friendList[indexPath.item].name,
+                     comment: friendList[indexPath.item].sentence ?? "")
         return cell
     }
 }

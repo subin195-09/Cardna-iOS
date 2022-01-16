@@ -30,4 +30,10 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         commentLabel.textColor = .w1
         commentLabel.font = .cardnaB3Rg
     }
+    
+    func setData(image: String, name: String, comment: String) {
+        profileImageView.setImage(with: image)
+        nameLabel.text = name
+        commentLabel.text = comment
+    }
 }
