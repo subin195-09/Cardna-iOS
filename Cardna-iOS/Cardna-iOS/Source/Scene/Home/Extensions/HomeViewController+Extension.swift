@@ -24,12 +24,15 @@ extension HomeViewController {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return cardList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: Const.Image.imgSymSmile, title: "우왕", isMe: true, small: false)
+        cell.setData(image: cardList[indexPath.item].cardImg,
+                     title: cardList[indexPath.item].title,
+                     isMe: cardList[indexPath.item].isMe,
+                     small: false)
         return cell
     }
 }

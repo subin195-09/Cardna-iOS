@@ -44,8 +44,8 @@ class CardCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setData(image: UIImage, title: String, isMe: Bool, small: Bool) {
-        imageView.image = image
+    func setData(image: String, title: String, isMe: Bool, small: Bool) {
+        imageView.setImage(with: image)
         titleLabel.text = title
         if isMe == true {
             bgView.backgroundColor = .mainGreen

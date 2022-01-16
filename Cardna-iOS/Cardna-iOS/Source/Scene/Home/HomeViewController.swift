@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Property
     
-    var cardList: [MainCardResponse] = 
+    var cardList: [MainCardList] = []
     
     // MARK: - IBOutlet
     
@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getMainCard()
-        setCollectionView()
         registerXib()
         setUI()
     }
@@ -69,9 +68,23 @@ class HomeViewController: UIViewController {
     }
     
     func getMainCard() {
-        MainCardService.shared.postSignIn { response in
-            print("res", response)
-            
+        MainCardService.shared.getMainCard { response in
+            print(response)
+            switch response {
+            case .success(let data):
+                guard let res = data as? MainCardResponse else { return }
+                self.cardList = res.mainCardList
+                self.setCollectionView()
+                self.countLabel.text = "현재셀/ \(self.cardList.count)"
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkErr")
+            }
         }
     }
     
