@@ -12,7 +12,7 @@ protocol BaseTargetType: TargetType { }
 extension BaseTargetType {
 
     var baseURL: URL {
-        return URL(string: "www.naver.com")!
+        return URL(string: URLConstant.baseURL)!
     }
     
     var sampleData: Data {

@@ -62,7 +62,7 @@ extension CardContainerCollectionViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: UIImage(), title: "경민이 최고 킹.", isMe: cellPage == 0 ? true : false)
+        cell.setData(image: UIImage(), title: "경민이 최고 킹.", isMe: cellPage == 0 ? true : false, small: true)
         return cell
     }
 }
