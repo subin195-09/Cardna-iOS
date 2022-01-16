@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class JoinViewController: UIViewController {
     
@@ -26,7 +25,7 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var passwordInputErrorLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var serviceProtocolLabel: UILabel!
-    @IBOutlet weak var AndInExplainLabel: UILabel!
+    @IBOutlet weak var andInExplainLabel: UILabel!
     @IBOutlet weak var privacyLabel: UILabel!
     @IBOutlet weak var serviceProtocolButton: UIButton!
     @IBOutlet weak var privacyButton: UIButton!
@@ -57,15 +56,14 @@ class JoinViewController: UIViewController {
                                                                         NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
-//        setShowPasswordButtonUI()
         passwordTextFieldUnderLine.backgroundColor = .w3
         passwordInputErrorLabel.font = .cardnaC
         explainLabel.font = .cardnaB3Rg
         explainLabel.textColor = .w3
         serviceProtocolLabel.font = .cardnaB3Rg
         serviceProtocolLabel.textColor = .mainGreen
-        AndInExplainLabel.font = .cardnaB3Rg
-        AndInExplainLabel.textColor = .w3
+        andInExplainLabel.font = .cardnaB3Rg
+        andInExplainLabel.textColor = .w3
         privacyLabel.font = .cardnaB3Rg
         privacyLabel.textColor = .mainGreen
         joinCompleteButton.backgroundColor = .mainGreen
@@ -74,18 +72,10 @@ class JoinViewController: UIViewController {
         joinCompleteButton.layer.cornerRadius = 10
     }
     
-    private func setShowPasswordButtonUI() {
-        var config = UIButton.Configuration.filled()
-        config.contentInsets = NSDirectionalEdgeInsets.init(top: 20, leading: 12, bottom: 12, trailing: 20)
-        
-        showPasswordToggleButton.configuration = config
-    }
-    
     // MARK: - Function
     
     private func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
