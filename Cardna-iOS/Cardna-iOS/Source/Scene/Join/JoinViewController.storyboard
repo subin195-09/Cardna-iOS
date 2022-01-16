@@ -155,10 +155,45 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="" image="eye" catalog="system"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 형식에 맞게 입력해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvW-RS-Mfe">
+                                <rect key="frame" x="28" y="195" width="228" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="UqP-2S-zGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Ml-Jfi">
+                                <rect key="frame" x="16" y="199.5" width="10" height="9"/>
+                                <color key="tintColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Rpr-M4-yus"/>
+                                    <constraint firstAttribute="width" constant="10" id="iS6-2N-jMA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-N3-y7H">
+                                <rect key="frame" x="16" y="270.5" width="10" height="9"/>
+                                <color key="tintColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="I0b-Xa-lcL"/>
+                                    <constraint firstAttribute="width" constant="10" id="PQW-wR-cs5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호는 영문+숫자 최소 8자 이상 입력해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-52-PYd">
+                                <rect key="frame" x="28" y="266" width="346" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="hFA-sC-tHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ho4-Ml-Jfi" firstAttribute="top" secondItem="S73-Ez-dcq" secondAttribute="bottom" constant="12" id="0ep-PU-gSa"/>
                             <constraint firstItem="jWK-rO-P8t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="9" id="1vW-AT-dVU"/>
                             <constraint firstItem="ppK-GG-W2F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3QT-UY-8h5"/>
                             <constraint firstItem="Wkb-Zj-ZcN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="3Sa-3W-sCl"/>
@@ -166,6 +201,8 @@
                             <constraint firstItem="0Ag-t4-zd3" firstAttribute="top" secondItem="S73-Ez-dcq" secondAttribute="bottom" constant="28" id="64K-Fg-EaV"/>
                             <constraint firstItem="Wkb-Zj-ZcN" firstAttribute="top" secondItem="ppK-GG-W2F" secondAttribute="bottom" constant="56" id="6D3-hZ-r5J"/>
                             <constraint firstItem="0Ag-t4-zd3" firstAttribute="leading" secondItem="sEJ-Zl-Lsw" secondAttribute="trailing" id="9fu-mW-hhd"/>
+                            <constraint firstItem="PvW-RS-Mfe" firstAttribute="leading" secondItem="ho4-Ml-Jfi" secondAttribute="trailing" constant="2" id="AtW-W1-pDf"/>
+                            <constraint firstItem="uEP-N3-y7H" firstAttribute="top" secondItem="9Qk-vR-u0J" secondAttribute="bottom" constant="12" id="BYU-iL-EKz"/>
                             <constraint firstItem="9Qk-vR-u0J" firstAttribute="top" secondItem="sEJ-Zl-Lsw" secondAttribute="bottom" id="C2e-0O-VMn"/>
                             <constraint firstItem="ewc-DK-g5S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Csn-dj-znN"/>
                             <constraint firstItem="S73-Ez-dcq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="LH7-Fr-cMA"/>
@@ -176,21 +213,26 @@
                             <constraint firstItem="CvU-Q9-mVS" firstAttribute="top" secondItem="jWK-rO-P8t" secondAttribute="bottom" constant="56" id="Oyd-Bn-iel"/>
                             <constraint firstAttribute="trailing" secondItem="9Qk-vR-u0J" secondAttribute="trailing" constant="16" id="SX3-4i-AKP"/>
                             <constraint firstItem="sEJ-Zl-Lsw" firstAttribute="top" secondItem="S73-Ez-dcq" secondAttribute="bottom" constant="28" id="Tjr-BI-94W"/>
+                            <constraint firstItem="PvW-RS-Mfe" firstAttribute="top" secondItem="S73-Ez-dcq" secondAttribute="bottom" constant="8" id="Uhf-7V-ooH"/>
                             <constraint firstItem="rav-1E-Tey" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="V8o-AV-ZDY"/>
                             <constraint firstItem="8Xy-Dq-OeT" firstAttribute="top" secondItem="8JV-Eu-IZO" secondAttribute="bottom" id="Xgj-qP-3HI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0Ag-t4-zd3" secondAttribute="trailing" constant="16" id="YpZ-7P-79F"/>
                             <constraint firstItem="ppK-GG-W2F" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cBg-FV-5y6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8JV-Eu-IZO" secondAttribute="trailing" constant="16" id="cTg-0a-qru"/>
+                            <constraint firstItem="ho4-Ml-Jfi" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="fXV-Rf-h9i"/>
                             <constraint firstItem="I6f-h5-RUO" firstAttribute="top" secondItem="8JV-Eu-IZO" secondAttribute="bottom" id="fbc-H5-jWb"/>
                             <constraint firstItem="9Qk-vR-u0J" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="flK-lw-Weu"/>
                             <constraint firstItem="8JV-Eu-IZO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="hnu-Wu-M1r"/>
                             <constraint firstItem="ewc-DK-g5S" firstAttribute="top" secondItem="8JV-Eu-IZO" secondAttribute="bottom" id="klZ-dl-BbA"/>
+                            <constraint firstItem="uEP-N3-y7H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="l1c-RQ-VFM"/>
                             <constraint firstItem="jbl-nu-mt2" firstAttribute="leading" secondItem="jWK-rO-P8t" secondAttribute="trailing" constant="11" id="mMe-SQ-m7R"/>
                             <constraint firstItem="8JV-Eu-IZO" firstAttribute="top" secondItem="9Qk-vR-u0J" secondAttribute="bottom" constant="47" id="mRR-ft-Wh1"/>
+                            <constraint firstItem="yfX-52-PYd" firstAttribute="leading" secondItem="uEP-N3-y7H" secondAttribute="trailing" constant="2" id="mUx-TY-lPl"/>
                             <constraint firstItem="S73-Ez-dcq" firstAttribute="top" secondItem="Wkb-Zj-ZcN" secondAttribute="bottom" id="o6L-yi-wdO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wkb-Zj-ZcN" secondAttribute="trailing" constant="16" id="oCK-zD-nRb"/>
                             <constraint firstItem="CvU-Q9-mVS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="17" id="oZv-Hw-Tem"/>
                             <constraint firstItem="jbl-nu-mt2" firstAttribute="top" secondItem="9Qk-vR-u0J" secondAttribute="bottom" constant="59" id="rjq-yf-W2v"/>
+                            <constraint firstItem="yfX-52-PYd" firstAttribute="top" secondItem="9Qk-vR-u0J" secondAttribute="bottom" constant="8" id="rk5-Hk-8ar"/>
                             <constraint firstItem="jWK-rO-P8t" firstAttribute="top" secondItem="9Qk-vR-u0J" secondAttribute="bottom" constant="59" id="rqi-fG-fFh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S73-Ez-dcq" secondAttribute="trailing" constant="16" id="wYO-gr-TW7"/>
                         </constraints>
@@ -198,12 +240,16 @@
                     <connections>
                         <outlet property="AndInExplainLabel" destination="I6f-h5-RUO" id="Tbm-mL-c0e"/>
                         <outlet property="backButton" destination="06A-0L-wF1" id="Q7i-qK-jaJ"/>
+                        <outlet property="emailInputErrorImageView" destination="ho4-Ml-Jfi" id="yJs-Dd-Vxw"/>
+                        <outlet property="emailInputErrorLabel" destination="PvW-RS-Mfe" id="qHI-Sj-zaY"/>
                         <outlet property="emailTextField" destination="Wkb-Zj-ZcN" id="cGl-Zs-bJe"/>
                         <outlet property="emailTextFieldUnderLine" destination="S73-Ez-dcq" id="UhA-uD-9ka"/>
                         <outlet property="explainLabel" destination="8JV-Eu-IZO" id="0BT-rF-nZP"/>
                         <outlet property="joinCompleteButton" destination="CvU-Q9-mVS" id="Eyn-jY-rg8"/>
                         <outlet property="joinTitleLabel" destination="rav-1E-Tey" id="yNO-hL-tx5"/>
                         <outlet property="joinTitleUIView" destination="ppK-GG-W2F" id="vMZ-x8-qT4"/>
+                        <outlet property="passwordInputErrorImageView" destination="uEP-N3-y7H" id="EUg-Kd-sp8"/>
+                        <outlet property="passwordInputErrorLabel" destination="yfX-52-PYd" id="WHZ-4X-YpR"/>
                         <outlet property="passwordTextField" destination="sEJ-Zl-Lsw" id="1Px-uI-8Lc"/>
                         <outlet property="passwordTextFieldUnderLine" destination="9Qk-vR-u0J" id="s8B-qK-UDy"/>
                         <outlet property="privacyButton" destination="jbl-nu-mt2" id="yMw-lM-LZy"/>
@@ -221,6 +267,7 @@
     <resources>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="icbtBack" width="42" height="42"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

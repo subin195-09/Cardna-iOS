@@ -17,9 +17,13 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var joinTitleLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailTextFieldUnderLine: UIView!
+    @IBOutlet weak var emailInputErrorImageView: UIImageView!
+    @IBOutlet weak var emailInputErrorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordToggleButton: UIButton!
     @IBOutlet weak var passwordTextFieldUnderLine: UIView!
+    @IBOutlet weak var passwordInputErrorImageView: UIImageView!
+    @IBOutlet weak var passwordInputErrorLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var serviceProtocolLabel: UILabel!
     @IBOutlet weak var AndInExplainLabel: UILabel!
@@ -47,6 +51,7 @@ class JoinViewController: UIViewController {
                                                           NSAttributedString.Key.foregroundColor: UIColor.w3])
         emailTextField.textColor = .w1
         emailTextFieldUnderLine.backgroundColor = .w3
+        emailInputErrorLabel.font = .cardnaC
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호 (영문+숫자 최소 8자 이상)",
                                                                      attributes: [
                                                                         NSAttributedString.Key.font: UIFont.cardnaB1Rg,
@@ -54,6 +59,7 @@ class JoinViewController: UIViewController {
         passwordTextField.textColor = .w1
 //        setShowPasswordButtonUI()
         passwordTextFieldUnderLine.backgroundColor = .w3
+        passwordInputErrorLabel.font = .cardnaC
         explainLabel.font = .cardnaB3Rg
         explainLabel.textColor = .w3
         serviceProtocolLabel.font = .cardnaB3Rg
@@ -73,5 +79,26 @@ class JoinViewController: UIViewController {
         config.contentInsets = NSDirectionalEdgeInsets.init(top: 20, leading: 12, bottom: 12, trailing: 20)
         
         showPasswordToggleButton.configuration = config
+    }
+    
+    // MARK: - Function
+    
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
+    // MARK: - Objc Function
+    
+    @objc
+    private func validateEmail() {
+        guard let text = emailTextField.text else { return }
+        if isValidEmail(text) {
+            // no error message
+        } else {
+            // error message
+        }
     }
 }
