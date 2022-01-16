@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+// MARK: - MyPageResponse
+
+struct MyPageResponse: Codable {
+    let id: Int
+    let name: String
+    let userImg: String
+    let email: String
+    let friendList: [FriendList]
+}
+
+// MARK: - FriendList
+
+struct FriendList: Codable {
+    let id: Int
+    let name: String
+    let userImg: String
+    let sentence: String?
+}

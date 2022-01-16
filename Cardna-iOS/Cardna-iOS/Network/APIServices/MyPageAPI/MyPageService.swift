@@ -34,7 +34,7 @@ public class MyPageService {
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(GeneralResponse<MainCardResponse>.self, from: data)
+        guard let decodedData = try? decoder.decode(GeneralResponse<MyPageResponse>.self, from: data)
         else { return .pathErr }
         print(decodedData)
         switch statusCode {

@@ -162,8 +162,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="emailLabel" destination="h5V-Pk-gNl" id="vye-WG-MKH"/>
-                                            <outlet property="nameLabel" destination="h5V-Pk-gNl" id="qIZ-eX-UEF"/>
+                                            <outlet property="emailLabel" destination="h5V-Pk-gNl" id="Gyb-AN-xR5"/>
+                                            <outlet property="nameLabel" destination="u9h-kY-Ohe" id="QJu-jy-k7B"/>
                                             <outlet property="profileImageContainerView" destination="8U3-qV-22p" id="Ltf-lH-vqG"/>
                                             <outlet property="profileImageView" destination="C8B-LM-M3d" id="DBu-LD-Wb0"/>
                                         </connections>
