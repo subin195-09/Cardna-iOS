@@ -61,6 +61,9 @@
 		15ABE4B5279558D700516170 /* CardDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B4279558D700516170 /* CardDetailRouter.swift */; };
 		15ABE4B7279558DF00516170 /* CardDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B6279558DF00516170 /* CardDetailService.swift */; };
 		15ABE4BA27955FBC00516170 /* CardDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B927955FBC00516170 /* CardDetailResponse.swift */; };
+		15ABE4C52795AAA800516170 /* CardPackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4C42795AAA800516170 /* CardPackRouter.swift */; };
+		15ABE4C72795AAB600516170 /* CardPackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4C62795AAB600516170 /* CardPackService.swift */; };
+		15ABE4CA2795AADE00516170 /* CardPackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4C92795AADE00516170 /* CardPackResponse.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -171,6 +174,9 @@
 		15ABE4B4279558D700516170 /* CardDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailRouter.swift; sourceTree = "<group>"; };
 		15ABE4B6279558DF00516170 /* CardDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailService.swift; sourceTree = "<group>"; };
 		15ABE4B927955FBC00516170 /* CardDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailResponse.swift; sourceTree = "<group>"; };
+		15ABE4C42795AAA800516170 /* CardPackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackRouter.swift; sourceTree = "<group>"; };
+		15ABE4C62795AAB600516170 /* CardPackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackService.swift; sourceTree = "<group>"; };
+		15ABE4C92795AADE00516170 /* CardPackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackResponse.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -421,6 +427,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4C32795AA9100516170 /* CardPackAPI */,
 				98BC0B7C2795A61600BE2AB0 /* EmailSearchAPI */,
 				98BF51DB27956CDD008A1993 /* InsightAPI */,
 				15ABE4B3279558CB00516170 /* CardDetailAPI */,
@@ -444,6 +451,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4C82795AABC00516170 /* CardPackModel */,
 				98BC0B792795A5F400BE2AB0 /* EmailSearchModel */,
 				98BF51D827956C89008A1993 /* InsightModel */,
 				15ABE4B827955F6E00516170 /* CardDetailModel */,
@@ -495,6 +503,23 @@
 				15ABE4B927955FBC00516170 /* CardDetailResponse.swift */,
 			);
 			path = CardDetailModel;
+			sourceTree = "<group>";
+		};
+		15ABE4C32795AA9100516170 /* CardPackAPI */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4C42795AAA800516170 /* CardPackRouter.swift */,
+				15ABE4C62795AAB600516170 /* CardPackService.swift */,
+			);
+			path = CardPackAPI;
+			sourceTree = "<group>";
+		};
+		15ABE4C82795AABC00516170 /* CardPackModel */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4C92795AADE00516170 /* CardPackResponse.swift */,
+			);
+			path = CardPackModel;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -1035,9 +1060,11 @@
 				98817C742792C5E100819892 /* InitialViewController.swift in Sources */,
 				98BC0B802795A62A00BE2AB0 /* EmailSearchService.swift in Sources */,
 				98BC0B7B2795A61100BE2AB0 /* EmailSearchResponse.swift in Sources */,
+				15ABE4CA2795AADE00516170 /* CardPackResponse.swift in Sources */,
 				14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */,
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
+				15ABE4C72795AAB600516170 /* CardPackService.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
 				98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */,
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
@@ -1051,6 +1078,7 @@
 				143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */,
 				15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */,
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
+				15ABE4C52795AAA800516170 /* CardPackRouter.swift in Sources */,
 				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 				15ABE4B7279558DF00516170 /* CardDetailService.swift in Sources */,
