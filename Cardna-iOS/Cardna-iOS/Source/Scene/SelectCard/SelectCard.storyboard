@@ -172,6 +172,9 @@
                                 <rect key="frame" x="347.5" y="76" width="48.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                                <connections>
+                                    <action selector="completeButtonDidTap:" destination="lL8-AV-fIU" eventType="touchUpInside" id="Lqw-UI-r6U"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-dM-9Ne">
                                 <rect key="frame" x="0.0" y="137" width="414" height="759"/>

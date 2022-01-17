@@ -100,6 +100,7 @@ class SelectCardViewController: UIViewController {
     @IBAction func allCardButtonDidTap(_ sender: Any) {
         guard let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCardModalViewController") as? SelectCardModalViewController else { return }
         cardVC.mainCardList = mainCards
+        cardVC.selectDelegate = self
         self.present(cardVC, animated: true, completion: nil)
     }
 
