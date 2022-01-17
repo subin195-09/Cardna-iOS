@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Join View Controller-->
+        <!--JoinViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="JoinViewController" id="Y6W-OH-hqX" customClass="JoinViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinViewController" title="JoinViewController" id="Y6W-OH-hqX" customClass="JoinViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppK-GG-W2F">
-                                <rect key="frame" x="0.0" y="44" width="449" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06A-0L-wF1">
                                         <rect key="frame" x="8" y="1" width="42" height="42"/>
@@ -30,7 +30,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="icbtBack" title=""/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rav-1E-Tey">
-                                        <rect key="frame" x="195" y="8" width="59" height="27"/>
+                                        <rect key="frame" x="177.5" y="8" width="59" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="xLt-zB-y4v"/>
                                         </constraints>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkb-Zj-ZcN">
-                                <rect key="frame" x="16" y="144" width="417" height="42"/>
+                                <rect key="frame" x="16" y="144" width="382" height="42"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="FQ5-2b-F3N"/>
@@ -59,14 +59,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S73-Ez-dcq">
-                                <rect key="frame" x="16" y="186" width="417" height="1"/>
+                                <rect key="frame" x="16" y="186" width="382" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="0Rk-vo-2bk"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEJ-Zl-Lsw">
-                                <rect key="frame" x="16" y="215" width="375" height="42"/>
+                                <rect key="frame" x="16" y="215" width="340" height="42"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="LKI-jW-Jlm"/>
@@ -76,14 +76,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qk-vR-u0J">
-                                <rect key="frame" x="16" y="257" width="417" height="1"/>
+                                <rect key="frame" x="16" y="257" width="382" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FZx-ZU-bdK"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입 시, CARDNA의 다음 사항에 동의하는 것으로 간주합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JV-Eu-IZO">
-                                <rect key="frame" x="16" y="305" width="417" height="21"/>
+                                <rect key="frame" x="16" y="305" width="382" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qkz-rV-CRq"/>
                                 </constraints>
@@ -137,16 +137,15 @@
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-Q9-mVS">
-                                <rect key="frame" x="17" y="415" width="416" height="64"/>
+                                <rect key="frame" x="17" y="415" width="381" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="342" id="qAI-FN-Vg6"/>
                                     <constraint firstAttribute="height" constant="64" id="ycW-1k-vcW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="확인"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ag-t4-zd3">
-                                <rect key="frame" x="391" y="215" width="42" height="42"/>
+                                <rect key="frame" x="356" y="215" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="iUo-Qa-KLR"/>
                                     <constraint firstAttribute="width" constant="42" id="u3v-gA-pdB"/>
