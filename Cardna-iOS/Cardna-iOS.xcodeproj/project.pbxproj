@@ -90,6 +90,10 @@
 		98116F3D2794678100042215 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98116F3C2794678100042215 /* Login.storyboard */; };
 		98116F3F2794678B00042215 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98116F3E2794678B00042215 /* LoginViewController.swift */; };
 		98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98327CEB279075FA006AE794 /* CardContainerCollectionViewCell.swift */; };
+		9844214527960D7A00497CF4 /* AddFriendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214427960D7A00497CF4 /* AddFriendRouter.swift */; };
+		9844214727960D8600497CF4 /* AddFriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214627960D8600497CF4 /* AddFriendService.swift */; };
+		9844214927960D9800497CF4 /* AddFriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214827960D9800497CF4 /* AddFriendRequest.swift */; };
+		9844214B27960DA500497CF4 /* AddFriendResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214A27960DA500497CF4 /* AddFriendResponse.swift */; };
 		9877FE3F2794DCBF005745C7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE3E2794DCBF005745C7 /* LoginRequest.swift */; };
 		9877FE412794DCC6005745C7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE402794DCC6005745C7 /* LoginResponse.swift */; };
 		9877FE452794DD0A005745C7 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE442794DD0A005745C7 /* LoginRouter.swift */; };
@@ -205,6 +209,10 @@
 		98116F3C2794678100042215 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		98116F3E2794678B00042215 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		98327CEB279075FA006AE794 /* CardContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		9844214427960D7A00497CF4 /* AddFriendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRouter.swift; sourceTree = "<group>"; };
+		9844214627960D8600497CF4 /* AddFriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendService.swift; sourceTree = "<group>"; };
+		9844214827960D9800497CF4 /* AddFriendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequest.swift; sourceTree = "<group>"; };
+		9844214A27960DA500497CF4 /* AddFriendResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendResponse.swift; sourceTree = "<group>"; };
 		9877FE3E2794DCBF005745C7 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		9877FE402794DCC6005745C7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9877FE442794DD0A005745C7 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -427,6 +435,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				9844214327960D6600497CF4 /* AddFriendAPI */,
 				15ABE4C32795AA9100516170 /* CardPackAPI */,
 				98BC0B7C2795A61600BE2AB0 /* EmailSearchAPI */,
 				98BF51DB27956CDD008A1993 /* InsightAPI */,
@@ -451,6 +460,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				9844213E27960C9300497CF4 /* AddFriendModel */,
 				15ABE4C82795AABC00516170 /* CardPackModel */,
 				98BC0B792795A5F400BE2AB0 /* EmailSearchModel */,
 				98BF51D827956C89008A1993 /* InsightModel */,
@@ -715,6 +725,24 @@
 				98116F3E2794678B00042215 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9844213E27960C9300497CF4 /* AddFriendModel */ = {
+			isa = PBXGroup;
+			children = (
+				9844214827960D9800497CF4 /* AddFriendRequest.swift */,
+				9844214A27960DA500497CF4 /* AddFriendResponse.swift */,
+			);
+			path = AddFriendModel;
+			sourceTree = "<group>";
+		};
+		9844214327960D6600497CF4 /* AddFriendAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9844214427960D7A00497CF4 /* AddFriendRouter.swift */,
+				9844214627960D8600497CF4 /* AddFriendService.swift */,
+			);
+			path = AddFriendAPI;
 			sourceTree = "<group>";
 		};
 		9877FE3D2794DCAF005745C7 /* LoginModel */ = {
@@ -1048,6 +1076,8 @@
 				15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */,
 				14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */,
 				15C51B0A278AC2C5001E1F6F /* MainTabBarController.swift in Sources */,
+				9844214527960D7A00497CF4 /* AddFriendRouter.swift in Sources */,
+				9844214927960D9800497CF4 /* AddFriendRequest.swift in Sources */,
 				15ABE4A12794CD0E00516170 /* MainCardRouter.swift in Sources */,
 				15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */,
 				9877FE452794DD0A005745C7 /* LoginRouter.swift in Sources */,
@@ -1075,7 +1105,9 @@
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15232FFF2793669A00F37EB4 /* URLConstant.swift in Sources */,
+				9844214727960D8600497CF4 /* AddFriendService.swift in Sources */,
 				143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */,
+				9844214B27960DA500497CF4 /* AddFriendResponse.swift in Sources */,
 				15A6EEE92792A036006EA23C /* ProfileCollectionViewCell.swift in Sources */,
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
 				15ABE4C52795AAA800516170 /* CardPackRouter.swift in Sources */,
