@@ -9,6 +9,11 @@ import UIKit
 
 class CardDetailViewController: UIViewController {
     
+    // MARK: - Property
+    
+    var cardID: Int?
+    var cardData: CardDetailResponse?
+    
     // MARK: - IBOutlet
 
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +27,7 @@ class CardDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCardDetail()
         setUI()
         setDummy()
     }
@@ -47,6 +53,37 @@ class CardDetailViewController: UIViewController {
     func setAddCardYouButtonUI() {
         addCardYouButton.tintColor = .black
         addCardYouButton.layer.cornerRadius = 10
+    }
+    
+    func sendMainCardID(cardID: Int) {
+        self.cardID = cardID
+    }
+    
+    func setData() {
+        titleLabel.text = cardData?.title
+        imageView.setImage(with: cardData?.cardImg ?? "")
+        contentLabel.text = cardData?.content
+        dateLabel.text = cardData?.createdAt
+        fromLabel.text = "From. \(cardData?.name ?? "" )"
+    }
+    
+    func getCardDetail() {
+        CardDetailService.shared.getCardDetail(cardID: self.cardID ?? 17) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? CardDetailResponse else { return }
+                self.cardData = data
+                self.setData()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
     
     /// 이후 삭제할 더미데이터
