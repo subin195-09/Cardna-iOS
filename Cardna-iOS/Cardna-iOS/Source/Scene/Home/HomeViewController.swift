@@ -23,9 +23,12 @@ class HomeViewController: UIViewController {
     
     // MARK: - VC LifeCycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        getMainCard()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMainCard()
         registerXib()
         setUI()
     }
