@@ -35,7 +35,6 @@ public class InsightService {
             return isValidLoginData(data: data)
         case 400..<500:
             return isValidLoginData(data: data)
-//            return .requestErr(decodedData.message)
         case 500:
             return .serverErr
         default:
