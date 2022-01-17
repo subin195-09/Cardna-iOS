@@ -9,6 +9,8 @@ import UIKit
 
 class SelectCardViewController: UIViewController {
     
+    var mainCards: [MainCardList] = []
+    
     // MARK: - IBOutlet
     
     @IBOutlet var bgView: UIView!
@@ -22,8 +24,8 @@ class SelectCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getMainCard()
         registerXib()
-        setCollectionView()
         setUI()
     }
     
@@ -52,6 +54,43 @@ class SelectCardViewController: UIViewController {
         navigationBgView.backgroundColor = .black
     }
     
+    func getMainCard() {
+        MainCardService.shared.getMainCard { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? MainCardResponse else { return }
+                self.mainCards = data.mainCardList
+                print(self.mainCards)
+                self.setCollectionView()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func putMainCard() {
+        MainCardService.shared.putMainCard(cardIndexList: [19, 17]) { response in
+            switch response {
+            case .success(let data):
+                self.navigationController?.popViewController(animated: true)
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
     // MARK: - IBAction
     
     @IBAction func backButtonDidTap(_ sender: Any) {
@@ -61,5 +100,9 @@ class SelectCardViewController: UIViewController {
     @IBAction func allCardButtonDidTap(_ sender: Any) {
         guard let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCardModalViewController") as? SelectCardModalViewController else { return }
         self.present(cardVC, animated: true, completion: nil)
+    }
+
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+        putMainCard()
     }
 }
