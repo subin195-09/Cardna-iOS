@@ -85,14 +85,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-X6-uri">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-X6-uri">
                                         <rect key="frame" x="140" y="148" width="102" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="7Mj-5T-Ajc"/>
                                             <constraint firstAttribute="height" constant="32" id="h5v-1q-un2"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="imgCardimg"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="btFriendsplus"/>
+                                        <connections>
+                                            <action selector="addButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="g3I-qk-awM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
@@ -137,9 +140,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btFriendsplus" width="102" height="32"/>
         <image name="icbtBack" width="42" height="42"/>
         <image name="icbtBoxbackPurple" width="44" height="44"/>
-        <image name="imgCardimg" width="128.5" height="40"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

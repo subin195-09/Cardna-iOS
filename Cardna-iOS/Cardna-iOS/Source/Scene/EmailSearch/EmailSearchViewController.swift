@@ -38,6 +38,7 @@ class EmailSearchViewController: UIViewController {
     
     func setInitializeState() {
         friendExist = false
+        nowFriend = false
         searchTextField.delegate = self
     }
     
@@ -46,6 +47,15 @@ class EmailSearchViewController: UIViewController {
         setImageViewUI()
         setTextFieldUI()
         setLabelUI()
+    }
+    
+    func setButtonImage() {
+        if nowFriend {
+            addButton.setImage(Const.Image.btFriends, for: .normal)
+        }
+        else {
+            addButton.setImage(Const.Image.btFriendsplus, for: .normal)
+        }
     }
     
     func setViewUI() {
@@ -81,11 +91,19 @@ class EmailSearchViewController: UIViewController {
         profileImageView.setImage(with: data.userImg)
         nameLabel.text = data.name
         emailLabel.text = data.email
-        if data.isFriend {
-            addButton.isEnabled = false
+        nowFriend = data.isFriend
+        setButtonImage()
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func addButtonDidTap(_ sender: Any) {
+        if nowFriend {
+            nowFriend = !nowFriend
         }
         else {
-            addButton.isEnabled = true
+            nowFriend = !nowFriend
         }
     }
+    
 }
