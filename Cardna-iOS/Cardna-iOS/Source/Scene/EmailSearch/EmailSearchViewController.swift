@@ -12,7 +12,8 @@ class EmailSearchViewController: UIViewController {
     // MARK: - Property
     
     var friendExist: Bool = false
-    var nowFriend: Bool = false 
+    var nowFriend: Bool = false
+    var friendID: Int = 0
 
     // MARK: - IBOutlet
     
@@ -42,6 +43,7 @@ class EmailSearchViewController: UIViewController {
         nowFriend = false
         noResultLabel.isHidden = true
         searchTextField.delegate = self
+        addButton.isEnabled = true
     }
     
     func setUI() {
@@ -96,18 +98,17 @@ class EmailSearchViewController: UIViewController {
         nameLabel.text = data.name
         emailLabel.text = data.email
         nowFriend = data.isFriend
+        friendID = data.id
         setButtonImage()
     }
     
     // MARK: - IBAction
     
     @IBAction func addButtonDidTap(_ sender: Any) {
-        if nowFriend {
-            nowFriend = !nowFriend
-        }
-        else {
-            nowFriend = !nowFriend
-        }
+        print("ㄹㄹㅇㄴㅇㄹㄴㅇㄹㄴ\n\n\n")
+        self.postAddDeleteFriend()
+        nowFriend = !nowFriend
+        setButtonImage()
     }
     
 }

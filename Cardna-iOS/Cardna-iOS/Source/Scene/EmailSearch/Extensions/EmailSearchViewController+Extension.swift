@@ -34,6 +34,25 @@ extension EmailSearchViewController {
             }
         }
     }
+    
+    func postAddDeleteFriend() {
+        AddFriendService.shared.postAddFriend(parameter: AddFriendRequest.init(friendID: friendID)) { response in
+            switch response {
+            case .success(let data):
+                print(data)
+                guard let res = data as? AddFriendResponse else { return }
+                self.nowFriend = res.isFriend
+            case .requestErr(_):
+                print("RequestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
 }
 
 extension EmailSearchViewController: UITextFieldDelegate {
