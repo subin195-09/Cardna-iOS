@@ -7,12 +7,22 @@
 
 import UIKit
 
+import Lottie
+
 class AddCardCompletedViewController: UIViewController {
     
     // MARK: - Property
     
     var receivedText = ""
     var receivedImage = UIImage()
+    lazy var completedLottieView: AnimationView = {
+        let animationView = AnimationView(name: "gif_confetti")
+        animationView.center = self.view.center
+        animationView.contentMode = .scaleAspectFit
+        animationView.stop()
+        animationView.isHidden = true
+        return animationView
+    }()
     
     // MARK: - IBOutlet
 
@@ -28,6 +38,7 @@ class AddCardCompletedViewController: UIViewController {
         setUI()
         self.makedCardLabel.text = receivedText
         self.makedCardImageView.image = receivedImage
+        setConpletedLottieView()
     }
     
     // MARK: - Function
@@ -48,5 +59,11 @@ class AddCardCompletedViewController: UIViewController {
         makedCardLabel.textColor = .black
         makedCardImageView.contentMode = .scaleAspectFill
         makedCardImageView.clipsToBounds = true
+    }
+    
+    private func setConpletedLottieView() {
+        view.addSubviews(completedLottieView)
+        completedLottieView.isHidden = false
+        completedLottieView.play()
     }
 }
