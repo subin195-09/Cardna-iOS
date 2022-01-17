@@ -12,6 +12,8 @@
 		142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */; };
 		143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */; };
 		143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E2D662793079100706038 /* AddCardCompletedViewController.swift */; };
+		14624CE92795609D002AC66C /* AddCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14624CE82795609D002AC66C /* AddCardService.swift */; };
+		14624CEC2795699A002AC66C /* AddCardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14624CEB2795699A002AC66C /* AddCardRequest.swift */; };
 		146DA7B12792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */; };
 		14A17B89278F36EC00167ECE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B88278F36EC00167ECE /* UILabel+.swift */; };
 		14A17B8F278F52B200167ECE /* AddCardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */; };
@@ -116,6 +118,8 @@
 		142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSymbolCollectionViewCell.swift; sourceTree = "<group>"; };
 		143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardCompletedViewController.storyboard; sourceTree = "<group>"; };
 		143E2D662793079100706038 /* AddCardCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardCompletedViewController.swift; sourceTree = "<group>"; };
+		14624CE82795609D002AC66C /* AddCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardService.swift; sourceTree = "<group>"; };
+		14624CEB2795699A002AC66C /* AddCardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardRequest.swift; sourceTree = "<group>"; };
 		146DA7B02792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardBottomSheetViewController+Extension.swift"; sourceTree = "<group>"; };
 		14A17B88278F36EC00167ECE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		14A17B8E278F52B200167ECE /* AddCardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddCardViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -236,6 +240,22 @@
 				142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		14624CE52795607A002AC66C /* AddCardAPI */ = {
+			isa = PBXGroup;
+			children = (
+				14624CE82795609D002AC66C /* AddCardService.swift */,
+			);
+			path = AddCardAPI;
+			sourceTree = "<group>";
+		};
+		14624CEA2795698A002AC66C /* AddCardModel */ = {
+			isa = PBXGroup;
+			children = (
+				14624CEB2795699A002AC66C /* AddCardRequest.swift */,
+			);
+			path = AddCardModel;
 			sourceTree = "<group>";
 		};
 		14A17B8A278F524C00167ECE /* AddCard */ = {
@@ -395,6 +415,7 @@
 			children = (
 				98BF51DB27956CDD008A1993 /* InsightAPI */,
 				15ABE4B3279558CB00516170 /* CardDetailAPI */,
+				14624CE52795607A002AC66C /* AddCardAPI */,
 				9877FE432794DCFE005745C7 /* LoginAPI */,
 				15ABE4A92794D99300516170 /* MyPageAPI */,
 				15ABE49D2794CCF600516170 /* MainCardAPI */,
@@ -416,6 +437,7 @@
 			children = (
 				98BF51D827956C89008A1993 /* InsightModel */,
 				15ABE4B827955F6E00516170 /* CardDetailModel */,
+				14624CEA2795698A002AC66C /* AddCardModel */,
 				9877FE3D2794DCAF005745C7 /* LoginModel */,
 				15ABE4AE2794DA9600516170 /* MyPageModel */,
 				15ABE4A42794CD5B00516170 /* MainCardModel */,
@@ -940,6 +962,7 @@
 				15A6EEE4279298BD006EA23C /* MyPageViewController+Extension.swift in Sources */,
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
+				14624CEC2795699A002AC66C /* AddCardRequest.swift in Sources */,
 				15233001279366A300F37EB4 /* NetworkConstant.swift in Sources */,
 				9877FE412794DCC6005745C7 /* LoginResponse.swift in Sources */,
 				15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */,
@@ -949,6 +972,7 @@
 				15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
 				15232FFD2793617F00F37EB4 /* MoyaLoggingPlugin.swift in Sources */,
+				14624CE92795609D002AC66C /* AddCardService.swift in Sources */,
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,
 				98BF51DA27956C9C008A1993 /* InsightResponse.swift in Sources */,
 				9877FE472794DD11005745C7 /* LoginService.swift in Sources */,
