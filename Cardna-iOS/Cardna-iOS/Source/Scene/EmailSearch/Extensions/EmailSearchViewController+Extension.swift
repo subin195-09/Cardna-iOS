@@ -38,6 +38,7 @@ extension EmailSearchViewController {
 
 extension EmailSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        noResultLabel.isHidden = false
         if textField == searchTextField {
             self.getSearchByEmail()
         }

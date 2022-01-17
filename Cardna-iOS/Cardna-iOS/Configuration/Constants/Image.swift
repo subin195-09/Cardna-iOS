@@ -127,5 +127,21 @@ extension Const {
         
         // MARK: - 갤러리 아이콘
         static let icGallery = UIImage(named: "icGallery")!
+        
+        // MARK: - 로그인 회원가입 뷰 관련 아이콘
+        static let icNotice = UIImage(named: "icNotice")!
+        static let icbtEye = UIImage(named: "icbtEye")!
+        static let icbtEyeslash = UIImage(named: "icbtEyeslash")!
+        
+        // MARK: - 말풍선 로고
+        static let bubbleMsg = UIImage(named: "bubbleMsg")!
+        
+        // MARK: - 이니셜 뷰 버튼
+        static let btSignup = UIImage(named: "btSignup")!
+        static let btLogin = UIImage(named: "btLogin")!
+        
+        // MARK: - 이메일 검색 뷰 버튼
+        static let btFriends = UIImage(named: "btFriends")!
+        static let btFriendsplus = UIImage(named: "btFriendsplus")!
     }
 }
