@@ -74,4 +74,19 @@ class LoginViewController: UIViewController {
         okButton.layer.cornerRadius = 10
         okButton.setBackgroundImage(Const.Image.gradientbg, for: .normal)
     }
+    
+    func makeAlert(data: GeneralResponse<LoginResponse>) {
+        let alert = UIAlertController(title: "로그인",
+                                      message: data.message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func okButtonDidTap(_ sender: Any) {
+        self.requestLogin()
+    }
 }
