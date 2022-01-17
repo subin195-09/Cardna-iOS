@@ -26,10 +26,30 @@ class InitialViewController: UIViewController {
     
     private func setUI() {
         setLabelUI()
+        setNavigationBar()
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     private func setLabelUI() {
         titleLabel.font = .cardnaB3Rg
         titleLabel.textColor = .w2
+    }
+    // MARK: - IBAction
+    
+    @IBAction func loginButtonDidTap(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func joinButtonDidTap(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "JoinViewController", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "JoinViewController") as? JoinViewController else { return }
+
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

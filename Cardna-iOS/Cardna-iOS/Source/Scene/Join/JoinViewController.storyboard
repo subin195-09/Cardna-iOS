@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Join View Controller-->
+        <!--JoinViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="JoinViewController" id="Y6W-OH-hqX" customClass="JoinViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinViewController" title="JoinViewController" id="Y6W-OH-hqX" customClass="JoinViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvU-Q9-mVS">
                                 <rect key="frame" x="17" y="415" width="381" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="342" id="qAI-FN-Vg6"/>
                                     <constraint firstAttribute="height" constant="64" id="ycW-1k-vcW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
