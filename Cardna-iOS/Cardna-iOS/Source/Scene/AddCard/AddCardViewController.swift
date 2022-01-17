@@ -15,7 +15,6 @@ class AddCardViewController: UIViewController {
     
     // MARK: - Property
     
-    var cardKeywordCount: Int = 0
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
     
     // MARK: - Component
@@ -128,6 +127,8 @@ class AddCardViewController: UIViewController {
         setLayout()
         setGesture()
         setTouchUpCardImageViewButton()
+        setTextFieldDelegate()
+        setNotificationCenter()
     }
     
     // MARK: - Function
@@ -135,6 +136,27 @@ class AddCardViewController: UIViewController {
     private func setLayout() {
         setViewHierarchy()
         setConstraints()
+    }
+    
+    private func setGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(didTapTextView(_:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setTouchUpCardImageViewButton() {
+        cardImageViewButton.addTarget(self, action: #selector(didImageViewTap), for: .touchUpInside)
+    }
+    
+    private func setTextFieldDelegate() {
+        cardKeywordTextField.delegate = self
+    }
+    
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(textDidChange(_:)),
+                                               name: UITextField.textDidChangeNotification,
+                                               object: cardKeywordTextField)
     }
     
     private func setViewHierarchy() {
@@ -262,16 +284,6 @@ class AddCardViewController: UIViewController {
         }
     }
     
-    private func setTouchUpCardImageViewButton() {
-        cardImageViewButton.addTarget(self, action: #selector(didImageViewTap), for: .touchUpInside)
-    }
-    
-    private func setGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self,
-                                                action: #selector(didTapTextView(_:)))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
     func updateContentsCountLabel(characterCount: Int) {
         cardContentsCountLabel.text = "\(characterCount)/200"
     }
@@ -303,5 +315,20 @@ class AddCardViewController: UIViewController {
         completedCardVC.receivedImage = cardImageView.image ?? UIImage()
         completedCardVC.modalPresentationStyle = .fullScreen
         self.present(completedCardVC, animated: true, completion: nil)
+    }
+    
+    @objc
+    private func textDidChange(_ notification: Notification) {
+        if let textField = notification.object as? UITextField {
+            if let text = textField.text {
+                cardKeywordCountLabel.text = "\(text.count)/14"
+                
+                if text.count > 14 {
+                    let index = text.index(text.startIndex, offsetBy: 14)
+                    let newString = text[text.startIndex..<index]
+                    textField.text = String(newString)
+                }
+            }
+        }
     }
 }
