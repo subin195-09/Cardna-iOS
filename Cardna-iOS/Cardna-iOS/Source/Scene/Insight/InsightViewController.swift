@@ -12,6 +12,8 @@ class InsightViewController: UIViewController {
     // MARK: - Property
     
     var deviceWidth: CGFloat = UIScreen.main.bounds.width
+    var openCard: AreaCard?
+    var blindCard: AreaCard?
     
     // MARK: - IBOutlet
     
@@ -40,6 +42,7 @@ class InsightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getInsightCard()
         setUI()
     }
     
@@ -66,6 +69,7 @@ class InsightViewController: UIViewController {
         }
         [openAreaExplainLabel, blindAreaExplainLabel].forEach {
             $0?.font = .cardnaSh3Sbd
+            $0?.sizeToFit()
         }
     }
     
@@ -104,6 +108,24 @@ class InsightViewController: UIViewController {
         }
         blindAreaPageView.snp.makeConstraints {
             $0.width.equalTo(deviceWidth)
+        }
+    }
+    
+    func setInsightCardInfo() {
+        if let open = openCard {
+            openAreaCardImageView.setImage(with: open.imageURL)
+            openAreaCardTitleLabel.text = open.title
+        }
+        else {
+            openAreaCardTitleLabel.text = "아무것도 없어요"
+        }
+        
+        if let blind = blindCard {
+            blindAreaCardImageView.setImage(with: blind.imageURL)
+            blindAreaCardTitleLabel.text = blind.title
+        }
+        else {
+            blindAreaCardTitleLabel.text = "별 정보가 없어요"
         }
     }
 }
