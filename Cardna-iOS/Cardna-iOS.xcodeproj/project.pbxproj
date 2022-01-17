@@ -100,6 +100,10 @@
 		9887523E278D7F3C006018AE /* CardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */; };
 		98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */; };
 		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
+		98BC0B7B2795A61100BE2AB0 /* EmailSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC0B7A2795A61100BE2AB0 /* EmailSearchResponse.swift */; };
+		98BC0B7E2795A62200BE2AB0 /* EmailSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC0B7D2795A62200BE2AB0 /* EmailSearchRouter.swift */; };
+		98BC0B802795A62A00BE2AB0 /* EmailSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC0B7F2795A62A00BE2AB0 /* EmailSearchService.swift */; };
+		98BC0B832795A63E00BE2AB0 /* EmailSearchViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC0B822795A63E00BE2AB0 /* EmailSearchViewController+Extension.swift */; };
 		98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */; };
 		98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */; };
 		98BF51DA27956C9C008A1993 /* InsightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51D927956C9C008A1993 /* InsightResponse.swift */; };
@@ -208,6 +212,10 @@
 		9887523D278D7F3C006018AE /* CardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardBottomSheet.storyboard; sourceTree = "<group>"; };
 		9887523F278D7F62006018AE /* CardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		98BC0B7A2795A61100BE2AB0 /* EmailSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSearchResponse.swift; sourceTree = "<group>"; };
+		98BC0B7D2795A62200BE2AB0 /* EmailSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSearchRouter.swift; sourceTree = "<group>"; };
+		98BC0B7F2795A62A00BE2AB0 /* EmailSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSearchService.swift; sourceTree = "<group>"; };
+		98BC0B822795A63E00BE2AB0 /* EmailSearchViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailSearchViewController+Extension.swift"; sourceTree = "<group>"; };
 		98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+Extension.swift"; sourceTree = "<group>"; };
 		98BF51D927956C9C008A1993 /* InsightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightResponse.swift; sourceTree = "<group>"; };
@@ -413,6 +421,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				98BC0B7C2795A61600BE2AB0 /* EmailSearchAPI */,
 				98BF51DB27956CDD008A1993 /* InsightAPI */,
 				15ABE4B3279558CB00516170 /* CardDetailAPI */,
 				14624CE52795607A002AC66C /* AddCardAPI */,
@@ -435,6 +444,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				98BC0B792795A5F400BE2AB0 /* EmailSearchModel */,
 				98BF51D827956C89008A1993 /* InsightModel */,
 				15ABE4B827955F6E00516170 /* CardDetailModel */,
 				14624CEA2795698A002AC66C /* AddCardModel */,
@@ -711,6 +721,7 @@
 		98817C6627929A7700819892 /* EmailSearch */ = {
 			isa = PBXGroup;
 			children = (
+				98BC0B812795A62F00BE2AB0 /* Extensions */,
 				98817C6727929AD200819892 /* EmailSearch.storyboard */,
 				98817C6927929B0600819892 /* EmailSearchViewController.swift */,
 			);
@@ -724,6 +735,31 @@
 				98817C732792C5E100819892 /* InitialViewController.swift */,
 			);
 			path = Initial;
+			sourceTree = "<group>";
+		};
+		98BC0B792795A5F400BE2AB0 /* EmailSearchModel */ = {
+			isa = PBXGroup;
+			children = (
+				98BC0B7A2795A61100BE2AB0 /* EmailSearchResponse.swift */,
+			);
+			path = EmailSearchModel;
+			sourceTree = "<group>";
+		};
+		98BC0B7C2795A61600BE2AB0 /* EmailSearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				98BC0B7D2795A62200BE2AB0 /* EmailSearchRouter.swift */,
+				98BC0B7F2795A62A00BE2AB0 /* EmailSearchService.swift */,
+			);
+			path = EmailSearchAPI;
+			sourceTree = "<group>";
+		};
+		98BC0B812795A62F00BE2AB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98BC0B822795A63E00BE2AB0 /* EmailSearchViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		98BDF5A2278F5B6A00B02F33 /* Cell */ = {
@@ -965,6 +1001,7 @@
 				14624CEC2795699A002AC66C /* AddCardRequest.swift in Sources */,
 				15233001279366A300F37EB4 /* NetworkConstant.swift in Sources */,
 				9877FE412794DCC6005745C7 /* LoginResponse.swift in Sources */,
+				98BC0B7E2795A62200BE2AB0 /* EmailSearchRouter.swift in Sources */,
 				15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */,
 				15ABE4BA27955FBC00516170 /* CardDetailResponse.swift in Sources */,
 				15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */,
@@ -978,6 +1015,7 @@
 				9877FE472794DD11005745C7 /* LoginService.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
+				98BC0B832795A63E00BE2AB0 /* EmailSearchViewController+Extension.swift in Sources */,
 				98116F3F2794678B00042215 /* LoginViewController.swift in Sources */,
 				15C51B1A278AC445001E1F6F /* InsightViewController.swift in Sources */,
 				15ABE4B22794DBC100516170 /* MyPageResponse.swift in Sources */,
@@ -995,6 +1033,8 @@
 				98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */,
 				98BF51E22795721C008A1993 /* InsightViewController+Extension.swift in Sources */,
 				98817C742792C5E100819892 /* InitialViewController.swift in Sources */,
+				98BC0B802795A62A00BE2AB0 /* EmailSearchService.swift in Sources */,
+				98BC0B7B2795A61100BE2AB0 /* EmailSearchResponse.swift in Sources */,
 				14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */,
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
