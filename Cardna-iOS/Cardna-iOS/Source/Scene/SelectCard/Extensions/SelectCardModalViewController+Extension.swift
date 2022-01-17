@@ -21,14 +21,61 @@ extension SelectCardModalViewController {
     }
 }
 
+extension SelectCardModalViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /// 카드나
+        if control == 0 {
+            var cardme = cardMeList[indexPath.item]
+            print("카드미", cardme)
+            if cardme.mainOrder == nil {
+                cardMeList[indexPath.item].changeMainState()
+                mainCardList.append(contentsOf: [MainCardList(id: cardme.id,
+                                                          mainOrder: -1,
+                                                          isMe: true,
+                                                          cardImg: cardme.cardImg,
+                                                          title: cardme.title)])
+            }
+            else {
+                print("zz")
+                cardme.changeMainState()
+                mainCardList.removeAll(where: { $0.id == cardme.id })
+            }
+            print("mainCardList", mainCardList)
+        }
+        /// 카드너
+        else {
+            var cardyou = cardYouList[indexPath.item]
+            
+            mainCardList.append(contentsOf: [MainCardList(id: cardyou.id, mainOrder: cardyou.mainOrder ?? -1, isMe: false, cardImg: cardyou.cardImg, title: cardyou.title)])
+        }
+        print(indexPath.item)
+        
+    }
+}
+
 extension SelectCardModalViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        /// 카드나
+        if control == 0 {
+            return cardMeList.count
+        }
+        /// 카드너
+        else {
+            return cardYouList.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: "https://firebasestorage.googleapis.com/v0/b/cardna-29f5b.appspot.com/o/20220115_212100_64397479199.jpeg?alt=media", title: "ㅋㅋㅋ ", isMe: true, small: true)
+        if control == 0 {
+            let card = cardMeList[indexPath.item]
+            cell.setData(image: card.cardImg, title: card.title, isMe: true, small: true, isMainCount: card.mainOrder)
+        }
+        else {
+            let card = cardYouList[indexPath.item]
+            cell.setData(image: card.cardImg, title: card.title, isMe: false, small: true, isMainCount: card.mainOrder)
+        }
         return cell
     }
 }

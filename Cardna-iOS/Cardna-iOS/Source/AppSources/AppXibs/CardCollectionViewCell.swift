@@ -21,6 +21,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var isMainCountLabel: UILabel!
     
     // MARK: - LifeCycle
     
@@ -33,6 +34,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
         titleLabel.text = nil
         bgView.backgroundColor = .w2
+        isMainCountLabel.text = nil
     }
     
     // MARK: - Function
@@ -44,7 +46,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setData(image: String, title: String, isMe: Bool, small: Bool) {
+    func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil) {
         imageView.setImage(with: image)
         titleLabel.text = title
         if isMe == true {
@@ -65,6 +67,10 @@ class CardCollectionViewCell: UICollectionViewCell {
             titleLeadingConstraint.constant = 20
             titleTrailingConstraint.constant = 20
             titleTopConstraint.constant = 5
+        }
+        
+        if isMainCount != nil {
+            isMainCountLabel.text = "\(isMainCount ?? 0)"
         }
     }
 }

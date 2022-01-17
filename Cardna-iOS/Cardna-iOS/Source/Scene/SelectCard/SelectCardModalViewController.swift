@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import CloudKit
 
 class SelectCardModalViewController: UIViewController {
+    
+    // MARK: - Property
+    
+    var userID: Int?
+    var control: Int = 0
+    var mainCardList: [MainCardList] = []
+    var cardMeList: [CardMeList] = []
+    var cardYouList: [CardYouList] = []
     
     // MARK: - IBOutlet
 
@@ -21,7 +30,7 @@ class SelectCardModalViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         registerXib()
-        setCollectionView()
+        getCardPackAll(id: userID)
     }
     
     // MARK: - Function
@@ -39,6 +48,34 @@ class SelectCardModalViewController: UIViewController {
     
     func setCollectionView() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
+    }
+    
+    func getCardPackAll(id: Int?) {
+        CardPackService.shared.getCardPackAll(id: id) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? CardPackAllResponse else { return }
+                self.cardMeList = data.cardMeList
+                self.cardYouList = data.cardYouList
+                self.setCollectionView()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func switchControl(_ sender: UISegmentedControl) {
+        control = sender.selectedSegmentIndex
+        collectionView.reloadData()
     }
 }
