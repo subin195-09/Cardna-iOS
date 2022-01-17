@@ -13,6 +13,7 @@ class AddCardBottomSheetViewController: UIViewController {
     
     var addCardSymbolIconList: [UIImage] = []
     let imagePickerController = UIImagePickerController()
+    var isMe = true
     
     // MARK: - IBOutlet
 
@@ -36,11 +37,19 @@ class AddCardBottomSheetViewController: UIViewController {
     // MARK: - Function
     
     private func initSymbolIconData() {
-        addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmile,
-                                                  Const.Image.icbtSymbolHeart,
-                                                  Const.Image.icbtSymbolDia,
-                                                  Const.Image.icbtSymbolSpade,
-                                                  Const.Image.icbtSymbolClover])
+        if (self.isMe) {
+            addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmile,
+                                                      Const.Image.icbtSymbolHeart,
+                                                      Const.Image.icbtSymbolDia,
+                                                      Const.Image.icbtSymbolSpade,
+                                                      Const.Image.icbtSymbolClover])
+        } else {
+            addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmilePur,
+                                                      Const.Image.icbtSymbolHeartPur,
+                                                      Const.Image.icbtSymbolDiaPur,
+                                                      Const.Image.icbtSymbolSpadePur,
+                                                      Const.Image.icbtSymbolCloverPur])
+        }
     }
     
     private func setLayout() {

@@ -13,26 +13,11 @@ import MaterialComponents.MaterialBottomSheet
 
 class AddCardViewController: UIViewController {
     
-    init(isMe: Bool) {
-        super.init(nibName: nil, bundle: nil)
-        
-        switch isMe {
-        case true:
-            ()
-        case false:
-            self.addCardViewTitleLabel.text = "타인 소개 작성"
-        default:
-            return
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     // MARK: - Property
     
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
+    var isMe = true
+    var cardForName = ""
     
     // MARK: - Component
     
@@ -146,6 +131,7 @@ class AddCardViewController: UIViewController {
         setTouchUpCardImageViewButton()
         setTextFieldDelegate()
         setNotificationCenter()
+        setCardYouOption()
     }
     
     // MARK: - Function
@@ -307,10 +293,24 @@ class AddCardViewController: UIViewController {
     
     private func showBottomSheet() {
         guard let bottomSheetVC = UIStoryboard(name: "AddCardBottomSheet", bundle: nil).instantiateViewController(withIdentifier: "AddCardBottomSheetViewController") as? AddCardBottomSheetViewController else { return }
+        if (self.isMe) {
+            bottomSheetVC.isMe = true
+        } else {
+            bottomSheetVC.isMe = false
+        }
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: bottomSheetVC)
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 300
         bottomSheet.adjustHeightForSafeAreaInsets = false
         self.present(bottomSheet, animated: true, completion: nil)
+    }
+    
+    private func setCardYouOption() {
+        if (!self.isMe) {
+            self.addCardViewTitleLabel.text = "타인 소개 작성"
+            self.cardKeywordLabel1.text = "\(cardForName)님은"
+            self.addCardButton.setTitle("작성 완료", for: .normal)
+            self.addCardButton.backgroundColor = .mainPurple
+        }
     }
     
     // MARK: - Objc Function
@@ -332,29 +332,35 @@ class AddCardViewController: UIViewController {
     
     @objc
     private func showCompletedCard(_ sender: Any) {
-        AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
-                                          content: cardContentsTextView.text,
-                                          symbolId: nil,
-                                          img: cardImageView.image!) { result in
-            switch result {
-            case .success(let msg):
-                print("success", msg)
-            case .requestErr(let msg):
-                print("requestERR", msg)
-            case .pathErr:
-                print("pathERR")
-            case .serverErr:
-                print("serverERR")
-            case .networkFail:
-                print("networkFail")
+        if (self.isMe) {
+            AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
+                                              content: cardContentsTextView.text,
+                                              symbolId: nil,
+                                              img: cardImageView.image!) { result in
+                switch result {
+                case .success(let msg):
+                    print("success", msg)
+                case .requestErr(let msg):
+                    print("requestERR", msg)
+                case .pathErr:
+                    print("pathERR")
+                case .serverErr:
+                    print("serverERR")
+                case .networkFail:
+                    print("networkFail")
+                }
             }
+            
+            guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
+            completedCardVC.receivedText = cardKeywordTextField.text ?? ""
+            completedCardVC.receivedImage = cardImageView.image ?? UIImage()
+            completedCardVC.modalPresentationStyle = .fullScreen
+            self.present(completedCardVC, animated: true, completion: nil)
+        } else {
+            guard let completedCardVC = UIStoryboard(name: "AddCardYouCompleted", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouCompleted") as? AddCardYouCompletedViewController else { return }
+            completedCardVC.modalPresentationStyle = .fullScreen
+            self.present(completedCardVC, animated: true, completion: nil)
         }
-        
-        guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
-        completedCardVC.receivedText = cardKeywordTextField.text ?? ""
-        completedCardVC.receivedImage = cardImageView.image ?? UIImage()
-        completedCardVC.modalPresentationStyle = .fullScreen
-        self.present(completedCardVC, animated: true, completion: nil)
     }
     
     @objc

@@ -12,7 +12,7 @@ class AddCardYouViewController: UIViewController {
     // MARK: - Property
     
     static let identifier = "AddCardYouViewController"
-    var relation = "정재"
+    var name = "정재"
     
     // MARK: - IBOutlet
     
@@ -40,7 +40,7 @@ class AddCardYouViewController: UIViewController {
         addCardYouTitleLabel.textColor = .w1
         addCardYouQuestion.font = .cardnaSh1Sbd
         addCardYouQuestion.textColor = .w1
-        addCardYouQuestion.text = "당신은 \(relation)님에게 어떤 사람인가요?"
+        addCardYouQuestion.text = "당신은 \(name)님에게 어떤 사람인가요?"
         addCardYouTextField.backgroundColor = .black
         addCardYouTextField.font = .cardnaSh3Sbd
         addCardYouTextField.textColor = .w1
@@ -65,8 +65,10 @@ class AddCardYouViewController: UIViewController {
     }
     
     @IBAction func nextButton(_ sender: Any) {
-        let nextVC = AddCardViewController(isMe: false)
+        let nextVC = AddCardViewController()
+        nextVC.isMe = false
         nextVC.modalPresentationStyle = .fullScreen
+        nextVC.cardForName = name
         self.present(nextVC, animated: true, completion: nil)
     }
 }
