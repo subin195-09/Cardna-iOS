@@ -75,9 +75,16 @@ class SelectCardViewController: UIViewController {
     }
     
     func putMainCard() {
-        MainCardService.shared.putMainCard(cardIndexList: [19, 17]) { response in
+        
+        var cardIndexs: [Int] = []
+        
+        for i in mainCards {
+            cardIndexs.append(contentsOf: [i.id])
+        }
+        
+        MainCardService.shared.putMainCard(cardIndexList: cardIndexs) { response in
             switch response {
-            case .success(let data):
+            case .success(_):
                 self.navigationController?.popViewController(animated: true)
             case .requestErr(_):
                 print("requestErr")
