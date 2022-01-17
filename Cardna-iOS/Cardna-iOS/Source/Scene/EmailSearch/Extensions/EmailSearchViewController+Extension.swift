@@ -23,9 +23,11 @@ extension EmailSearchViewController {
                 self.hideResult()
             case .requestErr(_):
                 self.friendExist = false
+                self.hideResult()
                 print("RequestErr")
             case .pathErr:
                 self.friendExist = false
+                self.hideResult()
                 print("pathErr")
             case .serverErr:
                 print("serverErr")

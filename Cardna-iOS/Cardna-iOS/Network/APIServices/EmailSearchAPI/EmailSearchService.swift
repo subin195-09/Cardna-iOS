@@ -34,7 +34,7 @@ public class EmailSearchService {
         case 200:
             return isValidLoginData(data: data)
         case 400..<500:
-            return isValidLoginData(data: data)
+            return .requestErr(data)
         case 500:
             return .serverErr
         default:
