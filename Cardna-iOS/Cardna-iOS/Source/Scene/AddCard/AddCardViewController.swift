@@ -121,7 +121,7 @@ class AddCardViewController: UIViewController {
     }
     
     // MARK: - VC LifeCycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
@@ -310,6 +310,24 @@ class AddCardViewController: UIViewController {
     
     @objc
     private func showCompletedCard(_ sender: Any) {
+        AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
+                                          content: cardContentsTextView.text,
+                                          symbolId: nil,
+                                          img: cardImageView.image!) { result in
+            switch result {
+            case .success(let msg):
+                print("success", msg)
+            case .requestErr(let msg):
+                print("requestERR", msg)
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+        
         guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
         completedCardVC.receivedText = cardKeywordTextField.text ?? ""
         completedCardVC.receivedImage = cardImageView.image ?? UIImage()
