@@ -8,6 +8,11 @@
 import UIKit
 
 class EmailSearchViewController: UIViewController {
+    
+    // MARK: - Property
+    
+    var friendExist: Bool = false
+    var nowFriend: Bool = false 
 
     // MARK: - IBOutlet
     
@@ -24,11 +29,17 @@ class EmailSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInitializeState()
         setUI()
-        hideResult(exist: false)
+        hideResult()
     }
 
     // MARK: - Function
+    
+    func setInitializeState() {
+        friendExist = false
+        searchTextField.delegate = self
+    }
     
     func setUI() {
         setViewUI()
@@ -62,7 +73,19 @@ class EmailSearchViewController: UIViewController {
         emailLabel.textColor = .w2
     }
     
-    func hideResult(exist: Bool) {
-        searchResultView.isHidden = exist
+    func hideResult() {
+        searchResultView.isHidden = !friendExist
+    }
+    
+    func setFriendResult(data: EmailSearchResponse) {
+        profileImageView.setImage(with: data.userImg)
+        nameLabel.text = data.name
+        emailLabel.text = data.email
+        if data.isFriend {
+            addButton.isEnabled = false
+        }
+        else {
+            addButton.isEnabled = true
+        }
     }
 }
