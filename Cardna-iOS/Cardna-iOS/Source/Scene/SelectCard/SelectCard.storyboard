@@ -155,6 +155,9 @@
                                     <segment title="카드나"/>
                                     <segment title="카드너"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchControl:" destination="lL8-AV-fIU" eventType="valueChanged" id="46g-wX-KAN"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCt-Sa-Psf">
                                 <rect key="frame" x="194.5" y="109" width="25" height="18"/>

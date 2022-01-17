@@ -41,12 +41,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJG-uo-g2b">
+                                <rect key="frame" x="272.5" y="367.5" width="13.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oWS-dP-mEt" firstAttribute="top" secondItem="mNn-Nw-OPg" secondAttribute="bottom" constant="5" id="2vl-uB-OQt"/>
                             <constraint firstItem="mNn-Nw-OPg" firstAttribute="leading" secondItem="W9a-lj-jng" secondAttribute="leading" constant="10" id="5Ff-4I-zWo"/>
                             <constraint firstItem="mNn-Nw-OPg" firstAttribute="height" secondItem="W9a-lj-jng" secondAttribute="height" multiplier="0.86" id="TxN-o9-Q2f"/>
+                            <constraint firstItem="vJG-uo-g2b" firstAttribute="trailing" secondItem="xsA-kv-moV" secondAttribute="trailing" id="Xla-k6-YHa"/>
+                            <constraint firstItem="vJG-uo-g2b" firstAttribute="centerY" secondItem="oWS-dP-mEt" secondAttribute="centerY" id="Ynj-oj-5sM"/>
                             <constraint firstItem="mNn-Nw-OPg" firstAttribute="top" secondItem="W9a-lj-jng" secondAttribute="top" constant="10" id="g5B-rv-VUT"/>
                             <constraint firstItem="oWS-dP-mEt" firstAttribute="leading" secondItem="W9a-lj-jng" secondAttribute="leading" constant="20" id="kAz-5l-UXx"/>
                             <constraint firstAttribute="trailing" secondItem="oWS-dP-mEt" secondAttribute="trailing" constant="20" id="qN8-GF-aCe"/>
@@ -66,6 +74,7 @@
             <connections>
                 <outlet property="bgView" destination="W9a-lj-jng" id="sEl-Nz-M2c"/>
                 <outlet property="imageView" destination="xsA-kv-moV" id="Swq-ih-Ea9"/>
+                <outlet property="isMainCountLabel" destination="vJG-uo-g2b" id="2a8-pV-eqP"/>
                 <outlet property="titleLabel" destination="oWS-dP-mEt" id="YiH-Be-4Vh"/>
                 <outlet property="titleLeadingConstraint" destination="kAz-5l-UXx" id="dJT-is-iyE"/>
                 <outlet property="titleTopConstraint" destination="2vl-uB-OQt" id="dkA-tM-zWb"/>
