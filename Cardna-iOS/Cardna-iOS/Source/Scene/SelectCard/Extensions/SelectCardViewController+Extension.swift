@@ -53,3 +53,10 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
         return view
     }
 }
+
+extension SelectCardViewController: MainCardSelectProtocol {
+    func sendMainCard(cardList: [MainCardList]) {
+        mainCards = cardList
+        collectionView.reloadData()
+    }
+}
