@@ -13,6 +13,23 @@ import MaterialComponents.MaterialBottomSheet
 
 class AddCardViewController: UIViewController {
     
+    init(isMe: Bool) {
+        super.init(nibName: nil, bundle: nil)
+        
+        switch isMe {
+        case true:
+            ()
+        case false:
+            self.addCardViewTitleLabel.text = "타인 소개 작성"
+        default:
+            return
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Property
     
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
@@ -23,7 +40,7 @@ class AddCardViewController: UIViewController {
     
     var backButton = UIButton().then {
         $0.setImage(Const.Image.icbtBack, for: .normal)
-        //$0.addTarget(self, action: #selector(backButtonDidTap(_:)), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(backButtonDidTap(_:)), for: .touchUpInside)
     }
     
     var addCardViewTitleLabel = UILabel().then {
@@ -181,7 +198,7 @@ class AddCardViewController: UIViewController {
         
         backButton.snp.makeConstraints {
             $0.top.equalTo(self.titleBarUIView.snp.top).offset(1)
-            $0.leading.equalTo(self.titleBarUIView.snp.leading).offset(16)
+            $0.leading.equalTo(self.titleBarUIView.snp.leading).offset(8)
         }
         
         addCardViewTitleLabel.snp.makeConstraints {
@@ -297,6 +314,11 @@ class AddCardViewController: UIViewController {
     }
     
     // MARK: - Objc Function
+    
+    @objc
+    private func backButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @objc
     private func didImageViewTap(_ sender: Any) {

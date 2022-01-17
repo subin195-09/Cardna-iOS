@@ -10,6 +10,8 @@
 		142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */; };
 		142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */; };
 		142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */; };
+		142EF09B2795C3C200D61C32 /* AddCardYouViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142EF09A2795C3C100D61C32 /* AddCardYouViewController.storyboard */; };
+		142EF09D2795C3D800D61C32 /* AddCardYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EF09C2795C3D800D61C32 /* AddCardYouViewController.swift */; };
 		143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */; };
 		143E2D672793079100706038 /* AddCardCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E2D662793079100706038 /* AddCardCompletedViewController.swift */; };
 		14624CE92795609D002AC66C /* AddCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14624CE82795609D002AC66C /* AddCardService.swift */; };
@@ -123,6 +125,8 @@
 		142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardBottomSheet.storyboard; sourceTree = "<group>"; };
 		142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSymbolCollectionViewCell.swift; sourceTree = "<group>"; };
+		142EF09A2795C3C100D61C32 /* AddCardYouViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardYouViewController.storyboard; sourceTree = "<group>"; };
+		142EF09C2795C3D800D61C32 /* AddCardYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardYouViewController.swift; sourceTree = "<group>"; };
 		143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardCompletedViewController.storyboard; sourceTree = "<group>"; };
 		143E2D662793079100706038 /* AddCardCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardCompletedViewController.swift; sourceTree = "<group>"; };
 		14624CE82795609D002AC66C /* AddCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardService.swift; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				142A721B27915F4300500364 /* Cell */,
 				14A17B8B278F526E00167ECE /* Extensions */,
 				14A5AFB5278E815A00B8BD84 /* AddCardViewController.swift */,
+				142EF09A2795C3C100D61C32 /* AddCardYouViewController.storyboard */,
+				142EF09C2795C3D800D61C32 /* AddCardYouViewController.swift */,
 				142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */,
 				142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */,
 				143E2D642793077400706038 /* AddCardCompletedViewController.storyboard */,
@@ -945,6 +951,7 @@
 				15C51B2D278C98B1001E1F6F /* Pretendard-SemiBold.otf in Resources */,
 				15A6EEDD2792001E006EA23C /* ListTableViewCell.xib in Resources */,
 				15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */,
+				142EF09B2795C3C200D61C32 /* AddCardYouViewController.storyboard in Resources */,
 				15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
 				143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */,
@@ -1017,6 +1024,7 @@
 				98817C6C2792A2E700819892 /* UITextField+.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
+				142EF09D2795C3D800D61C32 /* AddCardYouViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
 				15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */,
 				15ABE4B5279558D700516170 /* CardDetailRouter.swift in Sources */,
