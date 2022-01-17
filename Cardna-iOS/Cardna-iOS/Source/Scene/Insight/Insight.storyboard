@@ -49,6 +49,14 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta9-Om-sHH" userLabel="아직 인사이트를 얻기에 데이터가 부족해요!">
+                                                                <rect key="frame" x="109.66666666666669" y="405.66666666666669" width="156" height="40.666666666666686"/>
+                                                                <string key="text">아직 인사이트를 얻기에
+데이터가 부족해요!</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfn-ce-u1H">
                                                                 <rect key="frame" x="64" y="241" width="248" height="374"/>
                                                                 <subviews>
@@ -93,6 +101,7 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="375" id="7No-pa-yFH"/>
+                                                            <constraint firstItem="Ta9-Om-sHH" firstAttribute="centerX" secondItem="2Fa-12-gzX" secondAttribute="centerX" id="Eaz-yt-Vb7"/>
                                                             <constraint firstItem="Zfn-ce-u1H" firstAttribute="leading" secondItem="2Fa-12-gzX" secondAttribute="leading" constant="64" id="GAm-zu-sbE"/>
                                                             <constraint firstItem="Oeg-AU-ZUP" firstAttribute="leading" secondItem="hCr-li-Pkd" secondAttribute="trailing" constant="16" id="OHh-MK-CBe"/>
                                                             <constraint firstItem="AGM-LL-dB0" firstAttribute="leading" secondItem="2Fa-12-gzX" secondAttribute="leading" constant="16" id="Q3h-T8-KMb"/>
@@ -104,6 +113,7 @@
                                                             <constraint firstItem="DUn-1q-jSE" firstAttribute="centerX" secondItem="2Fa-12-gzX" secondAttribute="centerX" id="dV0-g9-rso"/>
                                                             <constraint firstItem="Zfn-ce-u1H" firstAttribute="top" secondItem="2Fa-12-gzX" secondAttribute="top" constant="241" id="pYj-YY-Egj"/>
                                                             <constraint firstItem="tRG-0j-fKI" firstAttribute="top" secondItem="Zfn-ce-u1H" secondAttribute="bottom" constant="32" id="v5D-Rw-QA6"/>
+                                                            <constraint firstItem="Ta9-Om-sHH" firstAttribute="top" secondItem="AGM-LL-dB0" secondAttribute="bottom" constant="205" id="w4e-Qd-AEh"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ND-jJ-ysm">
@@ -124,6 +134,14 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="lbb-RJ-pJX"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-7w-LI5">
+                                                                <rect key="frame" x="109.66666666666669" y="406" width="156" height="40.666666666666686"/>
+                                                                <string key="text">아직 인사이트를 얻기에
+데이터가 부족해요!</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -182,6 +200,8 @@
                                                             <constraint firstAttribute="trailing" secondItem="ucM-KF-yIB" secondAttribute="trailing" constant="16" id="MVb-wF-tya"/>
                                                             <constraint firstItem="mIQ-Xa-I1K" firstAttribute="top" secondItem="xxN-sn-eMb" secondAttribute="bottom" constant="32" id="SQt-pK-hhP"/>
                                                             <constraint firstItem="ucM-KF-yIB" firstAttribute="top" secondItem="0ND-jJ-ysm" secondAttribute="top" constant="180" id="Xd3-UC-z6c"/>
+                                                            <constraint firstItem="Phu-7w-LI5" firstAttribute="centerX" secondItem="0ND-jJ-ysm" secondAttribute="centerX" id="j3w-E8-h35"/>
+                                                            <constraint firstItem="Phu-7w-LI5" firstAttribute="top" secondItem="ucM-KF-yIB" secondAttribute="bottom" constant="205" id="mxW-QI-C3x"/>
                                                             <constraint firstAttribute="width" constant="375" id="nqn-fT-hKN"/>
                                                             <constraint firstItem="W7N-1B-Q0x" firstAttribute="leading" secondItem="0ND-jJ-ysm" secondAttribute="leading" constant="16" id="o0M-jC-M5K"/>
                                                             <constraint firstItem="u5E-bc-OPl" firstAttribute="top" secondItem="0ND-jJ-ysm" secondAttribute="top" constant="121" id="pSs-Xu-RMr"/>
@@ -265,6 +285,7 @@
                         <outlet property="blindAreaExplainLabel" destination="mIQ-Xa-I1K" id="UPO-Ks-uMQ"/>
                         <outlet property="blindAreaPageView" destination="0ND-jJ-ysm" id="ixg-Wx-gxY"/>
                         <outlet property="blindAreaTitleLabel" destination="ucM-KF-yIB" id="7wO-AY-1uX"/>
+                        <outlet property="blindNilLabel" destination="Phu-7w-LI5" id="8Sg-Iq-Wo7"/>
                         <outlet property="insightTitleLabel" destination="qK8-Jo-JRd" id="LzL-cM-3mH"/>
                         <outlet property="openAreaCardImageView" destination="L6m-KW-CJd" id="Hwr-qz-iZO"/>
                         <outlet property="openAreaCardTitleLabel" destination="MNk-gg-ota" id="iw1-pF-Kgw"/>
@@ -272,6 +293,7 @@
                         <outlet property="openAreaExplainLabel" destination="tRG-0j-fKI" id="Blc-g6-2IJ"/>
                         <outlet property="openAreaPageView" destination="2Fa-12-gzX" id="bFL-hs-QHc"/>
                         <outlet property="openAreaTitleLabel" destination="AGM-LL-dB0" id="5JJ-VC-dk8"/>
+                        <outlet property="openNilLabel" destination="Ta9-Om-sHH" id="6FZ-dB-EjP"/>
                         <outlet property="pageView" destination="TIM-bm-1TF" id="Dv1-mU-tGX"/>
                         <outlet property="scrollView" destination="MFG-HP-bvh" id="TJh-8d-zxK"/>
                     </connections>
