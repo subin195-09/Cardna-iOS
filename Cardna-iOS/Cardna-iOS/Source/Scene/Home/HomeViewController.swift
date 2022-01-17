@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         collectionView.backgroundColor = .none
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func registerXib() {

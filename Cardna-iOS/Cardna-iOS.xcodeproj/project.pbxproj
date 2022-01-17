@@ -56,6 +56,9 @@
 		15ABE4AD2794D9A900516170 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AC2794D9A900516170 /* MyPageService.swift */; };
 		15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4AF2794DB7900516170 /* MainCardService.swift */; };
 		15ABE4B22794DBC100516170 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B12794DBC100516170 /* MyPageResponse.swift */; };
+		15ABE4B5279558D700516170 /* CardDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B4279558D700516170 /* CardDetailRouter.swift */; };
+		15ABE4B7279558DF00516170 /* CardDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B6279558DF00516170 /* CardDetailService.swift */; };
+		15ABE4BA27955FBC00516170 /* CardDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ABE4B927955FBC00516170 /* CardDetailResponse.swift */; };
 		15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */; };
 		15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AED278AB2F0001E1F6F /* AppDelegate.swift */; };
 		15C51AF0278AB2F0001E1F6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C51AEF278AB2F0001E1F6F /* SceneDelegate.swift */; };
@@ -153,6 +156,9 @@
 		15ABE4AC2794D9A900516170 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
 		15ABE4AF2794DB7900516170 /* MainCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardService.swift; sourceTree = "<group>"; };
 		15ABE4B12794DBC100516170 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
+		15ABE4B4279558D700516170 /* CardDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailRouter.swift; sourceTree = "<group>"; };
+		15ABE4B6279558DF00516170 /* CardDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailService.swift; sourceTree = "<group>"; };
+		15ABE4B927955FBC00516170 /* CardDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailResponse.swift; sourceTree = "<group>"; };
 		15BCB21D278EA4E9005E6D98 /* HomeViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Extension.swift"; sourceTree = "<group>"; };
 		15C51AEA278AB2F0001E1F6F /* Cardna-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardna-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C51AED278AB2F0001E1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -379,6 +385,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4B3279558CB00516170 /* CardDetailAPI */,
 				9877FE432794DCFE005745C7 /* LoginAPI */,
 				15ABE4A92794D99300516170 /* MyPageAPI */,
 				15ABE49D2794CCF600516170 /* MainCardAPI */,
@@ -398,6 +405,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				15ABE4B827955F6E00516170 /* CardDetailModel */,
 				9877FE3D2794DCAF005745C7 /* LoginModel */,
 				15ABE4AE2794DA9600516170 /* MyPageModel */,
 				15ABE4A42794CD5B00516170 /* MainCardModel */,
@@ -428,6 +436,23 @@
 				15ABE4B12794DBC100516170 /* MyPageResponse.swift */,
 			);
 			path = MyPageModel;
+			sourceTree = "<group>";
+		};
+		15ABE4B3279558CB00516170 /* CardDetailAPI */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4B4279558D700516170 /* CardDetailRouter.swift */,
+				15ABE4B6279558DF00516170 /* CardDetailService.swift */,
+			);
+			path = CardDetailAPI;
+			sourceTree = "<group>";
+		};
+		15ABE4B827955F6E00516170 /* CardDetailModel */ = {
+			isa = PBXGroup;
+			children = (
+				15ABE4B927955FBC00516170 /* CardDetailResponse.swift */,
+			);
+			path = CardDetailModel;
 			sourceTree = "<group>";
 		};
 		15BCB21C278EA4BC005E6D98 /* Extensions */ = {
@@ -875,12 +900,14 @@
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				15582F40278D7B2400C38614 /* CardCollectionViewCell.swift in Sources */,
 				15A6EEB2278ECB42006EA23C /* CardDetailViewController.swift in Sources */,
+				15ABE4B5279558D700516170 /* CardDetailRouter.swift in Sources */,
 				15A6EEE4279298BD006EA23C /* MyPageViewController+Extension.swift in Sources */,
 				15BCB21E278EA4E9005E6D98 /* HomeViewController+Extension.swift in Sources */,
 				15A6EEDC2792001E006EA23C /* ListTableViewCell.swift in Sources */,
 				15233001279366A300F37EB4 /* NetworkConstant.swift in Sources */,
 				9877FE412794DCC6005745C7 /* LoginResponse.swift in Sources */,
 				15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */,
+				15ABE4BA27955FBC00516170 /* CardDetailResponse.swift in Sources */,
 				15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */,
 				15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
@@ -922,6 +949,7 @@
 				98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */,
 				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
+				15ABE4B7279558DF00516170 /* CardDetailService.swift in Sources */,
 				158A2EEF27945FAC007C4163 /* GeneralResponse.swift in Sources */,
 				14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */,
 				9877FE3F2794DCBF005745C7 /* LoginRequest.swift in Sources */,

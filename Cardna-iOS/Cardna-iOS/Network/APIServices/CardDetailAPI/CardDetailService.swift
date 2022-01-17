@@ -1,5 +1,5 @@
 //
-//  MyPageService.swift
+//  CardDetailService.swift
 //  Cardna-iOS
 //
 //  Created by 김혜수 on 2022/01/17.
@@ -9,14 +9,14 @@ import Foundation
 
 import Moya
 
-public class MyPageService {
-    static let shared = MyPageService()
-    var myPageProvider = MoyaProvider<MyPageRouter>(plugins: [MoyaLoggingPlugin()])
+public class CardDetailService {
+    static let shared = CardDetailService()
+    var cardDetailProvider = MoyaProvider<CardDetailRouter>(plugins: [MoyaLoggingPlugin()])
     
     public init() { }
     
-    func getMyPage(completion: @escaping (NetworkResult<Any>) -> Void) {
-        myPageProvider.request(.getMyPage) { response in
+    func getCardDetail(cardID: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        cardDetailProvider.request(.getCardDetail(cardID: cardID)) { response in
             //print(response)
             switch response {
             case.success(let response):
@@ -32,8 +32,9 @@ public class MyPageService {
     
     
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(GeneralResponse<MyPageResponse>.self, from: data)
+        guard let decodedData = try? decoder.decode(GeneralResponse<CardDetailResponse>.self, from: data)
         else { return .pathErr }
         print(decodedData)
         switch statusCode {
@@ -48,4 +49,3 @@ public class MyPageService {
         }
     }
 }
-
