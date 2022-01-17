@@ -37,6 +37,8 @@ class InsightViewController: UIViewController {
     @IBOutlet weak var blindAreaCardImageView: UIImageView!
     @IBOutlet weak var blindAreaCardTitleLabel: UILabel!
     @IBOutlet weak var blindAreaExplainLabel: UILabel!
+    @IBOutlet weak var openNilLabel: UILabel!
+    @IBOutlet weak var blindNilLabel: UILabel!
     
     // MARK: - VC Life Cycle
     
@@ -70,6 +72,10 @@ class InsightViewController: UIViewController {
         [openAreaExplainLabel, blindAreaExplainLabel].forEach {
             $0?.font = .cardnaSh3Sbd
             $0?.sizeToFit()
+        }
+        [openNilLabel, blindNilLabel].forEach {
+            $0?.font = .Pretendard(.regular, size: 16)
+            $0?.textColor = UIColor(white: 18.0 / 255.0, alpha: 0.4)
         }
     }
     
@@ -113,19 +119,21 @@ class InsightViewController: UIViewController {
     
     func setInsightCardInfo() {
         if let open = openCard {
+            openAreaCardView.isHidden = false
             openAreaCardImageView.setImage(with: open.imageURL)
             openAreaCardTitleLabel.text = open.title
         }
         else {
-            openAreaCardTitleLabel.text = "아무것도 없어요"
+            openAreaCardView.isHidden = true
         }
         
         if let blind = blindCard {
+            blindAreaCardView.isHidden = false
             blindAreaCardImageView.setImage(with: blind.imageURL)
             blindAreaCardTitleLabel.text = blind.title
         }
         else {
-            blindAreaCardTitleLabel.text = "별 정보가 없어요"
+            blindAreaCardView.isHidden = true
         }
     }
 }
