@@ -56,6 +56,12 @@
                                     <constraint firstItem="Y4b-XB-deE" firstAttribute="top" secondItem="SzB-ww-r4F" secondAttribute="top" constant="14" id="q3Y-i3-DiG"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앗! 검색 결과가 없어요 :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-wh-waM">
+                                <rect key="frame" x="124" y="258" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-8A-c5f">
                                 <rect key="frame" x="16" y="124" width="382" height="204"/>
                                 <subviews>
@@ -119,6 +125,8 @@
                             <constraint firstItem="lhd-8A-c5f" firstAttribute="top" secondItem="SzB-ww-r4F" secondAttribute="bottom" constant="16" id="7pV-fm-eXW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SzB-ww-r4F" secondAttribute="trailing" id="QLd-aR-mIt"/>
                             <constraint firstItem="SzB-ww-r4F" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fUS-ej-Fzf"/>
+                            <constraint firstItem="bgw-wh-waM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ixh-Hl-8K6"/>
+                            <constraint firstItem="bgw-wh-waM" firstAttribute="top" secondItem="SzB-ww-r4F" secondAttribute="bottom" constant="150" id="jcy-hv-hRs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lhd-8A-c5f" secondAttribute="trailing" constant="16" id="sr6-BU-M29"/>
                             <constraint firstItem="SzB-ww-r4F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wO3-Em-FSK"/>
                         </constraints>
@@ -128,6 +136,7 @@
                         <outlet property="backButton" destination="Ivq-Cd-SgL" id="lKu-fY-e1F"/>
                         <outlet property="emailLabel" destination="5g4-xF-1I8" id="Opk-nL-TyX"/>
                         <outlet property="nameLabel" destination="uiD-bh-Zji" id="IEF-TF-NB6"/>
+                        <outlet property="noResultLabel" destination="bgw-wh-waM" id="IRU-BQ-3eQ"/>
                         <outlet property="profileImageView" destination="FmJ-Rz-flR" id="DNg-SZ-WgH"/>
                         <outlet property="searchFieldView" destination="Y4b-XB-deE" id="zv0-Hq-V3I"/>
                         <outlet property="searchResultView" destination="lhd-8A-c5f" id="srM-As-Pog"/>

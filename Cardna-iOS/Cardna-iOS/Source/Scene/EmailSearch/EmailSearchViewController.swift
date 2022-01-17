@@ -19,6 +19,7 @@ class EmailSearchViewController: UIViewController {
     @IBOutlet weak var searchFieldView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var noResultLabel: UILabel!
     @IBOutlet weak var searchResultView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -39,6 +40,7 @@ class EmailSearchViewController: UIViewController {
     func setInitializeState() {
         friendExist = false
         nowFriend = false
+        noResultLabel.isHidden = true
         searchTextField.delegate = self
     }
     
@@ -77,6 +79,8 @@ class EmailSearchViewController: UIViewController {
     }
     
     func setLabelUI() {
+        noResultLabel.font = .Pretendard(.regular, size: 16)
+        noResultLabel.textColor = .w3
         nameLabel.font = .cardnaB2Sbd
         nameLabel.textColor = .w1
         emailLabel.font = .cardnaB3Rg
