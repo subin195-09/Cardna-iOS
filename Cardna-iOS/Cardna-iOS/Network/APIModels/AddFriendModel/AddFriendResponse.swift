@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+// MARK: - AddFriendResponse
+struct AddFriendResponse: Codable {
+    let id: Int
+    let isFriend: Bool
+}

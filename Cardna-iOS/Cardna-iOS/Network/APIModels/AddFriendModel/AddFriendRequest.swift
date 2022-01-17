@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+// MARK: - Welcome
+struct AddFriendRequest: Codable {
+    let friendID: Int
+
+    enum CodingKeys: String, CodingKey {
+        case friendID = "friendId"
+    }
+}
