@@ -105,7 +105,6 @@ class EmailSearchViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func addButtonDidTap(_ sender: Any) {
-        print("ㄹㄹㅇㄴㅇㄹㄴㅇㄹㄴ\n\n\n")
         self.postAddDeleteFriend()
         nowFriend = !nowFriend
         setButtonImage()
