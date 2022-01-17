@@ -100,6 +100,9 @@
 		98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98938427278D8F4D00ACDC06 /* UIView+.swift */; };
 		98BDF5A5278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */; };
 		98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */; };
+		98BF51DA27956C9C008A1993 /* InsightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51D927956C9C008A1993 /* InsightResponse.swift */; };
+		98BF51DD27956CF5008A1993 /* InsightRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DC27956CF5008A1993 /* InsightRouter.swift */; };
+		98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DE27956CFB008A1993 /* InsightService.swift */; };
 		98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */; };
 		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
 		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
@@ -202,6 +205,9 @@
 		98938427278D8F4D00ACDC06 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		98BDF5A4278F5BDF00B02F33 /* CardPackTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		98BDF5A6278F5C3600B02F33 /* CardViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+Extension.swift"; sourceTree = "<group>"; };
+		98BF51D927956C9C008A1993 /* InsightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightResponse.swift; sourceTree = "<group>"; };
+		98BF51DC27956CF5008A1993 /* InsightRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightRouter.swift; sourceTree = "<group>"; };
+		98BF51DE27956CFB008A1993 /* InsightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightService.swift; sourceTree = "<group>"; };
 		98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
 		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -385,6 +391,7 @@
 		15ABE49B2794CCD300516170 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				98BF51DB27956CDD008A1993 /* InsightAPI */,
 				15ABE4B3279558CB00516170 /* CardDetailAPI */,
 				9877FE432794DCFE005745C7 /* LoginAPI */,
 				15ABE4A92794D99300516170 /* MyPageAPI */,
@@ -405,6 +412,7 @@
 		15ABE4A32794CD3B00516170 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				98BF51D827956C89008A1993 /* InsightModel */,
 				15ABE4B827955F6E00516170 /* CardDetailModel */,
 				9877FE3D2794DCAF005745C7 /* LoginModel */,
 				15ABE4AE2794DA9600516170 /* MyPageModel */,
@@ -710,6 +718,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		98BF51D827956C89008A1993 /* InsightModel */ = {
+			isa = PBXGroup;
+			children = (
+				98BF51D927956C9C008A1993 /* InsightResponse.swift */,
+			);
+			path = InsightModel;
+			sourceTree = "<group>";
+		};
+		98BF51DB27956CDD008A1993 /* InsightAPI */ = {
+			isa = PBXGroup;
+			children = (
+				98BF51DC27956CF5008A1993 /* InsightRouter.swift */,
+				98BF51DE27956CFB008A1993 /* InsightService.swift */,
+			);
+			path = InsightAPI;
+			sourceTree = "<group>";
+		};
 		98C6893B2791DE42008BB153 /* MyPageSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -909,10 +934,12 @@
 				15ABE4B02794DB7900516170 /* MainCardService.swift in Sources */,
 				15ABE4BA27955FBC00516170 /* CardDetailResponse.swift in Sources */,
 				15ABE4AB2794D9A200516170 /* MyPageRouter.swift in Sources */,
+				98BF51DD27956CF5008A1993 /* InsightRouter.swift in Sources */,
 				15ABE4A82794D5A400516170 /* UIImageView+.swift in Sources */,
 				15A6EEE0279202AA006EA23C /* CardNotYetBoxViewController+Extension.swift in Sources */,
 				15232FFD2793617F00F37EB4 /* MoyaLoggingPlugin.swift in Sources */,
 				98BDF5A7278F5C3600B02F33 /* CardViewController+Extension.swift in Sources */,
+				98BF51DA27956C9C008A1993 /* InsightResponse.swift in Sources */,
 				9877FE472794DD11005745C7 /* LoginService.swift in Sources */,
 				15C51AEE278AB2F0001E1F6F /* AppDelegate.swift in Sources */,
 				142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */,
@@ -936,6 +963,7 @@
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
+				98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */,
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
 				15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */,
 				9877FE4A2794E64D005745C7 /* LoginViewController+Extension.swift in Sources */,

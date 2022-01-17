@@ -39,7 +39,11 @@ struct URLConstant {
     static let friendList = "/friend/list"
     static let friendSearch = "/friend/search"
     
-    // MARK: - MyPAge
+    // MARK: - Insight
+    
+    static let insight = "/insight"
+    
+    // MARK: - MyPage
     static let myPage = "/my-page"
     static let myPageUser = "/my-page/user"
 }
