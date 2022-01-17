@@ -6,12 +6,16 @@
 //
 
 import UIKit
-import CloudKit
+
+protocol MainCardSelectProtocol {
+    func sendMainCard(cardList: [MainCardList])
+}
 
 class SelectCardModalViewController: UIViewController {
     
     // MARK: - Property
     
+    var selectDelegate: MainCardSelectProtocol?
     var userID: Int?
     var control: Int = 0
     var mainCardList: [MainCardList] = []
@@ -77,5 +81,11 @@ class SelectCardModalViewController: UIViewController {
     @IBAction func switchControl(_ sender: UISegmentedControl) {
         control = sender.selectedSegmentIndex
         collectionView.reloadData()
+    }
+    
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+        print("최종", mainCardList)
+        self.selectDelegate?.sendMainCard(cardList: mainCardList)
+        self.dismiss(animated: true, completion: nil)
     }
 }

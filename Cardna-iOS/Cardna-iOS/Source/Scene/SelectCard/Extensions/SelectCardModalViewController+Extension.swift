@@ -25,7 +25,7 @@ extension SelectCardModalViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         /// 카드나
         if control == 0 {
-            var cardme = cardMeList[indexPath.item]
+            let cardme = cardMeList[indexPath.item]
             print("카드미", cardme)
             if cardme.mainOrder == nil {
                 cardMeList[indexPath.item].changeMainState()
@@ -36,20 +36,28 @@ extension SelectCardModalViewController: UICollectionViewDelegate {
                                                           title: cardme.title)])
             }
             else {
-                print("zz")
-                cardme.changeMainState()
+                cardMeList[indexPath.item].changeMainState()
                 mainCardList.removeAll(where: { $0.id == cardme.id })
             }
             print("mainCardList", mainCardList)
         }
         /// 카드너
         else {
-            var cardyou = cardYouList[indexPath.item]
-            
-            mainCardList.append(contentsOf: [MainCardList(id: cardyou.id, mainOrder: cardyou.mainOrder ?? -1, isMe: false, cardImg: cardyou.cardImg, title: cardyou.title)])
+            let cardyou = cardYouList[indexPath.item]
+            if cardyou.mainOrder == nil {
+                cardYouList[indexPath.item].changeMainState()
+                mainCardList.append(contentsOf: [MainCardList(id: cardyou.id,
+                                                          mainOrder: -1,
+                                                          isMe: true,
+                                                          cardImg: cardyou.cardImg,
+                                                          title: cardyou.title)])
+            }
+            else {
+                cardYouList[indexPath.item].changeMainState()
+                mainCardList.removeAll(where: { $0.id == cardyou.id })
+            }
         }
-        print(indexPath.item)
-        
+        print("mainCardList", mainCardList)
     }
 }
 
