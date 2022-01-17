@@ -103,6 +103,7 @@
 		98BF51DA27956C9C008A1993 /* InsightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51D927956C9C008A1993 /* InsightResponse.swift */; };
 		98BF51DD27956CF5008A1993 /* InsightRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DC27956CF5008A1993 /* InsightRouter.swift */; };
 		98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DE27956CFB008A1993 /* InsightService.swift */; };
+		98BF51E22795721C008A1993 /* InsightViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51E12795721C008A1993 /* InsightViewController+Extension.swift */; };
 		98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */; };
 		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
 		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
@@ -208,6 +209,7 @@
 		98BF51D927956C9C008A1993 /* InsightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightResponse.swift; sourceTree = "<group>"; };
 		98BF51DC27956CF5008A1993 /* InsightRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightRouter.swift; sourceTree = "<group>"; };
 		98BF51DE27956CFB008A1993 /* InsightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightService.swift; sourceTree = "<group>"; };
+		98BF51E12795721C008A1993 /* InsightViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightViewController+Extension.swift"; sourceTree = "<group>"; };
 		98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
 		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 		15C51B0D278AC3F9001E1F6F /* Insight */ = {
 			isa = PBXGroup;
 			children = (
+				98BF51E02795720E008A1993 /* Extensions */,
 				15C51B17278AC43E001E1F6F /* Insight.storyboard */,
 				15C51B19278AC445001E1F6F /* InsightViewController.swift */,
 			);
@@ -733,6 +736,14 @@
 				98BF51DE27956CFB008A1993 /* InsightService.swift */,
 			);
 			path = InsightAPI;
+			sourceTree = "<group>";
+		};
+		98BF51E02795720E008A1993 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98BF51E12795721C008A1993 /* InsightViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		98C6893B2791DE42008BB153 /* MyPageSetting */ = {
@@ -958,6 +969,7 @@
 				15C51B06278AB7DB001E1F6F /* Image.swift in Sources */,
 				98327CEC279075FA006AE794 /* CardContainerCollectionViewCell.swift in Sources */,
 				98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */,
+				98BF51E22795721C008A1993 /* InsightViewController+Extension.swift in Sources */,
 				98817C742792C5E100819892 /* InitialViewController.swift in Sources */,
 				14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */,
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,

@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+// MARK: - InsightResponse
+struct InsightResponse: Codable {
+    let openAreaCard, blindAreaCard: AreaCard?
+}
+
+// MARK: - AreaCard
+struct AreaCard: Codable {
+    let id: Int
+    let title: String
+    let imageURL: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, title
+        case imageURL = "imageUrl"
+    }
+}
