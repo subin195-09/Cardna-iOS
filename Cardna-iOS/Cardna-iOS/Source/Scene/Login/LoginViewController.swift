@@ -138,6 +138,10 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBAction
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     @IBAction func okButtonDidTap(_ sender: Any) {
         self.requestLogin()
     }
