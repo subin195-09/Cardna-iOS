@@ -13,7 +13,7 @@ struct CardPackAllResponse: Codable {
     let totalCardCnt: Int
     let isMyCard: Bool
     let cardMeList: [CardMeList]
-    let cardYouList: [CardYouList]
+    var cardYouList: [CardYouList]
 }
 
 // MARK: - CardPackMeResponse
@@ -21,7 +21,7 @@ struct CardPackAllResponse: Codable {
 struct CardPackMeResponse: Codable {
     let totalCardCnt: Int
     let isMyCard: Bool
-    let cardMeList: [CardMeList]
+    var cardMeList: [CardMeList]
 }
 
 // MARK: - CardPackYouResponse
@@ -29,7 +29,7 @@ struct CardPackMeResponse: Codable {
 struct CardPackYouResponse: Codable {
     let totalCardCnt: Int
     let isMyCard: Bool
-    let cardYouList: [CardYouList]
+    var cardYouList: [CardYouList]
 }
 
 // MARK: - CardMeList
@@ -41,13 +41,14 @@ struct CardMeList: Codable {
     var mainOrder: Int?
     let isLiked: Bool?
     
-    mutating func changeMainState() {
-        if self.mainOrder == nil {
-            self.mainOrder = -1
-        }
-        else {
-            self.mainOrder = nil
-        }
+    mutating func changeMainState(order: Int?) {
+        self.mainOrder = order
+//        if self.mainOrder == nil {
+//            self.mainOrder = order
+//        }
+//        else {
+//            self.mainOrder = nil
+//        }
     }
 
 }
@@ -62,15 +63,8 @@ struct CardYouList: Codable {
     let isLiked: Bool?
     
     
-    mutating func changeMainState() {
-        if self.mainOrder == nil {
-            self.mainOrder = -1
-        }
-        else {
-            self.mainOrder = nil
-        }
+    mutating func changeMainState(order: Int?) {
+        self.mainOrder = order
     }
-
-
 }
 
