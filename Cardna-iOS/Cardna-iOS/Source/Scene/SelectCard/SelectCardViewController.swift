@@ -112,6 +112,7 @@ class SelectCardViewController: UIViewController {
     }
 
     @IBAction func completeButtonDidTap(_ sender: Any) {
+        print("complete", mainCards)
         putMainCard()
     }
 }

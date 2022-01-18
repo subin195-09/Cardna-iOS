@@ -52,6 +52,14 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: SelectCardViewController.sectionHeaderElementKind, withReuseIdentifier: SelectCardHeaderCollectionReusableView.identifier, for: indexPath)
         return view
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+        let card = mainCards[indexPath.item]
+        mainCards.removeAll(where: { $0.id == card.id })
+        print(mainCards)
+        collectionView.reloadData()
+    }
 }
 
 extension SelectCardViewController: MainCardSelectProtocol {

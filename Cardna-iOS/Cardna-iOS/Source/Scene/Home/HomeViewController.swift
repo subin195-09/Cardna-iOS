@@ -72,14 +72,17 @@ class HomeViewController: UIViewController {
     }
     
     func getMainCard() {
-        MainCardService.shared.getMainCard { response in
+        MainCardService.shared.getMainCard { [weak self] response in
             print(response)
+            guard let self = self else { return }
             switch response {
             case .success(let data):
                 guard let res = data as? MainCardResponse else { return }
                 self.cardList = res.mainCardList
                 self.setCollectionView()
+                self.collectionView.reloadData()
                 self.countLabel.text = "현재셀/ \(self.cardList.count)"
+                print("home", self.cardList)
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
