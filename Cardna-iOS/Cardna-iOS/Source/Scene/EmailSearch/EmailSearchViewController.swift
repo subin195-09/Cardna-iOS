@@ -107,6 +107,9 @@ class EmailSearchViewController: UIViewController {
     @IBAction func addButtonDidTap(_ sender: Any) {
         self.postAddDeleteFriend()
         nowFriend = !nowFriend
+        if nowFriend {
+            showToast(message: "친구추가가 완료되었어요", font: .Pretendard(.regular, size: 12))
+        }
         setButtonImage()
     }
     
