@@ -40,6 +40,7 @@ class MyPageViewController: UIViewController {
     }
     
     func setNavigationBarUI() {
+        self.navigationController?.navigationBar.isHidden = true
         navigationTitleLabel.font = .cardnaH1Sbd
     }
     
@@ -103,5 +104,24 @@ class MyPageViewController: UIViewController {
                 print("networkFail")
             }
         }
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func cardNotYetBoxButtonDidTap(_ sender: Any) {
+        guard let cardNotYetBoxVC = UIStoryboard(name: "CardNotYetBox", bundle: nil).instantiateViewController(withIdentifier: "CardNotYetBoxViewController") as? CardNotYetBoxViewController else { return }
+        cardNotYetBoxVC.modalPresentationStyle = .fullScreen
+        self.present(cardNotYetBoxVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func settingButtonDidTap(_ sender: Any) {
+        guard let settingVC = UIStoryboard(name: "MyPageSetting", bundle: nil).instantiateViewController(withIdentifier: "MyPageSettingViewController") as? MyPageSettingViewController else { return }
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    @IBAction func emailSearchButtonDidTap(_ sender: Any) {
+        guard let emailSerchVC = UIStoryboard(name: "EmailSearch", bundle: nil).instantiateViewController(withIdentifier: "EmailSearchViewController") as? EmailSearchViewController else { return }
+        emailSerchVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(emailSerchVC, animated: true)
     }
 }

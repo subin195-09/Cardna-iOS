@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gbk-gy-3Xg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc6-dB-eDP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-Vz-VUQ">
                                         <rect key="frame" x="16" y="11.5" width="23.5" height="21"/>
@@ -30,7 +30,10 @@
                                             <constraint firstAttribute="width" secondItem="Gwm-e9-aV7" secondAttribute="height" multiplier="1:1" id="Rpz-ST-Jka"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icbtSearch"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icbtSetting"/>
+                                        <connections>
+                                            <action selector="settingButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vXd-TC-CK0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19y-YL-rZH">
                                         <rect key="frame" x="322" y="1" width="42" height="42"/>
@@ -38,7 +41,10 @@
                                             <constraint firstAttribute="width" secondItem="19y-YL-rZH" secondAttribute="height" multiplier="1:1" id="m4p-lW-epw"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icbtSearch"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icbtBox"/>
+                                        <connections>
+                                            <action selector="cardNotYetBoxButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v2P-kF-Wpk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +62,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lt6-3d-0lV">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="bX9-Wn-Oxy">
                                     <rect key="frame" x="0.0" y="333" width="414" height="136"/>
@@ -90,7 +96,10 @@
                                                 <constraint firstAttribute="width" secondItem="hkV-z1-YN1" secondAttribute="height" multiplier="1:1" id="izX-Rd-xiA"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="icbtSearch"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="icbtFriendsplus"/>
+                                            <connections>
+                                                <action selector="emailSearchButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZBV-Ph-JMg"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
@@ -178,7 +187,7 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IgM-KF-vNQ">
                                                     <rect key="frame" x="0.0" y="16" width="414" height="135"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ytt-rp-RQP">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ytt-rp-RQP">
                                                         <size key="itemSize" width="128" height="128"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -214,9 +223,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lt6-3d-0lV" secondAttribute="trailing" id="x43-Lp-JMz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="btmnavi4Inactive" selectedImage="btmnavi4Active" id="EDL-gA-M3Z">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="nbG-gr-BeC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="friendCountLabel" destination="Imt-Fb-ssS" id="zIc-7y-ZBG"/>
@@ -229,13 +236,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5qj-vf-HSs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gbk-gy-3Xg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="btmnavi4Inactive" selectedImage="btmnavi4Active" id="EDL-gA-M3Z">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5HE-Pg-vHl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Wjk-BA-G3l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBs-w7-Neq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="btmnavi4Active" width="85" height="84"/>
         <image name="btmnavi4Inactive" width="85" height="84"/>
+        <image name="icbtBox" width="42" height="42"/>
         <image name="icbtBoxbackPurple" width="44" height="44"/>
-        <image name="icbtSearch" width="32" height="32"/>
+        <image name="icbtFriendsplus" width="42" height="42"/>
+        <image name="icbtSetting" width="42" height="42"/>
     </resources>
 </document>
