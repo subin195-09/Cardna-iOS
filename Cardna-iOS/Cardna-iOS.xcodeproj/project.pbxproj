@@ -125,6 +125,7 @@
 		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
 		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
 		98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */; };
+		98DA0E1527974AF100EB48DF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA0E1427974AF100EB48DF /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -248,6 +249,7 @@
 		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPageSettingViewController+Extension.swift"; sourceTree = "<group>"; };
+		98DA0E1427974AF100EB48DF /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -686,6 +688,7 @@
 				14A17B88278F36EC00167ECE /* UILabel+.swift */,
 				98817C6B2792A2E700819892 /* UITextField+.swift */,
 				15ABE4A72794D5A400516170 /* UIImageView+.swift */,
+				98DA0E1427974AF100EB48DF /* UIViewController+.swift */,
 			);
 			path = AppExtensions;
 			sourceTree = "<group>";
@@ -1110,6 +1113,7 @@
 				14A9327827945589006B4D86 /* JoinNameViewController.swift in Sources */,
 				15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */,
 				98938428278D8F4D00ACDC06 /* UIView+.swift in Sources */,
+				98DA0E1527974AF100EB48DF /* UIViewController+.swift in Sources */,
 				15ABE4C72795AAB600516170 /* CardPackService.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
 				98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */,
