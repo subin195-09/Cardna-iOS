@@ -22,6 +22,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var isMainCountLabel: UILabel!
+    @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var countBackgroundView: UIView!
     
     // MARK: - LifeCycle
     
@@ -35,6 +37,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         titleLabel.text = nil
         bgView.backgroundColor = .w2
         isMainCountLabel.text = nil
+        countBackgroundView.isHidden = true
     }
     
     // MARK: - Function
@@ -46,7 +49,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil) {
+    func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil, selected: Bool = false) {
         imageView.setImage(with: image)
         titleLabel.text = title
         if isMe == true {
@@ -71,6 +74,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         if isMainCount != nil {
             isMainCountLabel.text = "\(isMainCount ?? 0)"
+            countBackgroundView.isHidden = false
+        } else {
+            countBackgroundView.isHidden = true
         }
+        
+        selectedView.isHidden = !selected
     }
 }

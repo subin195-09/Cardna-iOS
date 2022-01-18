@@ -23,41 +23,72 @@ extension SelectCardModalViewController {
 
 extension SelectCardModalViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /// 카드나
+        
         if control == 0 {
-            let cardme = cardMeList[indexPath.item]
-            print("카드미", cardme)
-            if cardme.mainOrder == nil {
-                cardMeList[indexPath.item].changeMainState()
-                mainCardList.append(contentsOf: [MainCardList(id: cardme.id,
-                                                          mainOrder: -1,
-                                                          isMe: true,
-                                                          cardImg: cardme.cardImg,
-                                                          title: cardme.title)])
+            let list = mainCardList.filter{ $0.id == cardMeList[indexPath.item].id }
+            if list.count > 0 {
+                // 이미 있는 경우 -> 삭제
+                mainCardList.removeAll(where: { $0.id == cardMeList[indexPath.item].id })
             }
             else {
-                cardMeList[indexPath.item].changeMainState()
-                mainCardList.removeAll(where: { $0.id == cardme.id })
+                // 없는경우 -> 추가
+                mainCardList.append(contentsOf: [MainCardList(id: cardMeList[indexPath.item].id,
+                                                              mainOrder: mainCardList.count,
+                                                              isMe: true,
+                                                              cardImg: cardMeList[indexPath.item].cardImg,
+                                                              title: cardMeList[indexPath.item].title)])
             }
-            print("mainCardList", mainCardList)
         }
-        /// 카드너
         else {
-            let cardyou = cardYouList[indexPath.item]
-            if cardyou.mainOrder == nil {
-                cardYouList[indexPath.item].changeMainState()
-                mainCardList.append(contentsOf: [MainCardList(id: cardyou.id,
-                                                          mainOrder: -1,
-                                                          isMe: true,
-                                                          cardImg: cardyou.cardImg,
-                                                          title: cardyou.title)])
+            let list = mainCardList.filter{ $0.id == cardYouList[indexPath.item].id }
+            if list.count > 0 {
+                // 이미 있는 경우 -> 삭제
+                mainCardList.removeAll(where: { $0.id == cardYouList[indexPath.item].id })
             }
             else {
-                cardYouList[indexPath.item].changeMainState()
-                mainCardList.removeAll(where: { $0.id == cardyou.id })
+                // 없는경우 -> 추가
+                mainCardList.append(contentsOf: [MainCardList(id: cardYouList[indexPath.item].id,
+                                                              mainOrder: mainCardList.count,
+                                                              isMe: false,
+                                                              cardImg: cardYouList[indexPath.item].cardImg,
+                                                              title: cardYouList[indexPath.item].title)])
             }
         }
-        print("mainCardList", mainCardList)
+
+        print(cardMeList)
+        print(cardYouList)
+        
+        for i in 0..<cardMeList.count {
+            var isMain = false
+            for j in 0..<mainCardList.count {
+                if (cardMeList[i].id == mainCardList[j].id) {
+                    cardMeList[i].changeMainState(order: j)
+                    isMain = true
+                    break
+                }
+            }
+            if isMain == false {
+                cardMeList[i].mainOrder = nil
+            }
+        }
+        
+        for i in 0..<cardYouList.count {
+            var isMain = false
+            for j in 0..<mainCardList.count {
+                if (cardYouList[i].id == mainCardList[j].id) {
+                    cardYouList[i].changeMainState(order: j)
+                    isMain = true
+                    break
+                }
+            }
+            if isMain == false {
+                cardYouList[i].mainOrder = nil
+            }
+        }
+        
+        print(mainCardList)
+        print(mainCardList.count)
+        collectionView.reloadData()
     }
 }
 
@@ -78,11 +109,21 @@ extension SelectCardModalViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
         if control == 0 {
             let card = cardMeList[indexPath.item]
-            cell.setData(image: card.cardImg, title: card.title, isMe: true, small: true, isMainCount: card.mainOrder)
+            cell.setData(image: card.cardImg,
+                         title: card.title,
+                         isMe: true,
+                         small: true,
+                         isMainCount: card.mainOrder,
+                         selected: card.mainOrder != nil)
         }
         else {
             let card = cardYouList[indexPath.item]
-            cell.setData(image: card.cardImg, title: card.title, isMe: false, small: true, isMainCount: card.mainOrder)
+            cell.setData(image: card.cardImg,
+                         title: card.title,
+                         isMe: false,
+                         small: true,
+                         isMainCount: card.mainOrder,
+                         selected: card.mainOrder != nil)
         }
         return cell
     }
