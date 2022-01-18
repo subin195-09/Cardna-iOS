@@ -32,9 +32,11 @@ public class InsightService {
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200:
-            return isValidLoginData(data: data)
+            return isValidLoginData(code: statusCode, data: data)
+        case 204:
+            return isValidLoginData(code: statusCode, data: data)
         case 400..<500:
-            return isValidLoginData(data: data)
+            return isValidLoginData(code: statusCode, data: data)
         case 500:
             return .serverErr
         default:
@@ -42,11 +44,18 @@ public class InsightService {
         }
     }
     
-    private func isValidLoginData(data: Data) -> NetworkResult<Any> {
+    private func isValidLoginData(code: Int, data: Data) -> NetworkResult<Any> {
+        if code == 204 {
+            let pass = InsightResponse.init(openAreaCard: nil, blindAreaCard: nil)
+            return .success(pass)
+        }
+        else {
             let decoder = JSONDecoder()
             guard let decodedData = try? decoder.decode(GeneralResponse<InsightResponse>.self, from: data)
             else { return .pathErr }
             
-        return .success(decodedData.data)
+            return .success(decodedData.data)
+        }
+        
     }
 }
