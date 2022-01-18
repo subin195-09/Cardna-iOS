@@ -110,4 +110,7 @@ class EmailSearchViewController: UIViewController {
         setButtonImage()
     }
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
