@@ -16,6 +16,9 @@ class AddCardViewController: UIViewController {
     // MARK: - Property
     
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
+    var isMe = true
+    var cardForName = ""
+    var cardYouRelation = ""
     
     // MARK: - Component
     
@@ -23,7 +26,7 @@ class AddCardViewController: UIViewController {
     
     var backButton = UIButton().then {
         $0.setImage(Const.Image.icbtBack, for: .normal)
-        //$0.addTarget(self, action: #selector(backButtonDidTap(_:)), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(backButtonDidTap(_:)), for: .touchUpInside)
     }
     
     var addCardViewTitleLabel = UILabel().then {
@@ -104,7 +107,7 @@ class AddCardViewController: UIViewController {
     
     lazy var cardContentsCountLabel: UILabel = {
         let label = UILabel()
-        label.text = "0/700"
+        label.text = "0/200"
         label.font = .cardnaC
         label.textColor = .w3
         
@@ -129,6 +132,7 @@ class AddCardViewController: UIViewController {
         setTouchUpCardImageViewButton()
         setTextFieldDelegate()
         setNotificationCenter()
+        setCardYouOption()
     }
     
     // MARK: - Function
@@ -181,12 +185,12 @@ class AddCardViewController: UIViewController {
         
         backButton.snp.makeConstraints {
             $0.top.equalTo(self.titleBarUIView.snp.top).offset(1)
-            $0.leading.equalTo(self.titleBarUIView.snp.leading).offset(16)
+            $0.leading.equalTo(self.titleBarUIView.snp.leading).offset(8)
         }
         
         addCardViewTitleLabel.snp.makeConstraints {
             $0.top.equalTo(self.titleBarUIView.snp.top).offset(8)
-            $0.leading.equalTo(self.backButton.snp.trailing).offset(88)
+            $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.height.equalTo(27)
         }
         
@@ -290,13 +294,33 @@ class AddCardViewController: UIViewController {
     
     private func showBottomSheet() {
         guard let bottomSheetVC = UIStoryboard(name: "AddCardBottomSheet", bundle: nil).instantiateViewController(withIdentifier: "AddCardBottomSheetViewController") as? AddCardBottomSheetViewController else { return }
+        if (self.isMe) {
+            bottomSheetVC.isMe = true
+        } else {
+            bottomSheetVC.isMe = false
+        }
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: bottomSheetVC)
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 300
         bottomSheet.adjustHeightForSafeAreaInsets = false
         self.present(bottomSheet, animated: true, completion: nil)
     }
     
+    private func setCardYouOption() {
+        if (!self.isMe) {
+            self.addCardViewTitleLabel.text = "타인 소개 작성"
+            self.cardKeywordLabel1.text = "\(cardForName)님은"
+            self.addCardButton.setTitle("작성 완료", for: .normal)
+            self.addCardButton.backgroundColor = .mainPurple
+            print(cardYouRelation)
+        }
+    }
+    
     // MARK: - Objc Function
+    
+    @objc
+    private func backButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @objc
     private func didImageViewTap(_ sender: Any) {
@@ -310,29 +334,35 @@ class AddCardViewController: UIViewController {
     
     @objc
     private func showCompletedCard(_ sender: Any) {
-        AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
-                                          content: cardContentsTextView.text,
-                                          symbolId: nil,
-                                          img: cardImageView.image!) { result in
-            switch result {
-            case .success(let msg):
-                print("success", msg)
-            case .requestErr(let msg):
-                print("requestERR", msg)
-            case .pathErr:
-                print("pathERR")
-            case .serverErr:
-                print("serverERR")
-            case .networkFail:
-                print("networkFail")
+        if (self.isMe) {
+            AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
+                                              content: cardContentsTextView.text,
+                                              symbolId: nil,
+                                              img: cardImageView.image!) { result in
+                switch result {
+                case .success(let msg):
+                    print("success", msg)
+                case .requestErr(let msg):
+                    print("requestERR", msg)
+                case .pathErr:
+                    print("pathERR")
+                case .serverErr:
+                    print("serverERR")
+                case .networkFail:
+                    print("networkFail")
+                }
             }
+            
+            guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
+            completedCardVC.receivedText = cardKeywordTextField.text ?? ""
+            completedCardVC.receivedImage = cardImageView.image ?? UIImage()
+            completedCardVC.modalPresentationStyle = .fullScreen
+            self.present(completedCardVC, animated: true, completion: nil)
+        } else {
+            guard let completedCardVC = UIStoryboard(name: "AddCardYouCompleted", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouCompleted") as? AddCardYouCompletedViewController else { return }
+            completedCardVC.modalPresentationStyle = .fullScreen
+            self.present(completedCardVC, animated: true, completion: nil)
         }
-        
-        guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
-        completedCardVC.receivedText = cardKeywordTextField.text ?? ""
-        completedCardVC.receivedImage = cardImageView.image ?? UIImage()
-        completedCardVC.modalPresentationStyle = .fullScreen
-        self.present(completedCardVC, animated: true, completion: nil)
     }
     
     @objc

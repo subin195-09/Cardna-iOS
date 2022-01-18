@@ -47,13 +47,24 @@ extension AddCardViewController: UITextViewDelegate {
 
 extension AddCardBottomSheetViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return addCardSymbolIconList.count
+        return addCardSymbolSelectingList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddCardSymbolCollectionViewCell.identifier, for: indexPath) as? AddCardSymbolCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(symbolIconImage: addCardSymbolIconList[indexPath.row])
+        cell.setData(isCardMe: self.isMe, index: indexPath.row, isSelected: addCardSymbolSelectingList[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if addCardSymbolSelectingList[indexPath.row] {
+            addCardSymbolSelectingList = [false, false, false, false, false]
+            addCardSymbolSelectingList[indexPath.row] = false
+        } else {
+            addCardSymbolSelectingList = [false, false, false, false, false]
+            addCardSymbolSelectingList[indexPath.row] = true
+        }
+        collectionView.reloadData()
     }
 }
 
