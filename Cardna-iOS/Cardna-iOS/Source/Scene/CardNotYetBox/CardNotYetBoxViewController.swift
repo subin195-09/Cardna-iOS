@@ -43,4 +43,10 @@ class CardNotYetBoxViewController: UIViewController {
         let nib = UINib(nibName: ListTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: ListTableViewCell.identifier)
     }
+    
+    // MARK: - IBAction
+    
+    @IBAction func closeButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
