@@ -36,7 +36,7 @@ public class LoginService {
         case 200:
             return isValidLoginData(data: data)
         case 400..<500:
-            return .pathErr
+            return isValidLoginData(data: data)
         case 500:
             return .serverErr
         default:

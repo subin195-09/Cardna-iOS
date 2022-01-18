@@ -17,8 +17,12 @@ extension LoginViewController {
         LoginService.shared.postLogin(parameter: LoginRequest.init(email: email, password: password)) { responseData in
             switch responseData {
             case .success(let loginResponse):
+                
                 guard let response = loginResponse as? GeneralResponse<LoginResponse> else { return }
-                self.makeAlert(data: response)
+                if response.status == 404 {
+                    self.showToast(message: response.message ?? "", font: .Pretendard(.regular, size: 12))
+                }
+                else {self.makeAlert(data: response)}
             case .requestErr(let message):
                 print("requestErr \(message)")
             case .pathErr:
