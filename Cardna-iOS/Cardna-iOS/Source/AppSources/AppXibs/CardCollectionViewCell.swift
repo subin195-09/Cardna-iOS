@@ -46,7 +46,10 @@ class CardCollectionViewCell: UICollectionViewCell {
         bgView.layer.cornerRadius = 8
         bgView.backgroundColor = .mainGreen
         titleLabel.font = .cardnaSh1Sbd
-        
+        countBackgroundView.layer.cornerRadius = 10
+        countBackgroundView.layer.borderWidth = 1
+        countBackgroundView.layer.borderColor = UIColor.white.cgColor
+        isMainCountLabel.font = .cardnaB4Sbd
     }
     
     func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil, selected: Bool = false) {
@@ -73,7 +76,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         }
         
         if isMainCount != nil {
-            isMainCountLabel.text = "\(isMainCount ?? 0)"
+            isMainCountLabel.text = "\((isMainCount ?? 0)+1)"
             countBackgroundView.isHidden = false
         } else {
             countBackgroundView.isHidden = true

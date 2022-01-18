@@ -27,6 +27,7 @@ class SelectCardModalViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cardSegmentedControl: UISegmentedControl!
     
     // MARK: - VC LifeCycle
     
@@ -43,6 +44,8 @@ class SelectCardModalViewController: UIViewController {
         countLabel.textColor = .w1
         countLabel.font = .Pretendard(.light, size: 12)
         completeButton.tintColor = .w1
+        cardSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.w1, .font: UIFont.cardnaB2Sbd], for: .selected)
+        cardSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.w2, .font: UIFont.cardnaB3Rg], for: .normal)
     }
     
     func registerXib() {

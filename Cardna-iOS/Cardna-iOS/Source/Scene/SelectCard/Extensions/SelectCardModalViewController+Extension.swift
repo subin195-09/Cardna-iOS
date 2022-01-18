@@ -125,6 +125,7 @@ extension SelectCardModalViewController: UICollectionViewDataSource {
                          isMainCount: card.mainOrder,
                          selected: card.mainOrder != nil)
         }
+        countLabel.text = "\(mainCardList.count) / 7"
         return cell
     }
 }
