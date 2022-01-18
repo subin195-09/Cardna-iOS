@@ -19,9 +19,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var showPasswordButton: UIButton!
     @IBOutlet weak var passwordUnderView: UIView!
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var okView: UIView!
     @IBOutlet weak var okLabel: UILabel!
     @IBOutlet weak var findPasswordButton: UIButton!
     @IBOutlet weak var findPasswordLabel: UILabel!
+    @IBOutlet weak var emailUnderViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var passwordUnderViewHeight: NSLayoutConstraint!
     
     // MARK: - VC Life Cycle
     
@@ -36,7 +39,10 @@ class LoginViewController: UIViewController {
     private func setInitialState() {
         okButton.isEnabled = false
         passwordTextField.isSecureTextEntry = true
-        showPasswordButton.isEnabled = false
+        showPasswordButton.isHidden = true
+        showPasswordButton.isSelected = false
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     private func setUI() {
@@ -57,22 +63,23 @@ class LoginViewController: UIViewController {
     private func setLabelUI() {
         titleLabel.font = .cardnaSh1Sbd
         titleLabel.textColor = .w1
-        okLabel.font = .cardnaH6Rg
-        okLabel.textColor = .w2
         findPasswordLabel.font = .cardnaB3Rg
         findPasswordLabel.textColor = .w3
+        okLabel.font = .cardnaH6Rg
+        okLabel.textColor = .w2
     }
     
     private func setViewUI() {
+        okView.layer.cornerRadius = 10
+        okView.backgroundColor = .w3
+        okView.clipsToBounds = true
         emailUnderView.backgroundColor = .w4
         passwordUnderView.backgroundColor = .w4
     }
     
     private func setButtonUI() {
-        showPasswordButton.setBackgroundImage(Const.Image.icbtBox, for: .normal)
-        okButton.backgroundColor = .w3
-        okButton.layer.cornerRadius = 10
-        okButton.setBackgroundImage(Const.Image.gradientbg, for: .normal)
+        showPasswordButton.setImage(Const.Image.icbtEye, for: .normal)
+        showPasswordButton.setImage(Const.Image.icbtEyeslash, for: .selected)
     }
     
     func makeAlert(data: GeneralResponse<LoginResponse>) {
@@ -84,9 +91,60 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func setButtonEnable() {
+        if emailTextField.hasText && passwordTextField.hasText {
+            okButton.isEnabled = true
+            okView.setViewGradient(startColor: .mainGreen, endColor: .mainPurple)
+            okLabel.font = .cardnaH5Sbd
+            okLabel.textColor = .black
+        }
+        else {
+            okButton.isEnabled = false
+            okView.setViewGradient(startColor: .w3, endColor: .w3)
+            okView.backgroundColor = .w3
+            okLabel.font = .cardnaH6Rg
+            okLabel.textColor = .w2
+        }
+    }
+    
+    // MARK: - objc function
+    
+    @objc
+    func textFieldDidChange(_ textField : UITextField) {
+        setButtonEnable()
+        if textField == emailTextField {
+            if emailTextField.hasText {
+                emailUnderView.backgroundColor = .w1
+                emailUnderViewHeight.constant = 2
+            }
+            else {
+                emailUnderView.backgroundColor = .w4
+                emailUnderViewHeight.constant = 1
+            }
+        }
+        else if textField == passwordTextField {
+            if passwordTextField.hasText {
+                showPasswordButton.isHidden = false
+                passwordUnderView.backgroundColor = .w1
+                passwordUnderViewHeight.constant = 2
+            }
+            else {
+                showPasswordButton.isHidden = true
+                passwordUnderView.backgroundColor = .w4
+                passwordUnderViewHeight.constant = 1
+            }
+        }
+    }
+    
     // MARK: - IBAction
     
     @IBAction func okButtonDidTap(_ sender: Any) {
         self.requestLogin()
     }
+    
+    @IBAction func showPasswordButtonDidTap(_ sender: Any) {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        showPasswordButton.isSelected = !showPasswordButton.isSelected
+    }
+    
 }
