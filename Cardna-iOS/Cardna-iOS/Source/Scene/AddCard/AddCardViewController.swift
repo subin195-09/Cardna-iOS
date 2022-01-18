@@ -18,6 +18,7 @@ class AddCardViewController: UIViewController {
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
     var isMe = true
     var cardForName = ""
+    var cardYouRelation = ""
     
     // MARK: - Component
     
@@ -106,7 +107,7 @@ class AddCardViewController: UIViewController {
     
     lazy var cardContentsCountLabel: UILabel = {
         let label = UILabel()
-        label.text = "0/700"
+        label.text = "0/200"
         label.font = .cardnaC
         label.textColor = .w3
         
@@ -189,7 +190,7 @@ class AddCardViewController: UIViewController {
         
         addCardViewTitleLabel.snp.makeConstraints {
             $0.top.equalTo(self.titleBarUIView.snp.top).offset(8)
-            $0.leading.equalTo(self.backButton.snp.trailing).offset(88)
+            $0.centerX.equalTo(view.safeAreaLayoutGuide)
             $0.height.equalTo(27)
         }
         
@@ -310,6 +311,7 @@ class AddCardViewController: UIViewController {
             self.cardKeywordLabel1.text = "\(cardForName)님은"
             self.addCardButton.setTitle("작성 완료", for: .normal)
             self.addCardButton.backgroundColor = .mainPurple
+            print(cardYouRelation)
         }
     }
     

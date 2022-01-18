@@ -66,6 +66,7 @@ class AddCardYouViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         let nextVC = AddCardViewController()
+        nextVC.cardYouRelation = self.addCardYouTextField.text ?? ""
         nextVC.isMe = false
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.cardForName = name

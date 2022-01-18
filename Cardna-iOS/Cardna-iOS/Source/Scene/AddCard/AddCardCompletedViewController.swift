@@ -63,7 +63,14 @@ class AddCardCompletedViewController: UIViewController {
     
     private func setConpletedLottieView() {
         view.addSubviews(completedLottieView)
-        completedLottieView.isHidden = false
-        completedLottieView.play()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.completedLottieView.isHidden = false
+            self.completedLottieView.play()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            self.completedLottieView.isHidden = true
+            self.completedLottieView.stop()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

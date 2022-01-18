@@ -59,8 +59,15 @@ class CardBottomSheetViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func addCardMeButtonDidTap(_ sender: Any) {
+        let nextVC = AddCardViewController()
+        nextVC.isMe = true
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     @IBAction func addCardYouButtonDidTap(_ sender: Any) {
+        guard let nextVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
 }
