@@ -11,7 +11,7 @@ class AddCardBottomSheetViewController: UIViewController {
     
     // MARK: - Property
     
-    var addCardSymbolIconList: [UIImage] = []
+    var addCardSymbolSelectingList: [Bool] = [false, false, false, false, false]
     let imagePickerController = UIImagePickerController()
     var isMe = true
     
@@ -28,29 +28,12 @@ class AddCardBottomSheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initSymbolIconData()
         setLayout()
         setCollectionView()
         setImagePickerController()
     }
     
     // MARK: - Function
-    
-    private func initSymbolIconData() {
-        if (self.isMe) {
-            addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmile,
-                                                      Const.Image.icbtSymbolHeart,
-                                                      Const.Image.icbtSymbolDia,
-                                                      Const.Image.icbtSymbolSpade,
-                                                      Const.Image.icbtSymbolClover])
-        } else {
-            addCardSymbolIconList.append(contentsOf: [Const.Image.icbtSymbolSmilePur,
-                                                      Const.Image.icbtSymbolHeartPur,
-                                                      Const.Image.icbtSymbolDiaPur,
-                                                      Const.Image.icbtSymbolSpadePur,
-                                                      Const.Image.icbtSymbolCloverPur])
-        }
-    }
     
     private func setLayout() {
         setBottomSheetViewUI()
