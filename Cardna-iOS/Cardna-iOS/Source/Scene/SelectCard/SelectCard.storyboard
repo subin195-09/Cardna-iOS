@@ -150,11 +150,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SEA-BX-JM7">
-                                <rect key="frame" x="154.5" y="76" width="105" height="32"/>
+                                <rect key="frame" x="154.5" y="74" width="105" height="32"/>
                                 <segments>
                                     <segment title="카드나"/>
                                     <segment title="카드너"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchControl:" destination="lL8-AV-fIU" eventType="valueChanged" id="46g-wX-KAN"/>
                                 </connections>
@@ -168,10 +169,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-9J-U5T">
-                                <rect key="frame" x="347.5" y="76" width="48.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-9J-U5T">
+                                <rect key="frame" x="340.5" y="71.5" width="55.5" height="36"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="완료">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="completeButtonDidTap:" destination="lL8-AV-fIU" eventType="touchUpInside" id="Lqw-UI-r6U"/>
                                 </connections>
@@ -191,8 +200,8 @@
                         <viewLayoutGuide key="safeArea" id="1Q7-WY-wck"/>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SEA-BX-JM7" firstAttribute="top" secondItem="1Q7-WY-wck" secondAttribute="top" constant="32" id="FiO-6f-Gc8"/>
-                            <constraint firstItem="NCt-Sa-Psf" firstAttribute="top" secondItem="SEA-BX-JM7" secondAttribute="bottom" constant="2" id="IoS-tB-cW2"/>
+                            <constraint firstItem="SEA-BX-JM7" firstAttribute="top" secondItem="1Q7-WY-wck" secondAttribute="top" constant="30" id="FiO-6f-Gc8"/>
+                            <constraint firstItem="NCt-Sa-Psf" firstAttribute="top" secondItem="SEA-BX-JM7" secondAttribute="bottom" constant="4" id="IoS-tB-cW2"/>
                             <constraint firstItem="AYS-dM-9Ne" firstAttribute="leading" secondItem="1Q7-WY-wck" secondAttribute="leading" id="MQo-jN-8fw"/>
                             <constraint firstItem="wFb-9J-U5T" firstAttribute="centerY" secondItem="SEA-BX-JM7" secondAttribute="centerY" id="Na8-V4-Dj5"/>
                             <constraint firstItem="NCt-Sa-Psf" firstAttribute="centerX" secondItem="SEA-BX-JM7" secondAttribute="centerX" id="TNz-Dc-B1B"/>
@@ -204,6 +213,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardSegmentedControl" destination="SEA-BX-JM7" id="VtT-OL-6hl"/>
                         <outlet property="collectionView" destination="AYS-dM-9Ne" id="sv7-NN-RUW"/>
                         <outlet property="completeButton" destination="wFb-9J-U5T" id="npK-is-SSE"/>
                         <outlet property="countLabel" destination="NCt-Sa-Psf" id="HSD-t1-GCM"/>
