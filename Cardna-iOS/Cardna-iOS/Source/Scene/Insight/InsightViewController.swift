@@ -134,10 +134,16 @@ class InsightViewController: UIViewController {
     
     func setInsightCardInfo() {
         if let open = openCard {
-            openAreaCardView.isHidden = false
-            openAreaCardImageView.setImage(with: open.imageURL)
-            openAreaCardTitleLabel.text = open.title
-            openNilLabel.isHidden = true
+            if let imageString = open.imageURL {
+                openAreaCardImageView.setImage(with: imageString)
+                openAreaCardView.isHidden = false
+                openAreaCardTitleLabel.text = open.title
+                openNilLabel.isHidden = true
+            }
+            else {
+                openAreaCardView.isHidden = true
+                openNilLabel.isHidden = false
+            }
         }
         else {
             openAreaCardView.isHidden = true
@@ -145,10 +151,16 @@ class InsightViewController: UIViewController {
         }
         
         if let blind = blindCard {
-            blindAreaCardView.isHidden = false
-            blindAreaCardImageView.setImage(with: blind.imageURL)
-            blindAreaCardTitleLabel.text = blind.title
-            blindNilLabel.isHidden = true
+            if let imageString = blind.imageURL {
+                blindAreaCardImageView.setImage(with: imageString)
+                blindAreaCardView.isHidden = false
+                blindAreaCardTitleLabel.text = blind.title
+                blindNilLabel.isHidden = true
+            }
+            else {
+                blindAreaCardView.isHidden = true
+                blindNilLabel.isHidden = false
+            }
         }
         else {
             blindAreaCardView.isHidden = true

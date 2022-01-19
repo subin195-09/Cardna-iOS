@@ -14,9 +14,9 @@ struct InsightResponse: Codable {
 
 // MARK: - AreaCard
 struct AreaCard: Codable {
-    let id: Int
-    let title: String
-    let imageURL: String
+    let id: Int?
+    let title: String?
+    let imageURL: String?
 
     enum CodingKeys: String, CodingKey {
         case id, title
