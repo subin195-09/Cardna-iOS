@@ -50,14 +50,18 @@ class JoinViewController: UIViewController {
                                                           NSAttributedString.Key.foregroundColor: UIColor.w3])
         emailTextField.textColor = .w1
         emailTextFieldUnderLine.backgroundColor = .w3
+        emailInputErrorImageView.isHidden = true
         emailInputErrorLabel.font = .cardnaC
+        emailInputErrorLabel.isHidden = true
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호 (영문+숫자 최소 8자 이상)",
                                                                      attributes: [
                                                                         NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
         passwordTextFieldUnderLine.backgroundColor = .w3
+        passwordInputErrorImageView.isHidden = true
         passwordInputErrorLabel.font = .cardnaC
+        passwordInputErrorLabel.isHidden = true
         explainLabel.font = .cardnaB3Rg
         explainLabel.textColor = .w3
         serviceProtocolLabel.font = .cardnaB3Rg

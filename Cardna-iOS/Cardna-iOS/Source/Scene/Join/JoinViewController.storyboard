@@ -163,16 +163,16 @@
                                 <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Ml-Jfi">
-                                <rect key="frame" x="16" y="199.5" width="10" height="9"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icNotice" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Ml-Jfi">
+                                <rect key="frame" x="16" y="199" width="10" height="10"/>
                                 <color key="tintColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Rpr-M4-yus"/>
                                     <constraint firstAttribute="width" constant="10" id="iS6-2N-jMA"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-N3-y7H">
-                                <rect key="frame" x="16" y="270.5" width="10" height="9"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icNotice" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-N3-y7H">
+                                <rect key="frame" x="16" y="270" width="10" height="10"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="I0b-Xa-lcL"/>
@@ -382,8 +382,8 @@
     </scenes>
     <resources>
         <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="icNotice" width="15" height="15"/>
         <image name="icbtBack" width="42" height="42"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
