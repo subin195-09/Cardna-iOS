@@ -44,8 +44,14 @@ class InsightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInitializeState()
         getInsightCard()
         setUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInitializeState()
+        getInsightCard()
     }
     
     // MARK: - Function
@@ -54,6 +60,15 @@ class InsightViewController: UIViewController {
         setLabelUI()
         setCardViewUI()
         setSize()
+    }
+    
+    func setInitializeState() {
+        [openAreaCardView, blindAreaCardView].forEach {
+            $0?.isHidden = true
+        }
+        [openNilLabel, blindNilLabel].forEach {
+            $0?.isHidden = true
+        }
     }
     
     func setLabelUI() {
@@ -122,18 +137,22 @@ class InsightViewController: UIViewController {
             openAreaCardView.isHidden = false
             openAreaCardImageView.setImage(with: open.imageURL)
             openAreaCardTitleLabel.text = open.title
+            openNilLabel.isHidden = true
         }
         else {
             openAreaCardView.isHidden = true
+            openNilLabel.isHidden = false
         }
         
         if let blind = blindCard {
             blindAreaCardView.isHidden = false
             blindAreaCardImageView.setImage(with: blind.imageURL)
             blindAreaCardTitleLabel.text = blind.title
+            blindNilLabel.isHidden = true
         }
         else {
             blindAreaCardView.isHidden = true
+            blindNilLabel.isHidden = false
         }
     }
 }
