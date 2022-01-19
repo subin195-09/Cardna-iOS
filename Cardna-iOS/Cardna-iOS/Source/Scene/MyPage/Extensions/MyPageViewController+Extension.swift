@@ -11,6 +11,7 @@ extension MyPageViewController: MyPageFriendSelectProtocol {
     func pushFriendMainCard(friendID: Int) {
         guard let friendMainCardVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
         friendMainCardVC.friendID = friendID
+        friendMainCardVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(friendMainCardVC, animated: true)
     }
 }

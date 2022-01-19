@@ -143,5 +143,8 @@ extension Const {
         // MARK: - 이메일 검색 뷰 버튼
         static let btFriends = UIImage(named: "btFriends")!
         static let btFriendsplus = UIImage(named: "btFriendsplus")!
+        
+        // MARK: - 타인의 대표카드
+        static let btYoucardpack = UIImage(named: "btYoucardpack")!
     }
 }
