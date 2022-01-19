@@ -83,21 +83,34 @@
                             <constraint firstAttribute="trailing" secondItem="mNn-Nw-OPg" secondAttribute="trailing" constant="10" id="sdT-0l-Gdf"/>
                         </constraints>
                     </view>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btMinus" translatesAutoresizingMaskIntoConstraints="NO" id="PCT-xk-jaD">
+                        <rect key="frame" x="257" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="eeX-DS-8St"/>
+                            <constraint firstAttribute="width" constant="40" id="sNu-eD-Gzq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="PCT-xk-jaD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SAH-fk-gCx"/>
                 <constraint firstItem="W9a-lj-jng" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tyf-nz-hmk"/>
                 <constraint firstItem="W9a-lj-jng" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fg4-yA-A7M"/>
+                <constraint firstAttribute="trailing" secondItem="PCT-xk-jaD" secondAttribute="trailing" id="kgW-rG-mvf"/>
                 <constraint firstAttribute="bottom" secondItem="W9a-lj-jng" secondAttribute="bottom" id="mhe-IK-U07"/>
                 <constraint firstAttribute="trailing" secondItem="W9a-lj-jng" secondAttribute="trailing" id="xFQ-dn-hQE"/>
             </constraints>
             <size key="customSize" width="297" height="410"/>
             <connections>
                 <outlet property="bgView" destination="W9a-lj-jng" id="sEl-Nz-M2c"/>
+                <outlet property="bgViewLeadingConstraint" destination="fg4-yA-A7M" id="NSd-Zv-JyN"/>
+                <outlet property="bgViewTopConstraint" destination="Tyf-nz-hmk" id="wM0-bR-Zxz"/>
+                <outlet property="bgViewTrailingConstraint" destination="xFQ-dn-hQE" id="pqA-ug-qCY"/>
                 <outlet property="countBackgroundView" destination="tfo-MZ-vUo" id="PYK-Qk-6YG"/>
                 <outlet property="imageView" destination="xsA-kv-moV" id="Swq-ih-Ea9"/>
                 <outlet property="isMainCountLabel" destination="vJG-uo-g2b" id="2a8-pV-eqP"/>
+                <outlet property="minusImageView" destination="PCT-xk-jaD" id="SdO-4S-NZO"/>
                 <outlet property="selectedView" destination="lGG-o4-CeF" id="gUP-6m-Dhd"/>
                 <outlet property="titleLabel" destination="oWS-dP-mEt" id="YiH-Be-4Vh"/>
                 <outlet property="titleLeadingConstraint" destination="kAz-5l-UXx" id="dJT-is-iyE"/>
@@ -108,6 +121,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="btMinus" width="34" height="34"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

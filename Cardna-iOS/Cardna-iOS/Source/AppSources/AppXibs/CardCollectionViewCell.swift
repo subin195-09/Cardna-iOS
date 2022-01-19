@@ -12,7 +12,8 @@ class CardCollectionViewCell: UICollectionViewCell {
     // MARK: - Property
     
     public static let identifier = "CardCollectionViewCell"
-
+    var selectView: Bool = false
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var bgView: UIView!
@@ -24,6 +25,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var isMainCountLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var countBackgroundView: UIView!
+    @IBOutlet weak var bgViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var minusImageView: UIImageView!
     
     // MARK: - LifeCycle
     
@@ -44,15 +49,26 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func setUI() {
         bgView.layer.cornerRadius = 8
+        bgView.layer.borderColor = UIColor.black.cgColor
+        bgView.layer.borderWidth = 1
         bgView.backgroundColor = .mainGreen
         titleLabel.font = .cardnaSh1Sbd
         countBackgroundView.layer.cornerRadius = 10
         countBackgroundView.layer.borderWidth = 1
         countBackgroundView.layer.borderColor = UIColor.white.cgColor
         isMainCountLabel.font = .cardnaB4Sbd
+        if selectView {
+            setIsSelectViewUI()
+        }
     }
     
-    func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil, selected: Bool = false) {
+    func setIsSelectViewUI() {
+        bgViewTopConstraint.constant = 14
+        bgViewTrailingConstraint.constant = 14
+        minusImageView.isHidden = false
+    }
+    
+    func setData(image: String, title: String, isMe: Bool, small: Bool, isMainCount: Int? = nil, selected: Bool = false, isSelectedView: Bool = false) {
         imageView.setImage(with: image)
         titleLabel.text = title
         if isMe == true {
@@ -83,5 +99,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         }
         
         selectedView.isHidden = !selected
+        
+        selectView = isSelectedView
+        if isSelectedView {
+            setIsSelectViewUI()
+        }
+        
     }
 }
