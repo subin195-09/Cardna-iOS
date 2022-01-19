@@ -55,6 +55,7 @@ class AddCardCompletedViewController: UIViewController {
     
     private func setCardView() {
         makedCardUIView.layer.cornerRadius = 10
+        makedCardUIView.backgroundColor = .mainGreen
         makedCardLabel.font = .cardnaH5Sbd
         makedCardLabel.textColor = .black
         makedCardImageView.contentMode = .scaleAspectFill
