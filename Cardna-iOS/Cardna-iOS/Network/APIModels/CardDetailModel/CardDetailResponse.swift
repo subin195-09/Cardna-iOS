@@ -14,7 +14,7 @@ struct CardDetailResponse: Codable {
     let isMe, isCard: Bool
     let cardImg: String
     let title, content: String
-    let relation: String?
-    let name, createdAt: String
+    let relation, name: String?
+    let createdAt: String
     let isLiked: Bool?
 }

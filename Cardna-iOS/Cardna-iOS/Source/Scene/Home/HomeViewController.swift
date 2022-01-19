@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Property
     
-    static var isHomeMine: Bool = true
+    var isHomeMine: Bool = true
     var cardList: [MainCardList] = []
     var friendID: Int? = nil
     var name: String = "지우(기본이름)"
