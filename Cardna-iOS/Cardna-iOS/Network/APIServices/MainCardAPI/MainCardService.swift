@@ -15,8 +15,8 @@ public class MainCardService {
     
     public init() { }
     
-    func getMainCard(completion: @escaping (NetworkResult<Any>) -> Void) {
-        mainCardProvider.request(.getMainCard) { response in
+    func getMainCard(friendID: Int? = nil, completion: @escaping (NetworkResult<Any>) -> Void) {
+        mainCardProvider.request(.getMainCard(friendID: friendID)) { response in
             print(response)
             switch response {
             case.success(let response):

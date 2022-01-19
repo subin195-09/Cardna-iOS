@@ -7,6 +7,14 @@
 
 import UIKit
 
+extension MyPageViewController: MyPageFriendSelectProtocol {
+    func pushFriendMainCard(friendID: Int) {
+        guard let friendMainCardVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
+        friendMainCardVC.friendID = friendID
+        self.navigationController?.pushViewController(friendMainCardVC, animated: true)
+    }
+}
+
 extension MyPageViewController: UITableViewDelegate {
     
 }
@@ -44,6 +52,7 @@ extension MyPageViewController: UITableViewDataSource {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageFriendsTableViewCell.identifier, for: indexPath) as? MyPageFriendsTableViewCell else { return UITableViewCell() }
             cell.setData(friendList: friendList)
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()

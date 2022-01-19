@@ -11,7 +11,9 @@ class HomeViewController: UIViewController {
     
     // MARK: - Property
     
+    static var isHomeMine: Bool = true
     var cardList: [MainCardList] = []
+    var friendID: Int? = nil
     
     // MARK: - IBOutlet
     
@@ -24,7 +26,8 @@ class HomeViewController: UIViewController {
     // MARK: - VC LifeCycle
     
     override func viewWillAppear(_ animated: Bool) {
-        getMainCard()
+        if friendID != nil { getMainCard(friendID: friendID) }
+        else { getMainCard() }
     }
     
     override func viewDidLoad() {
@@ -71,8 +74,8 @@ class HomeViewController: UIViewController {
         countLabel.font = .cardnaB5Rg
     }
     
-    func getMainCard() {
-        MainCardService.shared.getMainCard { [weak self] response in
+    func getMainCard(friendID: Int? = nil) {
+        MainCardService.shared.getMainCard(friendID: friendID) { [weak self] response in
             print(response)
             guard let self = self else { return }
             switch response {

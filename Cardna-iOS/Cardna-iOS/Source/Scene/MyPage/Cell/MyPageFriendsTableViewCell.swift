@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol MyPageFriendSelectProtocol {
+    func pushFriendMainCard(friendID: Int)
+}
+
 class MyPageFriendsTableViewCell: UITableViewCell {
     
     static let identifier = "MyPageFriendsTableViewCell"
     var friendList: [FriendList] = []
+    var delegate: MyPageFriendSelectProtocol?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -27,6 +32,7 @@ class MyPageFriendsTableViewCell: UITableViewCell {
     func setCollectionView() {
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func registerXib() {
@@ -50,6 +56,13 @@ extension MyPageFriendsTableViewCell {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+}
+
+extension MyPageFriendsTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("mypage friend CollectionView", indexPath.item)
+        self.delegate?.pushFriendMainCard(friendID: friendList[indexPath.item].id)
     }
 }
 
