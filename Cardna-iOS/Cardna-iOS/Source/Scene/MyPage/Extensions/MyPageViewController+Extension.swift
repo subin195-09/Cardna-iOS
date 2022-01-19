@@ -17,6 +17,26 @@ extension MyPageViewController: MyPageFriendSelectProtocol {
     }
 }
 
+extension MyPageViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredList = []
+        
+        /// 검색창에 글자가 없을 때
+        if searchText == "" {
+            filteredList = friendList
+        }
+        /// 검색창에 글자가 있을 때 (검색했을 때)
+        else {
+            for friend in friendList {
+                if friend.name.lowercased().contains(searchText.lowercased()) {
+                    filteredList.append(friend)
+                }
+            }
+        }
+        self.tableView.reloadData()
+    }
+}
+
 extension MyPageViewController: UITableViewDelegate {
     
 }
@@ -53,7 +73,7 @@ extension MyPageViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageFriendsTableViewCell.identifier, for: indexPath) as? MyPageFriendsTableViewCell else { return UITableViewCell() }
-            cell.setData(friendList: friendList)
+            cell.setData(friendList: filteredList)
             cell.delegate = self
             return cell
         default:

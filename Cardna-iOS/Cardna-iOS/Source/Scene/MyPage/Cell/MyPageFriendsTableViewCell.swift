@@ -42,6 +42,7 @@ class MyPageFriendsTableViewCell: UITableViewCell {
     
     func setData(friendList: [FriendList]) {
         self.friendList = friendList
+        self.collectionView.reloadData()
     }
 }
 
