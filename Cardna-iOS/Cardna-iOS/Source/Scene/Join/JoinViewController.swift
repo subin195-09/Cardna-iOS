@@ -51,9 +51,9 @@ class JoinViewController: UIViewController {
                                                                     NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                                     NSAttributedString.Key.foregroundColor: UIColor.w3])
         emailTextField.textColor = .w1
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(validateEmail), for: .allEditingEvents)
         emailTextFieldUnderLine.backgroundColor = .w3
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         emailInputErrorImageView.isHidden = true
         emailInputErrorLabel.font = .cardnaC
         emailInputErrorLabel.isHidden = true
@@ -62,8 +62,8 @@ class JoinViewController: UIViewController {
                                                                         NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
-        passwordTextField.addTarget(self, action: #selector(validatePassword), for: .allEditingEvents)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(validatePassword), for: .allEditingEvents)
         showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
         passwordTextFieldUnderLine.backgroundColor = .w3
         passwordInputErrorImageView.isHidden = true
@@ -102,7 +102,7 @@ class JoinViewController: UIViewController {
     }
     
     private func setButtonEnable() {
-        if (emailInputErrorImageView.isHidden && passwordInputErrorImageView.isHidden) {
+        if (emailTextField.hasText && passwordTextField.hasText && emailInputErrorImageView.isHidden && passwordInputErrorImageView.isHidden) {
             joinCompleteButton.isEnabled = true
             joinCompletedView.setViewGradient(startColor: .mainGreen, endColor: .mainPurple)
             joinCompletedLabel.font = .cardnaH5Sbd
@@ -150,9 +150,11 @@ class JoinViewController: UIViewController {
         if isValidEmail(text) {
             emailInputErrorImageView.isHidden = true
             emailInputErrorLabel.isHidden = true
+            emailTextFieldUnderLine.backgroundColor = .w1
         } else {
             emailInputErrorImageView.isHidden = false
             emailInputErrorLabel.isHidden = false
+            emailTextFieldUnderLine.backgroundColor = .cardnaAcntRed
         }
     }
     
@@ -162,9 +164,11 @@ class JoinViewController: UIViewController {
         if isValidPassword(text) {
             passwordInputErrorImageView.isHidden = true
             passwordInputErrorLabel.isHidden = true
+            passwordTextFieldUnderLine.backgroundColor = .w1
         } else {
             passwordInputErrorImageView.isHidden = false
             passwordInputErrorLabel.isHidden = false
+            passwordTextFieldUnderLine.backgroundColor = .cardnaAcntRed
         }
     }
     
@@ -173,7 +177,7 @@ class JoinViewController: UIViewController {
         setButtonEnable()
         if textField == emailTextField {
             if emailTextField.hasText {
-                emailTextFieldUnderLine.backgroundColor = .w1
+                emailTextFieldUnderLine.backgroundColor = .cardnaAcntRed
             }
             else {
                 emailTextFieldUnderLine.backgroundColor = .w4
@@ -182,7 +186,7 @@ class JoinViewController: UIViewController {
         else if textField == passwordTextField {
             if passwordTextField.hasText {
                 showPasswordToggleButton.isHidden = false
-                passwordTextFieldUnderLine.backgroundColor = .w1
+                passwordTextFieldUnderLine.backgroundColor = .cardnaAcntRed
             }
             else {
                 showPasswordToggleButton.isHidden = true
