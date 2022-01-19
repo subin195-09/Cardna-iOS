@@ -13,12 +13,12 @@ extension CardNotYetBoxViewController: UITableViewDelegate {
 
 extension CardNotYetBoxViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cardNotYetList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
-        cell.setData(title: "우아아아악", from: "나", hasImage: true, date: "2021/01/01")
+        cell.setData(title: cardNotYetList[indexPath.row].title, from: cardNotYetList[indexPath.row].name, hasImage: cardNotYetList[indexPath.row].isImage, date: cardNotYetList[indexPath.row].createdAt)
         return cell
     }
     
