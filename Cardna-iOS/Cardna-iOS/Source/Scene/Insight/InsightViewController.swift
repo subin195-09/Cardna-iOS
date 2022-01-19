@@ -59,6 +59,7 @@ class InsightViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setInitializeState()
+        setPosition()
         getInsightCard()
     }
     
@@ -80,13 +81,8 @@ class InsightViewController: UIViewController {
         }
     }
     
-    func setAutoLayoutForDevice() {
-        if deviceHeight == 667 {
-            imageViewTopConstraint.constant = 80
-            titleViewTopConstraint.constant = 20
-            cardViewTopConstraint.constant = 20
-            explainLabelTopConstraint.constant = 15
-        }
+    func setPosition() {
+        scrollView.setContentOffset(.zero, animated: true)
     }
     
     func setLabelUI() {
@@ -147,6 +143,15 @@ class InsightViewController: UIViewController {
         }
         blindAreaPageView.snp.makeConstraints {
             $0.width.equalTo(deviceWidth)
+        }
+    }
+    
+    func setAutoLayoutForDevice() {
+        if deviceHeight == 667 {
+            imageViewTopConstraint.constant = 80
+            titleViewTopConstraint.constant = 20
+            cardViewTopConstraint.constant = 20
+            explainLabelTopConstraint.constant = 15
         }
     }
     
