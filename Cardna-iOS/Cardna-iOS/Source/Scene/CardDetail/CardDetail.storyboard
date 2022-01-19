@@ -48,6 +48,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="icbtSeemore"/>
+                                                <connections>
+                                                    <action selector="menuButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Rg-c8-XAq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -190,6 +193,10 @@
                         <outlet property="dateLabel" destination="TXg-zD-MqC" id="f07-DS-bmp"/>
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
                         <outlet property="imageView" destination="HbF-9s-1jm" id="Zmg-GB-gvo"/>
+                        <outlet property="menuButton" destination="kec-gq-IeN" id="KmO-Dv-5xm"/>
+                        <outlet property="menuButtonView" destination="tyg-Ah-pAI" id="0aX-Uc-IQ6"/>
+                        <outlet property="shareButton" destination="lNS-2y-FnT" id="6jw-Ri-ja3"/>
+                        <outlet property="shareButtonView" destination="Gjn-Cv-F3r" id="2DT-us-q7Y"/>
                         <outlet property="titleBgView" destination="GN9-Za-hmY" id="OeH-FT-n0C"/>
                         <outlet property="titleLabel" destination="6Fi-6q-Xnl" id="KcA-eQ-Hzn"/>
                     </connections>

@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Property
     
-    static var isHomeMine: Bool = true
+    var isHomeMine: Bool = true
     var cardList: [MainCardList] = []
     var friendID: Int? = nil
     var name: String = "지우(기본이름)"
@@ -98,11 +98,13 @@ class HomeViewController: UIViewController {
                 self.cardList = res.mainCardList
                 self.setCollectionView()
                 self.collectionView.reloadData()
+                if self.cardList.count > 0 {
                 if self.cardList[0].isMe == true {
                     self.commentUnderLineView.backgroundColor = .mainGreenAlpha
                 }
                 else {
                     self.commentUnderLineView.backgroundColor = .mainPurpleAlpha
+                }
                 }
                 print("home", self.cardList)
             case .requestErr(_):

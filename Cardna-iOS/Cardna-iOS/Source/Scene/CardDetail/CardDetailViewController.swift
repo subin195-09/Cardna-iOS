@@ -13,6 +13,7 @@ class CardDetailViewController: UIViewController {
     // MARK: - Property
     /// 분기처리 0: 카드나 1:카드너 2:카드아닌박스
     var cardDetailWhere: Int = 0
+    var isFriendsCardDetail: Bool = false
     var cardID: Int?
     var cardData: CardDetailResponse?
     
@@ -26,6 +27,10 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var addCardYouButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleBgView: UIView!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButtonView: UIView!
+    @IBOutlet weak var menuButtonView: UIView!
     
     // MARK: - VC LifeCycle
     
@@ -50,16 +55,64 @@ class CardDetailViewController: UIViewController {
         case 0:
             titleBgView.backgroundColor = .mainGreen
             backButton.setImage(Const.Image.icbtBoxbackGreen, for: .normal)
+            setMenuButtonInCardMe()
         case 1:
             titleBgView.backgroundColor = .mainPurple
             backButton.setImage(Const.Image.icbtBoxbackPurple, for: .normal)
+            setMenuButtonInCardYou()
         case 2:
             titleBgView.backgroundColor = .cardDetailGray
             backButton.setImage(Const.Image.icbtBoxbackGray, for: .normal)
             addCardYouButton.isHidden = false
+            setMenuButtonInCardBox()
         default:
             print("default")
         }
+    }
+    
+    func setMenuButtonInCardMe() {
+        if isFriendsCardDetail {
+            shareButton.isHidden = true
+            menuButton.isHidden = true
+            shareButtonView.isHidden = true
+            menuButtonView.isHidden = true
+        }
+        else {
+            menuButton.setImage(Const.Image.icbtTrash, for: .normal)
+            menuButton.addTarget(self, action: #selector(trashCard), for: .touchUpInside)
+        }
+    }
+    
+    func setMenuButtonInCardYou() {
+        if isFriendsCardDetail {
+            shareButton.isHidden = true
+            menuButton.isHidden = true
+            shareButtonView.isHidden = true
+            menuButtonView.isHidden = true
+        }
+        else {
+            let inBox = UIAction(title: "보관") { action in
+                self.putCardInBox()
+            }
+            let delete = UIAction(title: "삭제") { action in
+                print("삭제")
+                self.deleteCard()
+            }
+            menuButton.menu = UIMenu(title: "", children: [delete, inBox])
+        }
+    }
+    
+    func setMenuButtonInCardBox() {
+        shareButton.isHidden = true
+        shareButtonView.isHidden = true
+        let report = UIAction(title: "신고") { action in
+            print("신고")
+        }
+        let delete = UIAction(title: "삭제") { action in
+            print("삭제")
+            self.deleteCard()
+        }
+        menuButton.menu = UIMenu(title: "", children: [delete, report])
     }
     
     func setLabelUI() {
@@ -109,6 +162,45 @@ class CardDetailViewController: UIViewController {
         }
     }
     
+    func putCardInBox() {
+        CardPackService.shared.putCardORNot(cardID: cardID ?? 0) { result in
+            switch result {
+            case .success(_):
+                self.navigationController?.popViewController(animated: true)
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("requestErr")
+            case .serverErr:
+                print("requestErr")
+            case .networkFail:
+                print("requestErr")
+            }
+        }
+    }
+    
+    func deleteCard() {
+        makeRequestAlert(title: "삭제", message: "카드를 삭제하시겠습니까?", okAction: { _ in
+            CardPackService.shared.deleteCard(cardID: self.cardID ?? 0) { result in
+                switch result {
+                case .success(_):
+                    print("카드삭제완료")
+                     self.navigationController?.popViewController(animated: true)
+                case .requestErr(_):
+                    print("requestErr")
+                case .pathErr:
+                    print("requestErr")
+                case .serverErr:
+                    print("requestErr")
+                case .networkFail:
+                    print("requestErr")
+                }
+            }
+        }, cancelAction: { _ in
+            print("취소") },
+                         completion: nil)
+    }
+    
     /// 이후 삭제할 더미데이터
     func setDummy() {
         titleLabel.text = "힘이 들 땐 하늘을 봐.."
@@ -117,25 +209,22 @@ class CardDetailViewController: UIViewController {
         dateLabel.text = "2022/01/08"
     }
     
+    // MARK: - Objc Function
+    @objc func trashCard() {
+        deleteCard()
+    }
+    
+    // MARK: - IBAction
+    
     @IBAction func backButtonDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func menuButtonDidTap(_ sender: Any) {
+        
+    }
+    
     @IBAction func makeCardButtonDidTap(_ sender: Any) {
-        // 서버통신
-        CardPackService.shared.putCardORNot(cardID: cardID ?? 0) { response in
-            switch response {
-            case .success(_):
-                self.navigationController?.popViewController(animated: true)
-            case .requestErr(_):
-                print("requestErr")
-            case .pathErr:
-                print("patherr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
+        putCardInBox()
     }
 }

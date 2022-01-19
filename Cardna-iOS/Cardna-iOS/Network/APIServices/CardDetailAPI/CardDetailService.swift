@@ -17,7 +17,6 @@ public class CardDetailService {
     
     func getCardDetail(cardID: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         cardDetailProvider.request(.getCardDetail(cardID: cardID)) { response in
-            //print(response)
             switch response {
             case.success(let response):
                 let statusCode = response.statusCode
