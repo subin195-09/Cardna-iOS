@@ -64,6 +64,11 @@ extension AddCardBottomSheetViewController: UICollectionViewDataSource {
             addCardSymbolSelectingList = [false, false, false, false, false]
             addCardSymbolSelectingList[indexPath.row] = true
         }
+        if addCardSymbolSelectingList.contains(true) {
+            completeButton.isEnabled = true
+        } else {
+            completeButton.isEnabled = false
+        }
         collectionView.reloadData()
     }
 }
