@@ -60,6 +60,7 @@ class JoinViewController: UIViewController {
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
         passwordTextField.addTarget(self, action: #selector(validatePassword), for: .allEditingEvents)
+        showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
         passwordTextFieldUnderLine.backgroundColor = .w3
         passwordInputErrorImageView.isHidden = true
         passwordInputErrorLabel.font = .cardnaC
@@ -78,7 +79,14 @@ class JoinViewController: UIViewController {
         joinCompleteButton.layer.cornerRadius = 10
     }
     
-    // MARK: - Function
+    @IBAction func showPassword(_ sender: Any) {
+        if self.showPasswordToggleButton.image(for: .normal) == Const.Image.icbtEye {
+            self.showPasswordToggleButton.setImage(Const.Image.icbtEyeslash, for: .normal)
+        } else {
+            self.showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
+        }
+        self.passwordTextField.isSecureTextEntry.toggle()
+    }
     
     private func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
