@@ -50,6 +50,7 @@ class AddCardBottomSheetViewController: UIViewController {
     private func setButtonUI() {
         completeButton.titleLabel?.font = .cardnaSh3Sbd
         completeButton.tintColor = .w1
+        completeButton.isEnabled = false
     }
     
     private func setLabelUI() {
@@ -71,6 +72,12 @@ class AddCardBottomSheetViewController: UIViewController {
     }
     
     // MARK: - IBAction
+    
+    @IBAction func touchUpCompletedButton(_ sender: Any) {
+        
+        let addCardVC = AddCardViewController()
+//        addCardVC.
+    }
     
     @IBAction func albumBtn(_ sender: UIButton) {
         self.imagePickerController.sourceType = .photoLibrary
