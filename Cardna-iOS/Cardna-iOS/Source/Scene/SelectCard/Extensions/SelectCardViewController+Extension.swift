@@ -14,7 +14,7 @@ extension SelectCardViewController {
     func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 3, bottom: 0, trailing: 3)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(250))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 12, trailing: 10)
@@ -44,7 +44,7 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
         cell.setData(image: maincard.cardImg,
                      title: maincard.title,
                      isMe: maincard.isMe,
-                     small: true)
+                     small: true, isSelectedView: true)
         return cell
     }
     

@@ -73,7 +73,7 @@ extension CardViewController: UICollectionViewDelegateFlowLayout {
         }
         else {
             cellWidth = UIScreen.main.bounds.width
-            cellHeight = 568
+            cellHeight =  self.view.safeAreaLayoutGuide.layoutFrame.height - 116
         }
         return CGSize(width: cellWidth, height: cellHeight)
     }

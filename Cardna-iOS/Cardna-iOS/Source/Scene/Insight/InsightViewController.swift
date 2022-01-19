@@ -12,6 +12,7 @@ class InsightViewController: UIViewController {
     // MARK: - Property
     
     var deviceWidth: CGFloat = UIScreen.main.bounds.width
+    var deviceHeight: CGFloat = UIScreen.main.bounds.height
     var openCard: AreaCard?
     var blindCard: AreaCard?
     
@@ -40,6 +41,13 @@ class InsightViewController: UIViewController {
     @IBOutlet weak var openNilLabel: UILabel!
     @IBOutlet weak var blindNilLabel: UILabel!
     
+    // MARK: Layout For device
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cardViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var explainLabelTopConstraint: NSLayoutConstraint!
+    
+    
     // MARK: - VC Life Cycle
     
     override func viewDidLoad() {
@@ -51,6 +59,7 @@ class InsightViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setInitializeState()
+        setPosition()
         getInsightCard()
     }
     
@@ -60,6 +69,7 @@ class InsightViewController: UIViewController {
         setLabelUI()
         setCardViewUI()
         setSize()
+        setAutoLayoutForDevice()
     }
     
     func setInitializeState() {
@@ -69,6 +79,10 @@ class InsightViewController: UIViewController {
         [openNilLabel, blindNilLabel].forEach {
             $0?.isHidden = true
         }
+    }
+    
+    func setPosition() {
+        scrollView.setContentOffset(.zero, animated: true)
     }
     
     func setLabelUI() {
@@ -129,6 +143,15 @@ class InsightViewController: UIViewController {
         }
         blindAreaPageView.snp.makeConstraints {
             $0.width.equalTo(deviceWidth)
+        }
+    }
+    
+    func setAutoLayoutForDevice() {
+        if deviceHeight == 667 {
+            imageViewTopConstraint.constant = 80
+            titleViewTopConstraint.constant = 20
+            cardViewTopConstraint.constant = 20
+            explainLabelTopConstraint.constant = 15
         }
     }
     
