@@ -27,6 +27,8 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleBgView: UIView!
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButtonView: UIView!
     
     // MARK: - VC LifeCycle
     
@@ -43,7 +45,6 @@ class CardDetailViewController: UIViewController {
         setLabelUI()
         setAddCardYouButtonUI()
         setUIByWhere(card: cardDetailWhere)
-        setMenuButton()
     }
     
     func setUIByWhere(card: Int) {
@@ -52,19 +53,27 @@ class CardDetailViewController: UIViewController {
         case 0:
             titleBgView.backgroundColor = .mainGreen
             backButton.setImage(Const.Image.icbtBoxbackGreen, for: .normal)
+            setMenuButtonInCardMe()
         case 1:
             titleBgView.backgroundColor = .mainPurple
             backButton.setImage(Const.Image.icbtBoxbackPurple, for: .normal)
+            setMenuButtonInCardYou()
         case 2:
             titleBgView.backgroundColor = .cardDetailGray
             backButton.setImage(Const.Image.icbtBoxbackGray, for: .normal)
             addCardYouButton.isHidden = false
+            setMenuButtonInCardBox()
         default:
             print("default")
         }
     }
     
-    func setMenuButton() {
+    func setMenuButtonInCardMe() {
+        menuButton.setImage(Const.Image.icbtTrash, for: .normal)
+        menuButton.addTarget(self, action: #selector(trashCard), for: .touchUpInside)
+    }
+    
+    func setMenuButtonInCardYou() {
         let inBox = UIAction(title: "보관") { action in
             self.putCardInBox()
         }
@@ -72,6 +81,18 @@ class CardDetailViewController: UIViewController {
             print("삭제")
         }
         menuButton.menu = UIMenu(title: "", children: [delete, inBox])
+    }
+    
+    func setMenuButtonInCardBox() {
+        shareButton.isHidden = true
+        shareButtonView.isHidden = true
+        let report = UIAction(title: "신고") { action in
+            print("신고")
+        }
+        let delete = UIAction(title: "삭제") { action in
+            print("삭제")
+        }
+        menuButton.menu = UIMenu(title: "", children: [delete, report])
     }
     
     func setLabelUI() {
@@ -145,6 +166,13 @@ class CardDetailViewController: UIViewController {
         contentLabel.text = "지금 이 말이 우리가 다시 시작하자는 건 아냐 그저 너의 남아있던 기억들이 떠올랐을 뿐이야 정말 하루도 빠짐없이 너는 사랑한다 말해줬었지 잠들기 전에 또 눈 뜨자마자 말해주던 너 생각이 나 말해보는 거야 예뻤어 날 바라봐 주던 그 눈빛 날 불러주던 그 목소리 다 다 그 모든 게 내겐 예뻤어 더 바랄 게 없는듯한 느낌 오직 너만이 주던 순간들 그 모든게 내겐"
         dateLabel.text = "2022/01/08"
     }
+    
+    // MARK: - Objc Function
+    @objc func trashCard() {
+        print("카드삭제")
+    }
+    
+    // MARK: - IBAction
     
     @IBAction func backButtonDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

@@ -194,6 +194,8 @@
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
                         <outlet property="imageView" destination="HbF-9s-1jm" id="Zmg-GB-gvo"/>
                         <outlet property="menuButton" destination="kec-gq-IeN" id="KmO-Dv-5xm"/>
+                        <outlet property="shareButton" destination="lNS-2y-FnT" id="6jw-Ri-ja3"/>
+                        <outlet property="shareButtonView" destination="Gjn-Cv-F3r" id="2DT-us-q7Y"/>
                         <outlet property="titleBgView" destination="GN9-Za-hmY" id="OeH-FT-n0C"/>
                         <outlet property="titleLabel" destination="6Fi-6q-Xnl" id="KcA-eQ-Hzn"/>
                     </connections>
