@@ -56,6 +56,51 @@
                                     <constraint firstItem="hR9-fY-3aQ" firstAttribute="leading" secondItem="Tds-DP-5Oi" secondAttribute="trailing" constant="7" id="y2B-vi-7q9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-wp-Gdj">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPD-0p-4u1">
+                                        <rect key="frame" x="8" y="1" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WPD-0p-4u1" secondAttribute="height" multiplier="1:1" id="d70-Ol-sWR"/>
+                                            <constraint firstAttribute="height" constant="42" id="ifA-k5-6Mk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icbtBack"/>
+                                        <connections>
+                                            <action selector="friendBackButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lbh-tB-lzX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에르메스님의 카드팩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwz-gc-Jvd">
+                                        <rect key="frame" x="119" y="11.666666666666664" width="137" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDo-sW-dQ7">
+                                        <rect key="frame" x="325" y="1" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="BUp-DQ-wqD"/>
+                                            <constraint firstAttribute="width" secondItem="QDo-sW-dQ7" secondAttribute="height" multiplier="1:1" id="EZz-dm-Tvv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icbtWrite"/>
+                                        <connections>
+                                            <action selector="friendWriteButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yua-oy-G7x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WPD-0p-4u1" firstAttribute="top" secondItem="jMu-wp-Gdj" secondAttribute="top" constant="1" id="2lv-Dw-2f3"/>
+                                    <constraint firstItem="WPD-0p-4u1" firstAttribute="leading" secondItem="jMu-wp-Gdj" secondAttribute="leading" constant="8" id="Ee2-e4-wdC"/>
+                                    <constraint firstItem="QDo-sW-dQ7" firstAttribute="top" secondItem="jMu-wp-Gdj" secondAttribute="top" constant="1" id="FpE-KO-FiA"/>
+                                    <constraint firstAttribute="trailing" secondItem="QDo-sW-dQ7" secondAttribute="trailing" constant="8" id="PX8-AC-cTo"/>
+                                    <constraint firstItem="Lwz-gc-Jvd" firstAttribute="centerX" secondItem="jMu-wp-Gdj" secondAttribute="centerX" id="bhT-CM-hQg"/>
+                                    <constraint firstAttribute="height" constant="44" id="dLP-kd-wua"/>
+                                    <constraint firstItem="Lwz-gc-Jvd" firstAttribute="centerY" secondItem="jMu-wp-Gdj" secondAttribute="centerY" id="hvZ-ze-1zo"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcM-Ee-Mv8">
                                 <rect key="frame" x="0.0" y="88" width="375" height="72"/>
                                 <subviews>
@@ -177,11 +222,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="jMu-wp-Gdj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2Ys-Z9-9SH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Af-YP-MaY" secondAttribute="trailing" id="4Ld-uv-KaQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X88-QU-M5N" secondAttribute="trailing" id="7V1-LU-E87"/>
                             <constraint firstItem="EcM-Ee-Mv8" firstAttribute="top" secondItem="4Af-YP-MaY" secondAttribute="bottom" id="8lK-q4-MnP"/>
                             <constraint firstItem="4Af-YP-MaY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BgX-Gf-zW1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jMu-wp-Gdj" secondAttribute="trailing" id="DTF-pu-qBk"/>
                             <constraint firstItem="X88-QU-M5N" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IFb-Or-CJr"/>
+                            <constraint firstItem="jMu-wp-Gdj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QuS-Er-F1m"/>
                             <constraint firstItem="EcM-Ee-Mv8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ybh-eR-xTf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EcM-Ee-Mv8" secondAttribute="trailing" id="es0-lX-X1c"/>
                             <constraint firstItem="4Af-YP-MaY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g02-GE-Daq"/>
@@ -198,6 +246,10 @@
                         <outlet property="cardContainerCollectionView" destination="X88-QU-M5N" id="jmd-27-LeH"/>
                         <outlet property="cardCountLabel" destination="hR9-fY-3aQ" id="xbl-qB-bHX"/>
                         <outlet property="cardPackTitleCollectionView" destination="A8G-ni-jrN" id="MKO-y9-Yh2"/>
+                        <outlet property="friendBackButton" destination="WPD-0p-4u1" id="eFC-es-LOa"/>
+                        <outlet property="friendNavigationBarView" destination="jMu-wp-Gdj" id="10s-vS-9iN"/>
+                        <outlet property="friendNavigationTitleLabel" destination="Lwz-gc-Jvd" id="FFQ-jm-Yo6"/>
+                        <outlet property="friendWriteButton" destination="QDo-sW-dQ7" id="Wog-MX-tjd"/>
                         <outlet property="indicatorBarView" destination="1pH-I9-DKH" id="1Fg-ak-CYA"/>
                         <outlet property="indicatorLeadingConstraint" destination="xuv-dU-twI" id="T8O-qV-4r7"/>
                         <outlet property="navigationBarView" destination="4Af-YP-MaY" id="TXV-lR-UC4"/>
@@ -212,7 +264,9 @@
     <resources>
         <image name="btmnavi2Active" width="85" height="84"/>
         <image name="btmnavi2Inactive" width="85" height="84"/>
+        <image name="icbtBack" width="42" height="42"/>
         <image name="icbtCardplus" width="32" height="32"/>
+        <image name="icbtWrite" width="42" height="42"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
