@@ -45,10 +45,11 @@ class JoinViewController: UIViewController {
         joinTitleLabel.font = .cardnaSh1Sbd
         joinTitleLabel.textColor = .w1
         emailTextField.attributedPlaceholder = NSAttributedString(string: "이메일",
-                                                        attributes: [
-                                                          NSAttributedString.Key.font: UIFont.cardnaB1Rg,
-                                                          NSAttributedString.Key.foregroundColor: UIColor.w3])
+                                                                  attributes: [
+                                                                    NSAttributedString.Key.font: UIFont.cardnaB1Rg,
+                                                                    NSAttributedString.Key.foregroundColor: UIColor.w3])
         emailTextField.textColor = .w1
+        emailTextField.addTarget(self, action: #selector(validateEmail), for: .allEditingEvents)
         emailTextFieldUnderLine.backgroundColor = .w3
         emailInputErrorImageView.isHidden = true
         emailInputErrorLabel.font = .cardnaC
@@ -58,6 +59,7 @@ class JoinViewController: UIViewController {
                                                                         NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
+        passwordTextField.addTarget(self, action: #selector(validatePassword), for: .allEditingEvents)
         passwordTextFieldUnderLine.backgroundColor = .w3
         passwordInputErrorImageView.isHidden = true
         passwordInputErrorLabel.font = .cardnaC
@@ -84,15 +86,35 @@ class JoinViewController: UIViewController {
         return emailPred.evaluate(with: email)
     }
     
+    private func isValidPassword(_ password: String) -> Bool {
+        let passwordRegEx = "^(?=.*[a-zA-z])(?=.*[0-9]).{8,64}"
+        let passwordPred = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return passwordPred.evaluate(with: password)
+    }
+    
     // MARK: - Objc Function
     
     @objc
     private func validateEmail() {
         guard let text = emailTextField.text else { return }
         if isValidEmail(text) {
-            // no error message
+            emailInputErrorImageView.isHidden = true
+            emailInputErrorLabel.isHidden = true
         } else {
-            // error message
+            emailInputErrorImageView.isHidden = false
+            emailInputErrorLabel.isHidden = false
+        }
+    }
+    
+    @objc
+    private func validatePassword() {
+        guard let text = passwordTextField.text else { return }
+        if isValidPassword(text) {
+            passwordInputErrorImageView.isHidden = true
+            passwordInputErrorLabel.isHidden = true
+        } else {
+            passwordInputErrorImageView.isHidden = false
+            passwordInputErrorLabel.isHidden = false
         }
     }
 }
