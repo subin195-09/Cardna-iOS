@@ -8,7 +8,12 @@
 import UIKit
 
 extension CardNotYetBoxViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = UIStoryboard(name: "CardDetail", bundle: nil).instantiateViewController(withIdentifier: "CardDetailViewController") as? CardDetailViewController else { return }
+        detailVC.cardDetailWhere = 2
+        detailVC.cardID = cardNotYetList[indexPath.row].id
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 extension CardNotYetBoxViewController: UITableViewDataSource {
