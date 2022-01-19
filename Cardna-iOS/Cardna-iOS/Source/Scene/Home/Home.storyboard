@@ -71,6 +71,11 @@
                                 <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-2e-LyS">
+                                <rect key="frame" x="125" y="732" width="164" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btYoucardpack"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,19 +89,23 @@
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="50" id="ak8-FA-4bg"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="top" secondItem="mqI-RA-2IT" secondAttribute="bottom" id="bor-8a-hS1"/>
                             <constraint firstAttribute="trailing" secondItem="HW4-7g-rJS" secondAttribute="trailing" constant="8" id="gEA-t3-sk7"/>
+                            <constraint firstItem="KLX-2e-LyS" firstAttribute="top" secondItem="I5f-QM-DCR" secondAttribute="bottom" constant="10" id="nqD-CX-mPi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IXZ-Re-aFl" secondAttribute="trailing" id="pLv-8z-QF5"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qVV-2p-s9f"/>
                             <constraint firstItem="mqI-RA-2IT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uoK-SI-gb7"/>
                             <constraint firstItem="I5f-QM-DCR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wbI-fw-1xk"/>
+                            <constraint firstItem="KLX-2e-LyS" firstAttribute="centerX" secondItem="I5f-QM-DCR" secondAttribute="centerX" id="yow-On-llD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dfh-r9-Mh4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="IXZ-Re-aFl" id="62f-Kc-K8s"/>
+                        <outlet property="collectionViewTopConstraint" destination="ak8-FA-4bg" id="djh-BV-3jU"/>
                         <outlet property="commentLabel" destination="2aD-2V-JgP" id="xRn-vD-fWx"/>
                         <outlet property="countLabel" destination="I5f-QM-DCR" id="q0a-MK-Gf8"/>
                         <outlet property="editButton" destination="HW4-7g-rJS" id="wrv-3E-8dy"/>
+                        <outlet property="friendCardPackButton" destination="KLX-2e-LyS" id="htX-lM-XVl"/>
                         <outlet property="nameLabel" destination="mqI-RA-2IT" id="ORH-s9-t0p"/>
                     </connections>
                 </viewController>
@@ -128,6 +137,7 @@
     </scenes>
     <resources>
         <image name="arrow.left.arrow.right" catalog="system" width="119" height="128"/>
+        <image name="btYoucardpack" width="140" height="40"/>
         <image name="btmnavi1Active" width="85" height="84"/>
         <image name="btmnavi1Inactive" width="85" height="84"/>
         <image name="icbtNotification" width="42" height="42"/>

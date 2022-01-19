@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var collectionViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var friendCardPackButton: UIButton!
     
     // MARK: - VC LifeCycle
     
@@ -34,9 +36,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         registerXib()
         setUI()
+        isFriendMain()
     }
     
     // MARK: - Function
+    
+    func isFriendMain() {
+        if friendID != nil {
+            editButton.isHidden = true
+            collectionViewTopConstraint.constant = 24
+            friendCardPackButton.isHidden = false
+        }
+    }
     
     func setCollectionView() {
         collectionView.backgroundColor = .none
