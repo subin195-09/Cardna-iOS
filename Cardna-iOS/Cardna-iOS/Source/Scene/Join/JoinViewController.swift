@@ -30,6 +30,8 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var serviceProtocolButton: UIButton!
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var joinCompleteButton: UIButton!
+    @IBOutlet weak var joinCompletedView: UIView!
+    @IBOutlet weak var joinCompletedLabel: UILabel!
     
     // MARK: - VC LifeCycle
     
@@ -51,6 +53,7 @@ class JoinViewController: UIViewController {
         emailTextField.textColor = .w1
         emailTextField.addTarget(self, action: #selector(validateEmail), for: .allEditingEvents)
         emailTextFieldUnderLine.backgroundColor = .w3
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         emailInputErrorImageView.isHidden = true
         emailInputErrorLabel.font = .cardnaC
         emailInputErrorLabel.isHidden = true
@@ -60,6 +63,7 @@ class JoinViewController: UIViewController {
                                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         passwordTextField.textColor = .w1
         passwordTextField.addTarget(self, action: #selector(validatePassword), for: .allEditingEvents)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
         passwordTextFieldUnderLine.backgroundColor = .w3
         passwordInputErrorImageView.isHidden = true
@@ -77,15 +81,12 @@ class JoinViewController: UIViewController {
         joinCompleteButton.tintColor = .black
         joinCompleteButton.titleLabel?.font = .cardnaH5Sbd
         joinCompleteButton.layer.cornerRadius = 10
-    }
-    
-    @IBAction func showPassword(_ sender: Any) {
-        if self.showPasswordToggleButton.image(for: .normal) == Const.Image.icbtEye {
-            self.showPasswordToggleButton.setImage(Const.Image.icbtEyeslash, for: .normal)
-        } else {
-            self.showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
-        }
-        self.passwordTextField.isSecureTextEntry.toggle()
+        joinCompleteButton.isEnabled = false
+        joinCompletedView.layer.cornerRadius = 10
+        joinCompletedView.backgroundColor = .w3
+        joinCompletedView.clipsToBounds = true
+        joinCompletedLabel.font = .cardnaH6Rg
+        joinCompletedLabel.textColor = .w2
     }
     
     private func isValidEmail(_ email: String) -> Bool {
@@ -98,6 +99,47 @@ class JoinViewController: UIViewController {
         let passwordRegEx = "^(?=.*[a-zA-z])(?=.*[0-9]).{8,64}"
         let passwordPred = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return passwordPred.evaluate(with: password)
+    }
+    
+    private func setButtonEnable() {
+        if (emailInputErrorImageView.isHidden && passwordInputErrorImageView.isHidden) {
+            joinCompleteButton.isEnabled = true
+            joinCompletedView.setViewGradient(startColor: .mainGreen, endColor: .mainPurple)
+            joinCompletedLabel.font = .cardnaH5Sbd
+            joinCompletedLabel.textColor = .black
+        }
+        else {
+            joinCompleteButton.isEnabled = false
+            joinCompletedView.setViewGradient(startColor: .w3, endColor: .w3)
+            joinCompletedView.backgroundColor = .w3
+            joinCompletedLabel.font = .cardnaH6Rg
+            joinCompletedLabel.textColor = .w2
+        }
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func showPassword(_ sender: Any) {
+        if self.showPasswordToggleButton.image(for: .normal) == Const.Image.icbtEye {
+            self.showPasswordToggleButton.setImage(Const.Image.icbtEyeslash, for: .normal)
+        } else {
+            self.showPasswordToggleButton.setImage(Const.Image.icbtEye, for: .normal)
+        }
+        self.passwordTextField.isSecureTextEntry.toggle()
+    }
+    
+    @IBAction func touchUpServiceProtocolButton(_ sender: Any) {
+        guard let serviceProtocolVC = self.storyboard?.instantiateViewController(withIdentifier: "ServiceProtocolViewController") as? ServiceProtocolViewController else { return }
+        self.navigationController?.pushViewController(serviceProtocolVC, animated: true)
+    }
+    
+    @IBAction func touchUpPrivacyButton(_ sender: Any) {
+        guard let privacyVC = self.storyboard?.instantiateViewController(withIdentifier: "PrivacyViewController") as? PrivacyViewController else { return }
+        self.navigationController?.pushViewController(privacyVC, animated: true)
     }
     
     // MARK: - Objc Function
@@ -123,6 +165,29 @@ class JoinViewController: UIViewController {
         } else {
             passwordInputErrorImageView.isHidden = false
             passwordInputErrorLabel.isHidden = false
+        }
+    }
+    
+    @objc
+    func textFieldDidChange(_ textField : UITextField) {
+        setButtonEnable()
+        if textField == emailTextField {
+            if emailTextField.hasText {
+                emailTextFieldUnderLine.backgroundColor = .w1
+            }
+            else {
+                emailTextFieldUnderLine.backgroundColor = .w4
+            }
+        }
+        else if textField == passwordTextField {
+            if passwordTextField.hasText {
+                showPasswordToggleButton.isHidden = false
+                passwordTextFieldUnderLine.backgroundColor = .w1
+            }
+            else {
+                showPasswordToggleButton.isHidden = true
+                passwordTextFieldUnderLine.backgroundColor = .w4
+            }
         }
     }
 }

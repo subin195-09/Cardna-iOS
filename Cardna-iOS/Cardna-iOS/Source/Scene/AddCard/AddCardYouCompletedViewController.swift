@@ -13,11 +13,6 @@ class AddCardYouCompletedViewController: UIViewController {
     
     // MARK: - Property
     
-    
-    
-    // MARK: - IBOutlet
-
-    @IBOutlet weak var addCardYouConpletedLabel: UILabel!
     lazy var completedLottieView: AnimationView = {
         let animationView = AnimationView(name: "gif_confetti")
         animationView.center = self.view.center
@@ -26,6 +21,10 @@ class AddCardYouCompletedViewController: UIViewController {
         animationView.isHidden = true
         return animationView
     }()
+    
+    // MARK: - IBOutlet
+
+    @IBOutlet weak var addCardYouConpletedLabel: UILabel!
     
     // MARK: - VC LifeCycle
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141CDB18279884980068FAEF /* ServiceProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141CDB17279884980068FAEF /* ServiceProtocolViewController.swift */; };
+		141CDB1A279884E40068FAEF /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141CDB19279884E40068FAEF /* PrivacyViewController.swift */; };
 		142A7216279075AC00500364 /* AddCardBottomSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */; };
 		142A7218279075CF00500364 /* AddCardBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */; };
 		142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */; };
@@ -134,6 +136,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141CDB17279884980068FAEF /* ServiceProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocolViewController.swift; sourceTree = "<group>"; };
+		141CDB19279884E40068FAEF /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		142A7215279075AC00500364 /* AddCardBottomSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCardBottomSheet.storyboard; sourceTree = "<group>"; };
 		142A7217279075CF00500364 /* AddCardBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardBottomSheetViewController.swift; sourceTree = "<group>"; };
 		142A721927915F3400500364 /* AddCardSymbolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardSymbolCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 				14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */,
 				14FA67C727937660002FCDE5 /* JoinViewController.swift */,
 				14A9327727945589006B4D86 /* JoinNameViewController.swift */,
+				141CDB17279884980068FAEF /* ServiceProtocolViewController.swift */,
+				141CDB19279884E40068FAEF /* PrivacyViewController.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -1092,6 +1098,7 @@
 				15A6EECB27907201006EA23C /* SelectCardViewController+Extension.swift in Sources */,
 				146DA7B12792A883006480F9 /* AddCardBottomSheetViewController+Extension.swift in Sources */,
 				98817C6C2792A2E700819892 /* UITextField+.swift in Sources */,
+				141CDB1A279884E40068FAEF /* PrivacyViewController.swift in Sources */,
 				15C51B1E278AC456001E1F6F /* MyPageViewController.swift in Sources */,
 				15C51B16278AC433001E1F6F /* CardViewController.swift in Sources */,
 				142EF09D2795C3D800D61C32 /* AddCardYouViewController.swift in Sources */,
@@ -1150,6 +1157,7 @@
 				15ABE4C72795AAB600516170 /* CardPackService.swift in Sources */,
 				98875240278D7F62006018AE /* CardBottomSheetViewController.swift in Sources */,
 				98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */,
+				141CDB18279884980068FAEF /* ServiceProtocolViewController.swift in Sources */,
 				15A6EEB4278F1023006EA23C /* String+.swift in Sources */,
 				15A6EEE627929A4E006EA23C /* MyPageProfileTableViewCell.swift in Sources */,
 				9877FE4A2794E64D005745C7 /* LoginViewController+Extension.swift in Sources */,

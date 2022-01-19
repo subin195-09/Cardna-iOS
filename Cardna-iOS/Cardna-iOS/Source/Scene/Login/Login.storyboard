@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="height" constant="64" id="kLG-v9-huo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <action selector="okButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n0z-uu-BFd"/>
                                 </connections>
