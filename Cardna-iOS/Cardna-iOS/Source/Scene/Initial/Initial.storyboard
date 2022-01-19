@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZR-zq-7qT">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,30 +12,16 @@
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" title="InitialViewController" id="Y6W-OH-hqX" customClass="InitialViewController" customModule="Cardna_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardnalogo" translatesAutoresizingMaskIntoConstraints="NO" id="4Jn-ka-vUK">
-                                <rect key="frame" x="138" y="300" width="99" height="87"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="gsV-5K-F66"/>
-                                    <constraint firstAttribute="height" constant="87" id="uR5-is-D5A"/>
-                                </constraints>
+                                <rect key="frame" x="157.5" y="300" width="99" height="87"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 나를 펼치다, 카드나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ4-ga-1MF">
-                                <rect key="frame" x="87.666666666666686" y="403" width="200" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3RH-BF-zxs"/>
-                                    <constraint firstAttribute="width" constant="200" id="uy5-Zn-n61"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7G-1r-dxX">
-                                <rect key="frame" x="16" y="671" width="343" height="64"/>
+                                <rect key="frame" x="16" y="677" width="382" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="gGT-aj-jAc"/>
+                                    <constraint firstAttribute="height" constant="64" id="EcW-Eu-1t8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="btLogin"/>
@@ -44,9 +30,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFO-Rr-Vob">
-                                <rect key="frame" x="16" y="751" width="343" height="64"/>
+                                <rect key="frame" x="16" y="757" width="382" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="YW2-1n-Djy"/>
+                                    <constraint firstAttribute="height" constant="64" id="xds-fH-8QK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="btSignup"/>
@@ -54,20 +40,26 @@
                                     <action selector="joinButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a14-gV-gjC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 나를 펼치다, 카드나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ4-ga-1MF">
+                                <rect key="frame" x="117.5" y="403" width="179.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="N7G-1r-dxX" firstAttribute="top" secondItem="KZ4-ga-1MF" secondAttribute="bottom" constant="247" id="G5w-pb-QgL"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N7G-1r-dxX" secondAttribute="trailing" constant="16" id="HOs-C3-fwV"/>
-                            <constraint firstItem="qFO-Rr-Vob" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ipg-px-xr2"/>
-                            <constraint firstItem="KZ4-ga-1MF" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LT2-fY-9cx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qFO-Rr-Vob" secondAttribute="trailing" constant="16" id="Ldp-bZ-YxE"/>
-                            <constraint firstItem="4Jn-ka-vUK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="212" id="OPX-9r-vfL"/>
-                            <constraint firstItem="KZ4-ga-1MF" firstAttribute="top" secondItem="4Jn-ka-vUK" secondAttribute="bottom" constant="16" id="VUT-d1-7Y8"/>
-                            <constraint firstItem="N7G-1r-dxX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ac0-Hy-mso"/>
-                            <constraint firstItem="4Jn-ka-vUK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bKB-e9-xjN"/>
-                            <constraint firstItem="qFO-Rr-Vob" firstAttribute="top" secondItem="N7G-1r-dxX" secondAttribute="bottom" constant="16" id="qDT-lG-cU6"/>
+                            <constraint firstItem="4Jn-ka-vUK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ere-Z1-jO3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qFO-Rr-Vob" secondAttribute="bottom" constant="41" id="O7S-KQ-Fix"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qFO-Rr-Vob" secondAttribute="trailing" constant="16" id="TaN-ES-Rrd"/>
+                            <constraint firstItem="KZ4-ga-1MF" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VD2-Vy-pye"/>
+                            <constraint firstItem="qFO-Rr-Vob" firstAttribute="top" secondItem="N7G-1r-dxX" secondAttribute="bottom" constant="16" id="bFQ-my-RLu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N7G-1r-dxX" secondAttribute="trailing" constant="16" id="ccB-wo-zsJ"/>
+                            <constraint firstItem="qFO-Rr-Vob" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="r7h-Hk-Oc6"/>
+                            <constraint firstItem="4Jn-ka-vUK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="212" id="sHB-CP-R2X"/>
+                            <constraint firstItem="KZ4-ga-1MF" firstAttribute="top" secondItem="4Jn-ka-vUK" secondAttribute="bottom" constant="16" id="vNT-j6-bOs"/>
+                            <constraint firstItem="N7G-1r-dxX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="vh3-7A-rZw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r5P-DX-kTx"/>
@@ -87,7 +79,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZR-zq-7qT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EaR-YB-7SK">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
