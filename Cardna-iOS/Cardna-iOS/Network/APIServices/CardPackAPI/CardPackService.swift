@@ -57,6 +57,20 @@ public class CardPackService {
         }
     }
     
+    func getCardNotYetBox(completion: @escaping (NetworkResult<Any>) -> Void) {
+        cardPackProvider.request(.getCardNotYetBox) { response in
+            switch response {
+            case.success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                let networkResult = self.judgeCardPackNotYetBoxStatus(by: statusCode, data)
+                completion(networkResult)
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+    
     private func judgeCardPackAllStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GeneralResponse<CardPackAllResponse>.self, from: data)
@@ -94,6 +108,23 @@ public class CardPackService {
     private func judgeCardPackYouStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GeneralResponse<CardPackYouResponse>.self, from: data)
+        else { return .pathErr }
+        print(decodedData)
+        switch statusCode {
+        case 200:
+            return .success(decodedData.data)
+        case 400..<500:
+            return .requestErr(decodedData.message)
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    private func judgeCardPackNotYetBoxStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GeneralResponse<[CardNotYet]>.self, from: data)
         else { return .pathErr }
         print(decodedData)
         switch statusCode {

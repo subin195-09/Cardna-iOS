@@ -43,12 +43,6 @@ struct CardMeList: Codable {
     
     mutating func changeMainState(order: Int?) {
         self.mainOrder = order
-//        if self.mainOrder == nil {
-//            self.mainOrder = order
-//        }
-//        else {
-//            self.mainOrder = nil
-//        }
     }
 
 }
@@ -62,9 +56,15 @@ struct CardYouList: Codable {
     var mainOrder: Int?
     let isLiked: Bool?
     
-    
     mutating func changeMainState(order: Int?) {
         self.mainOrder = order
     }
+}
+
+// MARK: - CardNotYet
+struct CardNotYet: Codable {
+    let id: Int
+    let title, relation, name, createdAt: String
+    let isImage: Bool
 }
 
