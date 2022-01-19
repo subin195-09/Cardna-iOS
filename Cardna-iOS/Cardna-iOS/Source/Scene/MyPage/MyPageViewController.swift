@@ -12,6 +12,7 @@ class MyPageViewController: UIViewController {
     // MARK: - Property
     var myInfo: MyPageResponse?
     var friendList: [FriendList] = []
+    var filteredList: [FriendList] = []
     
     // MARK: - IBOutlet
     
@@ -28,6 +29,7 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
         getMyPageInfo()
         setUI()
+       // setSearchBarDelegate()
         
     }
     
@@ -51,6 +53,11 @@ class MyPageViewController: UIViewController {
             tableView.sectionFooterHeight = 0
             tableView.sectionHeaderHeight = 0
         }
+    }
+    
+    func setSearchBarDelegate() {
+        searchBar.delegate = self
+        filteredList = friendList
     }
     
     func setTableViewHeaderUI() {
@@ -93,6 +100,8 @@ class MyPageViewController: UIViewController {
                 self.friendCountLabel.text = "\(data.friendList.count)"
                 self.myInfo = data
                 self.friendList = data.friendList
+                self.filteredList = self.friendList
+                self.setSearchBarDelegate()
                 self.setTableView()
             case .requestErr(_):
                 print("requestErr")
