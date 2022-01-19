@@ -113,7 +113,7 @@ class AddCardBottomSheetViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func albumBtn(_ sender: UIButton) {
+    @IBAction func touchUpPhotoFromGallery(_ sender: UIButton) {
         self.imagePickerController.sourceType = .photoLibrary
         self.present(self.imagePickerController, animated: true, completion: nil)
     }
