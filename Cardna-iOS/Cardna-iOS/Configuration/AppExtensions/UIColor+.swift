@@ -9,6 +9,10 @@ import UIKit
 
 extension UIColor {
     
+    @nonobjc class var cardDetailGray: UIColor {
+        return UIColor(red: 198.0 / 255.0, green: 198.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0)
+    }
+    
     @nonobjc class var mainGreenAlpha: UIColor {
         return UIColor(red: 94.0 / 255.0, green: 204.0 / 255.0, blue: 156.0 / 255.0, alpha: 0.6)
     }

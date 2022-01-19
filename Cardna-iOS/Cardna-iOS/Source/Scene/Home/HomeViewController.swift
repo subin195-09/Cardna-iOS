@@ -99,10 +99,10 @@ class HomeViewController: UIViewController {
                 self.setCollectionView()
                 self.collectionView.reloadData()
                 if self.cardList[0].isMe == true {
-                    self.commentUnderLineView.backgroundColor = .mainGreen
+                    self.commentUnderLineView.backgroundColor = .mainGreenAlpha
                 }
                 else {
-                    self.commentUnderLineView.backgroundColor = .mainPurple
+                    self.commentUnderLineView.backgroundColor = .mainPurpleAlpha
                 }
                 print("home", self.cardList)
             case .requestErr(_):

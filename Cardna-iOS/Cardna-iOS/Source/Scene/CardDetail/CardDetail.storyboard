@@ -141,7 +141,7 @@
                                 <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-Np-1Wk">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-Np-1Wk">
                                 <rect key="frame" x="16" y="794" width="382" height="64"/>
                                 <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -179,10 +179,12 @@
                     </view>
                     <connections>
                         <outlet property="addCardYouButton" destination="r0t-Np-1Wk" id="Q7f-vr-UHZ"/>
+                        <outlet property="backButton" destination="dLd-xJ-uWY" id="J6g-hD-nTL"/>
                         <outlet property="contentLabel" destination="ICQ-7b-y19" id="tcZ-9X-zDY"/>
                         <outlet property="dateLabel" destination="TXg-zD-MqC" id="f07-DS-bmp"/>
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
                         <outlet property="imageView" destination="HbF-9s-1jm" id="Zmg-GB-gvo"/>
+                        <outlet property="titleBgView" destination="GN9-Za-hmY" id="OeH-FT-n0C"/>
                         <outlet property="titleLabel" destination="6Fi-6q-Xnl" id="KcA-eQ-Hzn"/>
                     </connections>
                 </viewController>

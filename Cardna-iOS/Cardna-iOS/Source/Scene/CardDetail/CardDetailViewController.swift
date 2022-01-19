@@ -10,7 +10,8 @@ import UIKit
 class CardDetailViewController: UIViewController {
     
     // MARK: - Property
-    
+    /// 분기처리 0: 카드나 1:카드너 2:카드아닌박스
+    var cardDetailWhere: Int = 0
     var cardID: Int?
     var cardData: CardDetailResponse?
     
@@ -22,6 +23,8 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addCardYouButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var titleBgView: UIView!
     
     // MARK: - VC LifeCycle
     
@@ -37,6 +40,25 @@ class CardDetailViewController: UIViewController {
     func setUI() {
         setLabelUI()
         setAddCardYouButtonUI()
+        setUIByWhere(card: cardDetailWhere)
+    }
+    
+    func setUIByWhere(card: Int) {
+        /// 색상 분기처리 (나중에 enum으로 바꿀예정)
+        switch cardDetailWhere {
+        case 0:
+            titleBgView.backgroundColor = .mainGreen
+            backButton.setImage(Const.Image.icbtBoxbackGreen, for: .normal)
+        case 1:
+            titleBgView.backgroundColor = .mainPurple
+            backButton.setImage(Const.Image.icbtBoxbackPurple, for: .normal)
+        case 2:
+            titleBgView.backgroundColor = .cardDetailGray
+            backButton.setImage(Const.Image.icbtBoxbackGray, for: .normal)
+            addCardYouButton.isHidden = false
+        default:
+            print("default")
+        }
     }
     
     func setLabelUI() {
