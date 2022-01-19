@@ -13,6 +13,7 @@ class CardDetailViewController: UIViewController {
     // MARK: - Property
     /// 분기처리 0: 카드나 1:카드너 2:카드아닌박스
     var cardDetailWhere: Int = 0
+    var isFriendsCardDetail: Bool = false
     var cardID: Int?
     var cardData: CardDetailResponse?
     
@@ -29,6 +30,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var shareButtonView: UIView!
+    @IBOutlet weak var menuButtonView: UIView!
     
     // MARK: - VC LifeCycle
     
@@ -69,19 +71,35 @@ class CardDetailViewController: UIViewController {
     }
     
     func setMenuButtonInCardMe() {
-        menuButton.setImage(Const.Image.icbtTrash, for: .normal)
-        menuButton.addTarget(self, action: #selector(trashCard), for: .touchUpInside)
+        if isFriendsCardDetail {
+            shareButton.isHidden = true
+            menuButton.isHidden = true
+            shareButtonView.isHidden = true
+            menuButtonView.isHidden = true
+        }
+        else {
+            menuButton.setImage(Const.Image.icbtTrash, for: .normal)
+            menuButton.addTarget(self, action: #selector(trashCard), for: .touchUpInside)
+        }
     }
     
     func setMenuButtonInCardYou() {
-        let inBox = UIAction(title: "보관") { action in
-            self.putCardInBox()
+        if isFriendsCardDetail {
+            shareButton.isHidden = true
+            menuButton.isHidden = true
+            shareButtonView.isHidden = true
+            menuButtonView.isHidden = true
         }
-        let delete = UIAction(title: "삭제") { action in
-            print("삭제")
-            self.deleteCard()
+        else {
+            let inBox = UIAction(title: "보관") { action in
+                self.putCardInBox()
+            }
+            let delete = UIAction(title: "삭제") { action in
+                print("삭제")
+                self.deleteCard()
+            }
+            menuButton.menu = UIMenu(title: "", children: [delete, inBox])
         }
-        menuButton.menu = UIMenu(title: "", children: [delete, inBox])
     }
     
     func setMenuButtonInCardBox() {
@@ -163,10 +181,10 @@ class CardDetailViewController: UIViewController {
     
     func deleteCard() {
         makeRequestAlert(title: "삭제", message: "카드를 삭제하시겠습니까?", okAction: { _ in
-            print("카드삭제")
             CardPackService.shared.deleteCard(cardID: self.cardID ?? 0) { result in
                 switch result {
                 case .success(_):
+                    print("카드삭제완료")
                      self.navigationController?.popViewController(animated: true)
                 case .requestErr(_):
                     print("requestErr")
@@ -193,7 +211,6 @@ class CardDetailViewController: UIViewController {
     
     // MARK: - Objc Function
     @objc func trashCard() {
-        print("카드삭제")
         deleteCard()
     }
     
