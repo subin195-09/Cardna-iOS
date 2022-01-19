@@ -74,9 +74,43 @@ class AddCardBottomSheetViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func touchUpCompletedButton(_ sender: Any) {
+        let index = addCardSymbolSelectingList.firstIndex(of: true)
+        var defaultImage = UIImage()
+        if isMe {
+            switch index {
+            case 0:
+                defaultImage = Const.Image.imgSymSmile
+            case 1:
+                defaultImage = Const.Image.imgSymHeart
+            case 2:
+                defaultImage = Const.Image.imgSymDia
+            case 3:
+                defaultImage = Const.Image.imgSymSpade
+            case 4:
+                defaultImage = Const.Image.imgSymClover
+            default:
+                break
+            }
+        } else {
+            switch index {
+            case 0:
+                defaultImage = Const.Image.imgSymSmilePur
+            case 1:
+                defaultImage = Const.Image.imgSymHeartPur
+            case 2:
+                defaultImage = Const.Image.imgSymDiaPur
+            case 3:
+                defaultImage = Const.Image.imgSymSpadePur
+            case 4:
+                defaultImage = Const.Image.imgSymCloverPur
+            default:
+                break
+            }
+        }
         
-        let addCardVC = AddCardViewController()
-//        addCardVC.
+        let addCardVC = presentingViewController as? AddCardViewController
+        addCardVC?.cardImageView.image = defaultImage
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func albumBtn(_ sender: UIButton) {
