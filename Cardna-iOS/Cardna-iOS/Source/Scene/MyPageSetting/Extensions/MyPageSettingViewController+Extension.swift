@@ -57,4 +57,15 @@ extension MyPageSettingViewController: UITableViewDataSource {
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+//            switch indexPath.row {
+//            case 3..<5:
+//                
+//            default:
+//                break
+//            }
+        }
+    }
 }

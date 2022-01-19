@@ -125,6 +125,8 @@
 		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
 		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
 		98C689452791DF05008BB153 /* MyPageSettingViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */; };
+		98CBB3C5279867890060BCFF /* MyPageSettingRules.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CBB3C4279867890060BCFF /* MyPageSettingRules.storyboard */; };
+		98CBB3C7279867A00060BCFF /* MyPageSettingRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CBB3C6279867A00060BCFF /* MyPageSettingRulesViewController.swift */; };
 		98DA0E1527974AF100EB48DF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA0E1427974AF100EB48DF /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +251,8 @@
 		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		98C689442791DF05008BB153 /* MyPageSettingViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPageSettingViewController+Extension.swift"; sourceTree = "<group>"; };
+		98CBB3C4279867890060BCFF /* MyPageSettingRules.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSettingRules.storyboard; sourceTree = "<group>"; };
+		98CBB3C6279867A00060BCFF /* MyPageSettingRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingRulesViewController.swift; sourceTree = "<group>"; };
 		98DA0E1427974AF100EB48DF /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		B4C0822BAC8326FEE39E766B /* Pods_Cardna_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardna_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB2994FD7900731A20D87FA /* Pods-Cardna-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cardna-iOS.release.xcconfig"; path = "Target Support Files/Pods-Cardna-iOS/Pods-Cardna-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -879,6 +883,8 @@
 				98C689402791DEA7008BB153 /* Cell */,
 				98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */,
 				98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */,
+				98CBB3C4279867890060BCFF /* MyPageSettingRules.storyboard */,
+				98CBB3C6279867A00060BCFF /* MyPageSettingRulesViewController.swift */,
 			);
 			path = MyPageSetting;
 			sourceTree = "<group>";
@@ -979,6 +985,7 @@
 				15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */,
 				98817C6827929AD200819892 /* EmailSearch.storyboard in Resources */,
 				15582F41278D7B2400C38614 /* CardCollectionViewCell.xib in Resources */,
+				98CBB3C5279867890060BCFF /* MyPageSettingRules.storyboard in Resources */,
 				15C51AF5278AB2F0001E1F6F /* Main.storyboard in Resources */,
 				14FA67C62793764D002FCDE5 /* JoinViewController.storyboard in Resources */,
 				15A6EEEA2792A036006EA23C /* ProfileCollectionViewCell.xib in Resources */,
@@ -1134,6 +1141,7 @@
 				15A6EED92791F8BB006EA23C /* CardNotYetBoxViewController.swift in Sources */,
 				15C51B21278ACA52001E1F6F /* UIColor+.swift in Sources */,
 				15ABE4B7279558DF00516170 /* CardDetailService.swift in Sources */,
+				98CBB3C7279867A00060BCFF /* MyPageSettingRulesViewController.swift in Sources */,
 				158A2EEF27945FAC007C4163 /* GeneralResponse.swift in Sources */,
 				14A5AFB6278E815A00B8BD84 /* AddCardViewController.swift in Sources */,
 				9877FE3F2794DCBF005745C7 /* LoginRequest.swift in Sources */,
