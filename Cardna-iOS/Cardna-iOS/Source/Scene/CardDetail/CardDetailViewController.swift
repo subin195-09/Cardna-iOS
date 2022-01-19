@@ -79,6 +79,7 @@ class CardDetailViewController: UIViewController {
         }
         let delete = UIAction(title: "삭제") { action in
             print("삭제")
+            self.deleteCard()
         }
         menuButton.menu = UIMenu(title: "", children: [delete, inBox])
     }
@@ -91,6 +92,7 @@ class CardDetailViewController: UIViewController {
         }
         let delete = UIAction(title: "삭제") { action in
             print("삭제")
+            self.deleteCard()
         }
         menuButton.menu = UIMenu(title: "", children: [delete, report])
     }
@@ -159,6 +161,28 @@ class CardDetailViewController: UIViewController {
         }
     }
     
+    func deleteCard() {
+        makeRequestAlert(title: "삭제", message: "카드를 삭제하시겠습니까?", okAction: { _ in
+            print("카드삭제")
+            CardPackService.shared.deleteCard(cardID: self.cardID ?? 0) { result in
+                switch result {
+                case .success(_):
+                     self.navigationController?.popViewController(animated: true)
+                case .requestErr(_):
+                    print("requestErr")
+                case .pathErr:
+                    print("requestErr")
+                case .serverErr:
+                    print("requestErr")
+                case .networkFail:
+                    print("requestErr")
+                }
+            }
+        }, cancelAction: { _ in
+            print("취소") },
+                         completion: nil)
+    }
+    
     /// 이후 삭제할 더미데이터
     func setDummy() {
         titleLabel.text = "힘이 들 땐 하늘을 봐.."
@@ -170,6 +194,7 @@ class CardDetailViewController: UIViewController {
     // MARK: - Objc Function
     @objc func trashCard() {
         print("카드삭제")
+        deleteCard()
     }
     
     // MARK: - IBAction

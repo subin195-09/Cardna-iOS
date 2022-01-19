@@ -15,6 +15,7 @@ enum CardPackRouter {
     case getCardPackYou(id: Int?)
     case getCardNotYetBox
     case putCardORNot(cardID: Int)
+    case deleteCard(cardID: Int)
 }
 
 extension CardPackRouter: BaseTargetType {
@@ -31,6 +32,8 @@ extension CardPackRouter: BaseTargetType {
             return URLConstant.cardBox
         case .putCardORNot(let cardID):
             return "\(URLConstant.cardBox)/\(cardID)"
+        case .deleteCard(let cardID):
+            return "\(URLConstant.card)/\(cardID)"
         }
     }
 
@@ -40,19 +43,21 @@ extension CardPackRouter: BaseTargetType {
             return .get
         case .putCardORNot:
             return .put
+        case .deleteCard(_):
+            return .delete
         }
     }
 
     var task: Task {
         switch self {
-        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot:
+        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot, .deleteCard(_):
             return .requestPlain
         }
     }
 
     var headers: [String : String]? {
         switch self {
-        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot:
+        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot, .deleteCard(_):
             return NetworkConstant.hasTokenHeader
         }
     }

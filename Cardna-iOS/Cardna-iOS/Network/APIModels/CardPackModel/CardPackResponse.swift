@@ -75,4 +75,12 @@ struct CardORNotResponse: Codable {
     let title, content: String
 }
 
+// MARK: - DeleteCardResponse
+struct DeleteCardResponse: Codable {
+    let id: Int
+    let isMe: Bool
+    let title, content: String
+}
+
+
 

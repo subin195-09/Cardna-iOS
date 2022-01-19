@@ -85,6 +85,20 @@ public class CardPackService {
         }
     }
     
+    func deleteCard(cardID: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        cardPackProvider.request(.deleteCard(cardID: cardID)) { response in
+            switch response {
+            case.success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                let networkResult = self.judgeDeleteCardStatus(by: statusCode, data)
+                completion(networkResult)
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+    
     private func judgeCardPackAllStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GeneralResponse<CardPackAllResponse>.self, from: data)
@@ -156,6 +170,23 @@ public class CardPackService {
     private func judgeCardORNotStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GeneralResponse<CardORNotResponse>.self, from: data)
+        else { return .pathErr }
+        print(decodedData)
+        switch statusCode {
+        case 200:
+            return .success(decodedData.data)
+        case 400..<500:
+            return .requestErr(decodedData.message)
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    private func judgeDeleteCardStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GeneralResponse<DeleteCardResponse>.self, from: data)
         else { return .pathErr }
         print(decodedData)
         switch statusCode {
