@@ -13,6 +13,8 @@ enum CardPackRouter {
     case getCardPackAll(id: Int?)
     case getCardPackMe(id: Int?)
     case getCardPackYou(id: Int?)
+    case getCardNotYetBox
+    case putCardORNot(cardID: Int)
 }
 
 extension CardPackRouter: BaseTargetType {
@@ -25,26 +27,32 @@ extension CardPackRouter: BaseTargetType {
             return URLConstant.cardMe
         case .getCardPackYou(let id):
             return URLConstant.cardYou
+        case .getCardNotYetBox:
+            return URLConstant.cardBox
+        case .putCardORNot(let cardID):
+            return "\(URLConstant.cardBox)/\(cardID)"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_):
+        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox:
             return .get
+        case .putCardORNot:
+            return .put
         }
     }
 
     var task: Task {
         switch self {
-        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_):
+        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot:
             return .requestPlain
         }
     }
 
     var headers: [String : String]? {
         switch self {
-        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_):
+        case .getCardPackAll(_), .getCardPackMe(_), .getCardPackYou(_), .getCardNotYetBox, .putCardORNot:
             return NetworkConstant.hasTokenHeader
         }
     }

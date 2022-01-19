@@ -110,12 +110,13 @@ class MyPageViewController: UIViewController {
     
     @IBAction func cardNotYetBoxButtonDidTap(_ sender: Any) {
         guard let cardNotYetBoxVC = UIStoryboard(name: "CardNotYetBox", bundle: nil).instantiateViewController(withIdentifier: "CardNotYetBoxViewController") as? CardNotYetBoxViewController else { return }
-        cardNotYetBoxVC.modalPresentationStyle = .fullScreen
-        self.present(cardNotYetBoxVC, animated: true, completion: nil)
+        cardNotYetBoxVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(cardNotYetBoxVC, animated: true)
     }
     
     @IBAction func settingButtonDidTap(_ sender: Any) {
         guard let settingVC = UIStoryboard(name: "MyPageSetting", bundle: nil).instantiateViewController(withIdentifier: "MyPageSettingViewController") as? MyPageSettingViewController else { return }
+        settingVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(settingVC, animated: true)
     }
     

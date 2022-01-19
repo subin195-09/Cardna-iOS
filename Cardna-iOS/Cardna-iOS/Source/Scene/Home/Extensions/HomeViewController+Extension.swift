@@ -41,6 +41,7 @@ extension HomeViewController: UICollectionViewDelegate {
         print(indexPath.row)
         guard let detailVC = UIStoryboard(name: "CardDetail", bundle: nil).instantiateViewController(withIdentifier: "CardDetailViewController") as? CardDetailViewController else { return }
         detailVC.cardID = cardList[indexPath.row].id
+        detailVC.cardDetailWhere = cardList[indexPath.row].isMe ? 0 : 1
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

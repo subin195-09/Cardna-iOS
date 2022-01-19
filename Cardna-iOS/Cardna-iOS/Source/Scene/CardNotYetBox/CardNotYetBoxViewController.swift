@@ -9,12 +9,19 @@ import UIKit
 
 class CardNotYetBoxViewController: UIViewController {
     
+    // MARK: - Property
+    var cardNotYetList: [CardNotYet] = []
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var navigationTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - VC LifeCycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getCardNotYetBoxList()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +49,25 @@ class CardNotYetBoxViewController: UIViewController {
     func registerXib() {
         let nib = UINib(nibName: ListTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: ListTableViewCell.identifier)
+    }
+    
+    func getCardNotYetBoxList() {
+        CardPackService.shared.getCardNotYetBox { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? [CardNotYet] else { return }
+                self.cardNotYetList = data
+                self.tableView.reloadData()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathERr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFAil")
+            }
+        }
     }
     
     // MARK: - IBAction
