@@ -22,13 +22,24 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HbF-9s-1jm">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="420"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8a-zV-z1p">
+                                        <rect key="frame" x="374" y="382" width="24" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="DVr-fU-uRB"/>
+                                            <constraint firstAttribute="height" constant="22" id="P4M-3I-HRd"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="likeUnselected"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HbF-9s-1jm" secondAttribute="trailing" id="05F-vB-tfX"/>
                                     <constraint firstItem="HbF-9s-1jm" firstAttribute="leading" secondItem="Z4l-IB-JkV" secondAttribute="leading" id="0c0-zm-DIJ"/>
                                     <constraint firstItem="HbF-9s-1jm" firstAttribute="top" secondItem="Z4l-IB-JkV" secondAttribute="top" id="BHm-yr-NR3"/>
+                                    <constraint firstAttribute="trailing" secondItem="K8a-zV-z1p" secondAttribute="trailing" constant="16" id="Li4-mE-MNu"/>
                                     <constraint firstAttribute="height" constant="420" id="P2x-FX-OI2"/>
+                                    <constraint firstAttribute="bottom" secondItem="K8a-zV-z1p" secondAttribute="bottom" constant="16" id="QFP-0P-SbL"/>
                                     <constraint firstAttribute="bottom" secondItem="HbF-9s-1jm" secondAttribute="bottom" id="kgu-Ls-Muv"/>
                                 </constraints>
                             </view>
@@ -193,6 +204,7 @@
                         <outlet property="dateLabel" destination="TXg-zD-MqC" id="f07-DS-bmp"/>
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
                         <outlet property="imageView" destination="HbF-9s-1jm" id="Zmg-GB-gvo"/>
+                        <outlet property="likeButton" destination="K8a-zV-z1p" id="k9Z-4o-z99"/>
                         <outlet property="menuButton" destination="kec-gq-IeN" id="KmO-Dv-5xm"/>
                         <outlet property="menuButtonView" destination="tyg-Ah-pAI" id="0aX-Uc-IQ6"/>
                         <outlet property="shareButton" destination="lNS-2y-FnT" id="6jw-Ri-ja3"/>
@@ -210,6 +222,7 @@
         <image name="icbtBoxbackPurple" width="44" height="44"/>
         <image name="icbtSeemore" width="42" height="42"/>
         <image name="icbtShare" width="42" height="42"/>
+        <image name="likeUnselected" width="25" height="23"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

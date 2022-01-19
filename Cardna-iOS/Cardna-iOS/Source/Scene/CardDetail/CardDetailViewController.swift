@@ -31,6 +31,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var shareButtonView: UIView!
     @IBOutlet weak var menuButtonView: UIView!
+    @IBOutlet weak var likeButton: UIButton!
     
     // MARK: - VC LifeCycle
     
