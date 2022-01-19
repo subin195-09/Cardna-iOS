@@ -51,6 +51,10 @@ class CardViewController: UIViewController {
         setUI()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        isMyCardPack = true
+    }
+    
     // MARK: - Function
     
     private func setCollectionView() {
@@ -86,6 +90,10 @@ class CardViewController: UIViewController {
     
     func setViewUI() {
         indicatorBarView.backgroundColor = .mainGreen
+    }
+    
+    func setFriendNameLabel(name: String) {
+        friendNavigationTitleLabel.text = "\(name)님의 카드팩"
     }
     
     private func showBottomSheet() {
