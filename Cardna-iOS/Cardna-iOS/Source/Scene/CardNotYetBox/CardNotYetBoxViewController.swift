@@ -19,11 +19,14 @@ class CardNotYetBoxViewController: UIViewController {
     
     // MARK: - VC LifeCycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        getCardNotYetBoxList()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCardNotYetBoxList()
         setUI()
-        //setTableView()
+        setTableView()
         registerXib()
     }
     
@@ -54,7 +57,7 @@ class CardNotYetBoxViewController: UIViewController {
             case .success(let data):
                 guard let data = data as? [CardNotYet] else { return }
                 self.cardNotYetList = data
-                self.setTableView()
+                self.tableView.reloadData()
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:

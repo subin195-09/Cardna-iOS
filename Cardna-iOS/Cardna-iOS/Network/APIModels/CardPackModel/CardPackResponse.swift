@@ -68,3 +68,11 @@ struct CardNotYet: Codable {
     let isImage: Bool
 }
 
+// MARK: - CardORNotResponse
+
+struct CardORNotResponse: Codable {
+    let id: Int
+    let title, content: String
+}
+
+
