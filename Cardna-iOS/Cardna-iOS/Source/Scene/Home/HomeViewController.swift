@@ -14,11 +14,13 @@ class HomeViewController: UIViewController {
     static var isHomeMine: Bool = true
     var cardList: [MainCardList] = []
     var friendID: Int? = nil
+    var name: String = "지우(기본이름)"
     
     // MARK: - IBOutlet
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var commentUnderLineView: UIView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var countLabel: UILabel!
@@ -46,6 +48,7 @@ class HomeViewController: UIViewController {
             editButton.isHidden = true
             collectionViewTopConstraint.constant = 24
             friendCardPackButton.isHidden = false
+            nameLabel.text = "\(name)님은"
         }
     }
     
@@ -95,7 +98,12 @@ class HomeViewController: UIViewController {
                 self.cardList = res.mainCardList
                 self.setCollectionView()
                 self.collectionView.reloadData()
-                self.countLabel.text = "현재셀/ \(self.cardList.count)"
+                if self.cardList[0].isMe == true {
+                    self.commentUnderLineView.backgroundColor = .mainGreen
+                }
+                else {
+                    self.commentUnderLineView.backgroundColor = .mainPurple
+                }
                 print("home", self.cardList)
             case .requestErr(_):
                 print("requestErr")
