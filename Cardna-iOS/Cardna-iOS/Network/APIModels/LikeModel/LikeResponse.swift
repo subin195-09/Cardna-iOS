@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+// MARK: - LikeResponse
+
+struct LikeResponse: Codable {
+    let isLiked: Bool
+}
