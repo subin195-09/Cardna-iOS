@@ -33,9 +33,12 @@ class EmailSearchViewController: UIViewController {
         super.viewDidLoad()
         setInitializeState()
         setUI()
-        hideResult()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        setInitializeState()
+    }
+    
     // MARK: - Function
     
     func setInitializeState() {
@@ -44,6 +47,7 @@ class EmailSearchViewController: UIViewController {
         noResultLabel.isHidden = true
         searchTextField.delegate = self
         addButton.isEnabled = true
+        searchResultView.isHidden = true
     }
     
     func setUI() {
@@ -90,6 +94,7 @@ class EmailSearchViewController: UIViewController {
     }
     
     func hideResult() {
+        noResultLabel.isHidden = friendExist
         searchResultView.isHidden = !friendExist
     }
     
