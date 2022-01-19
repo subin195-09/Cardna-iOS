@@ -206,6 +206,7 @@
                         <outlet property="contentLabel" destination="ICQ-7b-y19" id="tcZ-9X-zDY"/>
                         <outlet property="dateLabel" destination="TXg-zD-MqC" id="f07-DS-bmp"/>
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
+                        <outlet property="imageContainerViewHeightConstraint" destination="P2x-FX-OI2" id="0PR-5S-yUI"/>
                         <outlet property="imageView" destination="HbF-9s-1jm" id="Zmg-GB-gvo"/>
                         <outlet property="likeButton" destination="K8a-zV-z1p" id="k9Z-4o-z99"/>
                         <outlet property="menuButton" destination="kec-gq-IeN" id="KmO-Dv-5xm"/>

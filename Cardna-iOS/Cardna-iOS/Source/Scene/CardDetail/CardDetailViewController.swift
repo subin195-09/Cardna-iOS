@@ -32,6 +32,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var shareButtonView: UIView!
     @IBOutlet weak var menuButtonView: UIView!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var imageContainerViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: - VC LifeCycle
     
@@ -48,6 +49,11 @@ class CardDetailViewController: UIViewController {
         setLabelUI()
         setAddCardYouButtonUI()
         setUIByWhere(card: cardDetailWhere)
+        setLayout()
+    }
+    
+    func setLayout() {
+        imageContainerViewHeightConstraint.constant = UIScreen.main.bounds.height * (420/812)
     }
     
     func setUIByWhere(card: Int) {
