@@ -77,6 +77,7 @@ class CardDetailViewController: UIViewController {
             menuButton.isHidden = true
             shareButtonView.isHidden = true
             menuButtonView.isHidden = true
+            likeButton.isHidden = false
         }
         else {
             menuButton.setImage(Const.Image.icbtTrash, for: .normal)
@@ -90,6 +91,7 @@ class CardDetailViewController: UIViewController {
             menuButton.isHidden = true
             shareButtonView.isHidden = true
             menuButtonView.isHidden = true
+            likeButton.isHidden = false
         }
         else {
             let inBox = UIAction(title: "보관") { action in
@@ -136,12 +138,21 @@ class CardDetailViewController: UIViewController {
         self.cardID = cardID
     }
     
+    
     func setData() {
         titleLabel.text = cardData?.title
         imageView.setImage(with: cardData?.cardImg ?? "")
         contentLabel.text = cardData?.content
         dateLabel.text = cardData?.createdAt
         fromLabel.text = "From. \(cardData?.name ?? "" )"
+        if let like = cardData?.isLiked {
+            if like {
+                likeButton.setImage(Const.Image.likeSelected, for: .normal)
+            }
+            else {
+                likeButton.setImage(Const.Image.likeUnselected, for: .normal)
+            }
+        }
     }
     
     func getCardDetail() {
@@ -202,6 +213,30 @@ class CardDetailViewController: UIViewController {
                          completion: nil)
     }
     
+    func likeCard() {
+        LikeService.shared.postLike(cardId: cardID ?? 1) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+                guard let data = data as? LikeResponse else { return }
+                if data.isLiked {
+                    self.likeButton.setImage(Const.Image.likeSelected, for: .normal)
+                }
+                else {
+                    self.likeButton.setImage(Const.Image.likeUnselected, for: .normal)
+                }
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("requestErr")
+            case .serverErr:
+                print("requestErr")
+            case .networkFail:
+                print("requestErr")
+            }
+        }
+    }
+    
     /// 이후 삭제할 더미데이터
     func setDummy() {
         titleLabel.text = "힘이 들 땐 하늘을 봐.."
@@ -227,5 +262,9 @@ class CardDetailViewController: UIViewController {
     
     @IBAction func makeCardButtonDidTap(_ sender: Any) {
         putCardInBox()
+    }
+    
+    @IBAction func likeButtonDidTap(_ sender: Any) {
+        likeCard()
     }
 }
