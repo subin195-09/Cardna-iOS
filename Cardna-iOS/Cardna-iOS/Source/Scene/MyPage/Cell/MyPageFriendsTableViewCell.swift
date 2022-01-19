@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MyPageFriendSelectProtocol {
-    func pushFriendMainCard(friendID: Int)
+    func pushFriendMainCard(friendID: Int, friendName: String)
 }
 
 class MyPageFriendsTableViewCell: UITableViewCell {
@@ -62,7 +62,7 @@ extension MyPageFriendsTableViewCell {
 extension MyPageFriendsTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("mypage friend CollectionView", indexPath.item)
-        self.delegate?.pushFriendMainCard(friendID: friendList[indexPath.item].id)
+        self.delegate?.pushFriendMainCard(friendID: friendList[indexPath.item].id, friendName: friendList[indexPath.item].name)
     }
 }
 

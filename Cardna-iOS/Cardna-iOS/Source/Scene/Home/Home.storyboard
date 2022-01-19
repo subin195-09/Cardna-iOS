@@ -34,19 +34,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="힘이들땐 하늘을 봐..!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-2V-JgP">
-                                <rect key="frame" x="16" y="182" width="140.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-2V-JgP">
+                                <rect key="frame" x="16" y="182" width="17.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXZ-Re-aFl">
-                                <rect key="frame" x="0.0" y="253" width="414" height="430"/>
+                                <rect key="frame" x="0.0" y="252.5" width="414" height="430"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="2pj-Du-PQB"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="akR-Ad-cbt">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EbQ-FL-eBD">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -55,7 +55,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HW4-7g-rJS">
-                                <rect key="frame" x="346" y="216.5" width="60" height="24.5"/>
+                                <rect key="frame" x="346" y="216" width="60" height="24.5"/>
                                 <color key="tintColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" Edit" buttonSize="small">
@@ -66,16 +66,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-QM-DCR">
-                                <rect key="frame" x="191.5" y="701" width="31" height="21"/>
+                                <rect key="frame" x="191.5" y="700.5" width="31" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-2e-LyS">
-                                <rect key="frame" x="125" y="732" width="164" height="54"/>
+                                <rect key="frame" x="125" y="731.5" width="164" height="54"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="btYoucardpack"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tg-bz-n4z">
+                                <rect key="frame" x="16" y="199.5" width="17.5" height="4"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="yA1-4F-oTE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,9 +93,12 @@
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="leading" secondItem="mqI-RA-2IT" secondAttribute="leading" id="7AA-E2-2bA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PsC-V9-WlX" secondAttribute="trailing" constant="4" id="OuS-rK-3Oh"/>
                             <constraint firstItem="PsC-V9-WlX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="Yhr-5j-FCS"/>
+                            <constraint firstItem="9tg-bz-n4z" firstAttribute="trailing" secondItem="2aD-2V-JgP" secondAttribute="trailing" id="Zv0-TS-DOf"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="50" id="ak8-FA-4bg"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="top" secondItem="mqI-RA-2IT" secondAttribute="bottom" id="bor-8a-hS1"/>
+                            <constraint firstItem="9tg-bz-n4z" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="-3" id="dJI-Fi-6yw"/>
                             <constraint firstAttribute="trailing" secondItem="HW4-7g-rJS" secondAttribute="trailing" constant="8" id="gEA-t3-sk7"/>
+                            <constraint firstItem="9tg-bz-n4z" firstAttribute="leading" secondItem="2aD-2V-JgP" secondAttribute="leading" id="mVR-qQ-Gpo"/>
                             <constraint firstItem="KLX-2e-LyS" firstAttribute="top" secondItem="I5f-QM-DCR" secondAttribute="bottom" constant="10" id="nqD-CX-mPi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IXZ-Re-aFl" secondAttribute="trailing" id="pLv-8z-QF5"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qVV-2p-s9f"/>
@@ -103,6 +113,7 @@
                         <outlet property="collectionView" destination="IXZ-Re-aFl" id="62f-Kc-K8s"/>
                         <outlet property="collectionViewTopConstraint" destination="ak8-FA-4bg" id="djh-BV-3jU"/>
                         <outlet property="commentLabel" destination="2aD-2V-JgP" id="xRn-vD-fWx"/>
+                        <outlet property="commentUnderLineView" destination="9tg-bz-n4z" id="QJs-mg-NfE"/>
                         <outlet property="countLabel" destination="I5f-QM-DCR" id="q0a-MK-Gf8"/>
                         <outlet property="editButton" destination="HW4-7g-rJS" id="wrv-3E-8dy"/>
                         <outlet property="friendCardPackButton" destination="KLX-2e-LyS" id="htX-lM-XVl"/>

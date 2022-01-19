@@ -17,12 +17,26 @@ extension HomeViewController {
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.visibleItemsInvalidationHandler = { [weak self] (items, offset, env) -> Void in
+            //print(Int(max(0, round(offset.x / UIScreen.main.bounds.width * (284/375) ))))
+            guard let self = self else { return }
+            let index = Int(max(0, round(offset.x / 284)))+1
+            self.countLabel.text = "\(Int(max(0, round(offset.x / 284)))+1) / \(self.cardList.count)"
+            self.commentLabel.text = self.cardList[index-1].title
+            if self.cardList[index-1].isMe {
+                self.commentUnderLineView.backgroundColor = .mainGreenAlpha
+            }
+            else {
+                self.commentUnderLineView.backgroundColor = .mainPurpleAlpha
+            }
+        }
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
         guard let detailVC = UIStoryboard(name: "CardDetail", bundle: nil).instantiateViewController(withIdentifier: "CardDetailViewController") as? CardDetailViewController else { return }
