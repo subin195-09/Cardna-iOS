@@ -91,7 +91,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                         <connections>
-                                            <action selector="albumBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EeQ-eL-jww"/>
+                                            <action selector="touchUpPhotoFromGallery:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hvb-rM-3OJ"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icGallery" translatesAutoresizingMaskIntoConstraints="NO" id="njT-u9-LgW">
