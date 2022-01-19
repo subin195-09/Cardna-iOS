@@ -26,6 +26,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var addCardYouButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleBgView: UIView!
+    @IBOutlet weak var menuButton: UIButton!
     
     // MARK: - VC LifeCycle
     
@@ -42,6 +43,7 @@ class CardDetailViewController: UIViewController {
         setLabelUI()
         setAddCardYouButtonUI()
         setUIByWhere(card: cardDetailWhere)
+        setMenuButton()
     }
     
     func setUIByWhere(card: Int) {
@@ -60,6 +62,16 @@ class CardDetailViewController: UIViewController {
         default:
             print("default")
         }
+    }
+    
+    func setMenuButton() {
+        let inBox = UIAction(title: "보관") { action in
+            self.putCardInBox()
+        }
+        let delete = UIAction(title: "삭제") { action in
+            print("삭제")
+        }
+        menuButton.menu = UIMenu(title: "", children: [delete, inBox])
     }
     
     func setLabelUI() {
@@ -109,6 +121,23 @@ class CardDetailViewController: UIViewController {
         }
     }
     
+    func putCardInBox() {
+        CardPackService.shared.putCardORNot(cardID: cardID ?? 0) { result in
+            switch result {
+            case .success(_):
+                self.navigationController?.popViewController(animated: true)
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("requestErr")
+            case .serverErr:
+                print("requestErr")
+            case .networkFail:
+                print("requestErr")
+            }
+        }
+    }
+    
     /// 이후 삭제할 더미데이터
     func setDummy() {
         titleLabel.text = "힘이 들 땐 하늘을 봐.."
@@ -121,21 +150,11 @@ class CardDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func menuButtonDidTap(_ sender: Any) {
+        
+    }
+    
     @IBAction func makeCardButtonDidTap(_ sender: Any) {
-        // 서버통신
-        CardPackService.shared.putCardORNot(cardID: cardID ?? 0) { response in
-            switch response {
-            case .success(_):
-                self.navigationController?.popViewController(animated: true)
-            case .requestErr(_):
-                print("requestErr")
-            case .pathErr:
-                print("patherr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
+        putCardInBox()
     }
 }
