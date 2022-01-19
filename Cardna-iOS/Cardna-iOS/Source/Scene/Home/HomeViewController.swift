@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var collectionViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var friendCardPackButton: UIButton!
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
     // MARK: - VC LifeCycle
     
@@ -69,6 +70,11 @@ class HomeViewController: UIViewController {
         setTitleUI()
         setEditButtonUI()
         setCountLabelUI()
+        setLayout()
+    }
+    
+    func setLayout() {
+        collectionViewHeight.constant = UIScreen.main.bounds.height * (430/812)
     }
     
     func setNavigationBarUI() {
