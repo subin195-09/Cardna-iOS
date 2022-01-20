@@ -199,7 +199,8 @@ class AddCardViewController: UIViewController {
             $0.top.equalTo(self.titleBarUIView.snp.bottom)
             $0.leading.equalTo(view.safeAreaLayoutGuide)
             $0.trailing.equalTo(view.safeAreaLayoutGuide)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(UIScreen.main.bounds.width)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(4)
         }
         
         cardImageView.snp.makeConstraints {
@@ -230,8 +231,9 @@ class AddCardViewController: UIViewController {
         
         cardContentsUIView.snp.makeConstraints {
             $0.top.equalTo(self.cardImageView.snp.bottom).offset(21)
-            $0.leading.equalTo(self.addCardScrollView.snp.leading).offset(16)
-            $0.trailing.equalTo(self.addCardScrollView.snp.trailing).offset(-16)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
+            $0.height.equalTo(200)
         }
         
         cardKeywordLabel1.snp.makeConstraints {
@@ -242,8 +244,8 @@ class AddCardViewController: UIViewController {
         
         cardKeywordTextField.snp.makeConstraints {
             $0.top.equalTo(self.cardKeywordLabel1.snp.bottom).offset(4)
-            $0.leading.equalTo(self.addCardScrollView.snp.leading).offset(16)
-            $0.width.equalTo(333)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-26)
             $0.height.equalTo(28)
         }
         
@@ -256,34 +258,34 @@ class AddCardViewController: UIViewController {
         cardKeywordUnderLine.snp.makeConstraints {
             $0.top.equalTo(self.cardKeywordTextField.snp.bottom).offset(4)
             $0.leading.equalTo(self.cardKeywordTextField)
-            $0.width.equalTo(333)
+            $0.trailing.equalTo(self.cardKeywordTextField)
             $0.height.equalTo(2)
         }
         
         cardKeywordCountLabel.snp.makeConstraints {
             $0.top.equalTo(self.cardKeywordUnderLine.snp.bottom).offset(4)
-            $0.trailing.equalTo(self.addCardScrollView.snp.trailing).inset(26)
+            $0.trailing.equalTo(self.cardKeywordUnderLine.snp.trailing)
             $0.height.equalTo(18)
         }
         
         cardContentsTextView.snp.makeConstraints {
             $0.top.equalTo(self.cardKeywordCountLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(self.addCardScrollView.snp.leading).offset(16)
-            $0.trailing.equalTo(self.addCardScrollView.snp.trailing).offset(-16)
+            $0.leading.equalTo(self.cardContentsUIView.snp.leading)
+            $0.trailing.equalTo(self.cardContentsUIView.snp.trailing)
             $0.height.equalTo(168)
         }
         
         cardContentsCountLabel.snp.makeConstraints {
             $0.top.equalTo(self.cardContentsTextView.snp.bottom).offset(4)
-            $0.trailing.equalTo(self.addCardScrollView.snp.trailing).inset(16)
+            $0.trailing.equalTo(self.cardContentsUIView.snp.trailing)
             $0.bottom.equalTo(self.cardContentsUIView.snp.bottom)
             $0.height.equalTo(18)
         }
         
         addCardButton.snp.makeConstraints {
             $0.top.equalTo(self.cardContentsUIView.snp.bottom).offset(28)
-            $0.leading.equalTo(self.addCardScrollView.snp.leading).inset(16)
-            $0.trailing.equalTo(self.addCardScrollView.snp.trailing).inset(16)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).inset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
             $0.bottom.equalTo(self.addCardScrollView.snp.bottom).inset(4)
             $0.height.equalTo(64)
         }
