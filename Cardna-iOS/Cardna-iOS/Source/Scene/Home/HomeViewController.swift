@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var friendCardPackButton: UIButton!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var navigationButton: UIButton!
+    @IBOutlet weak var addFriendButton: UIButton!
     
     // MARK: - VC LifeCycle
     
@@ -50,6 +52,8 @@ class HomeViewController: UIViewController {
             collectionViewTopConstraint.constant = 24
             friendCardPackButton.isHidden = false
             nameLabel.text = "\(name)님은"
+            navigationButton.setImage(Const.Image.icbtWrite, for: .normal)
+            addFriendButton.isHidden = false
         }
     }
     
@@ -133,10 +137,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func friendCardPackButtonDidTap(_ sender: Any) {
-        let nextSB = UIStoryboard.init(name: "Card", bundle: nil)
-        guard let nextVC = nextSB.instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return }
+        guard let nextVC = UIStoryboard(name: "Card", bundle: nil).instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return }
         nextVC.friendID = self.friendID
         nextVC.friendName = self.name
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func friendAddButtonDidTap(_ sender: Any) {
+        print("친구추가")
+    }
+    
+    @IBAction func navigationButtonDidTap(_ sender: Any) {
+        if friendID != nil {
+        guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
+        self.navigationController?.pushViewController(addVC, animated: true)
+        }
     }
 }
