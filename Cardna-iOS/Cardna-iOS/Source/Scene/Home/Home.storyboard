@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzb-nn-tGV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzb-nn-tGV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icbtNotification"/>
+                                <connections>
+                                    <action selector="navigationButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kYV-WV-ml1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지우님은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqI-RA-2IT">
                                 <rect key="frame" x="16" y="146" width="59" height="36"/>
@@ -86,12 +89,25 @@
                                     <constraint firstAttribute="height" constant="4" id="yA1-4F-oTE"/>
                                 </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdE-Os-uMf">
+                                <rect key="frame" x="322" y="89" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="eeu-yk-d6M"/>
+                                    <constraint firstAttribute="height" constant="42" id="fwO-13-oah"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icbtFriendalready"/>
+                                <connections>
+                                    <action selector="friendAddButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PTf-yH-Snx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="I5f-QM-DCR" firstAttribute="top" secondItem="IXZ-Re-aFl" secondAttribute="bottom" constant="18" id="1lp-MQ-4dL"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="top" secondItem="HW4-7g-rJS" secondAttribute="bottom" constant="12" id="4Ua-vQ-uAt"/>
+                            <constraint firstItem="tdE-Os-uMf" firstAttribute="centerY" secondItem="PsC-V9-WlX" secondAttribute="centerY" id="4vm-z3-y0i"/>
                             <constraint firstItem="mqI-RA-2IT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="58" id="4vq-R8-CLx"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="leading" secondItem="mqI-RA-2IT" secondAttribute="leading" id="7AA-E2-2bA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PsC-V9-WlX" secondAttribute="trailing" constant="4" id="OuS-rK-3Oh"/>
@@ -99,6 +115,7 @@
                             <constraint firstItem="9tg-bz-n4z" firstAttribute="trailing" secondItem="2aD-2V-JgP" secondAttribute="trailing" id="Zv0-TS-DOf"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="50" id="ak8-FA-4bg"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="top" secondItem="mqI-RA-2IT" secondAttribute="bottom" id="bor-8a-hS1"/>
+                            <constraint firstItem="PsC-V9-WlX" firstAttribute="leading" secondItem="tdE-Os-uMf" secondAttribute="trailing" constant="4" id="cLV-I4-OEl"/>
                             <constraint firstItem="9tg-bz-n4z" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="-3" id="dJI-Fi-6yw"/>
                             <constraint firstAttribute="trailing" secondItem="HW4-7g-rJS" secondAttribute="trailing" constant="8" id="gEA-t3-sk7"/>
                             <constraint firstItem="9tg-bz-n4z" firstAttribute="leading" secondItem="2aD-2V-JgP" secondAttribute="leading" id="mVR-qQ-Gpo"/>
@@ -113,6 +130,7 @@
                     <navigationItem key="navigationItem" id="Dfh-r9-Mh4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addFriendButton" destination="tdE-Os-uMf" id="FX4-6Z-ulw"/>
                         <outlet property="collectionView" destination="IXZ-Re-aFl" id="62f-Kc-K8s"/>
                         <outlet property="collectionViewHeight" destination="2pj-Du-PQB" id="S8K-Tq-xez"/>
                         <outlet property="collectionViewTopConstraint" destination="ak8-FA-4bg" id="djh-BV-3jU"/>
@@ -122,6 +140,7 @@
                         <outlet property="editButton" destination="HW4-7g-rJS" id="wrv-3E-8dy"/>
                         <outlet property="friendCardPackButton" destination="KLX-2e-LyS" id="htX-lM-XVl"/>
                         <outlet property="nameLabel" destination="mqI-RA-2IT" id="ORH-s9-t0p"/>
+                        <outlet property="navigationButton" destination="PsC-V9-WlX" id="MNX-Dh-HQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,6 +174,7 @@
         <image name="btYoucardpack" width="140" height="40"/>
         <image name="btmnavi1Active" width="85" height="84"/>
         <image name="btmnavi1Inactive" width="85" height="84"/>
+        <image name="icbtFriendalready" width="42.5" height="42"/>
         <image name="icbtNotification" width="42" height="42"/>
     </resources>
 </document>
