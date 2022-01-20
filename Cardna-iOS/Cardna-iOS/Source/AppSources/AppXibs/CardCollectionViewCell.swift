@@ -13,6 +13,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     public static let identifier = "CardCollectionViewCell"
     var selectView: Bool = false
+    var delegate: CardPassProtocol?
     
     // MARK: - IBOutlet
     

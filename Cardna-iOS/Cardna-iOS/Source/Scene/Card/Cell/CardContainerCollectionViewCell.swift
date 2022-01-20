@@ -9,11 +9,13 @@ import UIKit
 
 class CardContainerCollectionViewCell: UICollectionViewCell {
     
+    
     // MARK: - Property
     
     static let identifier = "CardContainerCollectionViewCell"
     var deviceWidth = UIScreen.main.bounds.width
     var isCardMe: Bool = true
+    var delegate: CardPassProtocol?
     
     // MARK: - IBOutlet
     
@@ -69,6 +71,15 @@ extension CardContainerCollectionViewCell: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
             cell.setData(image: CardViewController.cardYouList?[indexPath.item].cardImg ?? "", title: CardViewController.cardYouList?[indexPath.item].title ?? "", isMe: false, small: true)
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if isCardMe {
+            self.delegate?.pushDetailCard(cardID: CardViewController.cardMeList?[indexPath.row].id ?? 0, isMe: 0, isOthers: CardViewController.judgeWhom)
+        }
+        else {
+            self.delegate?.pushDetailCard(cardID: CardViewController.cardYouList?[indexPath.row].id ?? 0, isMe: 1, isOthers: CardViewController.judgeWhom)
         }
     }
 }
