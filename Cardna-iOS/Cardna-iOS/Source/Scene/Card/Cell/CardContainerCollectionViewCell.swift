@@ -12,9 +12,8 @@ class CardContainerCollectionViewCell: UICollectionViewCell {
     // MARK: - Property
     
     static let identifier = "CardContainerCollectionViewCell"
-    var cellPage: Int = 0
     var deviceWidth = UIScreen.main.bounds.width
-    
+    var isCardMe: Bool = true
     
     // MARK: - IBOutlet
     
@@ -24,8 +23,8 @@ class CardContainerCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        registerXib()
         setCollectionView()
+        registerXib()
     }
     
     // MARK: - Function
@@ -39,6 +38,11 @@ class CardContainerCollectionViewCell: UICollectionViewCell {
         cardPackCollectionView.delegate = self
         cardPackCollectionView.dataSource = self
     }
+    
+    func setData(isCardMe: Bool, me: [CardMeList]?, you: [CardYouList]?) {
+        self.isCardMe = isCardMe
+        cardPackCollectionView.reloadData()
+    }
 }
 
 extension CardContainerCollectionViewCell: UICollectionViewDelegate {
@@ -46,13 +50,26 @@ extension CardContainerCollectionViewCell: UICollectionViewDelegate {
 
 extension CardContainerCollectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        
+        if isCardMe {
+            return CardViewController.cardMeList?.count ?? 0
+        }
+        else {
+            return CardViewController.cardYouList?.count ?? 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.setData(image: "https://firebasestorage.googleapis.com/v0/b/cardna-29f5b.appspot.com/o/20220115_212100_64397479199.jpeg?alt=media", title: "경민이 최고 킹.", isMe: cellPage == 0 ? true : false, small: true)
-        return cell
+        if isCardMe {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+            cell.setData(image: CardViewController.cardMeList?[indexPath.item].cardImg ?? "", title: CardViewController.cardMeList?[indexPath.item].title ?? "", isMe: true, small: true)
+            return cell
+        }
+        else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+            cell.setData(image: CardViewController.cardYouList?[indexPath.item].cardImg ?? "", title: CardViewController.cardYouList?[indexPath.item].title ?? "", isMe: false, small: true)
+            return cell
+        }
     }
 }
 

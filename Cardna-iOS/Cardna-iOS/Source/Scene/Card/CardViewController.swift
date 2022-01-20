@@ -16,6 +16,10 @@ class CardViewController: UIViewController {
     var nowPage: Int = 0
     var cardPackTitle: [String] = ["카드나","카드너"]
     var isMyCardPack: Bool = true
+    static var cardMeList: [CardMeList]? = []
+    static var cardYouList: [CardYouList]? = []
+    var friendID: Int?
+    var dummy: Int = 0
     
     // MARK: - IBOutlet
     
@@ -43,21 +47,22 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
-        setCollectionView()
+        setIsMyCardPack()
         setUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setUI()
+        getCardInfo()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         isMyCardPack = true
+        friendID = nil
     }
     
     // MARK: - Function
     
-    private func setCollectionView() {
+    func setCollectionView() {
         [cardPackTitleCollectionView, cardContainerCollectionView].forEach {
             $0?.delegate = self
             $0?.dataSource = self
@@ -68,10 +73,23 @@ class CardViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    private func getCardInfo() {
+        getCardPackAll(id: friendID)
+    }
+    
     private func setUI() {
         showProperNavigationBar()
         setLabelUI()
         setViewUI()
+    }
+    
+    func setIsMyCardPack() {
+        if friendID == nil {
+            isMyCardPack = true
+        }
+        else {
+            isMyCardPack = false
+        }
     }
     
     func showProperNavigationBar() {

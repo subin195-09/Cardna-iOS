@@ -23,11 +23,26 @@ extension CardPackRouter: BaseTargetType {
         switch self {
             /// 이후 id 넘겨서 타인의 카드팩도 봐야함!
         case .getCardPackAll(let id):
-            return URLConstant.card
+            if id == nil {
+                return URLConstant.card
+            }
+            else {
+                return "\(URLConstant.card)/:\(id)"
+            }
         case .getCardPackMe(let id):
-            return URLConstant.cardMe
+            if id == nil {
+                return URLConstant.cardMe
+            }
+            else {
+                return "\(URLConstant.cardMe)/:\(id)"
+            }
         case .getCardPackYou(let id):
-            return URLConstant.cardYou
+            if id == nil {
+                return URLConstant.cardYou
+            }
+            else {
+                return "\(URLConstant.cardYou)/:\(id)"
+            }
         case .getCardNotYetBox:
             return URLConstant.cardBox
         case .putCardORNot(let cardID):
