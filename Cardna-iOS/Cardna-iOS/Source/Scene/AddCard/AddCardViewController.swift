@@ -76,6 +76,7 @@ class AddCardViewController: UIViewController {
                                                         NSAttributedString.Key.foregroundColor: UIColor.w3])
         $0.font = .cardnaSh3Sbd
         $0.textColor = .w1
+        $0.returnKeyType = .next
     }
     
     var cardKeywordLabel2 = UILabel().then {
@@ -293,6 +294,13 @@ class AddCardViewController: UIViewController {
     
     func updateContentsCountLabel(characterCount: Int) {
         cardContentsCountLabel.text = "\(characterCount)/200"
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.cardKeywordTextField {
+            self.cardContentsTextView.becomeFirstResponder()
+        }
+        return true
     }
     
     private func showBottomSheet() {
