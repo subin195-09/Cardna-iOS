@@ -136,6 +136,15 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func makeAlert() {
+         let alert = UIAlertController(title: "앗!",
+                                       message: "⭐️준비중인 기능이예요⭐️",
+                                       preferredStyle: .alert)
+         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+         alert.addAction(okAction)
+         self.present(alert, animated: true, completion: nil)
+     }
+    
     // MARK: - IBAction
     
     @IBAction func backButtonDidTap(_ sender: Any) {
@@ -151,4 +160,7 @@ class LoginViewController: UIViewController {
         showPasswordButton.isSelected = !showPasswordButton.isSelected
     }
     
+    @IBAction func findPasswordButtonDidTap(_ sender: Any) {
+        makeAlert()
+    }
 }
