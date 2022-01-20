@@ -31,6 +31,7 @@ class InitialViewController: UIViewController {
     
     private func setNavigationBar() {
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     private func setLabelUI() {

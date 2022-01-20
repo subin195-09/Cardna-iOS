@@ -70,7 +70,7 @@ class JoinNameViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func touchUpBackButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func touchUpNameCompleteButton(_ sender: Any) {
