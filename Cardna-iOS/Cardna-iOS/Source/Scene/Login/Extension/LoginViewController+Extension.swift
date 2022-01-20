@@ -22,7 +22,15 @@ extension LoginViewController {
                 if response.status == 404 {
                     self.showToast(message: response.message ?? "", font: .Pretendard(.regular, size: 12))
                 }
-                else {self.makeAlert(data: response)}
+                else {
+                   // guard let data = response.data as? LoginResponse else { return }
+                    NetworkConstant.name = response.data?.name ?? ""
+                    NetworkConstant.accessToken = response.data?.accessToken ?? ""
+                    guard let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController else { return }
+                    self.changeRootViewController(homeVC)
+                    
+                    
+                }
             case .requestErr(let message):
                 print("requestErr \(message)")
             case .pathErr:
