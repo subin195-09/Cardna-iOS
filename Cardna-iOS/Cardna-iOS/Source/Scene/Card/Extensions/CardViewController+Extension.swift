@@ -113,6 +113,7 @@ extension CardViewController {
                 CardViewController.cardYouList = data.cardYouList
                 self.cardCountLabel.text = "\(data.totalCardCnt)"
                 self.setCollectionView()
+                self.cardContainerCollectionView.reloadData()
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:

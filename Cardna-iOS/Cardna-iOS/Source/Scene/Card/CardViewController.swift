@@ -62,7 +62,7 @@ class CardViewController: UIViewController {
         initialize()
         setInitialCollectionView()
         setIsMyCardPack()
-        getCardInfo()
+        //getCardInfo()
         setFriendNameLabel()
         setUI()
     }
@@ -71,7 +71,6 @@ class CardViewController: UIViewController {
         initialize()
         setIsMyCardPack()
         getCardInfo()
-//        setUI()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
