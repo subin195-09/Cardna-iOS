@@ -142,6 +142,15 @@ class JoinViewController: UIViewController {
         self.navigationController?.pushViewController(privacyVC, animated: true)
     }
     
+    @IBAction func touchUpJoinCompleteButton(_ sender: Any) {
+        print("hey")
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "JoinNameViewController") as? JoinNameViewController else { return }
+        nextVC.userEmail = emailTextField.text ?? ""
+        nextVC.userPassword = passwordTextField.text ?? ""
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    
     // MARK: - Objc Function
     
     @objc

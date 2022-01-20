@@ -9,8 +9,14 @@ import UIKit
 
 class JoinNameViewController: UIViewController {
     
+    // MARK: - Property
+    
+    var userEmail: String = ""
+    var userPassword: String = ""
+    
     // MARK: - IBOutlet
 
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var whatsYourNameLabel: UILabel!
     @IBOutlet weak var nameExplainLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -47,5 +53,24 @@ class JoinNameViewController: UIViewController {
         nameCompleteButton.tintColor = .black
         nameCompleteButton.titleLabel?.font = .cardnaH5Sbd
         nameCompleteButton.layer.cornerRadius = 10
+    }
+    
+    func makeAlert(data: GeneralResponse<JoinResponse>) {
+        let alert = UIAlertController(title: "회원가입",
+                                      message: data.message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func touchUpBackButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func touchUpNameCompleteButton(_ sender: Any) {
+        self.requestJoin()
     }
 }
