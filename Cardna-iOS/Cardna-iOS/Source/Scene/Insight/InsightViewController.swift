@@ -30,6 +30,7 @@ class InsightViewController: UIViewController {
     @IBOutlet weak var openAreaCardImageView: UIImageView!
     @IBOutlet weak var openAreaCardTitleLabel: UILabel!
     @IBOutlet weak var openAreaExplainLabel: UILabel!
+    @IBOutlet weak var openAreaUnderBarView: UIView!
     
     // MARK: Blind Area Page outlet
     @IBOutlet weak var blindAreaPageView: UIView!
@@ -38,6 +39,7 @@ class InsightViewController: UIViewController {
     @IBOutlet weak var blindAreaCardImageView: UIImageView!
     @IBOutlet weak var blindAreaCardTitleLabel: UILabel!
     @IBOutlet weak var blindAreaExplainLabel: UILabel!
+    @IBOutlet weak var blindAreaUnderBarView: UIView!
     @IBOutlet weak var openNilLabel: UILabel!
     @IBOutlet weak var blindNilLabel: UILabel!
     
@@ -155,39 +157,54 @@ class InsightViewController: UIViewController {
         }
     }
     
+    func setOpenAreaHiddenView(state: Bool) {
+        [openAreaExplainLabel].forEach {
+            $0?.isHidden = state
+        }
+        [openAreaCardView, openAreaUnderBarView].forEach {
+            $0?.isHidden = state
+        }
+        openNilLabel.isHidden = !state
+    }
+    
+    func setBlindAreaHiddenView(state: Bool) {
+        [blindAreaExplainLabel].forEach {
+            $0?.isHidden = state
+        }
+        [blindAreaCardView, blindAreaUnderBarView].forEach {
+            $0?.isHidden = state
+        }
+        blindNilLabel.isHidden = !state
+    }
+    
+    
     func setInsightCardInfo() {
         if let open = openCard {
             if let imageString = open.imageURL {
                 openAreaCardImageView.setImage(with: imageString)
-                openAreaCardView.isHidden = false
                 openAreaCardTitleLabel.text = open.title
-                openNilLabel.isHidden = true
+                setOpenAreaHiddenView(state: false)
             }
             else {
-                openAreaCardView.isHidden = true
-                openNilLabel.isHidden = false
+                setOpenAreaHiddenView(state: true)
             }
         }
         else {
-            openAreaCardView.isHidden = true
-            openNilLabel.isHidden = false
+            setOpenAreaHiddenView(state: true)
         }
         
         if let blind = blindCard {
             if let imageString = blind.imageURL {
                 blindAreaCardImageView.setImage(with: imageString)
-                blindAreaCardView.isHidden = false
                 blindAreaCardTitleLabel.text = blind.title
-                blindNilLabel.isHidden = true
+                setBlindAreaHiddenView(state: false)
             }
             else {
-                blindAreaCardView.isHidden = true
-                blindNilLabel.isHidden = false
+                setBlindAreaHiddenView(state: true)
             }
         }
         else {
-            blindAreaCardView.isHidden = true
-            blindNilLabel.isHidden = false
+            setBlindAreaHiddenView(state: true)
         }
     }
 }
