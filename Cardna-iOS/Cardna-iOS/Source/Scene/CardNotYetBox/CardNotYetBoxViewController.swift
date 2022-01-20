@@ -73,6 +73,6 @@ class CardNotYetBoxViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func closeButtonDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
