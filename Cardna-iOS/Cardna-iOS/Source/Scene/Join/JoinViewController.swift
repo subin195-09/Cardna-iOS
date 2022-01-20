@@ -81,7 +81,7 @@ class JoinViewController: UIViewController {
         joinCompleteButton.tintColor = .black
         joinCompleteButton.titleLabel?.font = .cardnaH5Sbd
         joinCompleteButton.layer.cornerRadius = 10
-        joinCompleteButton.isEnabled = false
+       // joinCompleteButton.isEnabled = false
         joinCompletedView.layer.cornerRadius = 10
         joinCompletedView.backgroundColor = .w3
         joinCompletedView.clipsToBounds = true
@@ -109,7 +109,7 @@ class JoinViewController: UIViewController {
             joinCompletedLabel.textColor = .black
         }
         else {
-            joinCompleteButton.isEnabled = false
+            //joinCompleteButton.isEnabled = false
             joinCompletedView.setViewGradient(startColor: .w3, endColor: .w3)
             joinCompletedView.backgroundColor = .w3
             joinCompletedLabel.font = .cardnaH6Rg
