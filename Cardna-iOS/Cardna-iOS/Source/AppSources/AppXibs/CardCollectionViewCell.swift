@@ -54,6 +54,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         bgView.layer.borderWidth = 1
         bgView.backgroundColor = .mainGreen
         titleLabel.font = .cardnaSh1Sbd
+        titleLabel.textColor = UIColor.init(red: 18/255.0, green: 18/255.0, blue: 18/255.0, alpha: 1.0)
         countBackgroundView.layer.cornerRadius = 10
         countBackgroundView.layer.borderWidth = 1
         countBackgroundView.layer.borderColor = UIColor.white.cgColor
