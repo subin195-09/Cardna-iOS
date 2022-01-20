@@ -155,5 +155,8 @@ class HomeViewController: UIViewController {
         guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
         self.navigationController?.pushViewController(addVC, animated: true)
         }
+        else {
+            self.showToastTop(message: "준비중인 기능입니다.", font: .cardnaB3Rg)
+        }
     }
 }
