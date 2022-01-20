@@ -20,7 +20,11 @@ class SelectCardHeaderCollectionReusableView: UICollectionReusableView {
         return label
     }()
     
-    
+    var titleImage: UIImageView = {
+        var imageView = UIImageView()
+        imageView.image = Const.Image.invalidName
+        return imageView
+    }()
     
     
     override init(frame: CGRect) {
@@ -36,16 +40,21 @@ class SelectCardHeaderCollectionReusableView: UICollectionReusableView {
     
     func configure() {
         self.backgroundColor = .clear
-        addSubview(titleLabel)
+        //addSubview(titleLabel)
+        addSubview(titleImage)
+        titleImage.translatesAutoresizingMaskIntoConstraints = false
+        titleImage.adjustsImageSizeForAccessibilityContentSizeCategory = true
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.adjustsFontForContentSizeCategory = true
         
+        
         let inset = CGFloat(16)
+        
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -inset),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: CGFloat(25)),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -inset)
+            titleImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset),
+            titleImage.widthAnchor.constraint(equalToConstant: 273),
+            titleImage.topAnchor.constraint(equalTo: topAnchor, constant: CGFloat(25)),
+            titleImage.heightAnchor.constraint(equalToConstant: 57)
         ])
         
         let attributedStr = NSMutableAttributedString(string: titleLabel.text!)

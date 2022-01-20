@@ -146,5 +146,8 @@ extension Const {
         
         // MARK: - 타인의 대표카드
         static let btYoucardpack = UIImage(named: "btYoucardpack")!
+        
+        // MARK: - 대표카드 수정 label
+        static let invalidName = UIImage(named: "invalidName")!
     }
 }
