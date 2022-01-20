@@ -131,4 +131,12 @@ class HomeViewController: UIViewController {
         let editVC = UIStoryboard(name: "SelectCard", bundle: nil).instantiateViewController(withIdentifier: "SelectCardViewController")
         self.navigationController?.pushViewController(editVC, animated: true)
     }
+    
+    @IBAction func friendCardPackButtonDidTap(_ sender: Any) {
+        let nextSB = UIStoryboard.init(name: "Card", bundle: nil)
+        guard let nextVC = nextSB.instantiateViewController(withIdentifier: "CardViewController") as? CardViewController else { return }
+        nextVC.friendID = self.friendID
+        nextVC.friendName = self.name
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
 }

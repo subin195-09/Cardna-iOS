@@ -19,7 +19,7 @@ class CardViewController: UIViewController {
     static var cardMeList: [CardMeList]? = []
     static var cardYouList: [CardYouList]? = []
     var friendID: Int?
-    var dummy: Int = 0
+    var friendName: String = "에르메스"
     
     // MARK: - IBOutlet
     
@@ -47,12 +47,18 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        setInitialCollectionView()
         setIsMyCardPack()
+        getCardInfo()
+        setFriendNameLabel()
         setUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        initialize()
+        setIsMyCardPack()
         getCardInfo()
+        setUI()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -61,6 +67,11 @@ class CardViewController: UIViewController {
     }
     
     // MARK: - Function
+    
+    func setInitialCollectionView() {
+        cardPackTitleCollectionView.delegate = self
+        cardPackTitleCollectionView.dataSource = self
+    }
     
     func setCollectionView() {
         [cardPackTitleCollectionView, cardContainerCollectionView].forEach {
@@ -110,8 +121,8 @@ class CardViewController: UIViewController {
         indicatorBarView.backgroundColor = .mainGreen
     }
     
-    func setFriendNameLabel(name: String) {
-        friendNavigationTitleLabel.text = "\(name)님의 카드팩"
+    func setFriendNameLabel() {
+        friendNavigationTitleLabel?.text = "\(friendName)님의 카드팩"
     }
     
     private func showBottomSheet() {
