@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         registerXib()
         setUI()
         isFriendMain()
+        setCollectionView()
     }
     
     // MARK: - Function
@@ -109,7 +110,7 @@ class HomeViewController: UIViewController {
             case .success(let data):
                 guard let res = data as? MainCardResponse else { return }
                 self.cardList = res.mainCardList
-                self.setCollectionView()
+                
                 self.collectionView.reloadData()
                 if self.cardList.count > 0 {
                 if self.cardList[0].isMe == true {
