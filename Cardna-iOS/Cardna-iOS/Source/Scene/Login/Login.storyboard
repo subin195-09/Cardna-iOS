@@ -114,6 +114,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="findPasswordButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mSc-yD-aPg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-Zu-cBS">
                                 <rect key="frame" x="356" y="204" width="42" height="42"/>
