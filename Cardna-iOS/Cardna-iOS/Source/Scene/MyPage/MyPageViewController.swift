@@ -24,10 +24,12 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var friendCountLabel: UILabel!
     
     // MARK: - VC LifeCycle
+    override func viewWillAppear(_ animated: Bool) {
+        getMyPageInfo()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMyPageInfo()
         setUI()
         
     }
@@ -103,6 +105,7 @@ class MyPageViewController: UIViewController {
                 self.filteredList = self.friendList
                 self.setSearchBarDelegate()
                 self.setTableView()
+                self.tableView.reloadData()
             case .requestErr(_):
                 print("requestErr")
             case .pathErr:
