@@ -77,6 +77,7 @@ class AddCardViewController: UIViewController {
         $0.font = .cardnaSh3Sbd
         $0.textColor = .w1
         $0.returnKeyType = .next
+        $0.borderStyle = .none
     }
     
     var cardKeywordLabel2 = UILabel().then {
@@ -247,7 +248,7 @@ class AddCardViewController: UIViewController {
             $0.top.equalTo(self.cardKeywordLabel1.snp.bottom).offset(4)
             $0.leading.equalTo(view.safeAreaLayoutGuide).offset(16)
             $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-26)
-            $0.height.equalTo(28)
+            $0.height.equalTo(34)
         }
         
         cardKeywordLabel2.snp.makeConstraints {
@@ -257,7 +258,7 @@ class AddCardViewController: UIViewController {
         }
         
         cardKeywordUnderLine.snp.makeConstraints {
-            $0.top.equalTo(self.cardKeywordTextField.snp.bottom).offset(4)
+            $0.top.equalTo(self.cardKeywordTextField.snp.bottom)
             $0.leading.equalTo(self.cardKeywordTextField)
             $0.trailing.equalTo(self.cardKeywordTextField)
             $0.height.equalTo(2)

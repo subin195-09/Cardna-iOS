@@ -48,6 +48,7 @@ class AddCardYouViewController: UIViewController {
                                                         attributes: [
                                                           NSAttributedString.Key.font: UIFont.cardnaB1Rg,
                                                           NSAttributedString.Key.foregroundColor: UIColor.w3])
+        addCardYouTextField.layer.borderColor = UIColor(white: 18.0 / 255.0, alpha: 0.0).cgColor
         addCardYouTextFieldUnderLineView.backgroundColor = .w2
         addCardYouTextCountLabel.font = .cardnaC
         addCardYouTextCountLabel.textColor = .w3
