@@ -13,7 +13,7 @@ class MyPageSettingViewController: UIViewController {
     
     var sectionTitle: [String] = ["개인 정보","문의", "앱 정보"]
     var simpleCells: [String] = ["계정 설정","메일로 문의하기"]
-    var cellTitle: [String] = ["버전 정보", "개발자 정보", "서비스 운영정책", "개인정보 처리방침", "서비스 이용약관", "오픈소스 라이선스"]
+    var cellTitle: [String] = ["버전 정보", "개발자 정보", "서비스 운영정책", "개인정보 처리방침", "서비스 이용약관", "오픈소스 라이선스", "로그아웃"]
     
     // MARK: - IBOutlet
     

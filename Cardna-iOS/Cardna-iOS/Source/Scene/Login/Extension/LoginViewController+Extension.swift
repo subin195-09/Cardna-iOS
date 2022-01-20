@@ -24,8 +24,8 @@ extension LoginViewController {
                 }
                 else {
                    // guard let data = response.data as? LoginResponse else { return }
-                    NetworkConstant.name = response.data?.name ?? ""
-                    NetworkConstant.accessToken = response.data?.accessToken ?? ""
+                    UserDefaults.standard.setValue(response.data?.name ?? "", forKey: "name")
+                    UserDefaults.standard.setValue(response.data?.accessToken ?? "", forKey: "token")
                     guard let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController else { return }
                     self.changeRootViewController(homeVC)
                     
