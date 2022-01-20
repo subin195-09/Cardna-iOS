@@ -43,7 +43,13 @@ extension CardViewController: UICollectionViewDataSource {
         }
         else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardContainerCollectionViewCell.identifier, for: indexPath) as? CardContainerCollectionViewCell else { return UICollectionViewCell() }
-            cell.cellPage = nowPage
+            
+            if indexPath.item == 0 {
+                cell.setData(isCardMe: true, me: CardViewController.cardMeList, you: CardViewController.cardYouList)
+            }
+            else {
+                cell.setData(isCardMe: false, me: CardViewController.cardMeList, you: CardViewController.cardYouList)
+            }
             return cell
         }
     }
@@ -92,5 +98,29 @@ extension CardViewController: UICollectionViewDelegateFlowLayout {
         cardPackTitleCollectionView.reloadData()
         cardContainerCollectionView.reloadData()
         moveIndicatorBarViewUI()
+    }
+}
+
+extension CardViewController {
+    
+    func getCardPackAll(id: Int?) {
+        CardPackService.shared.getCardPackAll(id: id) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? CardPackAllResponse else { return }
+                CardViewController.cardMeList = data.cardMeList
+                CardViewController.cardYouList = data.cardYouList
+                self.cardCountLabel.text = "\(data.totalCardCnt)"
+                self.setCollectionView()
+            case .requestErr(_):
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
 }

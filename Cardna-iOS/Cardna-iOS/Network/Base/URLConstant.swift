@@ -23,6 +23,7 @@ struct URLConstant {
     
     static let cardMain = "/card/main"
     static let card = "/card"
+    static let cardAll = "/card/all"
     static let cardMe = "/card/me"
     static let cardYou = "/card/you"
     static let cardInfo = "/card/info"
