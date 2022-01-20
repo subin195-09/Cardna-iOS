@@ -84,7 +84,7 @@ extension MyPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0: return 80
-        case 1: return (UIScreen.main.bounds.width * (186/375) + 12) * round(CGFloat(friendList.count)/2) - 12
+        case 1: return (UIScreen.main.bounds.width * (186/375) + 12) * round(CGFloat(friendList.count)/2) 
         default: return 0
         }
     }
