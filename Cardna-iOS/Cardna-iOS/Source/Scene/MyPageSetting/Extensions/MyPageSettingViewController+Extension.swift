@@ -63,16 +63,11 @@ extension MyPageSettingViewController: UITableViewDataSource {
             if indexPath.row == 6 {
                 self.makeRequestAlert(title: "로그아웃", message: "로그아웃 하시겠습니까?", okAction: { _ in
                     UserDefaults.standard.removeObject(forKey: "token")
-                    guard let initailVC = UIStoryboard(name: "Initial", bundle: nil).instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController else { return }
-                    self.changeRootViewController(initailVC)
+//                    guard let initailVC = UIStoryboard(name: "Initial", bundle: nil).instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController else { return }
+                    guard let rootVC = UIStoryboard(name: "Initial", bundle: nil).instantiateViewController(withIdentifier: "InitialNavigationViewController") as? UINavigationController else { return }
+                    self.changeRootViewController(rootVC)
                 }, cancelAction: nil, completion: nil)
             }
-//            switch indexPath.row {
-//            case 3..<5:
-//                
-//            default:
-//                break
-//            }
         }
         
     }

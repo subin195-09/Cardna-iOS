@@ -21,6 +21,14 @@
 | 리드 경험과 사람을 얻고 싶고, <div></div>안해본 기능을 구현하고 싶습니다. | YB에게 알려줄 수 있는 <div></div>실력을 갖고 싶습니다. | iOS를 제대로 도전해보는<div></div>경험을 얻어가고 싶습니다. |
 <br/>
 
+## 프로젝트 내에서 본인이 맡은/개발한 기능들이나 뷰에 대해서 기재해주세요! 
+
+[Notion 바로가기](https://silken-pyroraptor-823.notion.site/ffe5265b1c464cbfabaaf9bdb11cf2ab)
+
+## 이번 프로젝트를 하면서 어려웠던 부분과 이를 어떻게 극복했는지 작성해주세요!
+
+[Notion 바로가기](https://silken-pyroraptor-823.notion.site/21dcc721098b40c985c35b203fb00e4b)
+
 ## 💻 Coding Convention
 <details>
 <summary>펼쳐서 보기</summary>
