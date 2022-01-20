@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import SwiftUI
+
+import Lottie
 
 class CardDetailViewController: UIViewController {
     
@@ -17,8 +18,20 @@ class CardDetailViewController: UIViewController {
     var cardID: Int?
     var cardData: CardDetailResponse?
     
+    lazy var lottieView : AnimationView = {
+        let animationView = AnimationView(name: "lottie_cardme")
+        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        animationView.center = CGPoint(x: UIScreen.main.bounds.width/2, y: imageContainerViewHeightConstraint.constant/2)
+        animationView.contentMode = .scaleAspectFill
+        animationView.stop()
+        animationView.isHidden = true
+        return animationView
+        
+    }()
+    
     // MARK: - IBOutlet
-
+    
+    @IBOutlet weak var lottieBgView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var fromLabel: UILabel!
@@ -38,12 +51,29 @@ class CardDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLottie()
         getCardDetail()
         setUI()
         setDummy()
     }
     
     // MARK: - Function
+    
+    func setLottie() {
+        lottieBgView.addSubview(lottieView)
+    }
+    
+    func startLottie() {
+        lottieBgView.isHidden = false
+        lottieView.isHidden = false
+        lottieView.play()
+    }
+    
+    func stopLottie() {
+        lottieBgView.isHidden = true
+        lottieView.isHidden = true
+        lottieView.stop()
+    }
     
     func setUI() {
         setLabelUI()
@@ -203,7 +233,7 @@ class CardDetailViewController: UIViewController {
                 switch result {
                 case .success(_):
                     print("카드삭제완료")
-                     self.navigationController?.popViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 case .requestErr(_):
                     print("requestErr")
                 case .pathErr:
@@ -220,6 +250,7 @@ class CardDetailViewController: UIViewController {
     }
     
     func likeCard() {
+        
         LikeService.shared.postLike(cardId: cardID ?? 1) { result in
             switch result {
             case .success(let data):
@@ -227,6 +258,10 @@ class CardDetailViewController: UIViewController {
                 guard let data = data as? LikeResponse else { return }
                 if data.isLiked {
                     self.likeButton.setImage(Const.Image.likeSelected, for: .normal)
+                    self.startLottie()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.6){
+                        self.stopLottie()
+                    }
                 }
                 else {
                     self.likeButton.setImage(Const.Image.likeUnselected, for: .normal)
