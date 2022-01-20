@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var navigationButton: UIButton!
     @IBOutlet weak var addFriendButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     // MARK: - VC LifeCycle
     
@@ -55,6 +56,7 @@ class HomeViewController: UIViewController {
             nameLabel.text = "\(name)님은"
             navigationButton.setImage(Const.Image.icbtWrite, for: .normal)
             addFriendButton.isHidden = false
+            backButton.isHidden = false
         }
         else {
             nameLabel.text = "\(NetworkConstant.name)님은"
@@ -159,5 +161,9 @@ class HomeViewController: UIViewController {
         else {
             self.showToastTop(message: "준비중인 기능입니다.", font: .cardnaB3Rg)
         }
+    }
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

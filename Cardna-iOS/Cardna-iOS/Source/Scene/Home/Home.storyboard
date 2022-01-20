@@ -101,6 +101,18 @@
                                     <action selector="friendAddButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PTf-yH-Snx"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2A-Xg-ssx">
+                                <rect key="frame" x="8" y="89" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="8ys-6z-tpl"/>
+                                    <constraint firstAttribute="height" constant="42" id="oYe-dG-lce"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icbtBack"/>
+                                <connections>
+                                    <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Nu-XB-IQv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,8 +122,10 @@
                             <constraint firstItem="tdE-Os-uMf" firstAttribute="centerY" secondItem="PsC-V9-WlX" secondAttribute="centerY" id="4vm-z3-y0i"/>
                             <constraint firstItem="mqI-RA-2IT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="58" id="4vq-R8-CLx"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="leading" secondItem="mqI-RA-2IT" secondAttribute="leading" id="7AA-E2-2bA"/>
+                            <constraint firstItem="q2A-Xg-ssx" firstAttribute="centerY" secondItem="PsC-V9-WlX" secondAttribute="centerY" id="8ME-v7-oYY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PsC-V9-WlX" secondAttribute="trailing" constant="4" id="OuS-rK-3Oh"/>
                             <constraint firstItem="PsC-V9-WlX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="Yhr-5j-FCS"/>
+                            <constraint firstItem="q2A-Xg-ssx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="ZMu-Ng-H4Z"/>
                             <constraint firstItem="9tg-bz-n4z" firstAttribute="trailing" secondItem="2aD-2V-JgP" secondAttribute="trailing" id="Zv0-TS-DOf"/>
                             <constraint firstItem="IXZ-Re-aFl" firstAttribute="top" secondItem="2aD-2V-JgP" secondAttribute="bottom" constant="50" id="ak8-FA-4bg"/>
                             <constraint firstItem="2aD-2V-JgP" firstAttribute="top" secondItem="mqI-RA-2IT" secondAttribute="bottom" id="bor-8a-hS1"/>
@@ -131,6 +145,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addFriendButton" destination="tdE-Os-uMf" id="FX4-6Z-ulw"/>
+                        <outlet property="backButton" destination="q2A-Xg-ssx" id="JOQ-IK-qIN"/>
                         <outlet property="collectionView" destination="IXZ-Re-aFl" id="62f-Kc-K8s"/>
                         <outlet property="collectionViewHeight" destination="2pj-Du-PQB" id="S8K-Tq-xez"/>
                         <outlet property="collectionViewTopConstraint" destination="ak8-FA-4bg" id="djh-BV-3jU"/>
@@ -174,6 +189,7 @@
         <image name="btYoucardpack" width="140" height="40"/>
         <image name="btmnavi1Active" width="85" height="84"/>
         <image name="btmnavi1Inactive" width="85" height="84"/>
+        <image name="icbtBack" width="42" height="42"/>
         <image name="icbtFriendalready" width="42.5" height="42"/>
         <image name="icbtNotification" width="42" height="42"/>
     </resources>
