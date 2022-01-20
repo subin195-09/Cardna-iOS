@@ -110,6 +110,7 @@ class AddCardBottomSheetViewController: UIViewController {
         
         let addCardVC = presentingViewController as? AddCardViewController
         addCardVC?.cardImageView.image = defaultImage
+        addCardVC?.selectedSymbolId = index
         dismiss(animated: true, completion: nil)
     }
     

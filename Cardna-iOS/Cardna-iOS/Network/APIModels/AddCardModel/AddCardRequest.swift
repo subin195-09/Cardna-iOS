@@ -14,3 +14,18 @@ struct AddCardRequest: Codable {
     let symbolId: Int?
     let img: [Data]
 }
+
+// MARK: - AddCardResponse
+struct AddCardResponse: Codable {
+    let id: Int
+    let isMe: Bool
+    let title, content, relation, createdAt: String
+    let imageURL: String
+    let name: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, isMe, title, content, relation, createdAt
+        case imageURL = "imageUrl"
+        case name
+    }
+}
