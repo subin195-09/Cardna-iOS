@@ -158,9 +158,11 @@ class CardViewController: UIViewController {
     }
     
     @IBAction func friendBackButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func friendWriteButtonDidTap(_ sender: Any) {
+        guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
+        self.navigationController?.pushViewController(addVC, animated: true)
     }
 }
-
