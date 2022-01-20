@@ -33,7 +33,6 @@
 		14FA67C62793764D002FCDE5 /* JoinViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */; };
 		14FA67C827937660002FCDE5 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA67C727937660002FCDE5 /* JoinViewController.swift */; };
 		15232FF3279356B400F37EB4 /* lottie_cardyou.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF2279356B400F37EB4 /* lottie_cardyou.json */; };
-		15232FF5279356B900F37EB4 /* lottie_cardme.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF4279356B900F37EB4 /* lottie_cardme.json */; };
 		15232FF7279356C000F37EB4 /* gif_confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 15232FF6279356C000F37EB4 /* gif_confetti.json */; };
 		15232FFB2793613D00F37EB4 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15232FFA2793613D00F37EB4 /* NetworkResult.swift */; };
 		15232FFD2793617F00F37EB4 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15232FFC2793617F00F37EB4 /* MoyaLoggingPlugin.swift */; };
@@ -108,6 +107,8 @@
 		9844214727960D8600497CF4 /* AddFriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214627960D8600497CF4 /* AddFriendService.swift */; };
 		9844214927960D9800497CF4 /* AddFriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214827960D9800497CF4 /* AddFriendRequest.swift */; };
 		9844214B27960DA500497CF4 /* AddFriendResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9844214A27960DA500497CF4 /* AddFriendResponse.swift */; };
+		9848F4812799E91F00946637 /* cardna_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 9848F4802799E91F00946637 /* cardna_splash.json */; };
+		9848F4832799E92F00946637 /* lottie_cardme.json in Resources */ = {isa = PBXBuildFile; fileRef = 9848F4822799E92F00946637 /* lottie_cardme.json */; };
 		9877FE3F2794DCBF005745C7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE3E2794DCBF005745C7 /* LoginRequest.swift */; };
 		9877FE412794DCC6005745C7 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE402794DCC6005745C7 /* LoginResponse.swift */; };
 		9877FE452794DD0A005745C7 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877FE442794DD0A005745C7 /* LoginRouter.swift */; };
@@ -168,7 +169,6 @@
 		14FA67C52793764D002FCDE5 /* JoinViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinViewController.storyboard; sourceTree = "<group>"; };
 		14FA67C727937660002FCDE5 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		15232FF2279356B400F37EB4 /* lottie_cardyou.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardyou.json; sourceTree = "<group>"; };
-		15232FF4279356B900F37EB4 /* lottie_cardme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardme.json; sourceTree = "<group>"; };
 		15232FF6279356C000F37EB4 /* gif_confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gif_confetti.json; sourceTree = "<group>"; };
 		15232FFA2793613D00F37EB4 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		15232FFC2793617F00F37EB4 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
@@ -245,6 +245,8 @@
 		9844214627960D8600497CF4 /* AddFriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendService.swift; sourceTree = "<group>"; };
 		9844214827960D9800497CF4 /* AddFriendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequest.swift; sourceTree = "<group>"; };
 		9844214A27960DA500497CF4 /* AddFriendResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendResponse.swift; sourceTree = "<group>"; };
+		9848F4802799E91F00946637 /* cardna_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cardna_splash.json; sourceTree = "<group>"; };
+		9848F4822799E92F00946637 /* lottie_cardme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_cardme.json; sourceTree = "<group>"; };
 		9877FE3E2794DCBF005745C7 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		9877FE402794DCC6005745C7 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9877FE442794DD0A005745C7 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -385,8 +387,9 @@
 		15232FF1279356A900F37EB4 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				9848F4802799E91F00946637 /* cardna_splash.json */,
+				9848F4822799E92F00946637 /* lottie_cardme.json */,
 				15232FF2279356B400F37EB4 /* lottie_cardyou.json */,
-				15232FF4279356B900F37EB4 /* lottie_cardme.json */,
 				15232FF6279356C000F37EB4 /* gif_confetti.json */,
 			);
 			path = Lottie;
@@ -1053,6 +1056,7 @@
 				15C51B2B278C98B1001E1F6F /* Pretendard-Light.otf in Resources */,
 				15C51B14278AC42C001E1F6F /* Card.storyboard in Resources */,
 				15C51AF7278AB2F1001E1F6F /* Assets.xcassets in Resources */,
+				9848F4832799E92F00946637 /* lottie_cardme.json in Resources */,
 				15232FF7279356C000F37EB4 /* gif_confetti.json in Resources */,
 				15C51B2C278C98B1001E1F6F /* Pretendard-Regular.otf in Resources */,
 				15A6EEB0278ECB2A006EA23C /* CardDetail.storyboard in Resources */,
@@ -1071,9 +1075,9 @@
 				142EF09B2795C3C200D61C32 /* AddCardYouViewController.storyboard in Resources */,
 				15A6EED72791F87F006EA23C /* CardNotYetBox.storyboard in Resources */,
 				15C51B10278AC41A001E1F6F /* Home.storyboard in Resources */,
+				9848F4812799E91F00946637 /* cardna_splash.json in Resources */,
 				143E2D652793077400706038 /* AddCardCompletedViewController.storyboard in Resources */,
 				15A6EEC6279066F6006EA23C /* SelectCard.storyboard in Resources */,
-				15232FF5279356B900F37EB4 /* lottie_cardme.json in Resources */,
 				15C51B18278AC43E001E1F6F /* Insight.storyboard in Resources */,
 				145A95F7279608DF002FC8C7 /* AddCardYouCompleted.storyboard in Resources */,
 			);
