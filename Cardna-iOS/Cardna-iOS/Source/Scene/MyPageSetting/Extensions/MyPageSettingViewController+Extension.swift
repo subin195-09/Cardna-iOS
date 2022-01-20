@@ -60,14 +60,24 @@ extension MyPageSettingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 2 {
-            if indexPath.row == 6 {
+            if indexPath.row == 5 {
                 self.makeRequestAlert(title: "로그아웃", message: "로그아웃 하시겠습니까?", okAction: { _ in
                     UserDefaults.standard.removeObject(forKey: "token")
-//                    guard let initailVC = UIStoryboard(name: "Initial", bundle: nil).instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController else { return }
                     guard let rootVC = UIStoryboard(name: "Initial", bundle: nil).instantiateViewController(withIdentifier: "InitialNavigationViewController") as? UINavigationController else { return }
                     self.changeRootViewController(rootVC)
                 }, cancelAction: nil, completion: nil)
             }
+            else if (indexPath.row == 2 || indexPath.row == 3) {
+                guard let nextVC = UIStoryboard.init(name: "MyPageSettingRules", bundle: nil).instantiateViewController(withIdentifier: "MyPageSettingRulesViewController") as? MyPageSettingRulesViewController else { return }
+                nextVC.nowPage = indexPath.row
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            }
+            else {
+                self.makeAlert()
+            }
+        }
+        else {
+            self.makeAlert()
         }
         
     }

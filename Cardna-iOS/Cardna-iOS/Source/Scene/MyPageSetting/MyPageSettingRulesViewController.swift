@@ -233,8 +233,6 @@ class MyPageSettingRulesViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var pageTitleLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var contentLabel: UILabel!
     
     // MARK: - VC Life Cycle
@@ -242,7 +240,6 @@ class MyPageSettingRulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        setContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -261,17 +258,24 @@ class MyPageSettingRulesViewController: UIViewController {
     }
     
     func setContent() {
-        switch nowPage {
-        case 2:
+        if nowPage == 2 {
             pageTitleLabel.text = privacyTitle
             contentLabel.text = privacyContent
             contentLabel.sizeToFit()
-        case 3:
+            contentLabel.snp.makeConstraints {
+                $0.height.equalTo(400)
+            }
+        }
+        else {
             pageTitleLabel.text = serviceTitle
             contentLabel.text = serviceContent
             contentLabel.sizeToFit()
-        default:
-            break
         }
     }
+    
+    // MARK: - IBAction
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
