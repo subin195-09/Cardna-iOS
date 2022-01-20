@@ -27,21 +27,21 @@ extension CardPackRouter: BaseTargetType {
                 return URLConstant.card
             }
             else {
-                return "\(URLConstant.card)/:\(id)"
+                return "\(URLConstant.card)/\(id ?? 0)"
             }
         case .getCardPackMe(let id):
             if id == nil {
                 return URLConstant.cardMe
             }
             else {
-                return "\(URLConstant.cardMe)/:\(id)"
+                return "\(URLConstant.cardMe)/\(id ?? 0)"
             }
         case .getCardPackYou(let id):
             if id == nil {
                 return URLConstant.cardYou
             }
             else {
-                return "\(URLConstant.cardYou)/:\(id)"
+                return "\(URLConstant.cardYou)/\(id ?? 0)"
             }
         case .getCardNotYetBox:
             return URLConstant.cardBox
