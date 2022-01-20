@@ -131,6 +131,7 @@
 		98BF51DD27956CF5008A1993 /* InsightRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DC27956CF5008A1993 /* InsightRouter.swift */; };
 		98BF51DF27956CFB008A1993 /* InsightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51DE27956CFB008A1993 /* InsightService.swift */; };
 		98BF51E22795721C008A1993 /* InsightViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BF51E12795721C008A1993 /* InsightViewController+Extension.swift */; };
+		98C09F2D2799CBD800B7BB35 /* InitialNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C09F2C2799CBD800B7BB35 /* InitialNavigationViewController.swift */; };
 		98C6893D2791DE51008BB153 /* MyPageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */; };
 		98C6893F2791DE9B008BB153 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */; };
 		98C689422791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */; };
@@ -267,6 +268,7 @@
 		98BF51DC27956CF5008A1993 /* InsightRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightRouter.swift; sourceTree = "<group>"; };
 		98BF51DE27956CFB008A1993 /* InsightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightService.swift; sourceTree = "<group>"; };
 		98BF51E12795721C008A1993 /* InsightViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightViewController+Extension.swift"; sourceTree = "<group>"; };
+		98C09F2C2799CBD800B7BB35 /* InitialNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialNavigationViewController.swift; sourceTree = "<group>"; };
 		98C6893C2791DE51008BB153 /* MyPageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPageSetting.storyboard; sourceTree = "<group>"; };
 		98C6893E2791DE9B008BB153 /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		98C689412791DEE8008BB153 /* MyPageSettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -875,6 +877,7 @@
 			children = (
 				98817C712792C5D100819892 /* Initial.storyboard */,
 				98817C732792C5E100819892 /* InitialViewController.swift */,
+				98C09F2C2799CBD800B7BB35 /* InitialNavigationViewController.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -1207,6 +1210,7 @@
 				9877FE4A2794E64D005745C7 /* LoginViewController+Extension.swift in Sources */,
 				15A6EEC8279066FE006EA23C /* SelectCardViewController.swift in Sources */,
 				98817C6A27929B0600819892 /* EmailSearchViewController.swift in Sources */,
+				98C09F2D2799CBD800B7BB35 /* InitialNavigationViewController.swift in Sources */,
 				142A721A27915F3400500364 /* AddCardSymbolCollectionViewCell.swift in Sources */,
 				15C51B12278AC426001E1F6F /* HomeViewController.swift in Sources */,
 				15232FFF2793669A00F37EB4 /* URLConstant.swift in Sources */,
