@@ -9,6 +9,18 @@ import UIKit
 
 import MaterialComponents.MaterialBottomSheet
 
+extension CardViewController: CardPassProtocol {
+    func pushDetailCard(cardID: Int, isMe: Int, isOthers: Bool) {
+        print("\n\n\n안녕하세요?\n\n\n")
+        guard let nextVC = UIStoryboard.init(name: "CardDetail", bundle: nil).instantiateViewController(withIdentifier: "CardDetailViewController") as? CardDetailViewController else { return }
+        nextVC.cardID = cardID
+        nextVC.isFriendsCardDetail = isOthers
+        nextVC.cardDetailWhere = isMe
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+
 class CardViewController: UIViewController {
     
     // MARK: - Property
@@ -20,6 +32,7 @@ class CardViewController: UIViewController {
     static var cardYouList: [CardYouList]? = []
     var friendID: Int?
     var friendName: String = "에르메스"
+    static var judgeWhom: Bool = false
     
     // MARK: - IBOutlet
     
@@ -58,7 +71,7 @@ class CardViewController: UIViewController {
         initialize()
         setIsMyCardPack()
         getCardInfo()
-        setUI()
+//        setUI()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -97,9 +110,11 @@ class CardViewController: UIViewController {
     func setIsMyCardPack() {
         if friendID == nil {
             isMyCardPack = true
+            CardViewController.judgeWhom = false
         }
         else {
             isMyCardPack = false
+            CardViewController.judgeWhom = true
         }
     }
     

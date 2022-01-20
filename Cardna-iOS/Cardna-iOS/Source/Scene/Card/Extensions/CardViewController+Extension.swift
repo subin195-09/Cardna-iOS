@@ -50,6 +50,7 @@ extension CardViewController: UICollectionViewDataSource {
             else {
                 cell.setData(isCardMe: false, me: CardViewController.cardMeList, you: CardViewController.cardYouList)
             }
+            cell.delegate = self
             return cell
         }
     }
@@ -123,4 +124,8 @@ extension CardViewController {
             }
         }
     }
+}
+
+protocol CardPassProtocol {
+    func pushDetailCard(cardID: Int, isMe: Int, isOthers: Bool)
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JnR-Rn-vrp">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-YP-MaY">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드팩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-DP-5Oi">
                                         <rect key="frame" x="16" y="4" width="45" height="21"/>
@@ -57,7 +57,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-wp-Gdj">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPD-0p-4u1">
                                         <rect key="frame" x="8" y="1" width="42" height="42"/>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에르메스님의 카드팩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwz-gc-Jvd">
-                                        <rect key="frame" x="119" y="11.666666666666664" width="137" height="21"/>
+                                        <rect key="frame" x="119" y="11.666666666666671" width="137" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcM-Ee-Mv8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="72"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8G-ni-jrN">
                                         <rect key="frame" x="16" y="34" width="200" height="27"/>
@@ -176,7 +176,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X88-QU-M5N">
-                                <rect key="frame" x="0.0" y="160" width="375" height="569"/>
+                                <rect key="frame" x="0.0" y="204" width="375" height="525"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lid-bl-36v">
                                     <size key="itemSize" width="375" height="568"/>
@@ -186,7 +186,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardContainerCollectionViewCell" id="ToE-dO-4C6" customClass="CardContainerCollectionViewCell" customModule="Cardna_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.66666666666666663" width="375" height="568"/>
+                                        <rect key="frame" x="0.0" y="-21.666666666666668" width="375" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1P1-GY-0AB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
@@ -237,9 +237,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="X88-QU-M5N" secondAttribute="bottom" id="p0o-4g-ANg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="btmnavi2Inactive" selectedImage="btmnavi2Active" id="nan-JL-JP4">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="DM5-4C-9CW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addCardButton" destination="jLL-Wz-4Op" id="ogu-Hs-TSF"/>
@@ -257,6 +255,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="130.04926108374386"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eBt-cO-Cim">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JnR-Rn-vrp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="btmnavi2Inactive" selectedImage="btmnavi2Active" id="nan-JL-JP4">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-40"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9oZ-N3-scs">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="AR4-rT-hI5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qV-dZ-ZbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.04926108374386"/>
         </scene>
