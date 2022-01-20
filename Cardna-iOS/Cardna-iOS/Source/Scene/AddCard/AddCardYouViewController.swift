@@ -61,7 +61,7 @@ class AddCardYouViewController: UIViewController {
     // MARK: - IBAction
 
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextButton(_ sender: Any) {
