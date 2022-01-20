@@ -55,6 +55,9 @@ class HomeViewController: UIViewController {
             navigationButton.setImage(Const.Image.icbtWrite, for: .normal)
             addFriendButton.isHidden = false
         }
+        else {
+            nameLabel.text = "\(NetworkConstant.name)님은"
+        }
     }
     
     func setCollectionView() {
