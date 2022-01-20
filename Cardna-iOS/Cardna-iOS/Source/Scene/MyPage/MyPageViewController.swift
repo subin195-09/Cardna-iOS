@@ -29,7 +29,6 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
         getMyPageInfo()
         setUI()
-       // setSearchBarDelegate()
         
     }
     
@@ -49,6 +48,7 @@ class MyPageViewController: UIViewController {
     func setTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = .clear
         if #available(iOS 15, *) {
             tableView.sectionFooterHeight = 0
             tableView.sectionHeaderHeight = 0
