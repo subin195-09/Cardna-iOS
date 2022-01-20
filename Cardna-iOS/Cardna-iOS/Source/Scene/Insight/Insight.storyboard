@@ -284,6 +284,7 @@
                         <outlet property="blindAreaExplainLabel" destination="mIQ-Xa-I1K" id="UPO-Ks-uMQ"/>
                         <outlet property="blindAreaPageView" destination="0ND-jJ-ysm" id="ixg-Wx-gxY"/>
                         <outlet property="blindAreaTitleLabel" destination="ucM-KF-yIB" id="7wO-AY-1uX"/>
+                        <outlet property="blindAreaUnderBarView" destination="4Ae-9U-95J" id="5Rj-HC-nMM"/>
                         <outlet property="blindNilLabel" destination="Phu-7w-LI5" id="8Sg-Iq-Wo7"/>
                         <outlet property="cardViewTopConstraint" destination="Qf9-bo-lW7" id="OYR-HQ-yIY"/>
                         <outlet property="explainLabelTopConstraint" destination="SQt-pK-hhP" id="5nj-YG-g0M"/>
@@ -295,6 +296,7 @@
                         <outlet property="openAreaExplainLabel" destination="tRG-0j-fKI" id="Blc-g6-2IJ"/>
                         <outlet property="openAreaPageView" destination="2Fa-12-gzX" id="bFL-hs-QHc"/>
                         <outlet property="openAreaTitleLabel" destination="AGM-LL-dB0" id="5JJ-VC-dk8"/>
+                        <outlet property="openAreaUnderBarView" destination="DUn-1q-jSE" id="IlZ-bX-FTj"/>
                         <outlet property="openNilLabel" destination="Ta9-Om-sHH" id="6FZ-dB-EjP"/>
                         <outlet property="pageView" destination="TIM-bm-1TF" id="Dv1-mU-tGX"/>
                         <outlet property="scrollView" destination="MFG-HP-bvh" id="TJh-8d-zxK"/>
