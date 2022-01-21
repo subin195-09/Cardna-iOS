@@ -34,6 +34,8 @@ class CardContainerCollectionViewCell: UICollectionViewCell {
     func registerXib() {
         let nib = UINib(nibName: CardCollectionViewCell.identifier, bundle: nil)
         cardPackCollectionView.register(nib, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
+        let nibAnotherCell = UINib(nibName: CardEmptyCollectionViewCell.identifier, bundle: nil)
+        cardPackCollectionView.register(nibAnotherCell, forCellWithReuseIdentifier: CardEmptyCollectionViewCell.identifier)
     }
     
     func setCollectionView() {

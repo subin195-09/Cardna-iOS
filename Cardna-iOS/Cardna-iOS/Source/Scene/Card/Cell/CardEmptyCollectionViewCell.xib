@@ -18,7 +18,19 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhJ-5x-xxm">
                         <rect key="frame" x="0.0" y="0.0" width="284" height="430"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 카드가 없어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBB-O4-s2c">
+                                <rect key="frame" x="76" y="204.5" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YBB-O4-s2c" firstAttribute="centerY" secondItem="yhJ-5x-xxm" secondAttribute="centerY" id="9B0-Vf-kxb"/>
+                            <constraint firstItem="YBB-O4-s2c" firstAttribute="centerX" secondItem="yhJ-5x-xxm" secondAttribute="centerX" id="cMo-UY-RAX"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -31,6 +43,10 @@
                 <constraint firstAttribute="bottom" secondItem="yhJ-5x-xxm" secondAttribute="bottom" id="bCB-3L-wcv"/>
             </constraints>
             <size key="customSize" width="318" height="400"/>
+            <connections>
+                <outlet property="cellBackgroundView" destination="yhJ-5x-xxm" id="BJh-4Y-fwp"/>
+                <outlet property="cellExplainLabel" destination="YBB-O4-s2c" id="FvX-NK-Sxc"/>
+            </connections>
             <point key="canvasLocation" x="331.8840579710145" y="188.16964285714286"/>
         </collectionViewCell>
     </objects>
