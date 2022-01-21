@@ -68,14 +68,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-8A-c5f">
                                 <rect key="frame" x="16" y="124" width="382" height="204"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtBoxbackPurple" translatesAutoresizingMaskIntoConstraints="NO" id="FmJ-Rz-flR">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtBoxbackPurple" translatesAutoresizingMaskIntoConstraints="NO" id="FmJ-Rz-flR">
                                         <rect key="frame" x="159" y="24" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="BKz-xi-yd7"/>
                                             <constraint firstAttribute="width" secondItem="FmJ-Rz-flR" secondAttribute="height" multiplier="1:1" id="F4F-wE-29x"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이깅민" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiD-bh-Zji">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiD-bh-Zji">
                                         <rect key="frame" x="156" y="96" width="70" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="2gL-5a-Dcb"/>
@@ -85,7 +85,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="evahollyblow@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-xF-1I8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emailLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-xF-1I8">
                                         <rect key="frame" x="66" y="117" width="250" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="oQy-3O-uty"/>
