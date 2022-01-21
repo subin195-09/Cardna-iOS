@@ -385,7 +385,9 @@ class AddCardViewController: UIViewController {
             completedCardVC.receivedText = cardKeywordTextField.text ?? ""
             completedCardVC.receivedImage = cardImageView.image ?? UIImage()
             completedCardVC.modalPresentationStyle = .fullScreen
-            self.present(completedCardVC, animated: true, completion: nil)
+            self.present(completedCardVC, animated: true) {
+                self.navigationController?.popViewController(animated: true)
+            }
         } else {
             AddCardService.shared.postAddCardYou(friendId: 4,
                                                  title: cardKeywordTextField.text!,

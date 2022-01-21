@@ -25,7 +25,7 @@ class AddCardCompletedViewController: UIViewController {
     }()
     
     // MARK: - IBOutlet
-
+    
     @IBOutlet weak var completedMessage: UILabel!
     @IBOutlet weak var makedCardUIView: UIView!
     @IBOutlet weak var makedCardImageView: UIImageView!
