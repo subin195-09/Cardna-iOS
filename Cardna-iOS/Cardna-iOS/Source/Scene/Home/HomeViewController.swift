@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if friendID != nil { getMainCard(friendID: friendID) }
         else { getMainCard() }
+
     }
     
     override func viewDidLoad() {
@@ -112,7 +113,11 @@ class HomeViewController: UIViewController {
             case .success(let data):
                 guard let res = data as? MainCardResponse else { return }
                 self.cardList = res.mainCardList
-                
+                if self.cardList.count == 0 {
+                    self.countLabel.isHidden = true
+                } else {
+                    self.countLabel.isHidden = false
+                }
                 self.collectionView.reloadData()
                 if self.cardList.count > 0 {
                 if self.cardList[0].isMe == true {
