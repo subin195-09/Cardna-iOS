@@ -144,11 +144,13 @@ class CardDetailViewController: UIViewController {
         }
         else {
             let inBox = UIAction(title: "보관") { action in
-                self.putCardInBox()
+                self.showToast(message: "준비중인 기능입니다", font: .cardnaB3Rg)
+                //self.putCardInBox()
             }
             let delete = UIAction(title: "삭제") { action in
                 print("삭제")
-                self.deleteCard()
+                self.showToast(message: "준비중인 기능입니다.", font: .cardnaB3Rg)
+                //self.deleteCard()
             }
             menuButton.menu = UIMenu(title: "", children: [delete, inBox])
         }
@@ -162,6 +164,7 @@ class CardDetailViewController: UIViewController {
         }
         let delete = UIAction(title: "삭제") { action in
             print("삭제")
+            
             self.deleteCard()
         }
         menuButton.menu = UIMenu(title: "", children: [delete, report])
