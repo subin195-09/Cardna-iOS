@@ -26,14 +26,14 @@ class CardEmptyCollectionViewCell: UICollectionViewCell {
     func setCellUI() {
         cellExplainLabel.numberOfLines = 0
         cellExplainLabel.textAlignment = .center
-        cellExplainLabel.textColor = .w1
+        cellExplainLabel.textColor = .w3
         cellExplainLabel.text =
         """
         아직 카드가 없어요!
         카드를 만들어주거나
         카드를 써줘보아요!
         """
-        cellExplainLabel.font = .Pretendard(.semiBold, size: 16)
+        cellExplainLabel.font = .Pretendard(.regular, size: 16)
         cellExplainLabel.sizeToFit()
     }
 }

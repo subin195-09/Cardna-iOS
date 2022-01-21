@@ -68,7 +68,13 @@ extension CardContainerCollectionViewCell: UICollectionViewDataSource {
             else {
                 isCardMeEmpty = true
             }
-            return CardViewController.cardMeList?.count ?? 1
+            if CardViewController.cardMeList?.count == 0 {
+                return 1
+            }
+            else {
+                return CardViewController.cardMeList?.count ?? 1
+                
+            }
         }
         else {
             if let cardYou = CardViewController.cardYouList {
@@ -82,7 +88,13 @@ extension CardContainerCollectionViewCell: UICollectionViewDataSource {
             else {
                 isCardYouEmpty = true
             }
-            return CardViewController.cardYouList?.count ?? 1
+            if CardViewController.cardYouList?.count == 0 {
+                return 1
+            }
+            else {
+                return CardViewController.cardYouList?.count ?? 1
+                
+            }
         }
     }
     
