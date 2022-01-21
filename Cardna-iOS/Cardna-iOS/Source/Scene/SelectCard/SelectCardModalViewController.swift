@@ -66,6 +66,7 @@ class SelectCardModalViewController: UIViewController {
                 guard let data = data as? CardPackAllResponse else { return }
                 self.cardMeList = data.cardMeList
                 self.cardYouList = data.cardYouList
+                self.setIndex(cardMeList: &self.cardMeList, cardYouList: &self.cardYouList, mainCardList: self.mainCardList)
                 self.setCollectionView()
             case .requestErr(_):
                 print("requestErr")

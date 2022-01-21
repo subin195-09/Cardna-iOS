@@ -57,6 +57,7 @@ extension SelectCardModalViewController: UICollectionViewDelegate {
 
         print(cardMeList)
         print(cardYouList)
+        //setIndex(cardMeList: &cardMeList, cardYouList: &cardYouList, mainCardList: mainCardList)
         
         for i in 0..<cardMeList.count {
             var isMain = false
@@ -89,6 +90,38 @@ extension SelectCardModalViewController: UICollectionViewDelegate {
         print(mainCardList)
         print(mainCardList.count)
         collectionView.reloadData()
+    }
+    
+    func setIndex(cardMeList: inout [CardMeList],
+                  cardYouList: inout [CardYouList],
+                  mainCardList: [MainCardList]) {
+        for i in 0..<cardMeList.count {
+            var isMain = false
+            for j in 0..<mainCardList.count {
+                if (cardMeList[i].id == mainCardList[j].id) {
+                    cardMeList[i].changeMainState(order: j)
+                    isMain = true
+                    break
+                }
+            }
+            if isMain == false {
+                cardMeList[i].changeMainState(order: nil)
+            }
+        }
+        
+        for i in 0..<cardYouList.count {
+            var isMain = false
+            for j in 0..<mainCardList.count {
+                if (cardYouList[i].id == mainCardList[j].id) {
+                    cardYouList[i].changeMainState(order: j)
+                    isMain = true
+                    break
+                }
+            }
+            if isMain == false {
+                cardYouList[i].changeMainState(order: nil)
+            }
+        }
     }
 }
 
