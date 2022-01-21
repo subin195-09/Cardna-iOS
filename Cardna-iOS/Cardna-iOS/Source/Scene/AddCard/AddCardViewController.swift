@@ -124,6 +124,7 @@ class AddCardViewController: UIViewController {
         $0.backgroundColor = .mainGreen
         $0.layer.cornerRadius = 10
         $0.addTarget(self, action: #selector(showCompletedCard(_:)), for: .touchUpInside)
+//        $0.isEnabled = false
     }
     
     // MARK: - VC LifeCycle
@@ -136,6 +137,7 @@ class AddCardViewController: UIViewController {
         setTextFieldDelegate()
         setNotificationCenter()
         setCardYouOption()
+        
     }
     
     // MARK: - Function
@@ -346,7 +348,13 @@ class AddCardViewController: UIViewController {
     
     @objc
     private func showCompletedCard(_ sender: Any) {
-        if (self.isMe) {
+        if !cardKeywordTextField.hasText ||
+            (cardContentsTextView.text == cardContentsTextViewPlaceHolder) || cardImageView.image == nil {
+            let alert = UIAlertController(title: "잠깐!", message: "아직 작성되지 않은 양식이 있어요!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        } else if (self.isMe) {
             AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
                                               content: cardContentsTextView.text,
                                               symbolId: selectedSymbolId,
@@ -364,7 +372,7 @@ class AddCardViewController: UIViewController {
                     print("networkFail")
                 }
             }
-            
+
             guard let completedCardVC = UIStoryboard(name: "AddCardCompletedViewController", bundle: nil)
                     .instantiateViewController(withIdentifier: "AddCardCompletedViewController") as? AddCardCompletedViewController else { return }
             completedCardVC.receivedText = cardKeywordTextField.text ?? ""
@@ -391,7 +399,7 @@ class AddCardViewController: UIViewController {
                     print("networkFail")
                 }
             }
-            
+
             guard let completedCardVC = UIStoryboard(name: "AddCardYouCompleted", bundle: nil)
                     .instantiateViewController(withIdentifier: "AddCardYouCompleted") as? AddCardYouCompletedViewController else { return }
             completedCardVC.modalPresentationStyle = .fullScreen
