@@ -386,7 +386,7 @@ class AddCardViewController: UIViewController {
             completedCardVC.receivedImage = cardImageView.image ?? UIImage()
             completedCardVC.modalPresentationStyle = .fullScreen
             self.present(completedCardVC, animated: true) {
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popToRootViewController(animated: true)
             }
         } else {
             AddCardService.shared.postAddCardYou(friendId: 4,
