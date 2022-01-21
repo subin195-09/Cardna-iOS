@@ -53,6 +53,8 @@ public class MainCardService {
         switch statusCode {
         case 200:
             return .success(decodedData.data)
+        case 404:
+            return .requestErr(decodedData.status)
         case 400..<500:
             return .requestErr(decodedData.message)
         case 500:
