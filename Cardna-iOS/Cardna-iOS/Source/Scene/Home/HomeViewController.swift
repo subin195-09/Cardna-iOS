@@ -162,6 +162,8 @@ class HomeViewController: UIViewController {
     @IBAction func navigationButtonDidTap(_ sender: Any) {
         if friendID != nil {
             guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
+            addVC.friendId = friendID
+            addVC.name = name
             self.navigationController?.pushViewController(addVC, animated: true)
         }
         else {
