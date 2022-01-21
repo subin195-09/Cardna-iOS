@@ -18,7 +18,7 @@ class CardDetailViewController: UIViewController {
     var cardID: Int?
     var cardData: CardDetailResponse?
     
-    lazy var lottieView : AnimationView = {
+    lazy var lottieViewCardme : AnimationView = {
         let animationView = AnimationView(name: "lottie_cardme")
         animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         animationView.center = CGPoint(x: UIScreen.main.bounds.width/2, y: imageContainerViewHeightConstraint.constant/2)
@@ -26,7 +26,16 @@ class CardDetailViewController: UIViewController {
         animationView.stop()
         animationView.isHidden = true
         return animationView
-        
+    }()
+    
+    lazy var lottieViewCardyou : AnimationView = {
+        let animationView = AnimationView(name: "lottie_cardyou")
+        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        animationView.center = CGPoint(x: UIScreen.main.bounds.width/2, y: imageContainerViewHeightConstraint.constant/2)
+        animationView.contentMode = .scaleAspectFill
+        animationView.stop()
+        animationView.isHidden = true
+        return animationView
     }()
     
     // MARK: - IBOutlet
@@ -61,19 +70,20 @@ class CardDetailViewController: UIViewController {
     // MARK: - Function
     
     func setLottie() {
-        lottieBgView.addSubview(lottieView)
+        lottieBgView.addSubview(lottieViewCardme)
+        lottieBgView.addSubview(lottieViewCardyou)
     }
     
-    func startLottie() {
+    func startLottie(lottie: AnimationView) {
         lottieBgView.isHidden = false
-        lottieView.isHidden = false
-        lottieView.play()
+        lottie.isHidden = false
+        lottie.play()
     }
     
-    func stopLottie() {
+    func stopLottie(lottie: AnimationView) {
         lottieBgView.isHidden = true
-        lottieView.isHidden = true
-        lottieView.stop()
+        lottie.isHidden = true
+        lottie.stop()
     }
     
     func setUI() {
@@ -254,16 +264,18 @@ class CardDetailViewController: UIViewController {
     
     func likeCard() {
         
-        LikeService.shared.postLike(cardId: cardID ?? 1) { result in
+        LikeService.shared.postLike(cardId: cardID ?? 1) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let data):
                 print(data)
                 guard let data = data as? LikeResponse else { return }
                 if data.isLiked {
                     self.likeButton.setImage(Const.Image.likeSelected, for: .normal)
-                    self.startLottie()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.6){
-                        self.stopLottie()
+                    switch self.cardDetailWhere {
+                    case 0: self.lottiePlay(lottie: self.lottieViewCardme)
+                    case 1: self.lottiePlay(lottie: self.lottieViewCardyou)
+                    default: print("error")
                     }
                 }
                 else {
@@ -278,6 +290,13 @@ class CardDetailViewController: UIViewController {
             case .networkFail:
                 print("requestErr")
             }
+        }
+    }
+    
+    func lottiePlay(lottie: AnimationView) {
+        self.startLottie(lottie: lottie)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6){
+            self.stopLottie(lottie: lottie)
         }
     }
     
