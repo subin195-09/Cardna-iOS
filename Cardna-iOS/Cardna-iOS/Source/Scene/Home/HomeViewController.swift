@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if friendID != nil { getMainCard(friendID: friendID) }
         else { getMainCard() }
-
+        
     }
     
     override func viewDidLoad() {
@@ -115,17 +115,18 @@ class HomeViewController: UIViewController {
                 self.cardList = res.mainCardList
                 if self.cardList.count == 0 {
                     self.countLabel.isHidden = true
+                    self.commentLabel.text = "아직 대표카드가 없어요!"
                 } else {
                     self.countLabel.isHidden = false
                 }
                 self.collectionView.reloadData()
                 if self.cardList.count > 0 {
-                if self.cardList[0].isMe == true {
-                    self.commentUnderLineView.backgroundColor = .mainGreenAlpha
-                }
-                else {
-                    self.commentUnderLineView.backgroundColor = .mainPurpleAlpha
-                }
+                    if self.cardList[0].isMe == true {
+                        self.commentUnderLineView.backgroundColor = .mainGreenAlpha
+                    }
+                    else {
+                        self.commentUnderLineView.backgroundColor = .mainPurpleAlpha
+                    }
                 }
                 print("home", self.cardList)
             case .requestErr(_):
@@ -160,8 +161,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func navigationButtonDidTap(_ sender: Any) {
         if friendID != nil {
-        guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
-        self.navigationController?.pushViewController(addVC, animated: true)
+            guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
+            self.navigationController?.pushViewController(addVC, animated: true)
         }
         else {
             self.showToastTop(message: "준비중인 기능입니다.", font: .cardnaB3Rg)
