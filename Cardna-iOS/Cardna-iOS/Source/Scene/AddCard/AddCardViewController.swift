@@ -390,7 +390,7 @@ class AddCardViewController: UIViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         } else {
-            AddCardService.shared.postAddCardYou(friendId: 4,
+            AddCardService.shared.postAddCardYou(friendId: self.friendId,
                                                  title: cardKeywordTextField.text!,
                                                  content: cardContentsTextView.text,
                                                  relation: cardYouRelation,
