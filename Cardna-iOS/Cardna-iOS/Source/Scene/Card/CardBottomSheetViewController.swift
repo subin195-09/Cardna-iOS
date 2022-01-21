@@ -59,10 +59,9 @@ class CardBottomSheetViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func addCardMeButtonDidTap(_ sender: Any) {
-        let nextVC = AddCardViewController()
-        nextVC.isMe = true
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("goToCardMe"),
+                                        object: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addCardYouButtonDidTap(_ sender: Any) {

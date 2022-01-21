@@ -11,8 +11,11 @@ extension AddCardBottomSheetViewController: UIImagePickerControllerDelegate, UIN
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            let presentingVC = presentingViewController as? AddCardViewController
-            presentingVC?.cardImageView.image = selectedImage
+//            let presentingVC = presentingViewController as? AddCardViewController
+//            presentingVC?.cardImageView.image = selectedImage
+            NotificationCenter.default.post(name: NSNotification.Name("selectedImage"),
+                                            object: defaultImageData(index: nil,
+                                                                     defaultImage: selectedImage))
         }
         self.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)

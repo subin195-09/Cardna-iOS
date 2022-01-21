@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct defaultImageData {
+    var index: Int?
+    var defaultImage: UIImage?
+}
+
 class AddCardBottomSheetViewController: UIViewController {
     
     // MARK: - Property
@@ -107,6 +112,10 @@ class AddCardBottomSheetViewController: UIViewController {
                 break
             }
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("selectedImage"),
+                                        object: defaultImageData(index: index ?? nil,
+                                                                 defaultImage: defaultImage))
         
         let addCardVC = presentingViewController as? AddCardViewController
         addCardVC?.cardImageView.image = defaultImage
