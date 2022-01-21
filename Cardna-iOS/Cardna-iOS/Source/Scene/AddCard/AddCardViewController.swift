@@ -18,6 +18,7 @@ class AddCardViewController: UIViewController {
     
     var cardContentsTextViewPlaceHolder = "더 자세하게 적어볼까요?\n설명, 자랑, 경험 등 어떤 내용도 좋아요 :)"
     var isMe = true
+    var friendId: Int? = nil
     var cardForName = ""
     var cardYouRelation = ""
     var selectedSymbolId: Int? = nil
@@ -389,7 +390,7 @@ class AddCardViewController: UIViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         } else {
-            AddCardService.shared.postAddCardYou(friendId: 4,
+            AddCardService.shared.postAddCardYou(friendId: self.friendId,
                                                  title: cardKeywordTextField.text!,
                                                  content: cardContentsTextView.text,
                                                  relation: cardYouRelation,
@@ -412,7 +413,9 @@ class AddCardViewController: UIViewController {
             guard let completedCardVC = UIStoryboard(name: "AddCardYouCompleted", bundle: nil)
                     .instantiateViewController(withIdentifier: "AddCardYouCompleted") as? AddCardYouCompletedViewController else { return }
             completedCardVC.modalPresentationStyle = .fullScreen
-            self.present(completedCardVC, animated: true, completion: nil)
+            self.present(completedCardVC, animated: true) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
         }
     }
     

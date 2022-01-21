@@ -12,7 +12,8 @@ class AddCardYouViewController: UIViewController {
     // MARK: - Property
     
     static let identifier = "AddCardYouViewController"
-    var name = "정재"
+    var friendId: Int?
+    var name = ""
     
     // MARK: - IBOutlet
     
@@ -69,8 +70,8 @@ class AddCardYouViewController: UIViewController {
         let nextVC = AddCardViewController()
         nextVC.cardYouRelation = self.addCardYouTextField.text ?? ""
         nextVC.isMe = false
-        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.friendId = friendId
         nextVC.cardForName = name
-        self.present(nextVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
