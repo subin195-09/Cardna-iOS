@@ -65,8 +65,8 @@ class CardBottomSheetViewController: UIViewController {
     }
     
     @IBAction func addCardYouButtonDidTap(_ sender: Any) {
-        guard let nextVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("goToCardNotYetBox"),
+                                        object: true)
+        dismiss(animated: true, completion: nil)
     }
 }
