@@ -350,7 +350,7 @@ class AddCardViewController: UIViewController {
             AddCardService.shared.postAddCard(title: cardKeywordTextField.text!,
                                               content: cardContentsTextView.text,
                                               symbolId: selectedSymbolId,
-                                              img: cardImageView.image!) { result in
+                                              img: cardImageView.image ?? UIImage()) { result in
                 switch result {
                 case .success(let msg):
                     print("success", msg)
