@@ -150,6 +150,10 @@ class CardViewController: UIViewController {
                                                selector: #selector(goToCardMe),
                                                name: Notification.Name("goToCardMe"),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(goToCardNotYetBox),
+                                               name: Notification.Name("goToCardNotYetBox"),
+                                               object: nil)
     }
     
     // MARK: - IBAction
@@ -173,5 +177,12 @@ class CardViewController: UIViewController {
         nextVC.isMe = notification.object as? Bool ?? true
         nextVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @objc
+    private func goToCardNotYetBox(notification: NSNotification) {
+        guard let cardNotYetBoxVC = UIStoryboard(name: "CardNotYetBox", bundle: nil).instantiateViewController(withIdentifier: "CardNotYetBoxViewController") as? CardNotYetBoxViewController else { return }
+        cardNotYetBoxVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(cardNotYetBoxVC, animated: true)
     }
 }
