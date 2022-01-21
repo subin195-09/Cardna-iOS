@@ -63,7 +63,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgSymSmile" translatesAutoresizingMaskIntoConstraints="NO" id="L6m-KW-CJd">
                                                                         <rect key="frame" x="10" y="10" width="228" height="324"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="솔이 1풀리퀘 20커밋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-gg-ota">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-gg-ota">
                                                                         <rect key="frame" x="9" y="339" width="230" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="230" id="fGA-6w-2ko"/>
@@ -149,7 +149,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgSymSmilePur" translatesAutoresizingMaskIntoConstraints="NO" id="bXk-FG-UDt">
                                                                         <rect key="frame" x="10" y="10" width="228" height="324"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="솔이는 빵동 스파이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6C-Jx-wa4">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6C-Jx-wa4">
                                                                         <rect key="frame" x="9" y="339" width="230" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="230" id="V3x-On-CTm"/>
