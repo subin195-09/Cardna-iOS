@@ -49,6 +49,9 @@ class InsightViewController: UIViewController {
     @IBOutlet weak var cardViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var explainLabelTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var insightViewControllerPageWidth: NSLayoutConstraint!
+    @IBOutlet weak var openCardWidthConstant: NSLayoutConstraint!
+    @IBOutlet weak var blindCardWidthConstraint: NSLayoutConstraint!
     
     // MARK: - VC Life Cycle
     
@@ -57,6 +60,7 @@ class InsightViewController: UIViewController {
         setInitializeState()
         getInsightCard()
         setUI()
+        setLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +76,12 @@ class InsightViewController: UIViewController {
         setCardViewUI()
         setSize()
         setAutoLayoutForDevice()
+    }
+    
+    func setLayout() {
+        insightViewControllerPageWidth.constant = UIScreen.main.bounds.width
+        openCardWidthConstant.constant = UIScreen.main.bounds.width * (248/375)
+        blindCardWidthConstraint.constant = UIScreen.main.bounds.width * (248/375)
     }
     
     func setInitializeState() {
