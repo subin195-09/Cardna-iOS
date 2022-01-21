@@ -56,4 +56,8 @@ class MyPageSettingViewController: UIViewController {
          alert.addAction(okAction)
          self.present(alert, animated: true, completion: nil)
      }
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
