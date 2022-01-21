@@ -46,6 +46,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var menuButtonView: UIView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var imageContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var contentLabelTopConstraint: NSLayoutConstraint!
     
     // MARK: - VC LifeCycle
     
@@ -92,6 +93,8 @@ class CardDetailViewController: UIViewController {
         case 0:
             titleBgView.backgroundColor = .mainGreen
             backButton.setImage(Const.Image.icbtBoxbackGreen, for: .normal)
+            contentLabelTopConstraint.constant = -12
+            fromLabel.isHidden = true
             setMenuButtonInCardMe()
         case 1:
             titleBgView.backgroundColor = .mainPurple
@@ -180,7 +183,7 @@ class CardDetailViewController: UIViewController {
         imageView.setImage(with: cardData?.cardImg ?? "")
         contentLabel.text = cardData?.content
         dateLabel.text = cardData?.createdAt
-        fromLabel.text = "From. \(cardData?.name ?? "" )"
+        fromLabel.text = "From. \(cardData?.relation ?? "" ) · \(cardData?.name ?? "" )"
         if let like = cardData?.isLiked {
             if like {
                 likeButton.setImage(Const.Image.likeSelected, for: .normal)
