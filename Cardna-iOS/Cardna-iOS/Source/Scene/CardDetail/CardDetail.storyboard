@@ -212,6 +212,7 @@
                         <outlet property="addCardYouButton" destination="r0t-Np-1Wk" id="Q7f-vr-UHZ"/>
                         <outlet property="backButton" destination="dLd-xJ-uWY" id="J6g-hD-nTL"/>
                         <outlet property="contentLabel" destination="ICQ-7b-y19" id="tcZ-9X-zDY"/>
+                        <outlet property="contentLabelTopConstraint" destination="zlK-70-Brn" id="FYd-9k-Pkc"/>
                         <outlet property="dateLabel" destination="TXg-zD-MqC" id="f07-DS-bmp"/>
                         <outlet property="fromLabel" destination="kdK-yl-wQp" id="WjW-jw-61D"/>
                         <outlet property="imageContainerViewHeightConstraint" destination="P2x-FX-OI2" id="0PR-5S-yUI"/>
