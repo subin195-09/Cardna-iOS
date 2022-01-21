@@ -73,11 +73,6 @@ class CardViewController: UIViewController {
         getCardInfo()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        isMyCardPack = true
-        friendID = nil
-    }
-    
     // MARK: - Function
     
     func setInitialCollectionView() {
