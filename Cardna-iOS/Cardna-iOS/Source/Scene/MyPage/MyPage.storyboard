@@ -83,8 +83,8 @@
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="155" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imt-Fb-ssS">
-                                            <rect key="frame" x="51.5" y="40" width="28" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imt-Fb-ssS">
+                                            <rect key="frame" x="51.5" y="40" width="13.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-qV-22p">
                                                     <rect key="frame" x="16" y="30" width="45" height="45"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtBoxbackPurple" translatesAutoresizingMaskIntoConstraints="NO" id="C8B-LM-M3d">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8B-LM-M3d">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                         </imageView>
                                                     </subviews>
@@ -140,7 +140,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="C8B-LM-M3d" secondAttribute="bottom" id="wOE-op-aZy"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지우님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-kY-Ohe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-kY-Ohe">
                                                     <rect key="frame" x="77" y="29" width="321" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="T9k-6y-Y8Z"/>
@@ -149,7 +149,7 @@
                                                     <color key="textColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oowizh@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5V-Pk-gNl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5V-Pk-gNl">
                                                     <rect key="frame" x="77" y="59" width="321" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="EzK-92-UoA"/>
@@ -264,7 +264,6 @@
         <image name="btmnavi4Active" width="85" height="84"/>
         <image name="btmnavi4Inactive" width="85" height="84"/>
         <image name="icbtBox" width="42" height="42"/>
-        <image name="icbtBoxbackPurple" width="44" height="44"/>
         <image name="icbtFriendsplus" width="42" height="42"/>
         <image name="icbtSetting" width="42" height="42"/>
     </resources>
