@@ -58,6 +58,7 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
         let card = mainCards[indexPath.item]
         mainCards.removeAll(where: { $0.id == card.id })
         print(mainCards)
+        countLabel.text = "\(mainCards.count) / 7"
         collectionView.reloadData()
     }
 }
@@ -65,6 +66,7 @@ extension SelectCardViewController: UICollectionViewDataSource, UICollectionView
 extension SelectCardViewController: MainCardSelectProtocol {
     func sendMainCard(cardList: [MainCardList]) {
         mainCards = cardList
+        countLabel.text = "\(cardList.count) / 7"
         collectionView.reloadData()
     }
 }

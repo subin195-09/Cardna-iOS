@@ -60,6 +60,7 @@ class SelectCardViewController: UIViewController {
             case .success(let data):
                 guard let data = data as? MainCardResponse else { return }
                 self.mainCards = data.mainCardList
+                self.countLabel.text = "\(data.mainCardList.count) / 7"
                 print(self.mainCards)
                 self.setCollectionView()
             case .requestErr(_):
