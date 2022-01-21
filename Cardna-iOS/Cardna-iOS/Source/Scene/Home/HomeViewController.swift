@@ -129,8 +129,11 @@ class HomeViewController: UIViewController {
                     }
                 }
                 print("home", self.cardList)
-            case .requestErr(_):
-                print("requestErr")
+            case .requestErr(let code):
+                if code as? Int == 404  {
+                    self.commentLabel.text = "아직 대표카드가 없어요!"
+                }
+                else { print("requestErr") }
             case .pathErr:
                 print("pathErr")
             case .serverErr:
