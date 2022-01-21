@@ -46,7 +46,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var friendBackButton: UIButton!
     @IBOutlet weak var friendNavigationTitleLabel: UILabel!
     @IBOutlet weak var friendWriteButton: UIButton!
-
+    
     // MARK: Recycle Views
     @IBOutlet weak var cardPackTitleCollectionView: UICollectionView!
     @IBOutlet weak var indicatorBarView: UIView!
@@ -64,6 +64,7 @@ class CardViewController: UIViewController {
         //getCardInfo()
         setFriendNameLabel()
         setUI()
+        notificationListner()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +135,7 @@ class CardViewController: UIViewController {
     }
     
     private func showBottomSheet() {
-    
+        
         guard let bottomSheetVC = UIStoryboard(name: "CardBottomSheet", bundle: nil).instantiateViewController(withIdentifier: "CardBottomSheetViewController") as? CardBottomSheetViewController else { return }
         
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: bottomSheetVC)
@@ -142,6 +143,13 @@ class CardViewController: UIViewController {
         bottomSheet.adjustHeightForSafeAreaInsets = false
         
         self.present(bottomSheet, animated: true, completion: nil)
+    }
+    
+    private func notificationListner() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(goToCardMe),
+                                               name: Notification.Name("goToCardMe"),
+                                               object: nil)
     }
     
     // MARK: - IBAction
@@ -157,5 +165,13 @@ class CardViewController: UIViewController {
     @IBAction func friendWriteButtonDidTap(_ sender: Any) {
         guard let addVC = UIStoryboard(name: "AddCardYouViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCardYouViewController") as? AddCardYouViewController else { return }
         self.navigationController?.pushViewController(addVC, animated: true)
+    }
+    
+    @objc
+    private func goToCardMe(notification: NSNotification) {
+        let nextVC = AddCardViewController()
+        nextVC.isMe = notification.object as? Bool ?? true
+        nextVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

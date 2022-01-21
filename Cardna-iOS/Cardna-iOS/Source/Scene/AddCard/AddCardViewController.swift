@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import Then
 import MaterialComponents.MaterialBottomSheet
+import Alamofire
 
 class AddCardViewController: UIViewController {
     
@@ -124,7 +125,6 @@ class AddCardViewController: UIViewController {
         $0.backgroundColor = .mainGreen
         $0.layer.cornerRadius = 10
         $0.addTarget(self, action: #selector(showCompletedCard(_:)), for: .touchUpInside)
-//        $0.isEnabled = false
     }
     
     // MARK: - VC LifeCycle
@@ -137,7 +137,7 @@ class AddCardViewController: UIViewController {
         setTextFieldDelegate()
         setNotificationCenter()
         setCardYouOption()
-        
+        receivedImage()
     }
     
     // MARK: - Function
@@ -329,11 +329,18 @@ class AddCardViewController: UIViewController {
         }
     }
     
+    private func receivedImage() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(setImage),
+                                               name: Notification.Name("selectedImage"),
+                                               object: nil)
+    }
+    
     // MARK: - Objc Function
     
     @objc
     private func backButtonDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc
@@ -418,6 +425,16 @@ class AddCardViewController: UIViewController {
                     let newString = text[text.startIndex..<index]
                     textField.text = String(newString)
                 }
+            }
+        }
+    }
+    
+    @objc
+    private func setImage(notification: NSNotification) {
+        if let object = notification.object as? defaultImageData {
+            if let image = object.defaultImage as? UIImage {
+                selectedSymbolId = object.index
+                cardImageView.image = image
             }
         }
     }
