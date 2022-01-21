@@ -172,6 +172,7 @@ class CardDetailViewController: UIViewController {
         fromLabel.font = .cardnaB1Rg
         contentLabel.font = .cardnaB1Rg
         dateLabel.font = .cardnaB1Rg
+        titleLabel.textColor = UIColor.init(red: 18/255.0, green: 18/255.0, blue: 18/255.0, alpha: 1.0)
         fromLabel.textColor = .w2
         contentLabel.textColor = .w1
         dateLabel.textColor = .w3
