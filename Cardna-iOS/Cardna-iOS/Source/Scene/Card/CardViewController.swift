@@ -11,7 +11,6 @@ import MaterialComponents.MaterialBottomSheet
 
 extension CardViewController: CardPassProtocol {
     func pushDetailCard(cardID: Int, isMe: Int, isOthers: Bool) {
-        print("\n\n\n안녕하세요?\n\n\n")
         guard let nextVC = UIStoryboard.init(name: "CardDetail", bundle: nil).instantiateViewController(withIdentifier: "CardDetailViewController") as? CardDetailViewController else { return }
         nextVC.cardID = cardID
         nextVC.isFriendsCardDetail = isOthers
