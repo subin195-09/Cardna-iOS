@@ -18,7 +18,7 @@
 | :-: | :-: | :-: |
 | <img src="https://user-images.githubusercontent.com/48648026/148783045-b676033a-a6b9-4afb-8abf-a66d9e537dd5.png" width="250"> | <img src="https://user-images.githubusercontent.com/48648026/148783025-0cff0c36-0b3e-47de-b1a0-3ac6e0e7b180.png" width="250"> | <img src="https://user-images.githubusercontent.com/48648026/148783060-952f18de-ed60-40e3-a872-6411fd8192b6.png" width="250"> |
 | [@hyesuuou](https://github.com/hyesuuou) | [@meenyweeny](https://github.com/meenyweeny) | [@ningpop](https://github.com/ningpop) |
-| 리드 경험과 사람을 얻고 싶고, <div></div>안해본 기능을 구현하고 싶습니다. | YB에게 알려줄 수 있는 <div></div>실력을 갖고 싶습니다. | iOS를 제대로 도전해보는<div></div>경험을 얻어가고 싶습니다. |
+| 아요 팀원들과 함께해서 <div></div>너무 행복했던 앱잼 ❤️ | YB에게 알려줄 수 있는 <div></div>실력을 갖고 싶습니다. | iOS를 제대로 도전해보는<div></div>경험을 얻어가고 싶습니다. |
 <br/>
 
 ## 프로젝트 내에서 본인이 맡은/개발한 기능들이나 뷰에 대해서 기재해주세요! 
