@@ -20,16 +20,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="284" height="430"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 카드가 없어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBB-O4-s2c">
-                                <rect key="frame" x="76" y="204.5" width="132" height="21"/>
+                                <rect key="frame" x="76" y="162" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbZ-PH-MBS">
+                                <rect key="frame" x="72" y="199" width="140" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbtCardme" translatesAutoresizingMaskIntoConstraints="NO" id="bCA-J8-spp">
+                                        <rect key="frame" x="18" y="7.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="FUf-zD-HGy"/>
+                                            <constraint firstAttribute="width" secondItem="bCA-J8-spp" secondAttribute="height" multiplier="1:1" id="MHG-k5-Bga"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드나 작성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-oh-yWg">
+                                        <rect key="frame" x="47" y="9.5" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bCA-J8-spp" firstAttribute="centerY" secondItem="AbZ-PH-MBS" secondAttribute="centerY" id="0WQ-0Y-pvY"/>
+                                    <constraint firstItem="bCA-J8-spp" firstAttribute="leading" secondItem="AbZ-PH-MBS" secondAttribute="leading" constant="18" id="4Y1-Fs-REF"/>
+                                    <constraint firstAttribute="height" constant="40" id="Aiq-dk-Dah"/>
+                                    <constraint firstItem="zJI-oh-yWg" firstAttribute="centerY" secondItem="AbZ-PH-MBS" secondAttribute="centerY" id="Dav-Pw-tpa"/>
+                                    <constraint firstAttribute="width" constant="140" id="Hpk-sU-Pp7"/>
+                                    <constraint firstItem="zJI-oh-yWg" firstAttribute="leading" secondItem="bCA-J8-spp" secondAttribute="trailing" constant="4" id="g7d-7G-AzC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-NO-U6Y">
+                                <rect key="frame" x="72" y="199" width="140" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="YBB-O4-s2c" firstAttribute="centerY" secondItem="yhJ-5x-xxm" secondAttribute="centerY" id="9B0-Vf-kxb"/>
+                            <constraint firstItem="YBB-O4-s2c" firstAttribute="top" secondItem="yhJ-5x-xxm" secondAttribute="top" constant="162" id="3eN-Ef-zlx"/>
+                            <constraint firstItem="iSL-NO-U6Y" firstAttribute="width" secondItem="AbZ-PH-MBS" secondAttribute="width" id="TBs-84-Swg"/>
+                            <constraint firstItem="iSL-NO-U6Y" firstAttribute="height" secondItem="AbZ-PH-MBS" secondAttribute="height" id="TF5-Io-zz2"/>
+                            <constraint firstItem="iSL-NO-U6Y" firstAttribute="top" secondItem="YBB-O4-s2c" secondAttribute="bottom" constant="16" id="ZIR-KO-jaR"/>
                             <constraint firstItem="YBB-O4-s2c" firstAttribute="centerX" secondItem="yhJ-5x-xxm" secondAttribute="centerX" id="cMo-UY-RAX"/>
+                            <constraint firstItem="AbZ-PH-MBS" firstAttribute="top" secondItem="YBB-O4-s2c" secondAttribute="bottom" constant="16" id="mDF-Ji-R3G"/>
+                            <constraint firstItem="AbZ-PH-MBS" firstAttribute="centerX" secondItem="yhJ-5x-xxm" secondAttribute="centerX" id="od8-9q-nRU"/>
+                            <constraint firstItem="iSL-NO-U6Y" firstAttribute="centerX" secondItem="yhJ-5x-xxm" secondAttribute="centerX" id="olS-de-jKI"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -44,10 +82,18 @@
             </constraints>
             <size key="customSize" width="318" height="400"/>
             <connections>
+                <outlet property="buttonBackgroundView" destination="AbZ-PH-MBS" id="abs-rh-aCZ"/>
+                <outlet property="buttonIconImageView" destination="bCA-J8-spp" id="vqo-Sq-x6x"/>
+                <outlet property="buttonTitleLabel" destination="zJI-oh-yWg" id="vxh-NJ-Oev"/>
                 <outlet property="cellBackgroundView" destination="yhJ-5x-xxm" id="BJh-4Y-fwp"/>
                 <outlet property="cellExplainLabel" destination="YBB-O4-s2c" id="FvX-NK-Sxc"/>
+                <outlet property="explainLabelTopConstraint" destination="3eN-Ef-zlx" id="9g8-qg-ft3"/>
+                <outlet property="writeButton" destination="iSL-NO-U6Y" id="YSh-eG-XXU"/>
             </connections>
             <point key="canvasLocation" x="331.8840579710145" y="188.16964285714286"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icbtCardme" width="45" height="45"/>
+    </resources>
 </document>
